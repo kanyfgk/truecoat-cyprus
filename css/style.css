@@ -223,38 +223,72 @@ ol {
    HEADER
 ========================================================= */
 
-.site-header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 100;
+.site-header{
+    position:fixed;
+    top:22px;
+    left:50%;
+    transform:translateX(-50%);
 
-  padding: 18px 0;
+    width:min(1380px,calc(100% - 42px));
 
-  color: var(--text-light);
+    z-index:9999;
 
-  transition:
-    padding var(--transition-normal),
-    background var(--transition-normal),
-    color var(--transition-normal),
-    border-color var(--transition-normal),
-    backdrop-filter var(--transition-normal);
+    padding:16px 28px;
+
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:22px;
+
+    background:rgba(18,24,21,.42);
+
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+
+    transition:.35s ease;
 }
 
-.site-header.scrolled {
-  padding: 12px 0;
-  color: var(--text);
-  background: rgba(245, 241, 233, 0.92);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(18px);
+.site-header.scrolled{
+
+    top:14px;
+
+    background:rgba(15,20,18,.78);
+
+    border-color:rgba(255,255,255,.08);
+
+    box-shadow:
+    0 18px 50px rgba(0,0,0,.25);
+}
+.header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:42px;
+
+    max-width:100%;
+    margin:0 auto;
 }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
+.desktop-nav{
+    display:flex;
+    align-items:center;
+    gap:34px;
+    margin-left:auto;
+}
+
+.desktop-nav a{
+    color:rgba(255,255,255,.82);
+    font-size:.95rem;
+    font-weight:600;
+    transition:.25s;
+}
+
+.desktop-nav a:hover{
+    color:#fff;
+}
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:14px;
 }
 
 .brand {
