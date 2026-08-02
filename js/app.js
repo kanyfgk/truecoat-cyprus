@@ -77,6 +77,10 @@ function setLanguage(language){
     const details =
         document.getElementById("details");
 
+    if (!name || !location || !details) {
+    return;
+}
+
     if(language==="tr"){
 
         name.placeholder="Adınız";
@@ -154,7 +158,7 @@ document
 
 if (quoteForm) {
 
-quoteForm.addEventListener(
+if (quoteForm) quoteForm.addEventListener(
 "submit",
 event=>{
 
