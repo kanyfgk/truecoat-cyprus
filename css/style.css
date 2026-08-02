@@ -1474,3 +1474,46 @@ ol {
     animation-iteration-count: 1 !important;
   }
 }
+
+.project-preview{
+background:#f7f3ec;
+}
+
+.project-preview-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:60px;
+align-items:center;
+margin-top:55px;
+}
+
+.project-preview-image img{
+border-radius:28px;
+box-shadow:var(--shadow-large);
+}
+
+.preview-price span{
+display:block;
+font-size:.78rem;
+letter-spacing:.15em;
+font-weight:800;
+color:var(--accent);
+margin-bottom:10px;
+}
+
+.preview-price strong{
+font-size:4rem;
+font-family:"Playfair Display",serif;
+}
+
+.preview-list{
+margin:34px 0;
+display:grid;
+gap:14px;
+}
+
+.preview-list li{
+padding-bottom:14px;
+border-bottom:1px solid var(--border);
+font-weight:600;
+}
