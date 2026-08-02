@@ -456,7 +456,7 @@ ol {
       rgba(8, 14, 12, 0.65) 45%,
       rgba(8, 14, 12, 0.18) 100%
     ),
-    url("../images/hero-living-room.jpg")
+    url("../images/hero-living-room.jpg");
 
   background-position: center;
   background-size: cover;
