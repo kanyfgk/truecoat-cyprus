@@ -23,15 +23,19 @@ function closeMenu() {
     document.body.classList.remove("menu-open");
 }
 
-menuButton.addEventListener("click", () => {
+if (menuButton && mobileMenu) {
 
-    menuButton.classList.toggle("active");
+    menuButton.addEventListener("click", () => {
 
-    mobileMenu.classList.toggle("open");
+        menuButton.classList.toggle("active");
 
-    document.body.classList.toggle("menu-open");
+        mobileMenu.classList.toggle("open");
 
-});
+        document.body.classList.toggle("menu-open");
+
+    });
+
+}
 
 document
 .querySelectorAll(".mobile-menu a")
@@ -107,20 +111,17 @@ function setLanguage(language){
 
 }
 
-languageButton.addEventListener(
-    "click",
-    ()=>{
+if (languageButton) {
+
+    languageButton.addEventListener("click", () => {
 
         setLanguage(
-
-            currentLanguage==="en"
-            ? "tr"
-            : "en"
-
+            currentLanguage === "en" ? "tr" : "en"
         );
 
-    }
-);
+    });
+
+}
 
 const observer =
 new IntersectionObserver(
@@ -150,6 +151,8 @@ threshold:.15
 document
 .querySelectorAll(".reveal")
 .forEach(el=>observer.observe(el));
+
+if (quoteForm) {
 
 quoteForm.addEventListener(
 "submit",
@@ -227,7 +230,12 @@ window.open(
 
 );
 
-document.getElementById("year").textContent =
-new Date().getFullYear();
+    }
+
+const year = document.getElementById("year");
+
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
 
 setLanguage(currentLanguage);
