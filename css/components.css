@@ -1,210 +1,131 @@
-/* ===========================
-   ATMOSPHERE COLLECTIONS
-=========================== */
+/* =========================================================
+   TRUECOAT V2
+========================================================= */
 
-.project-preview-grid{
+.painting-choice{
+    padding:120px 0;
+    background:#faf8f4;
+}
+
+.painting-choice-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:1fr 1.2fr;
+    gap:70px;
+    align-items:center;
+}
+
+.painting-choice-copy h2{
+    font-size:56px;
+    line-height:1.05;
+    margin-top:18px;
+    margin-bottom:0;
+}
+
+.painting-options{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
     gap:28px;
-    margin-top:70px;
 }
 
-.atmosphere-card{
-    position:relative;
-    overflow:hidden;
+.painting-option{
+    background:#fff;
     border-radius:28px;
-    min-height:540px;
-    background:#ddd;
-    cursor:pointer;
+    padding:42px;
+    border:1px solid rgba(0,0,0,.06);
+    transition:.35s;
 }
 
-.atmosphere-card img{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.6s;
+.painting-option:hover{
+    transform:translateY(-8px);
+    box-shadow:0 24px 70px rgba(0,0,0,.08);
 }
 
-.atmosphere-card::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        to top,
-        rgba(0,0,0,.78) 0%,
-        rgba(0,0,0,.25) 45%,
-        rgba(0,0,0,.05) 100%
-    );
-}
-
-.atmosphere-overlay{
-    position:absolute;
-    left:34px;
-    right:34px;
-    bottom:34px;
-    z-index:2;
+.painting-option-primary{
+    background:#111;
     color:#fff;
 }
 
-.atmosphere-number{
+.painting-option-number{
     display:inline-flex;
-    width:54px;
-    height:54px;
+    width:52px;
+    height:52px;
     border-radius:50%;
     align-items:center;
     justify-content:center;
-    background:rgba(255,255,255,.15);
-    border:1px solid rgba(255,255,255,.35);
-    backdrop-filter:blur(10px);
+    background:#d4af37;
+    color:#111;
+    font-weight:700;
     margin-bottom:24px;
 }
 
-.atmosphere-overlay h3{
-    font-size:42px;
-    line-height:1;
+.painting-option h3{
+    font-size:30px;
     margin-bottom:18px;
 }
 
-.atmosphere-overlay p{
-    font-size:18px;
-    line-height:1.7;
-    opacity:.92;
-    margin-bottom:28px;
+.painting-option p{
+    line-height:1.8;
+    margin-bottom:26px;
 }
 
-.atmosphere-card:hover img{
-    transform:scale(1.06);
+.painting-option a{
+    font-weight:700;
+    text-decoration:none;
 }
 
-@media(max-width:991px){
+/* =========================================================
+   ATMOSPHERE SHOWCASE
+========================================================= */
 
-.project-preview-grid{
-
-grid-template-columns:1fr;
-gap:24px;
-
-}
-
-.atmosphere-card{
-
-min-height:470px;
-
-}
-
+.atmosphere-section{
+    padding:140px 0;
+    background:#f4f1eb;
 }
 
 .atmosphere-container{
-    max-width:1550px;
+    max-width:1500px;
 }
 
-.project-preview{
-    padding-top:120px;
-    padding-bottom:120px;
-    background:#f8f5f1;
-}
-
-.project-preview-grid{
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:40px;
-}
-
-.atmosphere-card{
-    min-height:620px;
-    border-radius:32px;
-}
-
-.atmosphere-card img{
-    transition:transform .8s ease;
-}
-
-.atmosphere-card:hover img{
-    transform:scale(1.05);
-}
-
-.atmosphere-intro{
-    max-width:760px;
-    margin:0 auto 70px;
-    text-align:center;
-}
-
-.atmosphere-intro .eyebrow{
-    display:inline-block;
-    letter-spacing:3px;
-    font-size:12px;
-    color:#9d8568;
-    margin-bottom:18px;
-}
-
-.atmosphere-intro h2{
-    font-size:58px;
-    line-height:1.08;
-    margin-bottom:24px;
-}
-
-.atmosphere-intro p{
-    max-width:640px;
-    margin:auto;
-    font-size:19px;
-    line-height:1.8;
-    color:#6f6a63;
-}
-
-.atmosphere-overlay{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    padding:42px;
-    background:linear-gradient(to top,
-    rgba(0,0,0,.72),
-    rgba(0,0,0,.15),
-    transparent);
-    color:#fff;
-}
-
-.atmosphere-number{
-    width:48px;
-    height:48px;
-    border-radius:50%;
-    background:#fff;
-    color:#111;
+.atmosphere-section-heading{
     display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:600;
-    margin-bottom:18px;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:80px;
+    margin-bottom:70px;
 }
 
-.atmosphere-overlay h3{
-    font-size:34px;
-    margin-bottom:12px;
-    line-height:1.15;
+.atmosphere-section-heading h2{
+    font-size:64px;
+    line-height:1.05;
+    margin-top:16px;
 }
 
-.atmosphere-overlay p{
-    max-width:420px;
-    opacity:.92;
-    line-height:1.7;
-    margin-bottom:24px;
+.atmosphere-heading-copy{
+    max-width:520px;
 }
 
-.atmosphere-overlay .button{
-    background:white;
-    color:#111;
+.atmosphere-heading-copy p{
+    line-height:1.8;
+    margin-bottom:16px;
 }
 
-/* ===========================
-   ATMOSPHERE HERO
-=========================== */
+.atmosphere-heading-copy span{
+    font-weight:700;
+    color:#9d8568;
+}
+
+.atmosphere-showcase{
+    display:grid;
+    grid-template-columns:1.7fr .72fr;
+    gap:34px;
+}
 
 .atmosphere-hero{
     position:relative;
     overflow:hidden;
-    min-height:760px;
     border-radius:34px;
-    background:#d8d8d8;
+    min-height:760px;
+    background:#ddd;
 }
 
 .atmosphere-hero img{
@@ -215,125 +136,304 @@ min-height:470px;
     object-fit:cover;
 }
 
-.atmosphere-hero::after{
-    content:"";
+.atmosphere-shade{
     position:absolute;
     inset:0;
-    background:
-    linear-gradient(
+    background:linear-gradient(
         90deg,
-        rgba(0,0,0,.72) 0%,
-        rgba(0,0,0,.30) 45%,
-        rgba(0,0,0,.10) 100%
+        rgba(0,0,0,.74),
+        rgba(0,0,0,.28),
+        rgba(0,0,0,.08)
     );
 }
 
-.hero-left{
-
+.atmosphere-hero-copy{
     position:absolute;
-
-    left:70px;
-    bottom:70px;
-
-    max-width:560px;
-
-    color:#fff;
-
+    left:60px;
+    bottom:60px;
     z-index:5;
-
+    max-width:560px;
+    color:#fff;
 }
 
 .collection-tag{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:999px;
+    background:rgba(255,255,255,.16);
+    backdrop-filter:blur(14px);
+    margin-bottom:26px;
+    letter-spacing:.16em;
+    font-size:12px;
+}
 
-display:inline-block;
+.atmosphere-hero-copy h3{
+    font-size:76px;
+    line-height:.95;
+    margin-bottom:24px;
+}
 
-padding:10px 18px;
+.atmosphere-hero-copy p{
+    font-size:19px;
+    line-height:1.9;
+    margin-bottom:34px;
+    opacity:.95;
+}
 
-border-radius:999px;
+.atmosphere-actions{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
 
-background:rgba(255,255,255,.14);
+.atmosphere-paint-only-link{
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+}
 
-backdrop-filter:blur(12px);
+.hotspot{
+    position:absolute;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    border:none;
+    background:#fff;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+    z-index:10;
+}
 
-font-size:12px;
+.hotspot-1{top:22%;left:64%;}
+.hotspot-2{top:39%;left:56%;}
+.hotspot-3{top:56%;left:74%;}
+.hotspot-4{top:67%;left:47%;}
+.hotspot-5{top:30%;left:83%;}
 
-letter-spacing:.18em;
+.atmosphere-panel{
+    background:#fff;
+    border-radius:34px;
+    padding:42px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
 
-margin-bottom:28px;
+.atmosphere-panel-kicker{
+    font-size:13px;
+    letter-spacing:.18em;
+    color:#9d8568;
+    margin-bottom:30px;
+}
+
+.atmosphere-panel-list{
+    display:grid;
+    gap:18px;
+}
+
+.atmosphere-panel-item{
+    display:flex;
+    gap:18px;
+    padding:18px;
+    border-radius:18px;
+    border:1px solid rgba(0,0,0,.06);
+}
+
+.atmosphere-panel-item.is-active{
+    background:#111;
+    color:#fff;
+}
+
+.atmosphere-panel-item span{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#ece7df;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color:#111;
+    flex-shrink:0;
+}
+
+.atmosphere-panel-footer{
+    margin-top:36px;
+}
+
+.atmosphere-panel-footer p{
+    line-height:1.8;
+    margin-bottom:24px;
+}
+
+/* =========================================================
+   ATMOSPHERE TEASERS
+========================================================= */
+
+.atmosphere-teasers{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+    margin-top:42px;
+}
+
+.atmosphere-teaser{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    padding:28px;
+    border-radius:24px;
+    text-decoration:none;
+    transition:.35s;
+    color:#fff;
+    min-height:130px;
+}
+
+.atmosphere-teaser:hover{
+    transform:translateY(-8px);
+}
+
+.atmosphere-teaser span{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:rgba(255,255,255,.18);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.atmosphere-teaser strong{
+    display:block;
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.atmosphere-teaser small{
+    display:block;
+    line-height:1.7;
+    opacity:.9;
+}
+
+.atmosphere-teaser-light{
+    background:linear-gradient(135deg,#c5aa84,#9e7e54);
+}
+
+.atmosphere-teaser-dark{
+    background:linear-gradient(135deg,#242424,#575757);
+}
+
+.atmosphere-teaser-organic{
+    background:linear-gradient(135deg,#758b63,#4f6245);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px){
+
+.atmosphere-showcase{
+
+grid-template-columns:1fr;
 
 }
 
-.hero-left h2{
+.atmosphere-section-heading{
 
-font-size:78px;
-
-line-height:.95;
-
-margin-bottom:24px;
+display:block;
 
 }
 
-.hero-left p{
+.atmosphere-heading-copy{
 
-font-size:20px;
+margin-top:32px;
 
-line-height:1.8;
+max-width:100%;
 
-opacity:.92;
+}
 
-margin-bottom:34px;
+.painting-choice-grid{
 
-max-width:520px;
+grid-template-columns:1fr;
+
+}
+
+.painting-options{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.atmosphere-section{
+
+padding:90px 0;
+
+}
+
+.atmosphere-hero{
+
+min-height:560px;
+
+}
+
+.atmosphere-hero-copy{
+
+left:30px;
+right:30px;
+bottom:30px;
+
+}
+
+.atmosphere-hero-copy h3{
+
+font-size:48px;
+
+}
+
+.atmosphere-actions{
+
+flex-direction:column;
+align-items:flex-start;
+
+}
+
+.atmosphere-teasers{
+
+grid-template-columns:1fr;
 
 }
 
 .hotspot{
 
-position:absolute;
-
-width:46px;
-
-height:46px;
-
-border-radius:50%;
-
-background:#fff;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-weight:700;
-
-z-index:10;
-
-box-shadow:0 15px 40px rgba(0,0,0,.18);
+width:40px;
+height:40px;
+font-size:13px;
 
 }
 
-.hotspot-1{
-top:22%;
-left:65%;
+.painting-choice-copy h2{
+
+font-size:40px;
+
 }
 
-.hotspot-2{
-top:40%;
-left:56%;
+.atmosphere-section-heading h2{
+
+font-size:46px;
+
 }
 
-.hotspot-3{
-top:55%;
-left:74%;
 }
 
-.hotspot-4{
-top:68%;
-left:46%;
-}
-
-.hotspot-5{
-top:30%;
-left:83%;
-}
