@@ -94,3 +94,31 @@ min-height:470px;
 }
 
 }
+
+.atmosphere-container{
+    max-width:1550px;
+}
+
+.project-preview{
+    padding-top:120px;
+    padding-bottom:120px;
+    background:#f8f5f1;
+}
+
+.project-preview-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:40px;
+}
+
+.atmosphere-card{
+    min-height:620px;
+    border-radius:32px;
+}
+
+.atmosphere-card img{
+    transition:transform .8s ease;
+}
+
+.atmosphere-card:hover img{
+    transform:scale(1.05);
+}
