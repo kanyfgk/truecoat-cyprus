@@ -2,7 +2,42 @@
 
 document.documentElement.classList.add("js-enabled");
 
+const TRUECOAT_IMAGE_ROOT = "https://images.unsplash.com/";
+
+const TRUECOAT_IMAGES = {
+  home: `${TRUECOAT_IMAGE_ROOT}photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=88`,
+  painting: `${TRUECOAT_IMAGE_ROOT}photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1600&q=88`,
+  painter: `${TRUECOAT_IMAGE_ROOT}photo-1595814433015-e6f5ce69614e?auto=format&fit=crop&w=1600&q=88`,
+  exterior: `${TRUECOAT_IMAGE_ROOT}photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=1600&q=88`,
+  preparation: `${TRUECOAT_IMAGE_ROOT}photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1600&q=88`,
+  protected: `${TRUECOAT_IMAGE_ROOT}photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=88`,
+
+  mediterranean: `${TRUECOAT_IMAGE_ROOT}photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=88`,
+  mediterraneanDetail: `${TRUECOAT_IMAGE_ROOT}photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88`,
+  mediterraneanEvening: `${TRUECOAT_IMAGE_ROOT}photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=88`,
+
+  modern: `${TRUECOAT_IMAGE_ROOT}photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=88`,
+  modernDetail: `${TRUECOAT_IMAGE_ROOT}photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=88`,
+  modernEvening: `${TRUECOAT_IMAGE_ROOT}photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=88`,
+
+  organic: `${TRUECOAT_IMAGE_ROOT}photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=88`,
+  organicDetail: `${TRUECOAT_IMAGE_ROOT}photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=88`,
+  organicEvening: `${TRUECOAT_IMAGE_ROOT}photo-1618220179428-22790b461013?auto=format&fit=crop&w=1600&q=88`,
+
+  stone: `${TRUECOAT_IMAGE_ROOT}photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=88`,
+  timber: `${TRUECOAT_IMAGE_ROOT}photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=88`,
+  linen: `${TRUECOAT_IMAGE_ROOT}photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=88`,
+  ceramic: `${TRUECOAT_IMAGE_ROOT}photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=88`,
+  lighting: `${TRUECOAT_IMAGE_ROOT}photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=88`,
+  furniture: `${TRUECOAT_IMAGE_ROOT}photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=88`,
+  table: `${TRUECOAT_IMAGE_ROOT}photo-1532372320572-cda25653a694?auto=format&fit=crop&w=1200&q=88`,
+  textile: `${TRUECOAT_IMAGE_ROOT}photo-1615874694520-474822394e73?auto=format&fit=crop&w=1200&q=88`,
+  regionCyprus: `${TRUECOAT_IMAGE_ROOT}photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=88`,
+  regionUK: `${TRUECOAT_IMAGE_ROOT}photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1600&q=88`
+};
+
 document.addEventListener("DOMContentLoaded", () => {
+  initialiseImageSources();
   initialiseHeader();
   initialiseMobileNavigation();
   initialiseCurrentYear();
@@ -10,6 +45,216 @@ document.addEventListener("DOMContentLoaded", () => {
   initialiseSmoothAnchors();
   initialiseSurveyForm();
 });
+
+function initialiseImageSources() {
+  const images = document.querySelectorAll("img");
+
+  images.forEach((image) => {
+    const source = image.getAttribute("src") || "";
+    const filename = source.split("/").pop().toLowerCase();
+
+    if (filename === "home-hero.jpg") {
+      image.src = "images/hero-living-room.jpg";
+      installImageFallback(image, TRUECOAT_IMAGES.home);
+      return;
+    }
+
+    const replacement = findReplacementImage(filename);
+
+    if (!replacement) return;
+
+    image.src = replacement;
+    image.referrerPolicy = "no-referrer";
+  });
+}
+
+function findReplacementImage(filename) {
+  if (
+    filename.includes("painting-hero") ||
+    filename.includes("service-painting") ||
+    filename.includes("painting-interiors") ||
+    filename.includes("difference-craft")
+  ) {
+    return TRUECOAT_IMAGES.painting;
+  }
+
+  if (
+    filename.includes("painting-detail") ||
+    filename.includes("paint-finish") ||
+    filename.includes("material-paint")
+  ) {
+    return TRUECOAT_IMAGES.painter;
+  }
+
+  if (
+    filename.includes("painting-exteriors") ||
+    filename.includes("region-cyprus")
+  ) {
+    return filename.includes("region")
+      ? TRUECOAT_IMAGES.regionCyprus
+      : TRUECOAT_IMAGES.exterior;
+  }
+
+  if (
+    filename.includes("painting-repairs") ||
+    filename.includes("painting-tools") ||
+    filename.includes("preparation")
+  ) {
+    return TRUECOAT_IMAGES.preparation;
+  }
+
+  if (
+    filename.includes("furnished") ||
+    filename.includes("rental-refresh") ||
+    filename.includes("existing-home")
+  ) {
+    return TRUECOAT_IMAGES.protected;
+  }
+
+  if (filename.includes("region-uk")) {
+    return TRUECOAT_IMAGES.regionUK;
+  }
+
+  if (
+    filename.includes("project-mediterranean") ||
+    filename.includes("mediterranean-living") ||
+    filename.includes("mediterranean-adaptation")
+  ) {
+    return TRUECOAT_IMAGES.mediterranean;
+  }
+
+  if (
+    filename.includes("mediterranean-detail") ||
+    filename.includes("mediterranean-product-sofa") ||
+    filename.includes("mediterranean-product-console")
+  ) {
+    return TRUECOAT_IMAGES.mediterraneanDetail;
+  }
+
+  if (filename.includes("mediterranean-evening")) {
+    return TRUECOAT_IMAGES.mediterraneanEvening;
+  }
+
+  if (
+    filename.includes("project-modern") ||
+    filename.includes("modern-living") ||
+    filename.includes("modern-adaptation")
+  ) {
+    return TRUECOAT_IMAGES.modern;
+  }
+
+  if (
+    filename.includes("modern-detail") ||
+    filename.includes("modern-product-sofa") ||
+    filename.includes("modern-product-storage")
+  ) {
+    return TRUECOAT_IMAGES.modernDetail;
+  }
+
+  if (filename.includes("modern-evening")) {
+    return TRUECOAT_IMAGES.modernEvening;
+  }
+
+  if (
+    filename.includes("project-organic") ||
+    filename.includes("organic-living") ||
+    filename.includes("organic-adaptation")
+  ) {
+    return TRUECOAT_IMAGES.organic;
+  }
+
+  if (
+    filename.includes("organic-detail") ||
+    filename.includes("organic-product-sofa") ||
+    filename.includes("organic-product-rug")
+  ) {
+    return TRUECOAT_IMAGES.organicDetail;
+  }
+
+  if (filename.includes("organic-evening")) {
+    return TRUECOAT_IMAGES.organicEvening;
+  }
+
+  if (
+    filename.includes("stone") ||
+    filename.includes("limestone") ||
+    filename.includes("product-table")
+  ) {
+    return TRUECOAT_IMAGES.stone;
+  }
+
+  if (
+    filename.includes("timber") ||
+    filename.includes("oak") ||
+    filename.includes("console") ||
+    filename.includes("storage")
+  ) {
+    return TRUECOAT_IMAGES.timber;
+  }
+
+  if (
+    filename.includes("linen") ||
+    filename.includes("wool") ||
+    filename.includes("fibre") ||
+    filename.includes("textile") ||
+    filename.includes("rug")
+  ) {
+    return filename.includes("textile") || filename.includes("rug")
+      ? TRUECOAT_IMAGES.textile
+      : TRUECOAT_IMAGES.linen;
+  }
+
+  if (filename.includes("ceramic")) {
+    return TRUECOAT_IMAGES.ceramic;
+  }
+
+  if (
+    filename.includes("light") ||
+    filename.includes("atmospheres-budget")
+  ) {
+    return TRUECOAT_IMAGES.lighting;
+  }
+
+  if (
+    filename.includes("sofa") ||
+    filename.includes("chair") ||
+    filename.includes("furniture")
+  ) {
+    return TRUECOAT_IMAGES.furniture;
+  }
+
+  if (
+    filename.includes("home-material-study") ||
+    filename.includes("projects-planning") ||
+    filename.includes("adaptation-detail")
+  ) {
+    return TRUECOAT_IMAGES.table;
+  }
+
+  if (
+    filename.includes("service-atmospheres") ||
+    filename.includes("atmospheres-hero") ||
+    filename.includes("difference-hero") ||
+    filename.includes("difference-restraint") ||
+    filename.includes("home-regions") ||
+    filename.includes("projects-existing")
+  ) {
+    return TRUECOAT_IMAGES.home;
+  }
+
+  return TRUECOAT_IMAGES.home;
+}
+
+function installImageFallback(image, fallbackSource) {
+  image.addEventListener(
+    "error",
+    () => {
+      if (image.src === fallbackSource) return;
+      image.src = fallbackSource;
+    },
+    { once: true }
+  );
+}
 
 function initialiseHeader() {
   const header = document.querySelector("[data-header]");
@@ -24,9 +269,12 @@ function initialiseHeader() {
     const shouldFixHeader = currentScrollPosition > 80;
 
     header.classList.toggle("is-fixed", shouldFixHeader);
-    document.body.classList.toggle("has-fixed-header", shouldFixHeader);
 
-    if (shouldFixHeader && currentScrollPosition > previousScrollPosition && currentScrollPosition > 300) {
+    if (
+      shouldFixHeader &&
+      currentScrollPosition > previousScrollPosition &&
+      currentScrollPosition > 300
+    ) {
       header.style.transform = "translateY(-100%)";
     } else {
       header.style.transform = "translateY(0)";
@@ -39,10 +287,10 @@ function initialiseHeader() {
   window.addEventListener(
     "scroll",
     () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateHeader);
-        ticking = true;
-      }
+      if (ticking) return;
+
+      window.requestAnimationFrame(updateHeader);
+      ticking = true;
     },
     { passive: true }
   );
@@ -71,13 +319,10 @@ function initialiseMobileNavigation() {
   };
 
   menuButton.addEventListener("click", () => {
-    const menuIsOpen = menuButton.getAttribute("aria-expanded") === "true";
+    const menuIsOpen =
+      menuButton.getAttribute("aria-expanded") === "true";
 
-    if (menuIsOpen) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
+    menuIsOpen ? closeMenu() : openMenu();
   });
 
   navigation.querySelectorAll("a").forEach((link) => {
@@ -85,23 +330,18 @@ function initialiseMobileNavigation() {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMenu();
-    }
+    if (event.key === "Escape") closeMenu();
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 1080) {
-      closeMenu();
-    }
+    if (window.innerWidth > 1080) closeMenu();
   });
 }
 
 function initialiseCurrentYear() {
-  const yearElements = document.querySelectorAll("[data-current-year]");
   const currentYear = new Date().getFullYear();
 
-  yearElements.forEach((element) => {
+  document.querySelectorAll("[data-current-year]").forEach((element) => {
     element.textContent = currentYear;
   });
 }
@@ -186,7 +426,9 @@ function initialiseRevealAnimations() {
     ".project-cta__content"
   ];
 
-  const revealElements = document.querySelectorAll(revealSelectors.join(","));
+  const revealElements = document.querySelectorAll(
+    revealSelectors.join(",")
+  );
 
   if (!revealElements.length) return;
 
@@ -215,7 +457,6 @@ function initialiseRevealAnimations() {
       });
     },
     {
-      root: null,
       threshold: 0.12,
       rootMargin: "0px 0px -6% 0px"
     }
@@ -227,15 +468,16 @@ function initialiseRevealAnimations() {
 }
 
 function initialiseSmoothAnchors() {
-  const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+  const anchorLinks = document.querySelectorAll(
+    'a[href^="#"]:not([href="#"])'
+  );
 
   anchorLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
       const targetId = link.getAttribute("href");
-
-      if (!targetId) return;
-
-      const target = document.querySelector(targetId);
+      const target = targetId
+        ? document.querySelector(targetId)
+        : null;
 
       if (!target) return;
 
@@ -250,18 +492,12 @@ function initialiseSmoothAnchors() {
 
       window.scrollTo({
         top: targetPosition,
-        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        behavior: window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches
           ? "auto"
           : "smooth"
       });
-
-      if (!target.hasAttribute("tabindex")) {
-        target.setAttribute("tabindex", "-1");
-      }
-
-      window.setTimeout(() => {
-        target.focus({ preventScroll: true });
-      }, 500);
     });
   });
 }
@@ -294,64 +530,61 @@ function initialiseSurveyForm() {
         status.textContent = "Please select at least one service.";
       }
 
-      const firstService = form.querySelector('input[name="Service"]');
+      const firstService = form.querySelector(
+        'input[name="Service"]'
+      );
 
-      if (firstService) {
-        firstService.focus();
-      }
-
+      if (firstService) firstService.focus();
       return;
     }
 
     const formData = new FormData(form);
-
-    const projectDetails = {
-      name: cleanFormValue(formData.get("Name")),
-      contact: cleanFormValue(formData.get("Contact number")),
-      email: cleanFormValue(formData.get("Email")),
-      region: cleanFormValue(formData.get("Region")),
-      location: cleanFormValue(formData.get("Town or area")),
-      property: cleanFormValue(formData.get("Property type")),
-      furnished: cleanFormValue(formData.get("Furnished property")),
-      timing: cleanFormValue(formData.get("Preferred timing")),
-      message: cleanFormValue(formData.get("Project details")),
-      services: selectedServices.join(", ")
-    };
+    const name = cleanFormValue(formData.get("Name"));
 
     const subject = encodeURIComponent(
-      `TRUECOAT project request — ${projectDetails.name}`
+      `TRUECOAT project request — ${name}`
     );
 
     const body = encodeURIComponent(
       [
         "TRUECOAT PROJECT REQUEST",
         "",
-        `Name: ${projectDetails.name}`,
-        `Phone / WhatsApp: ${projectDetails.contact}`,
-        `Email: ${projectDetails.email}`,
-        `Region: ${projectDetails.region}`,
-        `Town or area: ${projectDetails.location}`,
-        `Property type: ${projectDetails.property}`,
-        `Services: ${projectDetails.services}`,
-        `Furnished property: ${projectDetails.furnished}`,
-        `Preferred timing: ${projectDetails.timing}`,
+        `Name: ${name}`,
+        `Phone / WhatsApp: ${cleanFormValue(
+          formData.get("Contact number")
+        )}`,
+        `Email: ${cleanFormValue(formData.get("Email"))}`,
+        `Region: ${cleanFormValue(formData.get("Region"))}`,
+        `Town or area: ${cleanFormValue(
+          formData.get("Town or area")
+        )}`,
+        `Property type: ${cleanFormValue(
+          formData.get("Property type")
+        )}`,
+        `Services: ${selectedServices.join(", ")}`,
+        `Furnished property: ${cleanFormValue(
+          formData.get("Furnished property")
+        )}`,
+        `Preferred timing: ${cleanFormValue(
+          formData.get("Preferred timing")
+        )}`,
         "",
         "PROJECT DETAILS",
-        projectDetails.message
+        cleanFormValue(formData.get("Project details"))
       ].join("\n")
     );
 
     if (status) {
-      status.textContent = "Opening your email app with the project details…";
+      status.textContent =
+        "Opening your email app with the project details…";
     }
 
-    window.location.href = `mailto:hello@truecoat.co?subject=${subject}&body=${body}`;
+    window.location.href =
+      `mailto:hello@truecoat.co?subject=${subject}&body=${body}`;
   });
 
   form.addEventListener("input", () => {
-    if (status) {
-      status.textContent = "";
-    }
+    if (status) status.textContent = "";
   });
 }
 
