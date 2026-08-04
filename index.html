@@ -1,772 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TRUECOAT transforms interiors through professional painting, considered finishes and complete atmosphere-led improvements.">
+  <meta name="theme-color" content="#191a17">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="TRUECOAT provides premium interior and exterior painting, professional preparation and clean handovers, with optional atmosphere and interior styling projects."
-  >
-
-  <title>TRUECOAT | Premium Painting & Home Atmospheres</title>
+  <title>TRUECOAT — Painting &amp; Interior Atmospheres</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <link
-    rel="stylesheet"
-    href="css/style.css"
-  >
-
-  <link
-    rel="stylesheet"
-    href="css/components.css"
-  >
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
+<body class="page page-home">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<body>
-
-<header
-  class="site-header"
-  id="siteHeader"
->
-  <div class="container header-inner">
-
-    <a
-      href="#home"
-      class="brand"
-      aria-label="TRUECOAT home"
-    >
-      <span class="brand-mark">
-        T
-      </span>
-
-      <span class="brand-text">
-        <strong>
-          TRUECOAT
-        </strong>
-
-        <small>
-          PAINT • CLEAN • TRANSFORM
-        </small>
-      </span>
-    </a>
-
-
-    <nav
-      class="desktop-nav"
-      aria-label="Main navigation"
-    >
-      <a
-        href="#painting.html"
-        data-en="Painting"
-        data-tr="Boya Hizmetleri"
-      >
-        Painting
-      </a>
-
-      <a
-        href="#difference.html"
-        data-en="Our Difference"
-        data-tr="Farkımız"
-      >
-        Our Difference
-      </a>
-
-      <a
-  href="collections.html"
-  data-en="Atmospheres"
-  data-tr="Atmosferler"
->
-  Atmospheres
-</a>
-
-      <a
-        href="projects.html"
-        data-en="Projects"
-        data-tr="Projeler"
-      >
-        Projects
-      </a>
-
-      <a
-        href="#service-areas.html"
-        data-en="Coverage"
-        data-tr="Hizmet Bölgeleri"
-      >
-        Coverage
-      </a>
-    </nav>
-
-
-    <div class="header-actions">
-
-      <button
-        class="language-button"
-        id="languageButton"
-        type="button"
-        aria-label="Change language"
-      >
-        TR
-      </button>
-
-      <a
-        href="#contact"
-        class="button button-dark desktop-quote-button"
-        data-en="Get a Free Quote"
-        data-tr="Ücretsiz Teklif Al"
-      >
-        Get a Free Quote
+  <header class="site-header" data-header>
+    <div class="site-header__inner container">
+      <a class="brand" href="index.html" aria-label="TRUECOAT home">
+        <span class="brand__wordmark">TRUECOAT</span>
+        <span class="brand__descriptor">Painting &amp; Interiors</span>
       </a>
 
       <button
-        class="menu-button"
-        id="menuButton"
+        class="menu-toggle"
         type="button"
-        aria-label="Open menu"
+        aria-label="Open navigation"
         aria-expanded="false"
-        aria-controls="mobileMenu"
+        aria-controls="primary-navigation"
+        data-menu-toggle
       >
         <span></span>
         <span></span>
       </button>
 
+      <nav
+        class="site-navigation"
+        id="primary-navigation"
+        aria-label="Primary navigation"
+        data-navigation
+      >
+        <a href="painting.html">Painting</a>
+        <a href="difference.html">Our Difference</a>
+        <a href="atmospheres.html">Atmospheres</a>
+        <a href="projects.html">Projects</a>
+        <a href="service-areas.html">Service Areas</a>
+        <a class="button button--small button--dark" href="service-areas.html#request-survey">
+          Request a survey
+        </a>
+      </nav>
     </div>
-
-  </div>
-
-
-  <div
-    class="mobile-menu"
-    id="mobileMenu"
-  >
-    <a
-      href="#painting.html"
-      data-en="Painting"
-      data-tr="Boya Hizmetleri"
-    >
-      Painting
-    </a>
-
-    <a
-      href="#difference.html"
-      data-en="Our Difference"
-      data-tr="Farkımız"
-    >
-      Our Difference
-    </a>
-
-    <a
-href="project-mediterranean.html"
-data-en="Projects"
-data-tr="Projeler"
->
-
-Projects
-
-</a>
-
-    <a
-      href="#process"
-      data-en="Process"
-      data-tr="Süreç"
-    >
-      Process
-    </a>
-
-    <a
-      href="#service-areas.html"
-      data-en="Coverage"
-      data-tr="Hizmet Bölgeleri"
-    >
-      Coverage
-    </a>
-
-    <a
-      href="#contact"
-      class="button button-dark"
-      data-en="Get a Free Quote"
-      data-tr="Ücretsiz Teklif Al"
-    >
-      Get a Free Quote
-    </a>
-  </div>
-
-</header>
-
-<main>
-
-  <section class="hero">
-
-<div class="container hero-layout">
-
-<div class="hero-left">
-
-<span class="eyebrow">
-PREMIUM PAINTING
-</span>
-
-<h1>
-
-Painting that transforms
-the way your home feels.
-
-</h1>
-
-<p>
-
-Professional interior and exterior painting.
-Optional atmosphere design.
-One premium experience.
-
-</p>
-
-<div class="hero-buttons">
-
-<a
-href="painting.html"
-class="button button-dark"
->
-
-Painting Services
-
-</a>
-
-<a
-href="projects.html"
-class="button button-light"
->
-
-Explore Projects
-
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-right">
-
-<img
-src="images/hero-living-room.jpg"
-alt="TRUECOAT"
->
-
-</div>
-
-</div>
-
-</section>
-
-  <section class="home-navigation">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="eyebrow">
-DISCOVER TRUECOAT
-</span>
-
-<h2>
-Choose where you
-want to start.
-</h2>
-
-</div>
-
-<div class="navigation-grid">
-
-<a href="painting.html" class="navigation-card">
-
-<h3>
-Painting
-</h3>
-
-<p>
-
-Professional interior
-and exterior painting.
-
-</p>
-
-</a>
-
-<a href="difference.html" class="navigation-card">
-
-<h3>
-Why TrueCoat
-</h3>
-
-<p>
-
-See what makes
-our service different.
-
-</p>
-
-</a>
-
-<a href="atmospheres.html" class="navigation-card">
-
-<h3>
-Atmospheres
-</h3>
-
-<p>
-
-Discover complete
-living concepts.
-
-</p>
-
-</a>
-
-<a href="projects.html" class="navigation-card">
-
-<h3>
-Projects
-</h3>
-
-<p>
-
-See finished
-transformations.
-
-</p>
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="featured-projects">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span class="eyebrow">
-FEATURED PROJECTS
-</span>
-
-<h2>
-Real homes.
-Real transformations.
-</h2>
-
-<p>
-
-Every project begins with professional painting.
-Atmosphere is optional.
-
-</p>
-
-</div>
-
-<div class="projects-grid">
-
-<a href="project-mediterranean.html" class="project-card">
-
-<img
-src="images/hero-living-room.jpg"
-alt="Mediterranean Silence"
->
-
-<div class="project-card-content">
-
-<span>01</span>
-
-<h3>
-Mediterranean Silence
-</h3>
-
-<p>
-
-Warm neutrals,
-natural textures
-and timeless painting.
-
-</p>
-
-</div>
-
-</a>
-
-<a href="project-modern.html" class="project-card">
-
-<img
-src="images/hero-living-room.jpg"
-alt="Modern Contrast"
->
-
-<div class="project-card-content">
-
-<span>02</span>
-
-<h3>
-Modern Contrast
-</h3>
-
-<p>
-
-Minimal luxury
-with architectural finishes.
-
-</p>
-
-</div>
-
-</a>
-
-<a href="project-organic.html" class="project-card">
-
-<img
-src="images/hero-living-room.jpg"
-alt="Organic Living"
->
-
-<div class="project-card-content">
-
-<span>03</span>
-
-<h3>
-Organic Living
-</h3>
-
-<p>
-
-Natural colours
-inspired by calm living.
-
-</p>
-
-</div>
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-  <section class="home-cta">
-
-<div class="container">
-
-<span class="eyebrow">
-READY TO START?
-</span>
-
-<h2>
-
-Let's create
-something beautiful.
-
-</h2>
-
-<p>
-
-Whether you need professional painting
-or a complete atmosphere,
-we're ready to help.
-
-</p>
-
-<div class="hero-buttons">
-
-<a
-href="painting.html"
-class="button button-dark"
->
-
-Painting Services
-
-</a>
-
-<a
-href="#contact"
-class="button button-light"
->
-
-Request Free Quote
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="contact-section" id="contact">
-
-<div class="container">
-
-<div class="contact-hero">
-
-<span class="eyebrow">
-START YOUR PROJECT
-</span>
-
-<h2>
-Let's transform
-your home.
-</h2>
-
-<p>
-
-Tell us about your property.
-We'll prepare a professional quotation
-and help you choose the right solution.
-
-</p>
-
-</div>
-
-<div class="contact-layout">
-
-<div class="contact-left">
-
-<div class="contact-card">
-
-<h3>
-Painting
-</h3>
-
-<p>
-
-Professional interior and exterior painting.
-
-</p>
-
-</div>
-
-<div class="contact-card">
-
-<h3>
-Atmosphere Design
-</h3>
-
-<p>
-
-Optional furniture,
-lighting
-and décor guidance.
-
-</p>
-
-</div>
-
-<div class="contact-card">
-
-<h3>
-Free Survey
-</h3>
-
-<p>
-
-Available across North Cyprus.
-
-</p>
-
-</div>
-
-</div>
-
-<form
-class="quote-form"
-id="quoteForm"
->
-
-<input
-type="text"
-id="name"
-placeholder="Your Name"
-required
->
-
-<input
-type="text"
-id="location"
-placeholder="Location"
-required
->
-
-<select id="projectType">
-
-<option>
-Interior Painting
-</option>
-
-<option>
-Exterior Painting
-</option>
-
-<option>
-Painting + Atmosphere
-</option>
-
-</select>
-
-<textarea
-id="details"
-placeholder="Tell us about your project..."
-></textarea>
-
-<button
-type="submit"
-class="button button-dark"
->
-
-Request Free Quote
-
-</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-<footer class="site-footer">
-
-<div class="container footer-grid">
-
-<div>
-
-<h3>
-TRUECOAT
-</h3>
-
-<p>
-
-Premium painting
-for homes that deserve
-more than just colour.
-
-</p>
-
-</div>
-
-<div>
-
-<h4>
-Services
-</h4>
-
-<a href="#services">
-Interior Painting
-</a>
-
-<a href="#services">
-Exterior Painting
-</a>
-
-<a href="#services">
-Commercial Painting
-</a>
-
-</div>
-
-<div>
-
-<h4>
-Projects
-</h4>
-
-<a href="project-mediterranean.html">
-Mediterranean Silence
-</a>
-
-<a href="project-modern.html">
-Modern Contrast
-</a>
-
-<a href="project-organic.html">
-Organic Living
-</a>
-
-</div>
-
-<div>
-
-<h4>
-Contact
-</h4>
-
-<p>
-
-North Cyprus
-
-</p>
-
-<p>
-
-WhatsApp
-
-</p>
-
-<p>
-
-Free Survey
-
-</p>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-<p>
-
-© 2026 TRUECOAT
-
-</p>
-
-</div>
-
-</footer>
-
-<a
-href="https://wa.me/905000000000"
-class="floating-whatsapp"
-target="_blank"
->
-
-WhatsApp
-
-</a>
-
-<script src="js/app.js"></script>
-
+  </header>
+
+  <main id="main-content">
+    <section class="home-hero">
+      <div class="home-hero__media" aria-hidden="true">
+        <img
+          src="assets/images/home-hero.jpg"
+          alt=""
+          width="1920"
+          height="1280"
+          fetchpriority="high"
+        >
+      </div>
+
+      <div class="home-hero__overlay"></div>
+
+      <div class="home-hero__content container">
+        <p class="eyebrow eyebrow--light">Professional painting. Complete interiors.</p>
+
+        <h1>
+          More than a fresh coat.<br>
+          <em>A better atmosphere.</em>
+        </h1>
+
+        <p class="home-hero__intro">
+          Considered colour, precise workmanship and finishing details that transform
+          the way a home looks, feels and lives.
+        </p>
+
+        <div class="home-hero__actions">
+          <a class="button button--light" href="projects.html">Explore our work</a>
+          <a class="text-link text-link--light" href="painting.html">
+            Discover our painting service
+            <span aria-hidden="true">↗️</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="home-hero__foot container">
+        <span>Residential interiors</span>
+        <span>Exterior painting</span>
+        <span>Atmosphere-led improvements</span>
+      </div>
+    </section>
+
+    <section class="home-introduction section">
+      <div class="container">
+        <div class="home-introduction__heading">
+          <p class="eyebrow">The TRUECOAT approach</p>
+
+          <h2 class="display-title">
+            Painting is where the transformation begins.
+          </h2>
+        </div>
+
+        <div class="home-introduction__body">
+          <p class="lead">
+            We combine experienced painting with a more complete understanding of
+            the interior—how colour, light, texture and placement work together.
+          </p>
+
+          <p>
+            You can choose a professionally finished painting service or ask us to
+            shape the wider atmosphere of the room. Every recommendation remains
+            practical, considered and tailored to the property.
+          </p>
+
+          <a class="text-link" href="difference.html">
+            See what makes TRUECOAT different
+            <span aria-hidden="true">↗️</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-services section section--warm">
+      <div class="container">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">What we do</p>
+            <h2>One team.<br>Two levels of transformation.</h2>
+          </div>
+
+          <p>
+            From a beautifully repainted room to a more complete interior refresh,
+            the scope is built around what your home actually needs.
+          </p>
+        </div>
+
+        <div class="home-services__grid">
+          <article class="service-feature">
+            <a class="service-feature__image" href="painting.html" aria-label="Explore professional painting">
+              <img
+                src="assets/images/service-painting.jpg"
+                alt="A professionally painted, softly lit living room"
+                width="1200"
+                height="1500"
+                loading="lazy"
+              >
+            </a>
+
+            <div class="service-feature__content">
+              <span class="service-feature__number">01</span>
+
+              <div>
+                <h3>Professional Painting</h3>
+                <p>
+                  Interior and exterior painting with careful preparation, clean
+                  execution and a finish designed to last.
+                </p>
+                <a class="text-link" href="painting.html">
+                  Explore painting
+                  <span aria-hidden="true">↗️</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-feature service-feature--offset">
+            <a class="service-feature__image" href="atmospheres.html" aria-label="Explore TRUECOAT Atmospheres">
+              <img
+                src="assets/images/service-atmospheres.jpg"
+                alt="A calm interior styled with natural materials and neutral colours"
+                width="1200"
+                height="1500"
+                loading="lazy"
+              >
+            </a>
+
+            <div class="service-feature__content">
+              <span class="service-feature__number">02</span>
+
+              <div>
+                <h3>TRUECOAT Atmospheres</h3>
+                <p>
+                  Curated interior directions combining paint, lighting, furniture
+                  and finishing details into one coherent mood.
+                </p>
+                <a class="text-link" href="atmospheres.html">
+                  Explore atmospheres
+                  <span aria-hidden="true">↗️</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-proof section">
+      <div class="container">
+        <div class="home-proof__statement">
+          <p class="eyebrow">Built on experience</p>
+
+          <blockquote>
+            “A premium result is rarely about adding more. It is about making every
+            decision feel intentional.”
+          </blockquote>
+        </div>
+
+        <div class="home-proof__facts" aria-label="TRUECOAT service benefits">
+          <article>
+            <strong>20+</strong>
+            <span>Years of hands-on painting experience</span>
+          </article>
+
+          <article>
+            <strong>01</strong>
+            <span>Dedicated team from preparation to completion</span>
+          </article>
+
+          <article>
+            <strong>100%</strong>
+            <span>Clear scope agreed before work begins</span>
+          </article>
+
+          <article>
+            <strong>Free</strong>
+            <span>Initial property survey and consultation</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-featured section section--dark">
+      <div class="container">
+        <div class="section-heading section-heading--split section-heading--light">
+          <div>
+            <p class="eyebrow eyebrow--light">Selected atmospheres</p>
+            <h2>Designed to feel complete.</h2>
+          </div>
+
+          <a class="text-link text-link--light" href="projects.html">
+            View all projects
+            <span aria-hidden="true">↗️</span>
+          </a>
+        </div>
+
+        <div class="project-showcase">
+          <article class="project-card project-card--large">
+            <a href="project-mediterranean.html">
+              <div class="project-card__image">
+                <img
+                  src="assets/images/project-mediterranean-cover.jpg"
+                  alt="Warm Mediterranean-inspired living space"
+                  width="1600"
+                  height="1900"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="project-card__meta">
+                <div>
+                  <span>Atmosphere 01</span>
+                  <h3>Mediterranean Calm</h3>
+                </div>
+                <span class="project-card__arrow" aria-hidden="true">↗️</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <a href="project-modern.html">
+              <div class="project-card__image">
+                <img
+                  src="assets/images/project-modern-cover.jpg"
+                  alt="Minimal contemporary interior in quiet neutral shades"
+                  width="1200"
+                  height="1400"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="project-card__meta">
+                <div>
+                  <span>Atmosphere 02</span>
+                  <h3>Quiet Modern</h3>
+                </div>
+                <span class="project-card__arrow" aria-hidden="true">↗️</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <a href="project-organic.html">
+              <div class="project-card__image">
+                <img
+                  src="assets/images/project-organic-cover.jpg"
+                  alt="Organic interior featuring stone, wood and soft textiles"
+                  width="1200"
+                  height="1400"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="project-card__meta">
+                <div>
+                  <span>Atmosphere 03</span>
+                  <h3>Organic Retreat</h3>
+                </div>
+                <span class="project-card__arrow" aria-hidden="true">↗️</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-process section">
+      <div class="container">
+        <div class="home-process__intro">
+          <p class="eyebrow">A clear process</p>
+          <h2>From first look<br>to final detail.</h2>
+
+          <p>
+            Every project begins by understanding the property, the desired result
+            and the level of service required.
+          </p>
+        </div>
+
+        <ol class="process-list">
+          <li>
+            <span class="process-list__number">01</span>
+            <div>
+              <h3>Tell us about the space</h3>
+              <p>
+                Share the property type, location and the areas you want to improve.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="process-list__number">02</span>
+            <div>
+              <h3>Property survey</h3>
+              <p>
+                We inspect the surfaces, understand the scope and discuss the result
+                you want to achieve.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="process-list__number">03</span>
+            <div>
+              <h3>Clear proposal</h3>
+              <p>
+                You receive a tailored plan covering preparation, finishes, timing
+                and the agreed project cost.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="process-list__number">04</span>
+            <div>
+              <h3>Transformation</h3>
+              <p>
+                Our team completes the work carefully and leaves the space ready to
+                be enjoyed.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="home-regions">
+      <div class="home-regions__image" aria-hidden="true">
+        <img
+          src="assets/images/home-regions.jpg"
+          alt=""
+          width="1920"
+          height="1100"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="home-regions__content container">
+        <div class="home-regions__panel">
+          <p class="eyebrow">Where we work</p>
+
+          <h2>Local attention.<br>International outlook.</h2>
+
+          <p>
+            TRUECOAT serves selected residential properties across our active
+            regions. Availability and project scope are confirmed during the first
+            consultation.
+          </p>
+
+          <a class="button button--dark" href="service-areas.html">
+            View service areas
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-journal section">
+      <div class="container">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Before you choose a colour</p>
+            <h2>A room should be considered as a whole.</h2>
+          </div>
+
+          <div>
+            <p>
+              The same paint can feel entirely different depending on daylight,
+              artificial lighting, floor tone and the materials already present.
+            </p>
+
+            <a class="text-link" href="difference.html">
+              Understand our approach
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </div>
+        </div>
+
+        <figure class="home-journal__visual">
+          <img
+            src="assets/images/home-material-study.jpg"
+            alt="Paint samples arranged with stone, timber and natural fabric"
+            width="1800"
+            height="1000"
+            loading="lazy"
+          >
+          <figcaption>
+            Colour, material and light are reviewed together—not as separate choices.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="home-cta section section--accent">
+      <div class="container">
+        <div class="home-cta__content">
+          <p class="eyebrow">Start your project</p>
+
+          <h2>
+            Show us the space.<br>
+            We’ll show you what it could become.
+          </h2>
+
+          <p>
+            Request an initial survey for professional painting or a more complete
+            TRUECOAT transformation.
+          </p>
+
+          <div class="home-cta__actions">
+            <a class="button button--dark" href="service-areas.html#request-survey">
+              Request a free survey
+            </a>
+            <a class="text-link" href="projects.html">
+              View project directions
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="brand brand--footer" href="index.html" aria-label="TRUECOAT home">
+          <span class="brand__wordmark">TRUECOAT</span>
+          <span class="brand__descriptor">Painting &amp; Interiors</span>
+        </a>
+
+        <p>
+          Professional painting and atmosphere-led interior improvements for
+          considered homes.
+        </p>
+      </div>
+
+      <div class="site-footer__navigation">
+        <div>
+          <h2>Services</h2>
+          <a href="painting.html">Professional Painting</a>
+          <a href="atmospheres.html">TRUECOAT Atmospheres</a>
+          <a href="projects.html">Selected Projects</a>
+        </div>
+
+        <div>
+          <h2>TRUECOAT</h2>
+          <a href="difference.html">Our Difference</a>
+          <a href="service-areas.html">Service Areas</a>
+          <a href="service-areas.html#request-survey">Request a Survey</a>
+        </div>
+
+        <div>
+          <h2>Featured</h2>
+          <a href="project-mediterranean.html">Mediterranean Calm</a>
+          <a href="project-modern.html">Quiet Modern</a>
+          <a href="project-organic.html">Organic Retreat</a>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-current-year></span> TRUECOAT. All rights reserved.</p>
+
+        <p>Painting &amp; interiors, thoughtfully finished.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
 </body>
-
 </html>
-
-
