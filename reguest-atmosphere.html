@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Send your property details and request a tailored TRUECOAT atmosphere, painting and interior transformation proposal."
+  >
+
+  <meta name="theme-color" content="#191a17">
+
+  <title>Request Your Atmosphere — TRUECOAT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="page page-atmosphere-request" data-atmosphere-request-page>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="site-header__inner container">
+      <a class="brand" href="index.html" aria-label="TRUECOAT home">
+        <span class="brand__wordmark">TRUECOAT</span>
+        <span class="brand__descriptor">Painting &amp; Interiors</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        data-menu-toggle
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav
+        class="site-navigation"
+        id="primary-navigation"
+        aria-label="Primary navigation"
+        data-navigation
+      >
+        <a href="painting.html">Painting</a>
+        <a href="difference.html">Our Difference</a>
+        <a href="atmospheres.html">Atmospheres</a>
+        <a href="projects.html">Projects</a>
+        <a href="service-areas.html">Service Areas</a>
+
+        <a
+          class="button button--small button--dark"
+          href="service-areas.html#request-survey"
+        >
+          Request a survey
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="atmosphere-request-hero">
+      <div class="container">
+        <a
+          class="atmosphere-request-hero__back"
+          href="projects.html"
+          data-request-back-link
+        >
+          <span aria-hidden="true">←</span>
+          Return to project
+        </a>
+
+        <p class="eyebrow">Your TRUECOAT project</p>
+
+        <h1>
+          I want this atmosphere
+          <em>in my home.</em>
+        </h1>
+
+        <p>
+          Send us a few details and photographs. We will review how your selected
+          atmosphere can be adapted to your property.
+        </p>
+      </div>
+    </section>
+
+    <section class="atmosphere-request section">
+      <div class="container">
+        <div class="atmosphere-request__main">
+          <form
+            class="atmosphere-application"
+            data-atmosphere-request-form
+            novalidate
+          >
+            <input
+              type="hidden"
+              name="Project"
+              value="Mediterranean Calm"
+              data-request-project-input
+            >
+
+            <input
+              type="hidden"
+              name="Selected products"
+              value=""
+              data-request-products-input
+            >
+
+            <input
+              type="hidden"
+              name="Estimated product total"
+              value=""
+              data-request-total-input
+            >
+
+            <section class="atmosphere-application__section">
+              <div class="atmosphere-application__section-heading">
+                <span>01</span>
+
+                <div>
+                  <h2>Your details</h2>
+                  <p>Tell us who we should contact about the project.</p>
+                </div>
+              </div>
+
+              <div class="atmosphere-application__fields">
+                <div class="form-field">
+                  <label for="atmosphere-name">Full name</label>
+
+                  <input
+                    id="atmosphere-name"
+                    name="Full name"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="Your full name"
+                    required
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="atmosphere-email">Email address</label>
+
+                  <input
+                    id="atmosphere-email"
+                    name="Email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="name@example.com"
+                    required
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="atmosphere-phone">Phone or WhatsApp</label>
+
+                  <input
+                    id="atmosphere-phone"
+                    name="Phone or WhatsApp"
+                    type="tel"
+                    autocomplete="tel"
+                    placeholder="+44 or +90"
+                    required
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="atmosphere-contact-method">
+                    Preferred contact method
+                  </label>
+
+                  <select
+                    id="atmosphere-contact-method"
+                    name="Preferred contact method"
+                    required
+                  >
+                    <option value="" selected disabled>Select one</option>
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Phone call">Phone call</option>
+                    <option value="Email">Email</option>
+                  </select>
+                </div>
+              </div>
+            </section>
+
+            <section class="atmosphere-application__section">
+              <div class="atmosphere-application__section-heading">
+                <span>02</span>
+
+                <div>
+                  <h2>Your property</h2>
+                  <p>
+                    These details help us understand the room before arranging a
+                    survey.
+                  </p>
+                </div>
+              </div>
+
+              <div class="atmosphere-application__fields">
+                <div class="form-field form-field--wide">
+                  <label for="atmosphere-address">Property location</label>
+
+                  <input
+                    id="atmosphere-address"
+                    name="Property location"
+                    type="text"
+                    autocomplete="street-address"
+                    placeholder="Town, area or postcode"
+                    required
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="atmosphere-region">Region</label>
+
+                  <select
+                    id="atmosphere-region"
+                    name="Region"
+                    required
+                  >
+                    <option value="" selected disabled>Select your region</option>
+                    <option value="Northern Cyprus">Northern Cyprus</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Other location">Another location</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="atmosphere-property-type">Property type</label>
+
+                  <select
+                    id="atmosphere-property-type"
+                    name="Property type"
+                    required
+                  >
+                    <option value="" selected disabled>Select property type</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Villa or house">Villa or house</option>
+                    <option value="Rental property">Rental property</option>
+                    <option value="Holiday residence">Holiday residence</option>
+                    <option value="Commercial interior">Commercial interior</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="atmosphere-room-type">Room type</label>
+
+                  <select
+                    id="atmosphere-room-type"
+                    name="Room type"
+                    required
+                  >
+                    <option value="" selected disabled>Select room</option>
+                    <option value="Living room">Living room</option>
+                    <option value="Bedroom">Bedroom</option>
+                    <option value="Dining room">Dining room</option>
+                    <option value="Open-plan interior">Open-plan interior</option>
+                    <option value="Multiple rooms">Multiple rooms</option>
+                    <option value="Other room">Other room</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="atmosphere-room-size">
+                    Approximate room size
+                  </label>
+
+                  <input
+                    id="atmosphere-room-size"
+                    name="Approximate room size"
+                    type="number"
+                    inputmode="decimal"
+                    min="1"
+                    max="1000"
+                    placeholder="m²"
+                    required
+                  >
+                </div>
+
+                <div class="form-field">
+                  <label for="atmosphere-furnished">
+                    Is the property furnished?
+                  </label>
+
+                  <select
+                    id="atmosphere-furnished"
+                    name="Furnished property"
+                    required
+                  >
+                    <option value="" selected disabled>Select one</option>
+                    <option value="Fully furnished">Fully furnished</option>
+                    <option value="Partly furnished">Partly furnished</option>
+                    <option value="Empty property">Empty property</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="atmosphere-ownership">
+                    Property status
+                  </label>
+
+                  <select
+                    id="atmosphere-ownership"
+                    name="Property status"
+                    required
+                  >
+                    <option value="" selected disabled>Select one</option>
+                    <option value="I own the property">
+                      I own the property
+                    </option>
+                    <option value="I rent with permission">
+                      I rent with permission
+                    </option>
+                    <option value="Property under purchase">
+                      Property under purchase
+                    </option>
+                    <option value="Commercially managed">
+                      Commercially managed
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </section>
+
+            <section class="atmosphere-application__section">
+              <div class="atmosphere-application__section-heading">
+                <span>03</span>
+
+                <div>
+                  <h2>Project scope</h2>
+                  <p>
+                    Select the services you would like TRUECOAT to consider.
+                  </p>
+                </div>
+              </div>
+
+              <fieldset class="atmosphere-scope">
+                <legend>Which services are you interested in?</legend>
+
+                <label class="atmosphere-scope__option">
+                  <input
+                    type="checkbox"
+                    name="Requested service"
+                    value="Professional painting"
+                    checked
+                  >
+
+                  <span>
+                    <strong>Professional painting</strong>
+                    <small>
+                      Preparation, colour direction and professional application.
+                    </small>
+                  </span>
+                </label>
+
+                <label class="atmosphere-scope__option">
+                  <input
+                    type="checkbox"
+                    name="Requested service"
+                    value="Selected atmosphere products"
+                    checked
+                  >
+
+                  <span>
+                    <strong>Selected atmosphere products</strong>
+                    <small>
+                      The products saved from your chosen atmosphere.
+                    </small>
+                  </span>
+                </label>
+
+                <label class="atmosphere-scope__option">
+                  <input
+                    type="checkbox"
+                    name="Requested service"
+                    value="Product alternatives"
+                  >
+
+                  <span>
+                    <strong>Alternative product sourcing</strong>
+                    <small>
+                      Similar products selected for your location and budget.
+                    </small>
+                  </span>
+                </label>
+
+                <label class="atmosphere-scope__option">
+                  <input
+                    type="checkbox"
+                    name="Requested service"
+                    value="Delivery and installation"
+                  >
+
+                  <span>
+                    <strong>Delivery and installation</strong>
+                    <small>
+                      Delivery, assembly and agreed product placement.
+                    </small>
+                  </span>
+                </label>
+
+                <label class="atmosphere-scope__option">
+                  <input
+                    type="checkbox"
+                    name="Requested service"
+                    value="Furniture moving"
+                  >
+
+                  <span>
+                    <strong>Furniture moving</strong>
+                    <small>
+                      Additional moving support for furnished properties.
+                    </small>
+                  </span>
+                </label>
+
+                <label class="atmosphere-scope__option">
+                  <input
+                    type="checkbox"
+                    name="Requested service"
+                    value="Complete atmosphere transformation"
+                  >
+
+                  <span>
+                    <strong>Complete transformation</strong>
+                    <small>
+                      Painting, product direction and final room presentation.
+                    </small>
+                  </span>
+                </label>
+              </fieldset>
+
+              <div class="atmosphere-application__fields">
+                <div class="form-field">
+                  <label for="atmosphere-budget">Preferred budget</label>
+
+                  <select
+                    id="atmosphere-budget"
+                    name="Preferred budget"
+                    required
+                  >
+                    <option value="" selected disabled>Select a range</option>
+                    <option value="Under £1,000">Under £1,000</option>
+                    <option value="£1,000–£2,500">£1,000–£2,500</option>
+                    <option value="£2,500–£5,000">£2,500–£5,000</option>
+                    <option value="£5,000–£10,000">£5,000–£10,000</option>
+                    <option value="Above £10,000">Above £10,000</option>
+                    <option value="I need guidance">I need guidance</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="atmosphere-timing">Preferred timing</label>
+
+                  <select
+                    id="atmosphere-timing"
+                    name="Preferred timing"
+                    required
+                  >
+                    <option value="" selected disabled>Select timing</option>
+                    <option value="As soon as possible">
+                      As soon as possible
+                    </option>
+                    <option value="Within one month">Within one month</option>
+                    <option value="Within three months">Within three months</option>
+                    <option value="Within six months">Within six months</option>
+                    <option value="Planning ahead">Planning ahead</option>
+                  </select>
+                </div>
+
+                <div class="form-field form-field--wide">
+                  <label for="atmosphere-notes">
+                    What would you like to change?
+                  </label>
+
+                  <textarea
+                    id="atmosphere-notes"
+                    name="Project notes"
+                    rows="6"
+                    placeholder="Tell us what currently does not feel right, what you want to keep and what result you would like to achieve."
+                    required
+                  ></textarea>
+                </div>
+              </div>
+            </section>
+
+            <section class="atmosphere-application__section">
+              <div class="atmosphere-application__section-heading">
+                <span>04</span>
+
+                <div>
+                  <h2>Property photographs</h2>
+                  <p>
+                    Add photographs from different angles so we can understand the
+                    existing room.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="atmosphere-upload"
+                data-atmosphere-upload
+              >
+                <label
+                  class="atmosphere-upload__dropzone"
+                  for="atmosphere-photos"
+                >
+                  <span class="atmosphere-upload__icon" aria-hidden="true">↑</span>
+
+                  <strong>Upload property photographs</strong>
+
+                  <small>
+                    JPG, PNG or WEBP. Select up to six images.
+                  </small>
+                </label>
+
+                <input
+                  id="atmosphere-photos"
+                  name="Property photographs"
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  multiple
+                  data-atmosphere-file-input
+                >
+
+                <div
+                  class="atmosphere-upload__previews"
+                  aria-live="polite"
+                  data-atmosphere-previews
+                ></div>
+              </div>
+
+              <p class="atmosphere-upload__notice">
+                Photographs are previewed in your browser. Your email application
+                may require the original photographs to be attached separately when
+                the request is submitted.
+              </p>
+            </section>
+
+            <label class="atmosphere-application__consent">
+              <input
+                type="checkbox"
+                name="Consent"
+                value="Accepted"
+                required
+              >
+
+              <span>
+                I agree that TRUECOAT may use the information supplied to review
+                this project and contact me about my request.
+              </span>
+            </label>
+
+            <button
+              class="button button--dark atmosphere-application__submit"
+              type="submit"
+            >
+              Submit project request
+            </button>
+
+            <p
+              class="atmosphere-application__status"
+              aria-live="polite"
+              data-atmosphere-request-status
+            ></p>
+          </form>
+        </div>
+
+        <aside class="atmosphere-request__sidebar">
+          <section class="request-project-card">
+            <div class="request-project-card__image">
+              <img
+                src="assets/images/project-mediterranean-cover.jpg"
+                alt=""
+                width="900"
+                height="700"
+                data-request-project-image
+              >
+            </div>
+
+            <div class="request-project-card__content">
+              <span data-request-project-number>Atmosphere 01</span>
+              <h2 data-request-project-name>Mediterranean Calm</h2>
+
+              <p data-request-project-description>
+                Natural materials, sun-washed colour and relaxed forms create a
+                warm, balanced living space.
+              </p>
+
+              <a
+                href="project-mediterranean.html"
+                data-request-project-link
+              >
+                View project details
+                <span aria-hidden="true">↗️</span>
+              </a>
+            </div>
+          </section>
+
+          <section class="request-selected-products">
+            <div class="request-selected-products__heading">
+              <h2>Your selected products</h2>
+              <span data-request-selected-count>0 items</span>
+            </div>
+
+            <div
+              class="request-selected-products__list"
+              data-request-selected-products
+            >
+              <p class="request-selected-products__empty">
+                Your saved atmosphere products will appear here.
+              </p>
+            </div>
+          </section>
+
+          <section class="request-benefits">
+            <h2>What happens next?</h2>
+
+            <ul>
+              <li>
+                <span>01</span>
+
+                <div>
+                  <strong>Project review</strong>
+                  <p>
+                    We review your property details, photographs and selected
+                    products.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <span>02</span>
+
+                <div>
+                  <strong>Initial contact</strong>
+                  <p>
+                    We contact you to clarify the scope and arrange the appropriate
+                    survey.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <span>03</span>
+
+                <div>
+                  <strong>Tailored direction</strong>
+                  <p>
+                    The chosen atmosphere is adapted to your property, location and
+                    budget.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <span>04</span>
+
+                <div>
+                  <strong>Clear proposal</strong>
+                  <p>
+                    You receive a defined proposal for painting, products and
+                    agreed installation.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="request-investment">
+            <h2>Current estimate</h2>
+
+            <dl>
+              <div>
+                <dt>Selected products</dt>
+                <dd data-request-product-total>To be confirmed</dd>
+              </div>
+
+              <div>
+                <dt>Professional painting</dt>
+                <dd>Survey required</dd>
+              </div>
+
+              <div>
+                <dt>Delivery &amp; installation</dt>
+                <dd>Quote required</dd>
+              </div>
+            </dl>
+
+            <div class="request-investment__total">
+              <span>Estimated project investment</span>
+
+              <strong data-request-project-total>
+                Tailored proposal required
+              </strong>
+
+              <small>
+                Final prices depend on product availability, property condition,
+                location and selected services.
+              </small>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <section class="request-process section section--warm">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">How it works</p>
+          <h2>From photographs to a finished atmosphere.</h2>
+        </div>
+
+        <ol class="request-process__steps">
+          <li>
+            <span>01</span>
+            <h3>Send your information</h3>
+            <p>
+              Complete the form and show us the existing property.
+            </p>
+          </li>
+
+          <li>
+            <span>02</span>
+            <h3>Arrange the survey</h3>
+            <p>
+              We contact you and confirm the most suitable survey process.
+            </p>
+          </li>
+
+          <li>
+            <span>03</span>
+            <h3>Receive your proposal</h3>
+            <p>
+              We adapt the atmosphere and define painting, product and installation
+              costs.
+            </p>
+          </li>
+
+          <li>
+            <span>04</span>
+            <h3>Transform the room</h3>
+            <p>
+              Once approved, the painting and agreed improvements can begin.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <a class="brand brand--footer" href="index.html" aria-label="TRUECOAT home">
+          <span class="brand__wordmark">TRUECOAT</span>
+          <span class="brand__descriptor">Painting &amp; Interiors</span>
+        </a>
+
+        <p>
+          Professional painting and atmosphere-led interior improvements for
+          considered homes.
+        </p>
+      </div>
+
+      <div class="site-footer__navigation">
+        <div>
+          <h2>Services</h2>
+          <a href="painting.html">Professional Painting</a>
+          <a href="atmospheres.html">TRUECOAT Atmospheres</a>
+          <a href="projects.html">Selected Projects</a>
+        </div>
+
+        <div>
+          <h2>TRUECOAT</h2>
+          <a href="difference.html">Our Difference</a>
+          <a href="service-areas.html">Service Areas</a>
+          <a href="service-areas.html#request-survey">Request a Survey</a>
+        </div>
+
+        <div>
+          <h2>Featured</h2>
+          <a href="project-mediterranean.html">Mediterranean Calm</a>
+          <a href="project-modern.html">Quiet Modern</a>
+          <a href="project-organic.html">Organic Retreat</a>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>
+          &copy; <span data-current-year></span> TRUECOAT. All rights reserved.
+        </p>
+
+        <p>Painting &amp; interiors, thoughtfully finished.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
