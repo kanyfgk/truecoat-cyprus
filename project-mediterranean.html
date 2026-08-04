@@ -3,22 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore Mediterranean Calm by TRUECOAT: a warm interior atmosphere combining sun-washed paint, natural timber, linen, stone and relaxed forms.">
+
+  <meta
+    name="description"
+    content="Explore Mediterranean Calm by TRUECOAT, select individual products and request a complete atmosphere for your home."
+  >
+
   <meta name="theme-color" content="#191a17">
 
   <title>Mediterranean Calm — TRUECOAT</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="page page-project page-project-mediterranean">
+<body
+  class="page page-project page-project-mediterranean"
+  data-atmosphere-page
+  data-project-id="mediterranean-calm"
+  data-project-name="Mediterranean Calm"
+>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <header class="site-header site-header--overlay" data-header>
+  <header class="site-header" data-header>
     <div class="site-header__inner container">
       <a class="brand" href="index.html" aria-label="TRUECOAT home">
         <span class="brand__wordmark">TRUECOAT</span>
@@ -46,9 +60,13 @@
         <a href="painting.html">Painting</a>
         <a href="difference.html">Our Difference</a>
         <a href="atmospheres.html">Atmospheres</a>
-        <a href="projects.html">Projects</a>
+        <a href="projects.html" aria-current="page">Projects</a>
         <a href="service-areas.html">Service Areas</a>
-        <a class="button button--small button--light" href="service-areas.html#request-survey">
+
+        <a
+          class="button button--small button--dark"
+          href="service-areas.html#request-survey"
+        >
           Request a survey
         </a>
       </nav>
@@ -56,526 +74,747 @@
   </header>
 
   <main id="main-content">
-    <section class="project-hero">
-      <div class="project-hero__media">
-        <img
-          src="assets/images/project-mediterranean-hero.jpg"
-          alt="Sun-washed Mediterranean living room with warm plaster walls and natural timber"
-          width="1920"
-          height="1280"
-          fetchpriority="high"
+    <section class="interactive-project">
+      <div class="interactive-project__stage">
+        <div class="interactive-project__image">
+          <img
+            src="assets/images/project-mediterranean-hero.jpg"
+            alt="Mediterranean Calm living room with selectable furniture and decorative products"
+            width="1920"
+            height="1280"
+            fetchpriority="high"
+          >
+        </div>
+
+        <div class="interactive-project__shade"></div>
+
+        <div class="interactive-project__introduction">
+          <a class="interactive-project__back" href="projects.html">
+            <span aria-hidden="true">←</span>
+            All projects
+          </a>
+
+          <p class="eyebrow eyebrow--light">Atmosphere 01</p>
+
+          <h1>Mediterranean Calm</h1>
+
+          <p>
+            Natural materials, sun-washed colour and relaxed forms create a warm,
+            balanced living space.
+          </p>
+
+          <dl class="interactive-project__facts">
+            <div>
+              <dt>Style</dt>
+              <dd>Mediterranean Modern</dd>
+            </div>
+
+            <div>
+              <dt>Palette</dt>
+              <dd>Warm natural tones</dd>
+            </div>
+
+            <div>
+              <dt>Suggested room</dt>
+              <dd>24–32 m² living room</dd>
+            </div>
+
+            <div>
+              <dt>Estimated application</dt>
+              <dd>5–7 days</dd>
+            </div>
+          </dl>
+
+          <a
+            class="button button--light"
+            href="request-atmosphere.html?project=mediterranean-calm"
+            data-request-atmosphere
+          >
+            I want this atmosphere
+          </a>
+        </div>
+
+        <button
+          class="product-hotspot"
+          type="button"
+          style="--hotspot-x: 51%; --hotspot-y: 77%;"
+          data-product-trigger="med-table"
+          aria-label="View Travertine Coffee Table"
         >
+          <span>1</span>
+        </button>
+
+        <button
+          class="product-hotspot"
+          type="button"
+          style="--hotspot-x: 28%; --hotspot-y: 64%;"
+          data-product-trigger="med-chair"
+          aria-label="View Bouclé Lounge Chair"
+        >
+          <span>2</span>
+        </button>
+
+        <button
+          class="product-hotspot"
+          type="button"
+          style="--hotspot-x: 83%; --hotspot-y: 42%;"
+          data-product-trigger="med-lamp"
+          aria-label="View Ceramic Table Lamp"
+        >
+          <span>3</span>
+        </button>
+
+        <button
+          class="product-hotspot"
+          type="button"
+          style="--hotspot-x: 84%; --hotspot-y: 68%;"
+          data-product-trigger="med-side-table"
+          aria-label="View Travertine Side Table"
+        >
+          <span>4</span>
+        </button>
+
+        <button
+          class="product-hotspot"
+          type="button"
+          style="--hotspot-x: 68%; --hotspot-y: 88%;"
+          data-product-trigger="med-rug"
+          aria-label="View Natural Woven Rug"
+        >
+          <span>5</span>
+        </button>
+
+        <button
+          class="product-hotspot"
+          type="button"
+          style="--hotspot-x: 58%; --hotspot-y: 57%;"
+          data-product-trigger="med-cushion"
+          aria-label="View Linen Cushion"
+        >
+          <span>6</span>
+        </button>
+
+        <button
+          class="product-hotspot"
+          type="button"
+          style="--hotspot-x: 57%; --hotspot-y: 25%;"
+          data-product-trigger="med-art"
+          aria-label="View Textured Wall Art"
+        >
+          <span>7</span>
+        </button>
+
+        <button
+          class="product-hotspot"
+          type="button"
+          style="--hotspot-x: 35%; --hotspot-y: 28%;"
+          data-product-trigger="med-olive"
+          aria-label="View Olive Tree"
+        >
+          <span>8</span>
+        </button>
+
+        <button
+          class="interactive-project__list-toggle"
+          type="button"
+          data-product-list-toggle
+          aria-expanded="true"
+        >
+          <span aria-hidden="true">☷</span>
+          <span data-list-toggle-label>Hide product list</span>
+        </button>
       </div>
 
-      <div class="project-hero__overlay"></div>
+      <aside
+        class="product-drawer"
+        aria-hidden="true"
+        aria-label="Selected product details"
+        data-product-drawer
+      >
+        <div class="product-drawer__header">
+          <div>
+            <span data-drawer-number>1</span>
+            <h2 data-drawer-name>Travertine Coffee Table</h2>
+          </div>
 
-      <div class="project-hero__content container">
-        <p class="eyebrow eyebrow--light">Atmosphere 01</p>
+          <button
+            class="product-drawer__close"
+            type="button"
+            aria-label="Close product details"
+            data-product-drawer-close
+          >
+            ×
+          </button>
+        </div>
 
-        <h1>Mediterranean Calm</h1>
+        <div class="product-drawer__image">
+          <img
+            src="assets/images/mediterranean-product-table.jpg"
+            alt=""
+            width="1000"
+            height="900"
+            data-drawer-image
+          >
+        </div>
 
-        <p>Sun-washed · Textural · Relaxed</p>
-      </div>
+        <div class="product-drawer__body">
+          <div class="product-drawer__price">
+            <strong data-drawer-price>£138.99</strong>
+            <span data-drawer-retailer>Selected retailer</span>
+          </div>
 
-      <div class="project-hero__footer container">
-        <span>Complete interior direction</span>
-        <a href="#project-overview">
-          Explore the atmosphere
-          <span aria-hidden="true">↓</span>
-        </a>
+          <div class="product-drawer__actions">
+            <a
+              class="button button--dark"
+              href="https://www.google.com/search?q=travertine+coffee+table"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-drawer-link
+            >
+              View product
+            </a>
+
+            <button
+              class="button product-drawer__select"
+              type="button"
+              data-drawer-select
+            >
+              Add to project
+            </button>
+          </div>
+
+          <div class="product-drawer__description">
+            <h3>Product description</h3>
+            <p data-drawer-description>
+              A low round coffee table with a warm travertine appearance and a
+              sculptural central base.
+            </p>
+          </div>
+
+          <dl class="product-drawer__specifications">
+            <div>
+              <dt>Material</dt>
+              <dd data-drawer-material>Travertine-effect stone</dd>
+            </div>
+
+            <div>
+              <dt>Colour</dt>
+              <dd data-drawer-colour>Warm beige</dd>
+            </div>
+
+            <div>
+              <dt>Size</dt>
+              <dd data-drawer-size>Approximately 70 cm diameter</dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+    </section>
+
+    <section class="project-product-list" data-product-list>
+      <div class="container">
+        <div class="project-product-list__heading">
+          <div>
+            <p class="eyebrow">Products used in this atmosphere</p>
+            <h2>Build your version of Mediterranean Calm.</h2>
+          </div>
+
+          <p>
+            Select the pieces you want to include. Your estimated product total
+            updates automatically.
+          </p>
+        </div>
+
+        <div class="project-product-list__grid">
+          <article
+            class="interactive-product-card is-selected"
+            data-product-card
+            data-product-id="med-table"
+            data-product-number="1"
+            data-product-name="Travertine Coffee Table"
+            data-product-price="138.99"
+            data-product-currency="GBP"
+            data-product-retailer="Selected retailer"
+            data-product-image="assets/images/mediterranean-product-table.jpg"
+            data-product-link="https://www.google.com/search?q=travertine+coffee+table"
+            data-product-description="A low round coffee table with a warm travertine appearance and a sculptural central base."
+            data-product-material="Travertine-effect stone"
+            data-product-colour="Warm beige"
+            data-product-size="Approximately 70 cm diameter"
+          >
+            <button
+              class="interactive-product-card__open"
+              type="button"
+              data-product-trigger="med-table"
+              aria-label="View Travertine Coffee Table"
+            >
+              <span class="interactive-product-card__number">1</span>
+
+              <img
+                src="assets/images/mediterranean-product-table.jpg"
+                alt="Round travertine coffee table"
+                width="700"
+                height="800"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="interactive-product-card__content">
+              <h3>Travertine Coffee Table</h3>
+              <span>£138.99</span>
+
+              <button
+                class="interactive-product-card__toggle"
+                type="button"
+                data-product-toggle="med-table"
+                aria-pressed="true"
+              >
+                Remove
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="interactive-product-card is-selected"
+            data-product-card
+            data-product-id="med-chair"
+            data-product-number="2"
+            data-product-name="Bouclé Lounge Chair"
+            data-product-price="142.99"
+            data-product-currency="GBP"
+            data-product-retailer="Selected retailer"
+            data-product-image="assets/images/mediterranean-product-sofa.jpg"
+            data-product-link="https://www.google.com/search?q=cream+boucle+lounge+chair"
+            data-product-description="A softly curved occasional chair upholstered in warm cream bouclé."
+            data-product-material="Bouclé upholstery and timber"
+            data-product-colour="Natural cream"
+            data-product-size="Approximately 75 × 80 cm"
+          >
+            <button
+              class="interactive-product-card__open"
+              type="button"
+              data-product-trigger="med-chair"
+              aria-label="View Bouclé Lounge Chair"
+            >
+              <span class="interactive-product-card__number">2</span>
+
+              <img
+                src="assets/images/mediterranean-product-sofa.jpg"
+                alt="Cream bouclé lounge chair"
+                width="700"
+                height="800"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="interactive-product-card__content">
+              <h3>Bouclé Lounge Chair</h3>
+              <span>£142.99</span>
+
+              <button
+                class="interactive-product-card__toggle"
+                type="button"
+                data-product-toggle="med-chair"
+                aria-pressed="true"
+              >
+                Remove
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="interactive-product-card is-selected"
+            data-product-card
+            data-product-id="med-lamp"
+            data-product-number="3"
+            data-product-name="Ceramic Table Lamp"
+            data-product-price="69.99"
+            data-product-currency="GBP"
+            data-product-retailer="Selected retailer"
+            data-product-image="assets/images/mediterranean-product-light.jpg"
+            data-product-link="https://www.google.com/search?q=neutral+ceramic+table+lamp"
+            data-product-description="A softly textured ceramic lamp designed to create warm evening light."
+            data-product-material="Ceramic and natural linen"
+            data-product-colour="Sand"
+            data-product-size="Approximately 55 cm high"
+          >
+            <button
+              class="interactive-product-card__open"
+              type="button"
+              data-product-trigger="med-lamp"
+              aria-label="View Ceramic Table Lamp"
+            >
+              <span class="interactive-product-card__number">3</span>
+
+              <img
+                src="assets/images/mediterranean-product-light.jpg"
+                alt="Neutral ceramic table lamp"
+                width="700"
+                height="800"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="interactive-product-card__content">
+              <h3>Ceramic Table Lamp</h3>
+              <span>£69.99</span>
+
+              <button
+                class="interactive-product-card__toggle"
+                type="button"
+                data-product-toggle="med-lamp"
+                aria-pressed="true"
+              >
+                Remove
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="interactive-product-card is-selected"
+            data-product-card
+            data-product-id="med-side-table"
+            data-product-number="4"
+            data-product-name="Travertine Side Tables"
+            data-product-price="131.99"
+            data-product-currency="GBP"
+            data-product-retailer="Selected retailer"
+            data-product-image="assets/images/mediterranean-product-table.jpg"
+            data-product-link="https://www.google.com/search?q=travertine+side+table+set"
+            data-product-description="A pair of compact architectural side tables with a warm stone appearance."
+            data-product-material="Travertine-effect composite"
+            data-product-colour="Natural beige"
+            data-product-size="Two-piece set"
+          >
+            <button
+              class="interactive-product-card__open"
+              type="button"
+              data-product-trigger="med-side-table"
+              aria-label="View Travertine Side Tables"
+            >
+              <span class="interactive-product-card__number">4</span>
+
+              <img
+                src="assets/images/mediterranean-product-table.jpg"
+                alt="Travertine side tables"
+                width="700"
+                height="800"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="interactive-product-card__content">
+              <h3>Travertine Side Tables</h3>
+              <span>£131.99</span>
+
+              <button
+                class="interactive-product-card__toggle"
+                type="button"
+                data-product-toggle="med-side-table"
+                aria-pressed="true"
+              >
+                Remove
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="interactive-product-card is-selected"
+            data-product-card
+            data-product-id="med-rug"
+            data-product-number="5"
+            data-product-name="Natural Woven Rug"
+            data-product-price="98.99"
+            data-product-currency="GBP"
+            data-product-retailer="Selected retailer"
+            data-product-image="assets/images/organic-product-rug.jpg"
+            data-product-link="https://www.google.com/search?q=large+natural+woven+rug"
+            data-product-description="A large textured rug that softens the room and defines the seating area."
+            data-product-material="Wool and natural fibre blend"
+            data-product-colour="Natural oat"
+            data-product-size="Approximately 200 × 300 cm"
+          >
+            <button
+              class="interactive-product-card__open"
+              type="button"
+              data-product-trigger="med-rug"
+              aria-label="View Natural Woven Rug"
+            >
+              <span class="interactive-product-card__number">5</span>
+
+              <img
+                src="assets/images/organic-product-rug.jpg"
+                alt="Large natural woven rug"
+                width="700"
+                height="800"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="interactive-product-card__content">
+              <h3>Natural Woven Rug</h3>
+              <span>£98.99</span>
+
+              <button
+                class="interactive-product-card__toggle"
+                type="button"
+                data-product-toggle="med-rug"
+                aria-pressed="true"
+              >
+                Remove
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="interactive-product-card is-selected"
+            data-product-card
+            data-product-id="med-cushion"
+            data-product-number="6"
+            data-product-name="Linen Cushion"
+            data-product-price="24.99"
+            data-product-currency="GBP"
+            data-product-retailer="Selected retailer"
+            data-product-image="assets/images/mediterranean-detail-linen.jpg"
+            data-product-link="https://www.google.com/search?q=natural+linen+cushion+cover"
+            data-product-description="A natural linen cushion used to create a softer tonal layer across the sofa."
+            data-product-material="Washed linen"
+            data-product-colour="Natural flax"
+            data-product-size="Approximately 50 × 50 cm"
+          >
+            <button
+              class="interactive-product-card__open"
+              type="button"
+              data-product-trigger="med-cushion"
+              aria-label="View Linen Cushion"
+            >
+              <span class="interactive-product-card__number">6</span>
+
+              <img
+                src="assets/images/mediterranean-detail-linen.jpg"
+                alt="Natural linen cushion"
+                width="700"
+                height="800"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="interactive-product-card__content">
+              <h3>Linen Cushion</h3>
+              <span>£24.99</span>
+
+              <button
+                class="interactive-product-card__toggle"
+                type="button"
+                data-product-toggle="med-cushion"
+                aria-pressed="true"
+              >
+                Remove
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="interactive-product-card is-selected"
+            data-product-card
+            data-product-id="med-art"
+            data-product-number="7"
+            data-product-name="Textured Wall Art"
+            data-product-price="59.99"
+            data-product-currency="GBP"
+            data-product-retailer="Selected retailer"
+            data-product-image="assets/images/mediterranean-detail-ceramic.jpg"
+            data-product-link="https://www.google.com/search?q=neutral+textured+canvas+wall+art"
+            data-product-description="A restrained abstract artwork with a softly textured mineral appearance."
+            data-product-material="Textured canvas"
+            data-product-colour="Stone and sand"
+            data-product-size="Approximately 80 × 100 cm"
+          >
+            <button
+              class="interactive-product-card__open"
+              type="button"
+              data-product-trigger="med-art"
+              aria-label="View Textured Wall Art"
+            >
+              <span class="interactive-product-card__number">7</span>
+
+              <img
+                src="assets/images/mediterranean-detail-ceramic.jpg"
+                alt="Neutral textured wall art"
+                width="700"
+                height="800"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="interactive-product-card__content">
+              <h3>Textured Wall Art</h3>
+              <span>£59.99</span>
+
+              <button
+                class="interactive-product-card__toggle"
+                type="button"
+                data-product-toggle="med-art"
+                aria-pressed="true"
+              >
+                Remove
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="interactive-product-card is-selected"
+            data-product-card
+            data-product-id="med-olive"
+            data-product-number="8"
+            data-product-name="Decorative Olive Tree"
+            data-product-price="74.99"
+            data-product-currency="GBP"
+            data-product-retailer="Selected retailer"
+            data-product-image="assets/images/mediterranean-material-oak.jpg"
+            data-product-link="https://www.google.com/search?q=artificial+olive+tree+indoor"
+            data-product-description="A tall decorative olive tree that introduces natural height and Mediterranean character."
+            data-product-material="Artificial foliage and ceramic pot"
+            data-product-colour="Muted olive"
+            data-product-size="Approximately 170 cm high"
+          >
+            <button
+              class="interactive-product-card__open"
+              type="button"
+              data-product-trigger="med-olive"
+              aria-label="View Decorative Olive Tree"
+            >
+              <span class="interactive-product-card__number">8</span>
+
+              <img
+                src="assets/images/mediterranean-material-oak.jpg"
+                alt="Decorative indoor olive tree"
+                width="700"
+                height="800"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="interactive-product-card__content">
+              <h3>Decorative Olive Tree</h3>
+              <span>£74.99</span>
+
+              <button
+                class="interactive-product-card__toggle"
+                type="button"
+                data-product-toggle="med-olive"
+                aria-pressed="true"
+              >
+                Remove
+              </button>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="project-overview section" id="project-overview">
+    <section class="project-estimate">
       <div class="container">
-        <div class="project-overview__title">
-          <p class="eyebrow">The atmosphere</p>
+        <div class="project-estimate__summary">
+          <article>
+            <span>Selected products</span>
+            <strong data-selected-count>8 items</strong>
+          </article>
 
-          <h2>
-            Coastal warmth without the coastal clichés.
-          </h2>
+          <span class="project-estimate__operator" aria-hidden="true">+</span>
+
+          <article>
+            <span>Estimated product total</span>
+            <strong data-product-total>£842.91</strong>
+          </article>
+
+          <span class="project-estimate__operator" aria-hidden="true">+</span>
+
+          <article>
+            <span>Painting application</span>
+            <strong>Survey required</strong>
+          </article>
+
+          <span class="project-estimate__operator" aria-hidden="true">+</span>
+
+          <article>
+            <span>Delivery &amp; installation</span>
+            <strong>Quote required</strong>
+          </article>
         </div>
 
-        <div class="project-overview__content">
-          <p class="lead">
-            Mediterranean Calm is built around warm light, mineral colour and
-            materials that become more beautiful through texture and imperfection.
-          </p>
+        <div class="project-estimate__action">
+          <div>
+            <span>Estimated project investment</span>
+            <strong data-project-total>From £842.91 + application</strong>
+            <small>
+              Product prices are indicative and may change according to retailer,
+              availability and region.
+            </small>
+          </div>
 
-          <p>
-            Rather than filling the room with obvious coastal references, the
-            atmosphere draws from the architecture and landscape: chalky walls,
-            sun-aged timber, limestone, linen and softly sculpted forms.
-          </p>
-
-          <p>
-            The result feels open and relaxed while remaining refined enough for a
-            contemporary home.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-gallery project-gallery--mediterranean">
-      <div class="container">
-        <figure class="project-gallery__wide">
-          <img
-            src="assets/images/mediterranean-living-room.jpg"
-            alt="Mediterranean Calm living room with soft neutral seating and natural materials"
-            width="1800"
-            height="1150"
-            loading="lazy"
+          <a
+            class="button button--dark"
+            href="request-atmosphere.html?project=mediterranean-calm"
+            data-request-atmosphere
           >
-        </figure>
-
-        <figure class="project-gallery__portrait">
-          <img
-            src="assets/images/mediterranean-detail-linen.jpg"
-            alt="Natural linen chair beside a warm textured wall"
-            width="1100"
-            height="1450"
-            loading="lazy"
-          >
-        </figure>
-
-        <figure class="project-gallery__portrait project-gallery__portrait--offset">
-          <img
-            src="assets/images/mediterranean-detail-ceramic.jpg"
-            alt="Handmade ceramic and olive branches on an aged timber console"
-            width="1100"
-            height="1450"
-            loading="lazy"
-          >
-        </figure>
-      </div>
-    </section>
-
-    <section class="project-palette section section--warm">
-      <div class="container">
-        <div class="project-palette__content">
-          <p class="eyebrow">Colour direction</p>
-
-          <h2>
-            Colours shaped by sun, earth and stone.
-          </h2>
-
-          <p>
-            The palette avoids brilliant white and sharp contrast. Warm chalk,
-            limestone, sand and muted olive create a softer transition between the
-            interior and natural daylight.
-          </p>
-
-          <p>
-            Deeper timber and clay tones provide enough weight to keep the room from
-            feeling pale or unfinished.
-          </p>
-        </div>
-
-        <div class="project-palette__swatches" aria-label="Mediterranean Calm colour palette">
-          <div class="project-swatch" style="--swatch: #e6ded0">
-            <span>Warm Chalk</span>
-            <small>Primary wall direction</small>
-          </div>
-
-          <div class="project-swatch" style="--swatch: #cbb897">
-            <span>Limestone</span>
-            <small>Layered neutral</small>
-          </div>
-
-          <div class="project-swatch" style="--swatch: #aa815f">
-            <span>Sun-baked Clay</span>
-            <small>Warm accent</small>
-          </div>
-
-          <div class="project-swatch" style="--swatch: #777762">
-            <span>Muted Olive</span>
-            <small>Natural contrast</small>
-          </div>
-
-          <div class="project-swatch" style="--swatch: #554639">
-            <span>Aged Timber</span>
-            <small>Grounding tone</small>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-paint section">
-      <div class="container">
-        <figure class="project-paint__visual">
-          <img
-            src="assets/images/mediterranean-paint-finish.jpg"
-            alt="Warm mineral paint finish illuminated by soft natural light"
-            width="1300"
-            height="1600"
-            loading="lazy"
-          >
-        </figure>
-
-        <div class="project-paint__content">
-          <p class="eyebrow">The painted foundation</p>
-
-          <h2>
-            Soft warmth begins with the walls.
-          </h2>
-
-          <p class="lead">
-            The paint direction is warm enough to soften strong daylight without
-            making the room appear yellow.
-          </p>
-
-          <p>
-            Wall, ceiling and woodwork colours are selected together. Where the
-            property allows, a low-contrast approach creates a more continuous,
-            architectural feeling.
-          </p>
-
-          <ul class="project-specification">
-            <li>
-              <span>Walls</span>
-              <strong>Warm chalk or mineral neutral</strong>
-            </li>
-
-            <li>
-              <span>Ceilings</span>
-              <strong>Soft off-white with a warm undertone</strong>
-            </li>
-
-            <li>
-              <span>Woodwork</span>
-              <strong>Low-contrast satin or eggshell finish</strong>
-            </li>
-
-            <li>
-              <span>Optional feature</span>
-              <strong>Textured mineral or lime-effect surface</strong>
-            </li>
-          </ul>
-
-          <a class="text-link" href="painting.html">
-            Explore professional painting
-            <span aria-hidden="true">↗️</span>
+            Request this atmosphere
           </a>
         </div>
       </div>
     </section>
 
-    <section class="project-materials section section--dark">
+    <section class="project-service-benefits section section--warm">
       <div class="container">
-        <div class="section-heading section-heading--split section-heading--light">
+        <div class="section-heading section-heading--split">
           <div>
-            <p class="eyebrow eyebrow--light">Material language</p>
-            <h2>Natural, tactile<br>and quietly imperfect.</h2>
+            <p class="eyebrow">More than a product list</p>
+            <h2>TRUECOAT brings the complete room together.</h2>
           </div>
 
           <p>
-            Materials should feel honest and slightly relaxed rather than polished to
-            complete uniformity.
+            Products can be selected independently or included within a complete
+            painting, delivery and installation proposal.
           </p>
         </div>
 
-        <div class="project-materials__grid">
+        <div class="project-service-benefits__grid">
           <article>
-            <img
-              src="assets/images/mediterranean-material-limestone.jpg"
-              alt="Warm natural limestone"
-              width="900"
-              height="1100"
-              loading="lazy"
-            >
             <span>01</span>
-            <h3>Limestone</h3>
-            <p>Soft movement and natural variation for tables and selected surfaces.</p>
+            <h3>Adapted to your home</h3>
+            <p>
+              The atmosphere is adjusted to your room dimensions, lighting,
+              architecture and existing furniture.
+            </p>
           </article>
 
           <article>
-            <img
-              src="assets/images/mediterranean-material-oak.jpg"
-              alt="Aged warm oak timber"
-              width="900"
-              height="1100"
-              loading="lazy"
-            >
             <span>02</span>
-            <h3>Aged Oak</h3>
-            <p>Warmth and depth without the formality of highly polished timber.</p>
+            <h3>Professional painting</h3>
+            <p>
+              Surface preparation, colour direction and painting can be included in
+              one coordinated project.
+            </p>
           </article>
 
           <article>
-            <img
-              src="assets/images/mediterranean-material-linen.jpg"
-              alt="Natural loosely woven linen"
-              width="900"
-              height="1100"
-              loading="lazy"
-            >
             <span>03</span>
-            <h3>Washed Linen</h3>
-            <p>Relaxed texture for curtains, upholstery and softly layered textiles.</p>
+            <h3>Product alternatives</h3>
+            <p>
+              Alternatives can be selected according to availability, location and
+              preferred investment level.
+            </p>
           </article>
 
           <article>
-            <img
-              src="assets/images/mediterranean-material-ceramic.jpg"
-              alt="Hand-finished Mediterranean ceramic"
-              width="900"
-              height="1100"
-              loading="lazy"
-            >
             <span>04</span>
-            <h3>Handmade Ceramic</h3>
-            <p>Individual objects with visible character rather than excessive decoration.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-products section">
-      <div class="container">
-        <div class="project-products__heading">
-          <p class="eyebrow">Product direction</p>
-
-          <h2>
-            The pieces that build the atmosphere.
-          </h2>
-
-          <p>
-            Final products are selected according to location, availability,
-            dimensions and investment level. These categories define the intended
-            visual direction.
-          </p>
-        </div>
-
-        <div class="project-products__grid">
-          <article class="product-direction">
-            <div class="product-direction__image">
-              <img
-                src="assets/images/mediterranean-product-sofa.jpg"
-                alt="Low-profile sofa upholstered in warm natural fabric"
-                width="1000"
-                height="1200"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="product-direction__content">
-              <span>Seating</span>
-              <h3>Low, softly structured sofa</h3>
-              <p>
-                Warm neutral upholstery with generous proportions and minimal visible
-                detailing.
-              </p>
-            </div>
-          </article>
-
-          <article class="product-direction">
-            <div class="product-direction__image">
-              <img
-                src="assets/images/mediterranean-product-table.jpg"
-                alt="Sculptural limestone coffee table"
-                width="1000"
-                height="1200"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="product-direction__content">
-              <span>Surface</span>
-              <h3>Sculptural stone table</h3>
-              <p>
-                A visually grounded central piece with softened edges and natural
-                tonal movement.
-              </p>
-            </div>
-          </article>
-
-          <article class="product-direction">
-            <div class="product-direction__image">
-              <img
-                src="assets/images/mediterranean-product-light.jpg"
-                alt="Textured pendant light in a warm natural finish"
-                width="1000"
-                height="1200"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="product-direction__content">
-              <span>Lighting</span>
-              <h3>Textured ambient light</h3>
-              <p>
-                Linen, plaster or woven finishes that create a soft pool of warm
-                evening light.
-              </p>
-            </div>
-          </article>
-
-          <article class="product-direction">
-            <div class="product-direction__image">
-              <img
-                src="assets/images/mediterranean-product-console.jpg"
-                alt="Simple aged timber console table"
-                width="1000"
-                height="1200"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="product-direction__content">
-              <span>Storage</span>
-              <h3>Simple timber console</h3>
-              <p>
-                A restrained, useful piece carrying visible grain and a lightly aged
-                finish.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-lighting section section--accent">
-      <div class="container">
-        <div class="project-lighting__content">
-          <p class="eyebrow">Light and atmosphere</p>
-
-          <h2>
-            Daylight leads.
-            Evening light supports.
-          </h2>
-
-          <p>
-            During the day, the palette is designed to respond naturally to strong
-            Mediterranean light. After sunset, several lower and warmer light
-            sources prevent the room from becoming flat.
-          </p>
-
-          <dl>
-            <div>
-              <dt>Temperature</dt>
-              <dd>Warm white evening light</dd>
-            </div>
-
-            <div>
-              <dt>Placement</dt>
-              <dd>Layered floor, table and selected pendant lighting</dd>
-            </div>
-
-            <div>
-              <dt>Control</dt>
-              <dd>Dimmable lighting where practical</dd>
-            </div>
-          </dl>
-        </div>
-
-        <figure class="project-lighting__visual">
-          <img
-            src="assets/images/mediterranean-evening.jpg"
-            alt="Mediterranean Calm interior illuminated by warm layered evening light"
-            width="1400"
-            height="1600"
-            loading="lazy"
-          >
-        </figure>
-      </div>
-    </section>
-
-    <section class="project-investment section">
-      <div class="container">
-        <div class="project-investment__heading">
-          <p class="eyebrow">Flexible investment</p>
-
-          <h2>
-            Keep the atmosphere.
-            Adapt the scope.
-          </h2>
-        </div>
-
-        <div class="project-investment__options">
-          <article>
-            <span>Level 01</span>
-            <h3>Paint-led refresh</h3>
+            <h3>Delivery and placement</h3>
             <p>
-              Establish the Mediterranean Calm palette through surface preparation,
-              painting and a focused colour direction.
+              Delivery, furniture movement, installation and final placement can be
+              included where available.
             </p>
-
-            <ul>
-              <li>Property and light assessment</li>
-              <li>Paint palette</li>
-              <li>Surface preparation</li>
-              <li>Professional painting</li>
-            </ul>
-          </article>
-
-          <article>
-            <span>Level 02</span>
-            <h3>Focused atmosphere</h3>
-            <p>
-              Combine painting with selected lighting, textiles and high-impact
-              furniture changes.
-            </p>
-
-            <ul>
-              <li>Everything in Level 01</li>
-              <li>Material direction</li>
-              <li>Selected product recommendations</li>
-              <li>Focused styling plan</li>
-            </ul>
-          </article>
-
-          <article>
-            <span>Level 03</span>
-            <h3>Complete transformation</h3>
-            <p>
-              Adapt and deliver the full visual direction across the agreed interior
-              spaces.
-            </p>
-
-            <ul>
-              <li>Complete atmosphere plan</li>
-              <li>Painting and product selection</li>
-              <li>Installation coordination</li>
-              <li>Final placement and presentation</li>
-            </ul>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="project-adaptation">
-      <div class="project-adaptation__visual">
-        <img
-          src="assets/images/mediterranean-adaptation.jpg"
-          alt="Mediterranean Calm atmosphere adapted to a furnished apartment"
-          width="1600"
-          height="1300"
-          loading="lazy"
-        >
-      </div>
-
-      <div class="project-adaptation__content">
-        <p class="eyebrow">Adapted, never copied</p>
-
-        <h2>
-          Your home remains your home.
-        </h2>
-
-        <p>
-          Existing flooring, furniture and architectural details are reviewed before
-          new selections are made. Pieces that support the atmosphere can remain and
-          become part of the final direction.
-        </p>
-
-        <p>
-          This avoids unnecessary replacement and produces a result that feels
-          personal rather than recreated from a showroom.
-        </p>
-
-        <a class="text-link" href="difference.html">
-          Understand our approach
-          <span aria-hidden="true">↗️</span>
-        </a>
       </div>
     </section>
 
@@ -595,35 +834,6 @@
             <strong>Organic Retreat</strong>
             <span aria-hidden="true">↗️</span>
           </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-cta section section--warm">
-      <div class="container">
-        <div class="project-cta__content">
-          <p class="eyebrow">Bring it home</p>
-
-          <h2>
-            I want Mediterranean Calm in my home.
-          </h2>
-
-          <p>
-            Send us photographs of your property and tell us which spaces you would
-            like to transform. We will review how this atmosphere can be adapted to
-            the property.
-          </p>
-
-          <div class="project-cta__actions">
-            <a class="button button--dark" href="service-areas.html#request-survey">
-              Request this atmosphere
-            </a>
-
-            <a class="text-link" href="projects.html">
-              Return to all projects
-              <span aria-hidden="true">↗️</span>
-            </a>
-          </div>
         </div>
       </div>
     </section>
@@ -667,7 +877,10 @@
       </div>
 
       <div class="site-footer__bottom">
-        <p>&copy; <span data-current-year></span> TRUECOAT. All rights reserved.</p>
+        <p>
+          &copy; <span data-current-year></span> TRUECOAT. All rights reserved.
+        </p>
+
         <p>Painting &amp; interiors, thoughtfully finished.</p>
       </div>
     </div>
