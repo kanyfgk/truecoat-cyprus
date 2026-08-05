@@ -1,88 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
 
   <meta
     name="description"
-    content="Explore Organic Retreat by TRUECOAT, select individual products and request a complete nature-led atmosphere for your home."
+    content="TRUECOAT Organik Sadelik atmosferi: doğal ahşaplar, yumuşak dokular, sakin renkler ve seçilmiş dekor ürünleri."
   >
 
-  <meta name="theme-color" content="#191a17">
+  <meta name="theme-color" content="#f3f0e9">
 
-  <title>Organic Retreat — TRUECOAT</title>
+  <title>Organik Sadelik — TRUECOAT</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/atmosphere-shop.css">
   <link rel="stylesheet" href="css/mobile.css">
 </head>
 
-<body
-  class="page page-project page-project-organic"
-  data-atmosphere-page
-  data-project-id="organic-retreat"
-  data-project-name="Organic Retreat"
->
-  <a class="skip-link" href="#main-content">Skip to content</a>
+<body class="page page-atmosphere-project page-project-organic">
+  <a class="skip-link" href="#main-content">İçeriğe geç</a>
 
   <header class="site-header" data-header>
-    <div class="site-header__inner container">
-      <a class="brand" href="index.html" aria-label="TRUECOAT home">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="TRUECOAT ana sayfa">
         <span class="brand__wordmark">TRUECOAT</span>
-        <span class="brand__descriptor">Painting &amp; Interiors</span>
+        <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
       </a>
 
       <button
         class="menu-toggle"
         type="button"
-        aria-label="Open navigation"
+        aria-label="Menüyü aç"
         aria-expanded="false"
         aria-controls="primary-navigation"
         data-menu-toggle
       >
-        <span></span>
         <span></span>
       </button>
 
       <nav
         class="site-navigation"
         id="primary-navigation"
-        aria-label="Primary navigation"
+        aria-label="Ana navigasyon"
         data-navigation
       >
-        <a href="painting.html">Painting</a>
-        <a href="difference.html">Our Difference</a>
-        <a href="atmospheres.html">Atmospheres</a>
-        <a href="projects.html" aria-current="page">Projects</a>
-        <a href="service-areas.html">Service Areas</a>
-
-        <a
-          class="button button--small button--dark"
-          href="service-areas.html#request-survey"
-        >
-          Request a survey
+        <a href="painting.html">Boyama</a>
+        <a href="difference.html">Farkımız</a>
+        <a href="atmospheres.html">Atmosferler</a>
+        <a href="projects.html">Projeler</a>
+        <a href="service-areas.html">Hizmet Alanları</a>
+        <a class="nav-cta" href="request-atmosphere.html">
+          Ücretsiz Keşif
         </a>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="interactive-project">
-      <div class="interactive-project__stage">
+    <article class="interactive-project">
+      <section
+        class="interactive-project__stage"
+        aria-labelledby="organic-project-title"
+      >
         <div class="interactive-project__image">
           <img
-            src="assets/images/project-organic-hero.jpg"
-            alt="Organic Retreat living room with selectable natural furniture and decorative products"
-            width="1920"
-            height="1280"
+            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1900&q=90"
+            alt="Doğal ahşaplar ve yumuşak dokularla tasarlanmış organik salon"
             fetchpriority="high"
           >
         </div>
@@ -91,799 +88,675 @@
 
         <div class="interactive-project__introduction">
           <a class="interactive-project__back" href="projects.html">
-            <span aria-hidden="true">←</span>
-            All projects
+            ← Tüm projeler
           </a>
 
-          <p class="eyebrow eyebrow--light">Atmosphere 03</p>
+          <p class="interactive-project__eyebrow">
+            Atmosfer 03
+          </p>
 
-          <h1>Organic Retreat</h1>
+          <h1 id="organic-project-title">
+            Organik Sadelik
+          </h1>
 
           <p>
-            Earth-led colour, honest materials and softly rounded forms create a
-            grounded, restorative living space.
+            Doğal ahşaplar, sıcak beyazlar ve dokunsal yüzeylerle
+            daha yavaş, rahat ve huzurlu bir yaşam alanı.
           </p>
 
           <dl class="interactive-project__facts">
-            <div>
-              <dt>Style</dt>
-              <dd>Organic Contemporary</dd>
+            <div class="interactive-project__fact">
+              <dt>Stil</dt>
+              <dd>Organik Modern</dd>
             </div>
 
-            <div>
-              <dt>Palette</dt>
-              <dd>Clay, oat and muted leaf</dd>
+            <div class="interactive-project__fact">
+              <dt>Palet</dt>
+              <dd>Keten, kil ve meşe</dd>
             </div>
 
-            <div>
-              <dt>Suggested room</dt>
-              <dd>22–32 m² living room</dd>
+            <div class="interactive-project__fact">
+              <dt>Önerilen oda</dt>
+              <dd>20–28 m² salon</dd>
             </div>
 
-            <div>
-              <dt>Estimated application</dt>
-              <dd>5–8 days</dd>
+            <div class="interactive-project__fact">
+              <dt>Tahmini uygulama</dt>
+              <dd>4–6 gün</dd>
             </div>
           </dl>
 
           <a
-            class="button button--light"
-            href="request-atmosphere.html?project=organic-retreat"
-            data-request-atmosphere
+            class="button"
+            href="request-atmosphere.html?project=organic-simplicity"
           >
-            I want this atmosphere
+            Bu atmosferi istiyorum
           </a>
         </div>
 
         <button
           class="product-hotspot"
           type="button"
-          style="--hotspot-x: 52%; --hotspot-y: 77%;"
-          data-product-trigger="organic-table"
-          aria-label="View Solid Timber Coffee Table"
+          style="--hotspot-x: 50%; --hotspot-y: 77%;"
+          data-product-id="organic-table"
+          aria-label="Masif ahşap orta sehpayı görüntüle"
         >
-          <span>1</span>
+          1
         </button>
 
         <button
           class="product-hotspot"
           type="button"
-          style="--hotspot-x: 55%; --hotspot-y: 57%;"
-          data-product-trigger="organic-sofa"
-          aria-label="View Curved Natural Sofa"
+          style="--hotspot-x: 43%; --hotspot-y: 60%;"
+          data-product-id="organic-sofa"
+          aria-label="Keten koltuğu görüntüle"
         >
-          <span>2</span>
+          2
         </button>
 
         <button
           class="product-hotspot"
           type="button"
-          style="--hotspot-x: 82%; --hotspot-y: 40%;"
-          data-product-trigger="organic-lamp"
-          aria-label="View Woven Floor Lamp"
+          style="--hotspot-x: 77%; --hotspot-y: 43%;"
+          data-product-id="organic-lamp"
+          aria-label="Kâğıt lambaderi görüntüle"
         >
-          <span>3</span>
+          3
         </button>
 
         <button
           class="product-hotspot"
           type="button"
-          style="--hotspot-x: 84%; --hotspot-y: 67%;"
-          data-product-trigger="organic-vase"
-          aria-label="View Hand-Finished Ceramic Vase"
+          style="--hotspot-x: 83%; --hotspot-y: 68%;"
+          data-product-id="organic-vase"
+          aria-label="El yapımı kil vazoyu görüntüle"
         >
-          <span>4</span>
+          4
         </button>
 
         <button
           class="product-hotspot"
           type="button"
-          style="--hotspot-x: 68%; --hotspot-y: 87%;"
-          data-product-trigger="organic-rug"
-          aria-label="View Natural Wool Rug"
+          style="--hotspot-x: 67%; --hotspot-y: 87%;"
+          data-product-id="organic-rug"
+          aria-label="El dokuma halıyı görüntüle"
         >
-          <span>5</span>
+          5
         </button>
 
         <button
           class="product-hotspot"
           type="button"
-          style="--hotspot-x: 28%; --hotspot-y: 64%;"
-          data-product-trigger="organic-chair"
-          aria-label="View Timber Lounge Chair"
+          style="--hotspot-x: 57%; --hotspot-y: 57%;"
+          data-product-id="organic-cushion"
+          aria-label="Yün dokulu kırlenti görüntüle"
         >
-          <span>6</span>
+          6
         </button>
 
         <button
           class="product-hotspot"
           type="button"
-          style="--hotspot-x: 57%; --hotspot-y: 25%;"
-          data-product-trigger="organic-art"
-          aria-label="View Earth Textured Artwork"
+          style="--hotspot-x: 52%; --hotspot-y: 25%;"
+          data-product-id="organic-art"
+          aria-label="Doğal dokulu tabloyu görüntüle"
         >
-          <span>7</span>
+          7
         </button>
 
         <button
           class="product-hotspot"
           type="button"
-          style="--hotspot-x: 35%; --hotspot-y: 28%;"
-          data-product-trigger="organic-plant"
-          aria-label="View Indoor Olive Tree"
+          style="--hotspot-x: 29%; --hotspot-y: 30%;"
+          data-product-id="organic-plant"
+          aria-label="İç mekân ağacını görüntüle"
         >
-          <span>8</span>
+          8
         </button>
 
         <button
           class="interactive-project__list-toggle"
           type="button"
-          data-product-list-toggle
           aria-expanded="true"
+          data-list-toggle
+          data-show-label="Ürün listesini göster"
         >
-          <span aria-hidden="true">☷</span>
-          <span data-list-toggle-label>Hide product list</span>
+          Ürün listesini gizle
         </button>
-      </div>
+      </section>
 
-      <aside
-        class="product-drawer"
-        aria-hidden="true"
-        aria-label="Selected product details"
-        data-product-drawer
+      <section
+        class="organic-principles"
+        aria-labelledby="organic-principles-title"
       >
-        <div class="product-drawer__header">
-          <div>
-            <span data-drawer-number>1</span>
-            <h2 data-drawer-name>Solid Timber Coffee Table</h2>
-          </div>
+        <div class="organic-principles__intro">
+          <p class="eyebrow">Organik tasarım ilkeleri</p>
 
-          <button
-            class="product-drawer__close"
-            type="button"
-            aria-label="Close product details"
-            data-product-drawer-close
-          >
-            ×
-          </button>
-        </div>
-
-        <div class="product-drawer__image">
-          <img
-            src="assets/images/organic-product-table.jpg"
-            alt=""
-            width="1000"
-            height="900"
-            data-drawer-image
-          >
-        </div>
-
-        <div class="product-drawer__body">
-          <div class="product-drawer__price">
-            <strong data-drawer-price>£149.99</strong>
-            <span data-drawer-retailer>Selected retailer</span>
-          </div>
-
-          <div class="product-drawer__actions">
-            <a
-              class="button button--dark"
-              href="https://www.google.com/search?q=round+solid+wood+coffee+table"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-drawer-link
-            >
-              View product
-            </a>
-
-            <button
-              class="button product-drawer__select"
-              type="button"
-              data-drawer-select
-            >
-              Add to project
-            </button>
-          </div>
-
-          <div class="product-drawer__description">
-            <h3>Product description</h3>
-            <p data-drawer-description>
-              A substantial round coffee table with visible natural grain and
-              softened edges.
-            </p>
-          </div>
-
-          <dl class="product-drawer__specifications">
-            <div>
-              <dt>Material</dt>
-              <dd data-drawer-material>Solid or veneered natural timber</dd>
-            </div>
-
-            <div>
-              <dt>Colour</dt>
-              <dd data-drawer-colour>Warm oak</dd>
-            </div>
-
-            <div>
-              <dt>Size</dt>
-              <dd data-drawer-size>Approximately 90 cm diameter</dd>
-            </div>
-          </dl>
-        </div>
-      </aside>
-    </section>
-
-    <section class="project-product-list" data-product-list>
-      <div class="container">
-        <div class="project-product-list__heading">
-          <div>
-            <p class="eyebrow">Products used in this atmosphere</p>
-            <h2>Build your version of Organic Retreat.</h2>
-          </div>
+          <h2 id="organic-principles-title">
+            Mekân güzel görünmenin ötesinde, iyi hissettirmeli.
+          </h2>
 
           <p>
-            Select the pieces you want to include. Your estimated product total
-            updates automatically.
+            Organik Sadelik atmosferi keskin geçişlerden kaçınır.
+            Doğal ışık, mat boya yüzeyleri ve yaş aldıkça güzelleşen
+            malzemeler mekânın temelini oluşturur.
           </p>
         </div>
 
-        <div class="project-product-list__grid">
-          <article
-            class="interactive-product-card is-selected"
-            data-product-card
-            data-product-id="organic-table"
-            data-product-number="1"
-            data-product-name="Solid Timber Coffee Table"
-            data-product-price="149.99"
-            data-product-currency="GBP"
-            data-product-retailer="Selected retailer"
-            data-product-image="assets/images/organic-product-table.jpg"
-            data-product-link="https://www.google.com/search?q=round+solid+wood+coffee+table"
-            data-product-description="A substantial round coffee table with visible natural grain and softened edges."
-            data-product-material="Solid or veneered natural timber"
-            data-product-colour="Warm oak"
-            data-product-size="Approximately 90 cm diameter"
-          >
-            <button
-              class="interactive-product-card__open"
-              type="button"
-              data-product-trigger="organic-table"
-              aria-label="View Solid Timber Coffee Table"
-            >
-              <span class="interactive-product-card__number">1</span>
-
-              <img
-                src="assets/images/organic-product-table.jpg"
-                alt="Round solid timber coffee table"
-                width="700"
-                height="800"
-                loading="lazy"
-              >
-            </button>
-
-            <div class="interactive-product-card__content">
-              <h3>Solid Timber Coffee Table</h3>
-              <span>£149.99</span>
-
-              <button
-                class="interactive-product-card__toggle"
-                type="button"
-                data-product-toggle="organic-table"
-                aria-pressed="true"
-              >
-                Remove
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="interactive-product-card is-selected"
-            data-product-card
-            data-product-id="organic-sofa"
-            data-product-number="2"
-            data-product-name="Curved Natural Sofa"
-            data-product-price="649.00"
-            data-product-currency="GBP"
-            data-product-retailer="Selected retailer"
-            data-product-image="assets/images/organic-product-sofa.jpg"
-            data-product-link="https://www.google.com/search?q=curved+cream+organic+sofa"
-            data-product-description="A softly curved sofa upholstered in a warm tactile natural fabric."
-            data-product-material="Textured wool-blend upholstery"
-            data-product-colour="Natural oat"
-            data-product-size="Approximately 230 cm wide"
-          >
-            <button
-              class="interactive-product-card__open"
-              type="button"
-              data-product-trigger="organic-sofa"
-              aria-label="View Curved Natural Sofa"
-            >
-              <span class="interactive-product-card__number">2</span>
-
-              <img
-                src="assets/images/organic-product-sofa.jpg"
-                alt="Curved sofa in natural upholstery"
-                width="700"
-                height="800"
-                loading="lazy"
-              >
-            </button>
-
-            <div class="interactive-product-card__content">
-              <h3>Curved Natural Sofa</h3>
-              <span>£649.00</span>
-
-              <button
-                class="interactive-product-card__toggle"
-                type="button"
-                data-product-toggle="organic-sofa"
-                aria-pressed="true"
-              >
-                Remove
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="interactive-product-card is-selected"
-            data-product-card
-            data-product-id="organic-lamp"
-            data-product-number="3"
-            data-product-name="Woven Floor Lamp"
-            data-product-price="89.99"
-            data-product-currency="GBP"
-            data-product-retailer="Selected retailer"
-            data-product-image="assets/images/organic-product-light.jpg"
-            data-product-link="https://www.google.com/search?q=natural+woven+floor+lamp"
-            data-product-description="A softly diffused floor light finished with woven natural texture."
-            data-product-material="Woven fibre and timber"
-            data-product-colour="Natural straw"
-            data-product-size="Approximately 145 cm high"
-          >
-            <button
-              class="interactive-product-card__open"
-              type="button"
-              data-product-trigger="organic-lamp"
-              aria-label="View Woven Floor Lamp"
-            >
-              <span class="interactive-product-card__number">3</span>
-
-              <img
-                src="assets/images/organic-product-light.jpg"
-                alt="Woven natural floor lamp"
-                width="700"
-                height="800"
-                loading="lazy"
-              >
-            </button>
-
-            <div class="interactive-product-card__content">
-              <h3>Woven Floor Lamp</h3>
-              <span>£89.99</span>
-
-              <button
-                class="interactive-product-card__toggle"
-                type="button"
-                data-product-toggle="organic-lamp"
-                aria-pressed="true"
-              >
-                Remove
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="interactive-product-card is-selected"
-            data-product-card
-            data-product-id="organic-vase"
-            data-product-number="4"
-            data-product-name="Hand-Finished Ceramic Vase"
-            data-product-price="49.99"
-            data-product-currency="GBP"
-            data-product-retailer="Selected retailer"
-            data-product-image="assets/images/organic-detail-timber.jpg"
-            data-product-link="https://www.google.com/search?q=large+handmade+neutral+ceramic+vase"
-            data-product-description="A large organic vase with softly irregular texture and a handmade appearance."
-            data-product-material="Textured ceramic"
-            data-product-colour="Warm chalk"
-            data-product-size="Approximately 40 cm high"
-          >
-            <button
-              class="interactive-product-card__open"
-              type="button"
-              data-product-trigger="organic-vase"
-              aria-label="View Hand-Finished Ceramic Vase"
-            >
-              <span class="interactive-product-card__number">4</span>
-
-              <img
-                src="assets/images/organic-detail-timber.jpg"
-                alt="Large hand-finished ceramic vase"
-                width="700"
-                height="800"
-                loading="lazy"
-              >
-            </button>
-
-            <div class="interactive-product-card__content">
-              <h3>Hand-Finished Ceramic Vase</h3>
-              <span>£49.99</span>
-
-              <button
-                class="interactive-product-card__toggle"
-                type="button"
-                data-product-toggle="organic-vase"
-                aria-pressed="true"
-              >
-                Remove
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="interactive-product-card is-selected"
-            data-product-card
-            data-product-id="organic-rug"
-            data-product-number="5"
-            data-product-name="Natural Wool Rug"
-            data-product-price="119.99"
-            data-product-currency="GBP"
-            data-product-retailer="Selected retailer"
-            data-product-image="assets/images/organic-product-rug.jpg"
-            data-product-link="https://www.google.com/search?q=large+natural+textured+wool+rug"
-            data-product-description="A softly textured wool rug that grounds the room and adds acoustic warmth."
-            data-product-material="Wool and natural fibre blend"
-            data-product-colour="Oatmeal"
-            data-product-size="Approximately 200 × 300 cm"
-          >
-            <button
-              class="interactive-product-card__open"
-              type="button"
-              data-product-trigger="organic-rug"
-              aria-label="View Natural Wool Rug"
-            >
-              <span class="interactive-product-card__number">5</span>
-
-              <img
-                src="assets/images/organic-product-rug.jpg"
-                alt="Large natural wool rug"
-                width="700"
-                height="800"
-                loading="lazy"
-              >
-            </button>
-
-            <div class="interactive-product-card__content">
-              <h3>Natural Wool Rug</h3>
-              <span>£119.99</span>
-
-              <button
-                class="interactive-product-card__toggle"
-                type="button"
-                data-product-toggle="organic-rug"
-                aria-pressed="true"
-              >
-                Remove
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="interactive-product-card is-selected"
-            data-product-card
-            data-product-id="organic-chair"
-            data-product-number="6"
-            data-product-name="Timber Lounge Chair"
-            data-product-price="179.99"
-            data-product-currency="GBP"
-            data-product-retailer="Selected retailer"
-            data-product-image="assets/images/organic-material-timber.jpg"
-            data-product-link="https://www.google.com/search?q=wooden+organic+lounge+chair+natural"
-            data-product-description="A relaxed lounge chair combining a visible timber frame with tactile natural upholstery."
-            data-product-material="Natural timber and woven fabric"
-            data-product-colour="Oak and cream"
-            data-product-size="Approximately 72 × 78 cm"
-          >
-            <button
-              class="interactive-product-card__open"
-              type="button"
-              data-product-trigger="organic-chair"
-              aria-label="View Timber Lounge Chair"
-            >
-              <span class="interactive-product-card__number">6</span>
-
-              <img
-                src="assets/images/organic-material-timber.jpg"
-                alt="Natural timber lounge chair"
-                width="700"
-                height="800"
-                loading="lazy"
-              >
-            </button>
-
-            <div class="interactive-product-card__content">
-              <h3>Timber Lounge Chair</h3>
-              <span>£179.99</span>
-
-              <button
-                class="interactive-product-card__toggle"
-                type="button"
-                data-product-toggle="organic-chair"
-                aria-pressed="true"
-              >
-                Remove
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="interactive-product-card is-selected"
-            data-product-card
-            data-product-id="organic-art"
-            data-product-number="7"
-            data-product-name="Earth Textured Artwork"
-            data-product-price="69.99"
-            data-product-currency="GBP"
-            data-product-retailer="Selected retailer"
-            data-product-image="assets/images/organic-detail-textile.jpg"
-            data-product-link="https://www.google.com/search?q=earth+tone+textured+canvas+wall+art"
-            data-product-description="A restrained textural artwork using softened earth and mineral tones."
-            data-product-material="Textured canvas"
-            data-product-colour="Clay and natural stone"
-            data-product-size="Approximately 90 × 120 cm"
-          >
-            <button
-              class="interactive-product-card__open"
-              type="button"
-              data-product-trigger="organic-art"
-              aria-label="View Earth Textured Artwork"
-            >
-              <span class="interactive-product-card__number">7</span>
-
-              <img
-                src="assets/images/organic-detail-textile.jpg"
-                alt="Earth-toned textured wall artwork"
-                width="700"
-                height="800"
-                loading="lazy"
-              >
-            </button>
-
-            <div class="interactive-product-card__content">
-              <h3>Earth Textured Artwork</h3>
-              <span>£69.99</span>
-
-              <button
-                class="interactive-product-card__toggle"
-                type="button"
-                data-product-toggle="organic-art"
-                aria-pressed="true"
-              >
-                Remove
-              </button>
-            </div>
-          </article>
-
-          <article
-            class="interactive-product-card is-selected"
-            data-product-card
-            data-product-id="organic-plant"
-            data-product-number="8"
-            data-product-name="Indoor Olive Tree"
-            data-product-price="79.99"
-            data-product-currency="GBP"
-            data-product-retailer="Selected retailer"
-            data-product-image="assets/images/organic-adaptation.jpg"
-            data-product-link="https://www.google.com/search?q=large+indoor+olive+tree+ceramic+pot"
-            data-product-description="A tall olive tree that introduces natural height and softens the surrounding architecture."
-            data-product-material="Artificial foliage and ceramic pot"
-            data-product-colour="Muted olive"
-            data-product-size="Approximately 170 cm high"
-          >
-            <button
-              class="interactive-product-card__open"
-              type="button"
-              data-product-trigger="organic-plant"
-              aria-label="View Indoor Olive Tree"
-            >
-              <span class="interactive-product-card__number">8</span>
-
-              <img
-                src="assets/images/organic-adaptation.jpg"
-                alt="Tall indoor olive tree in a ceramic pot"
-                width="700"
-                height="800"
-                loading="lazy"
-              >
-            </button>
-
-            <div class="interactive-product-card__content">
-              <h3>Indoor Olive Tree</h3>
-              <span>£79.99</span>
-
-              <button
-                class="interactive-product-card__toggle"
-                type="button"
-                data-product-toggle="organic-plant"
-                aria-pressed="true"
-              >
-                Remove
-              </button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-estimate">
-      <div class="container">
-        <div class="project-estimate__summary">
-          <article>
-            <span>Selected products</span>
-            <strong data-selected-count>8 items</strong>
-          </article>
-
-          <span class="project-estimate__operator" aria-hidden="true">+</span>
-
-          <article>
-            <span>Estimated product total</span>
-            <strong data-product-total>£1,388.93</strong>
-          </article>
-
-          <span class="project-estimate__operator" aria-hidden="true">+</span>
-
-          <article>
-            <span>Painting application</span>
-            <strong>Survey required</strong>
-          </article>
-
-          <span class="project-estimate__operator" aria-hidden="true">+</span>
-
-          <article>
-            <span>Delivery &amp; installation</span>
-            <strong>Quote required</strong>
-          </article>
-        </div>
-
-        <div class="project-estimate__action">
-          <div>
-            <span>Estimated project investment</span>
-            <strong data-project-total>From £1,388.93 + application</strong>
-
-            <small>
-              Product prices are indicative and may change according to retailer,
-              availability and region.
-            </small>
-          </div>
-
-          <a
-            class="button button--dark"
-            href="request-atmosphere.html?project=organic-retreat"
-            data-request-atmosphere
-          >
-            Request this atmosphere
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-service-benefits section section--warm">
-      <div class="container">
-        <div class="section-heading section-heading--split">
-          <div>
-            <p class="eyebrow">More than a product list</p>
-            <h2>TRUECOAT brings the complete room together.</h2>
-          </div>
-
-          <p>
-            Products can be selected independently or included within a complete
-            painting, delivery and installation proposal.
-          </p>
-        </div>
-
-        <div class="project-service-benefits__grid">
+        <div class="organic-principles__grid">
           <article>
             <span>01</span>
-            <h3>Adapted to your home</h3>
+            <h3>Doğal yüzeyler</h3>
             <p>
-              The atmosphere is adjusted to your room dimensions, lighting,
-              architecture and existing furniture.
+              Ahşap, keten, yün, seramik ve taş görünümlü
+              yüzeyler birbiriyle dengelenir.
             </p>
           </article>
 
           <article>
             <span>02</span>
-            <h3>Professional painting</h3>
+            <h3>Yumuşak geçişler</h3>
             <p>
-              Surface preparation, colour direction and painting can be included in
-              one coordinated project.
+              Renkler arasında sert kontrast yerine birbirini
+              tamamlayan sıcak tonlar kullanılır.
             </p>
           </article>
 
           <article>
             <span>03</span>
-            <h3>Product alternatives</h3>
+            <h3>Dokunsal rahatlık</h3>
             <p>
-              Alternatives can be selected according to availability, location and
-              preferred investment level.
+              Her ürün yalnızca görünüşüyle değil, dokusu ve
+              günlük kullanım hissiyle seçilir.
             </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="project-product-list"
+        aria-labelledby="organic-products-title"
+        data-product-list
+      >
+        <div class="project-product-list__header">
+          <div>
+            <p class="eyebrow">
+              Bu ortamda kullanılan ürünler
+            </p>
+
+            <h2 id="organic-products-title">
+              Organik koleksiyon
+            </h2>
+          </div>
+
+          <p>
+            Ürünleri yana kaydırın veya oda görselindeki numaralı
+            noktalara dokunarak detaylarını inceleyin.
+          </p>
+        </div>
+
+        <div
+          class="project-product-list__grid"
+          data-horizontal-rail
+        >
+          <article
+            class="project-product-card"
+            data-product-card
+            data-product-id="organic-table"
+            data-product-number="1"
+            data-product-title="Masif Ahşap Orta Sehpa"
+            data-product-price="£172,00"
+            data-product-source="Etsy koleksiyonu"
+            data-product-description="Doğal damarları görünür masif ahşap yüzeyiyle salonun merkezinde sıcak ve kalıcı bir odak oluşturur."
+            data-product-url="https://www.etsy.com/search?q=solid+wood+organic+coffee+table"
+          >
+            <div class="project-product-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1499933374294-4584851497cc?auto=format&fit=crop&w=700&q=86"
+                alt="Doğal masif ahşap orta sehpa"
+                loading="lazy"
+              >
+
+              <span class="project-product-card__number">1</span>
+            </div>
+
+            <h3 class="project-product-card__title">
+              Masif Ahşap Orta Sehpa
+            </h3>
+
+            <p class="project-product-card__source">
+              Etsy koleksiyonu
+            </p>
+
+            <strong class="project-product-card__price">
+              £172,00
+            </strong>
+
+            <button type="button" data-product-open>
+              Ürünü incele
+            </button>
+          </article>
+
+          <article
+            class="project-product-card"
+            data-product-card
+            data-product-id="organic-sofa"
+            data-product-number="2"
+            data-product-title="Doğal Keten Koltuk"
+            data-product-price="£1.285,00"
+            data-product-source="Seçilmiş tedarikçi"
+            data-product-description="Yumuşak formu ve doğal keten dokusuyla organik atmosferin rahat ve sade karakterini belirler."
+            data-product-url="https://www.etsy.com/search?q=natural+linen+organic+sofa"
+          >
+            <div class="project-product-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=86"
+                alt="Doğal keten dokulu açık renk koltuk"
+                loading="lazy"
+              >
+
+              <span class="project-product-card__number">2</span>
+            </div>
+
+            <h3 class="project-product-card__title">
+              Doğal Keten Koltuk
+            </h3>
+
+            <p class="project-product-card__source">
+              Seçilmiş tedarikçi
+            </p>
+
+            <strong class="project-product-card__price">
+              £1.285,00
+            </strong>
+
+            <button type="button" data-product-open>
+              Ürünü incele
+            </button>
+          </article>
+
+          <article
+            class="project-product-card"
+            data-product-card
+            data-product-id="organic-lamp"
+            data-product-number="3"
+            data-product-title="Kâğıt Formlu Lambader"
+            data-product-price="£78,50"
+            data-product-source="Etsy koleksiyonu"
+            data-product-description="Kâğıt dokulu başlığı ışığı yumuşatarak dinlendirici ve sıcak bir akşam atmosferi yaratır."
+            data-product-url="https://www.etsy.com/search?q=paper+floor+lamp+japandi"
+          >
+            <div class="project-product-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=86"
+                alt="Kâğıt dokulu organik formlu lambader"
+                loading="lazy"
+              >
+
+              <span class="project-product-card__number">3</span>
+            </div>
+
+            <h3 class="project-product-card__title">
+              Kâğıt Formlu Lambader
+            </h3>
+
+            <p class="project-product-card__source">
+              Etsy koleksiyonu
+            </p>
+
+            <strong class="project-product-card__price">
+              £78,50
+            </strong>
+
+            <button type="button" data-product-open>
+              Ürünü incele
+            </button>
+          </article>
+
+          <article
+            class="project-product-card"
+            data-product-card
+            data-product-id="organic-vase"
+            data-product-number="4"
+            data-product-title="El Yapımı Kil Vazo"
+            data-product-price="£39,90"
+            data-product-source="Etsy koleksiyonu"
+            data-product-description="El işçiliğinin küçük farklılıklarını taşıyan kil vazo, mekâna benzersiz ve doğal bir karakter kazandırır."
+            data-product-url="https://www.etsy.com/search?q=handmade+clay+vase+organic"
+          >
+            <div class="project-product-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=700&q=86"
+                alt="El yapımı doğal kil dekoratif vazo"
+                loading="lazy"
+              >
+
+              <span class="project-product-card__number">4</span>
+            </div>
+
+            <h3 class="project-product-card__title">
+              El Yapımı Kil Vazo
+            </h3>
+
+            <p class="project-product-card__source">
+              Etsy koleksiyonu
+            </p>
+
+            <strong class="project-product-card__price">
+              £39,90
+            </strong>
+
+            <button type="button" data-product-open>
+              Ürünü incele
+            </button>
+          </article>
+
+          <article
+            class="project-product-card"
+            data-product-card
+            data-product-id="organic-rug"
+            data-product-number="5"
+            data-product-title="El Dokuma Yün Halı"
+            data-product-price="£156,00"
+            data-product-source="Etsy koleksiyonu"
+            data-product-description="Yumuşak yün dokusu zemindeki sertliği azaltır ve yaşam alanına sessiz bir konfor katmanı ekler."
+            data-product-url="https://www.etsy.com/search?q=handwoven+neutral+wool+rug"
+          >
+            <div class="project-product-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=700&q=86"
+                alt="Doğal renkli el dokuma yün halı"
+                loading="lazy"
+              >
+
+              <span class="project-product-card__number">5</span>
+            </div>
+
+            <h3 class="project-product-card__title">
+              El Dokuma Yün Halı
+            </h3>
+
+            <p class="project-product-card__source">
+              Etsy koleksiyonu
+            </p>
+
+            <strong class="project-product-card__price">
+              £156,00
+            </strong>
+
+            <button type="button" data-product-open>
+              Ürünü incele
+            </button>
+          </article>
+
+          <article
+            class="project-product-card"
+            data-product-card
+            data-product-id="organic-cushion"
+            data-product-number="6"
+            data-product-title="Yün Dokulu Kırlent"
+            data-product-price="£31,50"
+            data-product-source="Etsy koleksiyonu"
+            data-product-description="Yün karışımlı dokusu koltuk üzerinde sıcaklık ve görsel derinlik oluşturur."
+            data-product-url="https://www.etsy.com/search?q=neutral+wool+cushion+cover"
+          >
+            <div class="project-product-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=700&q=86"
+                alt="Doğal renkli yün dokulu kırlent"
+                loading="lazy"
+              >
+
+              <span class="project-product-card__number">6</span>
+            </div>
+
+            <h3 class="project-product-card__title">
+              Yün Dokulu Kırlent
+            </h3>
+
+            <p class="project-product-card__source">
+              Etsy koleksiyonu
+            </p>
+
+            <strong class="project-product-card__price">
+              £31,50
+            </strong>
+
+            <button type="button" data-product-open>
+              Ürünü incele
+            </button>
+          </article>
+
+          <article
+            class="project-product-card"
+            data-product-card
+            data-product-id="organic-art"
+            data-product-number="7"
+            data-product-title="Doğal Dokulu Tablo"
+            data-product-price="£82,00"
+            data-product-source="Etsy koleksiyonu"
+            data-product-description="Toprak tonlu dokulu yüzeyi duvara sakin bir hareket ve el yapımı hissi kazandırır."
+            data-product-url="https://www.etsy.com/search?q=organic+textured+neutral+wall+art"
+          >
+            <div class="project-product-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=700&q=86"
+                alt="Toprak tonlarında doğal dokulu duvar tablosu"
+                loading="lazy"
+              >
+
+              <span class="project-product-card__number">7</span>
+            </div>
+
+            <h3 class="project-product-card__title">
+              Doğal Dokulu Tablo
+            </h3>
+
+            <p class="project-product-card__source">
+              Etsy koleksiyonu
+            </p>
+
+            <strong class="project-product-card__price">
+              £82,00
+            </strong>
+
+            <button type="button" data-product-open>
+              Ürünü incele
+            </button>
+          </article>
+
+          <article
+            class="project-product-card"
+            data-product-card
+            data-product-id="organic-plant"
+            data-product-number="8"
+            data-product-title="İç Mekân Ağacı"
+            data-product-price="£69,90"
+            data-product-source="Seçilmiş tedarikçi"
+            data-product-description="Doğal yeşil tonu ve ince dallarıyla mekânın organik karakterini tamamlayan canlı bir vurgu oluşturur."
+            data-product-url="https://www.etsy.com/search?q=indoor+olive+tree+decor"
+          >
+            <div class="project-product-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1614594575810-49783b7d1a7f?auto=format&fit=crop&w=700&q=86"
+                alt="Doğal saksı içinde dekoratif iç mekân ağacı"
+                loading="lazy"
+              >
+
+              <span class="project-product-card__number">8</span>
+            </div>
+
+            <h3 class="project-product-card__title">
+              İç Mekân Ağacı
+            </h3>
+
+            <p class="project-product-card__source">
+              Seçilmiş tedarikçi
+            </p>
+
+            <strong class="project-product-card__price">
+              £69,90
+            </strong>
+
+            <button type="button" data-product-open>
+              Ürünü incele
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-estimate" aria-label="Proje tahmini">
+        <div class="project-estimate__summary">
+          <article>
+            <span>Seçilmiş ürünler</span>
+            <strong>8 parça</strong>
           </article>
 
           <article>
-            <span>04</span>
-            <h3>Delivery and placement</h3>
-            <p>
-              Delivery, furniture movement, installation and final placement can be
-              included where available.
-            </p>
+            <span>Tahmini ürün toplamı</span>
+            <strong>£1.914,80</strong>
+          </article>
+
+          <article>
+            <span>Boya uygulaması</span>
+            <strong>Keşif sonrası</strong>
+          </article>
+
+          <article>
+            <span>Teslimat ve montaj</span>
+            <strong>Teklif alınır</strong>
           </article>
         </div>
+
+        <div class="project-estimate__action">
+          <div>
+            <small>8 ürün · Tahmini toplam</small>
+            <strong>£1.914,80</strong>
+          </div>
+
+          <a href="request-atmosphere.html?project=organic-simplicity">
+            Atmosferi uygula
+          </a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <aside
+    class="product-drawer"
+    aria-hidden="true"
+    aria-label="Ürün detayları"
+    data-product-drawer
+  >
+    <div
+      class="product-drawer__panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="drawer-product-title"
+      data-drawer-panel
+    >
+      <button
+        class="product-drawer__close"
+        type="button"
+        aria-label="Ürün detaylarını kapat"
+        data-drawer-close
+      >
+        ×
+      </button>
+
+      <div class="product-drawer__media">
+        <img data-drawer-image src="" alt="">
       </div>
-    </section>
 
-    <section class="project-navigation section section--dark">
-      <div class="container">
-        <p class="eyebrow eyebrow--light">Continue exploring</p>
+      <div class="product-drawer__content">
+        <div class="product-drawer__heading">
+          <span
+            class="product-drawer__number"
+            data-drawer-number
+          ></span>
 
-        <div class="project-navigation__links">
-          <a href="project-modern.html">
-            <span>Previous atmosphere</span>
-            <strong>Quiet Modern</strong>
-            <span aria-hidden="true">↗️</span>
+          <div>
+            <p
+              class="product-drawer__source"
+              data-drawer-source
+            ></p>
+
+            <h2
+              class="product-drawer__title"
+              id="drawer-product-title"
+              data-drawer-title
+            >
+              Ürün
+            </h2>
+          </div>
+        </div>
+
+        <strong
+          class="product-drawer__price"
+          data-drawer-price
+        ></strong>
+
+        <p
+          class="product-drawer__description"
+          data-drawer-description
+        ></p>
+
+        <div class="product-drawer__actions">
+          <a
+            class="product-drawer__link"
+            href="https://www.etsy.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-drawer-link
+          >
+            Ürünü görüntüle ↗️
           </a>
 
-          <a href="project-mediterranean.html">
-            <span>Atmosphere 01</span>
-            <strong>Mediterranean Calm</strong>
-            <span aria-hidden="true">↗️</span>
+          <a
+            class="product-drawer__apply"
+            href="request-atmosphere.html?project=organic-simplicity"
+          >
+            Bu atmosferi evime uygula
           </a>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </aside>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__top">
-        <a class="brand brand--footer" href="index.html" aria-label="TRUECOAT home">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="brand" href="index.html">
           <span class="brand__wordmark">TRUECOAT</span>
-          <span class="brand__descriptor">Painting &amp; Interiors</span>
+          <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
         </a>
 
         <p>
-          Professional painting and atmosphere-led interior improvements for
-          considered homes.
+          Boya, yüzey, malzeme ve dekoru tek bir atmosfer içinde
+          buluşturan premium iç mekân uygulamaları.
         </p>
       </div>
 
-      <div class="site-footer__navigation">
+      <div class="site-footer__grid">
         <div>
-          <h2>Services</h2>
-          <a href="painting.html">Professional Painting</a>
-          <a href="atmospheres.html">TRUECOAT Atmospheres</a>
-          <a href="projects.html">Selected Projects</a>
+          <h2>Keşfedin</h2>
+
+          <a href="painting.html">Boyama</a>
+          <a href="difference.html">Farkımız</a>
+          <a href="atmospheres.html">Atmosferler</a>
+          <a href="projects.html">Projeler</a>
         </div>
 
         <div>
-          <h2>TRUECOAT</h2>
-          <a href="difference.html">Our Difference</a>
-          <a href="service-areas.html">Service Areas</a>
-          <a href="service-areas.html#request-survey">Request a Survey</a>
-        </div>
+          <h2>Hizmet</h2>
 
-        <div>
-          <h2>Featured</h2>
-          <a href="project-mediterranean.html">Mediterranean Calm</a>
-          <a href="project-modern.html">Quiet Modern</a>
-          <a href="project-organic.html">Organic Retreat</a>
+          <a href="service-areas.html">Hizmet Alanları</a>
+          <a href="request-atmosphere.html">Ücretsiz Keşif</a>
         </div>
       </div>
 
       <div class="site-footer__bottom">
-        <p>
-          &copy; <span data-current-year></span> TRUECOAT. All rights reserved.
-        </p>
-
-        <p>Painting &amp; interiors, thoughtfully finished.</p>
+        <p>© 2026 TRUECOAT. Tüm hakları saklıdır.</p>
       </div>
     </div>
   </footer>
