@@ -609,3 +609,72 @@
     gap: 22px 10px;
   }
 }
+
+/* =========================================================
+   MOBILE HOTSPOT COORDINATES
+========================================================= */
+
+@media (max-width: 720px) {
+  .interactive-project__stage > .product-hotspot {
+    top: auto !important;
+    bottom: auto;
+    left: var(--hotspot-x);
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Görsel yüksekliği ekran genişliğinin %125’i.
+     Noktalar görselin alt kenarına göre hesaplanır. */
+
+  .interactive-project__stage > .product-hotspot:nth-of-type(1) {
+    bottom: 28.75vw;
+  }
+
+  .interactive-project__stage > .product-hotspot:nth-of-type(2) {
+    bottom: 45vw;
+  }
+
+  .interactive-project__stage > .product-hotspot:nth-of-type(3) {
+    bottom: 72.5vw;
+  }
+
+  .interactive-project__stage > .product-hotspot:nth-of-type(4) {
+    bottom: 40vw;
+  }
+
+  .interactive-project__stage > .product-hotspot:nth-of-type(5) {
+    bottom: 15vw;
+  }
+
+  .interactive-project__stage > .product-hotspot:nth-of-type(6) {
+    bottom: 53.75vw;
+  }
+
+  .interactive-project__stage > .product-hotspot:nth-of-type(7) {
+    bottom: 93.75vw;
+  }
+
+  .interactive-project__stage > .product-hotspot:nth-of-type(8) {
+    bottom: 90vw;
+  }
+
+  .interactive-project__stage > .product-hotspot:hover,
+  .interactive-project__stage > .product-hotspot.is-active {
+    transform: translate(-50%, 50%) scale(1.06);
+  }
+
+  .interactive-project__stage > .product-hotspot {
+    transform: translate(-50%, 50%);
+  }
+
+  .interactive-project__list-toggle {
+    bottom: 14px;
+  }
+}
+
+@media (max-width: 390px) {
+  .interactive-project__stage > .product-hotspot {
+    width: 28px;
+    height: 28px;
+  }
+}
