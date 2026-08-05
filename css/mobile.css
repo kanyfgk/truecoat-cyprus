@@ -1,0 +1,611 @@
+/* =========================================================
+   TRUECOAT — MOBILE LAYOUT
+   Masaüstü görünümü etkilemez.
+========================================================= */
+
+@media (max-width: 720px) {
+  :root {
+    --side-space: 20px;
+    --section-space: 72px;
+    --mobile-header-height: 112px;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 15px;
+  }
+
+  .container {
+    width: 100%;
+    padding-inline: var(--side-space);
+  }
+
+  /* =======================================================
+     HEADER
+  ======================================================= */
+
+  .site-header {
+    min-height: var(--mobile-header-height);
+  }
+
+  .site-header__inner {
+    min-height: var(--mobile-header-height);
+    padding-block: 18px;
+  }
+
+  .brand__wordmark {
+    font-size: clamp(1.9rem, 9vw, 2.55rem);
+    line-height: 0.95;
+  }
+
+  .brand__descriptor {
+    margin-top: 8px;
+    font-size: 0.61rem;
+    letter-spacing: 0.2em;
+  }
+
+  .menu-toggle {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+  }
+
+  /* =======================================================
+     GLOBAL MOBILE TYPOGRAPHY
+  ======================================================= */
+
+  h1,
+  h2,
+  h3,
+  p {
+    overflow-wrap: break-word;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+  }
+
+  h2 {
+    font-size: clamp(2.25rem, 10.5vw, 3.25rem);
+    line-height: 1.02;
+  }
+
+  .eyebrow {
+    font-size: 0.64rem;
+    letter-spacing: 0.18em;
+  }
+
+  .button {
+    width: auto;
+    max-width: 100%;
+    min-height: 52px;
+    padding: 0.9rem 1.2rem;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .section {
+    padding-block: var(--section-space);
+  }
+
+  /* =======================================================
+     ATMOSPHERES LANDING HERO
+  ======================================================= */
+
+  .atmospheres-hero {
+    min-height: calc(100svh - var(--mobile-header-height));
+    overflow: hidden;
+  }
+
+  .atmospheres-hero__media,
+  .atmospheres-hero__overlay {
+    position: absolute;
+    inset: 0;
+  }
+
+  .atmospheres-hero__media img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: 58% center;
+  }
+
+  .atmospheres-hero__overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(16, 16, 14, 0.17) 0%,
+        rgba(16, 16, 14, 0.48) 45%,
+        rgba(16, 16, 14, 0.82) 100%
+      );
+  }
+
+  .atmospheres-hero__content {
+    min-height: calc(100svh - var(--mobile-header-height));
+    padding-top: clamp(90px, 15vh, 140px);
+    padding-bottom: 38px;
+    justify-content: flex-end;
+  }
+
+  .atmospheres-hero__content .eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .atmospheres-hero h1 {
+    width: 100%;
+    max-width: 355px;
+    margin-bottom: 22px;
+    font-size: clamp(2.8rem, 12vw, 3.75rem);
+    line-height: 0.98;
+  }
+
+  .atmospheres-hero h1 em {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.88em;
+    line-height: 1;
+  }
+
+  .atmospheres-hero__content > p:not(.eyebrow) {
+    max-width: 340px;
+    margin-bottom: 24px;
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  /* =======================================================
+     ATMOSPHERES CONTENT
+  ======================================================= */
+
+  .atmospheres-intro .container,
+  .atmosphere-entry,
+  .atmospheres-adaptation .container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .atmospheres-intro__heading h2 {
+    font-size: clamp(2.35rem, 10vw, 3.3rem);
+  }
+
+  .atmosphere-collection__list {
+    gap: 80px;
+  }
+
+  .atmosphere-entry:nth-child(even) .atmosphere-entry__visual {
+    order: initial;
+  }
+
+  .atmosphere-entry__visual img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .atmosphere-entry__content h3 {
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+  }
+
+  .atmosphere-entry__palette span {
+    width: 40px;
+    height: 40px;
+  }
+
+  .atmospheres-system__layers article {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .atmospheres-system__layers article > div {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .atmospheres-included__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atmospheres-included__grid article {
+    min-height: 190px;
+    padding: 24px;
+  }
+
+  /* =======================================================
+     INTERACTIVE PROJECT PAGE
+  ======================================================= */
+
+  .interactive-project__stage {
+    display: flex;
+    min-height: auto;
+    overflow: visible;
+    flex-direction: column;
+    background: var(--atmosphere-ink);
+  }
+
+  .interactive-project__introduction {
+    position: relative;
+    z-index: 3;
+    order: 1;
+    width: 100%;
+    min-height: auto;
+    padding: 38px var(--side-space) 32px;
+    background: var(--atmosphere-ink);
+  }
+
+  .interactive-project__back {
+    position: static;
+    margin-bottom: 38px;
+    font-size: 0.62rem;
+  }
+
+  .interactive-project__introduction .eyebrow {
+    margin-bottom: 12px;
+  }
+
+  .interactive-project__introduction h1 {
+    max-width: 100%;
+    margin-bottom: 18px;
+    font-size: clamp(2.75rem, 12vw, 3.65rem);
+    line-height: 0.98;
+  }
+
+  .interactive-project__introduction > p:not(.eyebrow) {
+    max-width: 350px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .interactive-project__facts {
+    display: grid;
+    margin: 26px 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+  }
+
+  .interactive-project__facts div {
+    display: block;
+    min-width: 0;
+    padding: 13px 0;
+  }
+
+  .interactive-project__facts dt {
+    margin-bottom: 6px;
+    font-size: 0.58rem;
+  }
+
+  .interactive-project__facts dd {
+    font-size: 0.76rem;
+    line-height: 1.4;
+  }
+
+  .interactive-project__introduction .button {
+    width: 100%;
+    min-height: 54px;
+    font-size: 0.68rem;
+  }
+
+  .interactive-project__image {
+    position: relative;
+    inset: auto;
+    order: 2;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #b6a189;
+  }
+
+  .interactive-project__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .interactive-project__shade {
+    display: none;
+  }
+
+  /* Hotspotlar app.js tarafından mobilde görselin içine taşınacak. */
+
+  .interactive-project__image .product-hotspot {
+    position: absolute;
+    z-index: 5;
+    top: var(--hotspot-y);
+    left: var(--hotspot-x);
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+  }
+
+  .interactive-project__image .product-hotspot:hover,
+  .interactive-project__image .product-hotspot.is-active {
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+
+  .interactive-project__image .product-hotspot::before {
+    inset: -4px;
+  }
+
+  .interactive-project__image .product-hotspot span {
+    font-size: 0.65rem;
+  }
+
+  .interactive-project__list-toggle {
+    right: 14px;
+    bottom: 14px;
+    min-height: 40px;
+    padding: 9px 13px;
+    font-size: 0.62rem;
+  }
+
+  /* =======================================================
+     PRODUCT LIST
+  ======================================================= */
+
+  .project-product-list {
+    padding-block: 64px;
+  }
+
+  .project-product-list__heading {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .project-product-list__heading h2 {
+    font-size: clamp(2.3rem, 10vw, 3rem);
+  }
+
+  .project-product-list__grid {
+    display: grid;
+    width: 100%;
+    padding: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px 12px;
+    overflow: visible;
+  }
+
+  .interactive-product-card {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .interactive-product-card__open {
+    width: 100%;
+  }
+
+  .interactive-product-card__open img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .interactive-product-card__number {
+    top: 8px;
+    left: 8px;
+    width: 27px;
+    height: 27px;
+    font-size: 0.63rem;
+  }
+
+  .interactive-product-card__content {
+    padding-top: 11px;
+  }
+
+  .interactive-product-card__content h3 {
+    min-height: 0;
+    font-size: 0.77rem;
+    line-height: 1.35;
+  }
+
+  .interactive-product-card__content > span {
+    margin-top: 5px;
+    font-size: 0.72rem;
+  }
+
+  .interactive-product-card__toggle {
+    min-height: 38px;
+    margin-top: 10px;
+    padding-inline: 8px;
+    font-size: 0.58rem;
+  }
+
+  /* =======================================================
+     PRODUCT DRAWER
+  ======================================================= */
+
+  .product-drawer {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 90svh;
+    border-top: 1px solid var(--atmosphere-line);
+    border-left: 0;
+    border-radius: 20px 20px 0 0;
+    transform: translateY(100%);
+  }
+
+  .product-drawer.is-open {
+    transform: translateY(0);
+  }
+
+  .product-drawer__header {
+    min-height: 68px;
+    padding: 14px 18px;
+  }
+
+  .product-drawer__body {
+    padding: 0 18px 28px;
+  }
+
+  .product-drawer__media img {
+    max-height: 310px;
+    object-fit: contain;
+  }
+
+  .product-drawer__actions {
+    grid-template-columns: 1fr;
+  }
+
+  /* =======================================================
+     ESTIMATE AND SERVICES
+  ======================================================= */
+
+  .project-estimate__summary {
+    grid-template-columns: 1fr;
+  }
+
+  .project-estimate__operator {
+    display: none;
+  }
+
+  .project-estimate__summary article {
+    min-height: 72px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--atmosphere-line);
+  }
+
+  .project-estimate__action {
+    padding-block: 28px;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .project-estimate__action .button {
+    width: 100%;
+  }
+
+  .project-service-benefits__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-service-benefits__grid article {
+    min-height: 190px;
+    padding: 24px;
+  }
+
+  /* =======================================================
+     REQUEST PAGE
+  ======================================================= */
+
+  .atmosphere-request-hero {
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+
+  .atmosphere-request-hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.7rem, 12vw, 3.65rem);
+  }
+
+  .atmosphere-request > .container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .atmosphere-request__sidebar {
+    position: static;
+    grid-template-columns: 1fr;
+  }
+
+  .atmosphere-application__section {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .atmosphere-application__fields,
+  .atmosphere-scope {
+    grid-template-columns: 1fr;
+  }
+
+  .atmosphere-application .form-field--wide {
+    grid-column: auto;
+  }
+
+  .atmosphere-upload__previews {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .request-project-card {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .request-project-card__image img {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  .request-process__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .request-process__steps li {
+    min-height: 180px;
+    padding: 22px;
+  }
+
+  .request-process__steps li > span {
+    margin-bottom: 36px;
+  }
+
+  /* =======================================================
+     FOOTER
+  ======================================================= */
+
+  .site-footer__top {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .site-footer__navigation {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 390px) {
+  :root {
+    --side-space: 17px;
+  }
+
+  .brand__wordmark {
+    font-size: 1.85rem;
+  }
+
+  .brand__descriptor {
+    font-size: 0.54rem;
+  }
+
+  .atmospheres-hero h1,
+  .interactive-project__introduction h1,
+  .atmosphere-request-hero h1 {
+    font-size: 2.65rem;
+  }
+
+  .interactive-project__facts {
+    gap: 0 13px;
+  }
+
+  .project-product-list__grid {
+    gap: 22px 10px;
+  }
+}
