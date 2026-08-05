@@ -1,758 +1,539 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
 
   <meta
     name="description"
-    content="Send your property details and request a tailored TRUECOAT atmosphere, painting and interior transformation proposal."
+    content="Beğendiğiniz TRUECOAT atmosferini evinize uyarlamak için ücretsiz keşif ve kişiye özel proje talebi oluşturun."
   >
 
-  <meta name="theme-color" content="#191a17">
+  <meta name="theme-color" content="#f5f2ec">
 
-  <title>Request Your Atmosphere — TRUECOAT</title>
+  <title>Bu Atmosferi Evimde İstiyorum — TRUECOAT</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/atmosphere-shop.css">
   <link rel="stylesheet" href="css/mobile.css">
 </head>
 
-<body class="page page-atmosphere-request" data-atmosphere-request-page>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+<body class="page page-request-atmosphere">
+  <a class="skip-link" href="#main-content">İçeriğe geç</a>
 
   <header class="site-header" data-header>
-    <div class="site-header__inner container">
-      <a class="brand" href="index.html" aria-label="TRUECOAT home">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html" aria-label="TRUECOAT ana sayfa">
         <span class="brand__wordmark">TRUECOAT</span>
-        <span class="brand__descriptor">Painting &amp; Interiors</span>
+        <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
       </a>
 
       <button
         class="menu-toggle"
         type="button"
-        aria-label="Open navigation"
+        aria-label="Menüyü aç"
         aria-expanded="false"
         aria-controls="primary-navigation"
         data-menu-toggle
       >
-        <span></span>
         <span></span>
       </button>
 
       <nav
         class="site-navigation"
         id="primary-navigation"
-        aria-label="Primary navigation"
+        aria-label="Ana navigasyon"
         data-navigation
       >
-        <a href="painting.html">Painting</a>
-        <a href="difference.html">Our Difference</a>
-        <a href="atmospheres.html">Atmospheres</a>
-        <a href="projects.html">Projects</a>
-        <a href="service-areas.html">Service Areas</a>
-
-        <a
-          class="button button--small button--dark"
-          href="service-areas.html#request-survey"
-        >
-          Request a survey
+        <a href="painting.html">Boyama</a>
+        <a href="difference.html">Farkımız</a>
+        <a href="atmospheres.html">Atmosferler</a>
+        <a href="projects.html">Projeler</a>
+        <a href="service-areas.html">Hizmet Alanları</a>
+        <a class="nav-cta" href="request-atmosphere.html">
+          Ücretsiz Keşif
         </a>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="atmosphere-request-hero">
-      <div class="container">
+    <section class="request-atmosphere">
+      <div class="request-atmosphere__intro">
         <a
-          class="atmosphere-request-hero__back"
-          href="projects.html"
-          data-request-back-link
+          class="request-atmosphere__back"
+          href="project-mediterranean.html"
         >
-          <span aria-hidden="true">←</span>
-          Return to project
+          ← Akdeniz Sakinliği projesine dön
         </a>
 
-        <p class="eyebrow">Your TRUECOAT project</p>
+        <p class="eyebrow">Kişiye özel atmosfer uygulaması</p>
 
-        <h1>
-          I want this atmosphere
-          <em>in my home.</em>
-        </h1>
+        <h1>Bu atmosferi evimde istiyorum.</h1>
 
-        <p>
-          Send us a few details and photographs. We will review how your selected
-          atmosphere can be adapted to your property.
+        <p class="request-atmosphere__lead">
+          Beğendiğiniz atmosferi evinizin ölçülerine, ışığına,
+          mevcut mobilyalarına ve bütçenize göre yeniden yorumluyoruz.
         </p>
       </div>
-    </section>
 
-    <section class="atmosphere-request section">
-      <div class="container">
-        <div class="atmosphere-request__main">
+      <div class="request-atmosphere__layout">
+        <section
+          class="request-project-card"
+          aria-labelledby="selected-project-title"
+        >
+          <div class="request-project-card__image">
+            <img
+              src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88"
+              alt="Sıcak doğal tonlarla tasarlanmış Akdeniz atmosferli oturma odası"
+            >
+          </div>
+
+          <div class="request-project-card__content">
+            <div>
+              <p class="eyebrow">Seçilen atmosfer</p>
+
+              <h2 id="selected-project-title">
+                Akdeniz Sakinliği
+              </h2>
+
+              <p>
+                Doğal malzemeler, sıcak tonlar ve zamansız tasarımla
+                dengeli bir yaşam alanı.
+              </p>
+            </div>
+
+            <dl class="request-project-card__facts">
+              <div>
+                <dt>Önerilen alan</dt>
+                <dd>24–32 m²</dd>
+              </div>
+
+              <div>
+                <dt>Tahmini uygulama</dt>
+                <dd>5–7 gün</dd>
+              </div>
+
+              <div>
+                <dt>Ürün sayısı</dt>
+                <dd>8 parça</dd>
+              </div>
+
+              <div>
+                <dt>Proje türü</dt>
+                <dd>Salon</dd>
+              </div>
+            </dl>
+
+            <a
+              class="request-project-card__link"
+              href="project-mediterranean.html"
+            >
+              Proje detaylarını görüntüle →
+            </a>
+          </div>
+        </section>
+
+        <section
+          class="request-form-card"
+          aria-labelledby="request-form-title"
+        >
+          <div class="request-form-card__header">
+            <p class="eyebrow">Ücretsiz keşif talebi</p>
+
+            <h2 id="request-form-title">
+              Evinizi tanıyalım.
+            </h2>
+
+            <p>
+              Bilgilerinizi bırakın. Ekibimiz alanınızı değerlendirip
+              sizinle iletişime geçsin.
+            </p>
+          </div>
+
           <form
-            class="atmosphere-application"
-            data-atmosphere-request-form
+            class="request-form"
+            id="atmosphere-request-form"
+            data-request-form
             novalidate
           >
             <input
               type="hidden"
-              name="Project"
-              value="Mediterranean Calm"
-              data-request-project-input
+              name="project"
+              value="Akdeniz Sakinliği"
             >
 
-            <input
-              type="hidden"
-              name="Selected products"
-              value=""
-              data-request-products-input
-            >
+            <div class="request-form__grid">
+              <div class="form-field">
+                <label for="full-name">
+                  Ad Soyad
+                  <span aria-hidden="true">*</span>
+                </label>
 
-            <input
-              type="hidden"
-              name="Estimated product total"
-              value=""
-              data-request-total-input
-            >
+                <input
+                  id="full-name"
+                  name="fullName"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Adınız ve soyadınız"
+                  required
+                >
 
-            <section class="atmosphere-application__section">
-              <div class="atmosphere-application__section-heading">
-                <span>01</span>
-
-                <div>
-                  <h2>Your details</h2>
-                  <p>Tell us who we should contact about the project.</p>
-                </div>
+                <small class="form-field__error" data-error-for="fullName">
+                  Lütfen adınızı ve soyadınızı girin.
+                </small>
               </div>
 
-              <div class="atmosphere-application__fields">
-                <div class="form-field">
-                  <label for="atmosphere-name">Full name</label>
+              <div class="form-field">
+                <label for="phone">
+                  Telefon
+                  <span aria-hidden="true">*</span>
+                </label>
 
-                  <input
-                    id="atmosphere-name"
-                    name="Full name"
-                    type="text"
-                    autocomplete="name"
-                    placeholder="Your full name"
-                    required
-                  >
-                </div>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="tel"
+                  autocomplete="tel"
+                  placeholder="+90 5XX XXX XX XX"
+                  required
+                >
 
-                <div class="form-field">
-                  <label for="atmosphere-email">Email address</label>
-
-                  <input
-                    id="atmosphere-email"
-                    name="Email"
-                    type="email"
-                    autocomplete="email"
-                    placeholder="name@example.com"
-                    required
-                  >
-                </div>
-
-                <div class="form-field">
-                  <label for="atmosphere-phone">Phone or WhatsApp</label>
-
-                  <input
-                    id="atmosphere-phone"
-                    name="Phone or WhatsApp"
-                    type="tel"
-                    autocomplete="tel"
-                    placeholder="+44 or +90"
-                    required
-                  >
-                </div>
-
-                <div class="form-field">
-                  <label for="atmosphere-contact-method">
-                    Preferred contact method
-                  </label>
-
-                  <select
-                    id="atmosphere-contact-method"
-                    name="Preferred contact method"
-                    required
-                  >
-                    <option value="" selected disabled>Select one</option>
-                    <option value="WhatsApp">WhatsApp</option>
-                    <option value="Phone call">Phone call</option>
-                    <option value="Email">Email</option>
-                  </select>
-                </div>
-              </div>
-            </section>
-
-            <section class="atmosphere-application__section">
-              <div class="atmosphere-application__section-heading">
-                <span>02</span>
-
-                <div>
-                  <h2>Your property</h2>
-                  <p>
-                    These details help us understand the room before arranging a
-                    survey.
-                  </p>
-                </div>
+                <small class="form-field__error" data-error-for="phone">
+                  Lütfen geçerli bir telefon numarası girin.
+                </small>
               </div>
 
-              <div class="atmosphere-application__fields">
-                <div class="form-field form-field--wide">
-                  <label for="atmosphere-address">Property location</label>
+              <div class="form-field">
+                <label for="email">
+                  E-posta
+                </label>
 
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  inputmode="email"
+                  autocomplete="email"
+                  placeholder="ornek@email.com"
+                >
+
+                <small class="form-field__error" data-error-for="email">
+                  Lütfen geçerli bir e-posta adresi girin.
+                </small>
+              </div>
+
+              <div class="form-field">
+                <label for="location">
+                  Bölge
+                  <span aria-hidden="true">*</span>
+                </label>
+
+                <select
+                  id="location"
+                  name="location"
+                  required
+                >
+                  <option value="">Bölgenizi seçin</option>
+                  <option value="Girne">Girne</option>
+                  <option value="Lefkoşa">Lefkoşa</option>
+                  <option value="Gazimağusa">Gazimağusa</option>
+                  <option value="İskele">İskele</option>
+                  <option value="Güzelyurt">Güzelyurt</option>
+                  <option value="Lefke">Lefke</option>
+                  <option value="Diğer">Diğer</option>
+                </select>
+
+                <small class="form-field__error" data-error-for="location">
+                  Lütfen hizmet bölgesini seçin.
+                </small>
+              </div>
+
+              <div class="form-field">
+                <label for="room-type">
+                  Oda türü
+                  <span aria-hidden="true">*</span>
+                </label>
+
+                <select
+                  id="room-type"
+                  name="roomType"
+                  required
+                >
+                  <option value="">Oda türünü seçin</option>
+                  <option value="Salon">Salon</option>
+                  <option value="Yatak odası">Yatak odası</option>
+                  <option value="Yemek alanı">Yemek alanı</option>
+                  <option value="Çalışma odası">Çalışma odası</option>
+                  <option value="Tüm ev">Tüm ev</option>
+                  <option value="Diğer">Diğer</option>
+                </select>
+
+                <small class="form-field__error" data-error-for="roomType">
+                  Lütfen oda türünü seçin.
+                </small>
+              </div>
+
+              <div class="form-field">
+                <label for="room-size">
+                  Yaklaşık alan
+                </label>
+
+                <div class="form-field__unit">
                   <input
-                    id="atmosphere-address"
-                    name="Property location"
-                    type="text"
-                    autocomplete="street-address"
-                    placeholder="Town, area or postcode"
-                    required
-                  >
-                </div>
-
-                <div class="form-field">
-                  <label for="atmosphere-region">Region</label>
-
-                  <select
-                    id="atmosphere-region"
-                    name="Region"
-                    required
-                  >
-                    <option value="" selected disabled>Select your region</option>
-                    <option value="Northern Cyprus">Northern Cyprus</option>
-                    <option value="United Kingdom">United Kingdom</option>
-                    <option value="Other location">Another location</option>
-                  </select>
-                </div>
-
-                <div class="form-field">
-                  <label for="atmosphere-property-type">Property type</label>
-
-                  <select
-                    id="atmosphere-property-type"
-                    name="Property type"
-                    required
-                  >
-                    <option value="" selected disabled>Select property type</option>
-                    <option value="Apartment">Apartment</option>
-                    <option value="Villa or house">Villa or house</option>
-                    <option value="Rental property">Rental property</option>
-                    <option value="Holiday residence">Holiday residence</option>
-                    <option value="Commercial interior">Commercial interior</option>
-                  </select>
-                </div>
-
-                <div class="form-field">
-                  <label for="atmosphere-room-type">Room type</label>
-
-                  <select
-                    id="atmosphere-room-type"
-                    name="Room type"
-                    required
-                  >
-                    <option value="" selected disabled>Select room</option>
-                    <option value="Living room">Living room</option>
-                    <option value="Bedroom">Bedroom</option>
-                    <option value="Dining room">Dining room</option>
-                    <option value="Open-plan interior">Open-plan interior</option>
-                    <option value="Multiple rooms">Multiple rooms</option>
-                    <option value="Other room">Other room</option>
-                  </select>
-                </div>
-
-                <div class="form-field">
-                  <label for="atmosphere-room-size">
-                    Approximate room size
-                  </label>
-
-                  <input
-                    id="atmosphere-room-size"
-                    name="Approximate room size"
+                    id="room-size"
+                    name="roomSize"
                     type="number"
                     inputmode="decimal"
                     min="1"
                     max="1000"
-                    placeholder="m²"
-                    required
+                    placeholder="Örn. 28"
                   >
-                </div>
 
-                <div class="form-field">
-                  <label for="atmosphere-furnished">
-                    Is the property furnished?
-                  </label>
-
-                  <select
-                    id="atmosphere-furnished"
-                    name="Furnished property"
-                    required
-                  >
-                    <option value="" selected disabled>Select one</option>
-                    <option value="Fully furnished">Fully furnished</option>
-                    <option value="Partly furnished">Partly furnished</option>
-                    <option value="Empty property">Empty property</option>
-                  </select>
-                </div>
-
-                <div class="form-field">
-                  <label for="atmosphere-ownership">
-                    Property status
-                  </label>
-
-                  <select
-                    id="atmosphere-ownership"
-                    name="Property status"
-                    required
-                  >
-                    <option value="" selected disabled>Select one</option>
-                    <option value="I own the property">
-                      I own the property
-                    </option>
-                    <option value="I rent with permission">
-                      I rent with permission
-                    </option>
-                    <option value="Property under purchase">
-                      Property under purchase
-                    </option>
-                    <option value="Commercially managed">
-                      Commercially managed
-                    </option>
-                  </select>
-                </div>
-              </div>
-            </section>
-
-            <section class="atmosphere-application__section">
-              <div class="atmosphere-application__section-heading">
-                <span>03</span>
-
-                <div>
-                  <h2>Project scope</h2>
-                  <p>
-                    Select the services you would like TRUECOAT to consider.
-                  </p>
+                  <span>m²</span>
                 </div>
               </div>
 
-              <fieldset class="atmosphere-scope">
-                <legend>Which services are you interested in?</legend>
-
-                <label class="atmosphere-scope__option">
-                  <input
-                    type="checkbox"
-                    name="Requested service"
-                    value="Professional painting"
-                    checked
-                  >
-
-                  <span>
-                    <strong>Professional painting</strong>
-                    <small>
-                      Preparation, colour direction and professional application.
-                    </small>
-                  </span>
+              <div class="form-field form-field--full">
+                <label for="budget">
+                  Bütçe aralığı
                 </label>
 
-                <label class="atmosphere-scope__option">
-                  <input
-                    type="checkbox"
-                    name="Requested service"
-                    value="Selected atmosphere products"
-                    checked
-                  >
-
-                  <span>
-                    <strong>Selected atmosphere products</strong>
-                    <small>
-                      The products saved from your chosen atmosphere.
-                    </small>
-                  </span>
-                </label>
-
-                <label class="atmosphere-scope__option">
-                  <input
-                    type="checkbox"
-                    name="Requested service"
-                    value="Product alternatives"
-                  >
-
-                  <span>
-                    <strong>Alternative product sourcing</strong>
-                    <small>
-                      Similar products selected for your location and budget.
-                    </small>
-                  </span>
-                </label>
-
-                <label class="atmosphere-scope__option">
-                  <input
-                    type="checkbox"
-                    name="Requested service"
-                    value="Delivery and installation"
-                  >
-
-                  <span>
-                    <strong>Delivery and installation</strong>
-                    <small>
-                      Delivery, assembly and agreed product placement.
-                    </small>
-                  </span>
-                </label>
-
-                <label class="atmosphere-scope__option">
-                  <input
-                    type="checkbox"
-                    name="Requested service"
-                    value="Furniture moving"
-                  >
-
-                  <span>
-                    <strong>Furniture moving</strong>
-                    <small>
-                      Additional moving support for furnished properties.
-                    </small>
-                  </span>
-                </label>
-
-                <label class="atmosphere-scope__option">
-                  <input
-                    type="checkbox"
-                    name="Requested service"
-                    value="Complete atmosphere transformation"
-                  >
-
-                  <span>
-                    <strong>Complete transformation</strong>
-                    <small>
-                      Painting, product direction and final room presentation.
-                    </small>
-                  </span>
-                </label>
-              </fieldset>
-
-              <div class="atmosphere-application__fields">
-                <div class="form-field">
-                  <label for="atmosphere-budget">Preferred budget</label>
-
-                  <select
-                    id="atmosphere-budget"
-                    name="Preferred budget"
-                    required
-                  >
-                    <option value="" selected disabled>Select a range</option>
-                    <option value="Under £1,000">Under £1,000</option>
-                    <option value="£1,000–£2,500">£1,000–£2,500</option>
-                    <option value="£2,500–£5,000">£2,500–£5,000</option>
-                    <option value="£5,000–£10,000">£5,000–£10,000</option>
-                    <option value="Above £10,000">Above £10,000</option>
-                    <option value="I need guidance">I need guidance</option>
-                  </select>
-                </div>
-
-                <div class="form-field">
-                  <label for="atmosphere-timing">Preferred timing</label>
-
-                  <select
-                    id="atmosphere-timing"
-                    name="Preferred timing"
-                    required
-                  >
-                    <option value="" selected disabled>Select timing</option>
-                    <option value="As soon as possible">
-                      As soon as possible
-                    </option>
-                    <option value="Within one month">Within one month</option>
-                    <option value="Within three months">Within three months</option>
-                    <option value="Within six months">Within six months</option>
-                    <option value="Planning ahead">Planning ahead</option>
-                  </select>
-                </div>
-
-                <div class="form-field form-field--wide">
-                  <label for="atmosphere-notes">
-                    What would you like to change?
-                  </label>
-
-                  <textarea
-                    id="atmosphere-notes"
-                    name="Project notes"
-                    rows="6"
-                    placeholder="Tell us what currently does not feel right, what you want to keep and what result you would like to achieve."
-                    required
-                  ></textarea>
-                </div>
-              </div>
-            </section>
-
-            <section class="atmosphere-application__section">
-              <div class="atmosphere-application__section-heading">
-                <span>04</span>
-
-                <div>
-                  <h2>Property photographs</h2>
-                  <p>
-                    Add photographs from different angles so we can understand the
-                    existing room.
-                  </p>
-                </div>
-              </div>
-
-              <div
-                class="atmosphere-upload"
-                data-atmosphere-upload
-              >
-                <label
-                  class="atmosphere-upload__dropzone"
-                  for="atmosphere-photos"
+                <select
+                  id="budget"
+                  name="budget"
                 >
-                  <span class="atmosphere-upload__icon" aria-hidden="true">↑</span>
+                  <option value="">Bütçe aralığını seçin</option>
+                  <option value="Başlangıç">
+                    Başlangıç seviye
+                  </option>
+                  <option value="Dengeli">
+                    Dengeli seçim
+                  </option>
+                  <option value="Premium">
+                    Premium uygulama
+                  </option>
+                  <option value="Keşif sonrası">
+                    Keşif sonrasında belirlemek istiyorum
+                  </option>
+                </select>
+              </div>
 
-                  <strong>Upload property photographs</strong>
-
-                  <small>
-                    JPG, PNG or WEBP. Select up to six images.
-                  </small>
+              <div class="form-field form-field--full">
+                <label for="message">
+                  Eviniz ve beklentiniz
                 </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Mevcut alanınızı, değiştirmek istediğiniz bölümleri ve beklentilerinizi kısaca anlatın."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="request-upload">
+              <div class="request-upload__heading">
+                <div>
+                  <h3>Evinizin fotoğraflarını ekleyin</h3>
+
+                  <p>
+                    Alanı farklı açılardan gösteren en fazla dört fotoğraf
+                    ekleyebilirsiniz.
+                  </p>
+                </div>
+
+                <span>İsteğe bağlı</span>
+              </div>
+
+              <label
+                class="request-upload__area"
+                for="room-photos"
+              >
+                <span class="request-upload__icon" aria-hidden="true">
+                  ↑
+                </span>
+
+                <strong>Fotoğraf seçin</strong>
+
+                <small>JPG veya PNG · En fazla 10 MB</small>
 
                 <input
-                  id="atmosphere-photos"
-                  name="Property photographs"
+                  id="room-photos"
+                  name="roomPhotos"
                   type="file"
                   accept="image/jpeg,image/png,image/webp"
                   multiple
-                  data-atmosphere-file-input
+                  data-photo-input
                 >
+              </label>
 
-                <div
-                  class="atmosphere-upload__previews"
-                  aria-live="polite"
-                  data-atmosphere-previews
-                ></div>
-              </div>
+              <div
+                class="request-upload__preview"
+                data-photo-preview
+                aria-live="polite"
+              ></div>
+            </div>
 
-              <p class="atmosphere-upload__notice">
-                Photographs are previewed in your browser. Your email application
-                may require the original photographs to be attached separately when
-                the request is submitted.
-              </p>
-            </section>
-
-            <label class="atmosphere-application__consent">
+            <label class="request-consent">
               <input
                 type="checkbox"
-                name="Consent"
-                value="Accepted"
+                name="consent"
                 required
               >
 
               <span>
-                I agree that TRUECOAT may use the information supplied to review
-                this project and contact me about my request.
+                Talebimle ilgili benimle iletişime geçilmesini ve
+                bilgilerimin bu amaçla kullanılmasını kabul ediyorum.
               </span>
             </label>
 
+            <small class="form-field__error" data-error-for="consent">
+              Devam etmek için iletişim iznini onaylamalısınız.
+            </small>
+
             <button
-              class="button button--dark atmosphere-application__submit"
+              class="request-form__submit"
               type="submit"
             >
-              Submit project request
+              Ücretsiz keşif talebini gönder
+              <span aria-hidden="true">→</span>
             </button>
 
-            <p
-              class="atmosphere-application__status"
-              aria-live="polite"
-              data-atmosphere-request-status
-            ></p>
-          </form>
-        </div>
-
-        <aside class="atmosphere-request__sidebar">
-          <section class="request-project-card">
-            <div class="request-project-card__image">
-              <img
-                src="assets/images/project-mediterranean-cover.jpg"
-                alt=""
-                width="900"
-                height="700"
-                data-request-project-image
-              >
-            </div>
-
-            <div class="request-project-card__content">
-              <span data-request-project-number>Atmosphere 01</span>
-              <h2 data-request-project-name>Mediterranean Calm</h2>
-
-              <p data-request-project-description>
-                Natural materials, sun-washed colour and relaxed forms create a
-                warm, balanced living space.
-              </p>
-
-              <a
-                href="project-mediterranean.html"
-                data-request-project-link
-              >
-                View project details
-                <span aria-hidden="true">↗️</span>
-              </a>
-            </div>
-          </section>
-
-          <section class="request-selected-products">
-            <div class="request-selected-products__heading">
-              <h2>Your selected products</h2>
-              <span data-request-selected-count>0 items</span>
-            </div>
+            <p class="request-form__note">
+              Talebiniz sonrasında ekibimiz sizinle iletişime geçerek
+              uygun keşif zamanını belirler.
+            </p>
 
             <div
-              class="request-selected-products__list"
-              data-request-selected-products
-            >
-              <p class="request-selected-products__empty">
-                Your saved atmosphere products will appear here.
-              </p>
-            </div>
-          </section>
+              class="request-form__status"
+              data-form-status
+              role="status"
+              aria-live="polite"
+              hidden
+            ></div>
+          </form>
+        </section>
 
-          <section class="request-benefits">
-            <h2>What happens next?</h2>
+        <aside class="request-benefits">
+          <p class="eyebrow">TRUECOAT yaklaşımı</p>
 
-            <ul>
-              <li>
-                <span>01</span>
+          <h2>Size ne sunuyoruz?</h2>
 
-                <div>
-                  <strong>Project review</strong>
-                  <p>
-                    We review your property details, photographs and selected
-                    products.
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <span>02</span>
-
-                <div>
-                  <strong>Initial contact</strong>
-                  <p>
-                    We contact you to clarify the scope and arrange the appropriate
-                    survey.
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <span>03</span>
-
-                <div>
-                  <strong>Tailored direction</strong>
-                  <p>
-                    The chosen atmosphere is adapted to your property, location and
-                    budget.
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <span>04</span>
-
-                <div>
-                  <strong>Clear proposal</strong>
-                  <p>
-                    You receive a defined proposal for painting, products and
-                    agreed installation.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <section class="request-investment">
-            <h2>Current estimate</h2>
-
-            <dl>
-              <div>
-                <dt>Selected products</dt>
-                <dd data-request-product-total>To be confirmed</dd>
-              </div>
+          <div class="request-benefits__list">
+            <article>
+              <span aria-hidden="true">01</span>
 
               <div>
-                <dt>Professional painting</dt>
-                <dd>Survey required</dd>
+                <h3>Evinize özel uyarlama</h3>
+
+                <p>
+                  Atmosferi evinizin ölçülerine, ışığına ve mevcut
+                  mimarisine göre yeniden tasarlarız.
+                </p>
               </div>
+            </article>
+
+            <article>
+              <span aria-hidden="true">02</span>
 
               <div>
-                <dt>Delivery &amp; installation</dt>
-                <dd>Quote required</dd>
+                <h3>Boya, dekor ve uygulama</h3>
+
+                <p>
+                  Boya uygulaması, ürün seçimi, teslimat ve montaj
+                  süreçlerini tek yapı altında yönetiriz.
+                </p>
               </div>
-            </dl>
+            </article>
 
-            <div class="request-investment__total">
-              <span>Estimated project investment</span>
+            <article>
+              <span aria-hidden="true">03</span>
 
-              <strong data-request-project-total>
-                Tailored proposal required
-              </strong>
+              <div>
+                <h3>Ücretsiz keşif</h3>
 
-              <small>
-                Final prices depend on product availability, property condition,
-                location and selected services.
-              </small>
-            </div>
-          </section>
+                <p>
+                  Uzman ekibimiz alanı yerinde değerlendirerek uygulanabilir
+                  bir plan oluşturur.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <span aria-hidden="true">04</span>
+
+              <div>
+                <h3>Şeffaf teklif</h3>
+
+                <p>
+                  Ürün, boya, işçilik ve teslimat kalemlerini açık biçimde
+                  gösteren teklif sunarız.
+                </p>
+              </div>
+            </article>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section class="request-process section section--warm">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">How it works</p>
-          <h2>From photographs to a finished atmosphere.</h2>
+    <section class="request-process">
+      <div class="request-process__inner">
+        <div class="request-process__header">
+          <p class="eyebrow">Süreç</p>
+          <h2>Nasıl çalışıyoruz?</h2>
         </div>
 
         <ol class="request-process__steps">
           <li>
             <span>01</span>
-            <h3>Send your information</h3>
-            <p>
-              Complete the form and show us the existing property.
-            </p>
+
+            <div>
+              <h3>Bilgilerinizi gönderin</h3>
+              <p>Formu doldurun ve mümkünse alanın fotoğraflarını ekleyin.</p>
+            </div>
           </li>
 
           <li>
             <span>02</span>
-            <h3>Arrange the survey</h3>
-            <p>
-              We contact you and confirm the most suitable survey process.
-            </p>
+
+            <div>
+              <h3>Keşif planlayalım</h3>
+              <p>Ekibimiz sizinle iletişime geçerek ücretsiz keşfi planlar.</p>
+            </div>
           </li>
 
           <li>
             <span>03</span>
-            <h3>Receive your proposal</h3>
-            <p>
-              We adapt the atmosphere and define painting, product and installation
-              costs.
-            </p>
+
+            <div>
+              <h3>Projenizi oluşturalım</h3>
+              <p>Alanınıza özel boya, ürün ve uygulama planını hazırlayalım.</p>
+            </div>
           </li>
 
           <li>
             <span>04</span>
-            <h3>Transform the room</h3>
-            <p>
-              Once approved, the painting and agreed improvements can begin.
-            </p>
+
+            <div>
+              <h3>Atmosferi uygulayalım</h3>
+              <p>Onayınızın ardından uygulama ve teslimat süreci başlasın.</p>
+            </div>
           </li>
         </ol>
       </div>
@@ -760,48 +541,39 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__top">
-        <a class="brand brand--footer" href="index.html" aria-label="TRUECOAT home">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="brand" href="index.html">
           <span class="brand__wordmark">TRUECOAT</span>
-          <span class="brand__descriptor">Painting &amp; Interiors</span>
+          <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
         </a>
 
         <p>
-          Professional painting and atmosphere-led interior improvements for
-          considered homes.
+          Boya, yüzey, malzeme ve dekoru tek bir atmosfer içinde
+          buluşturan premium iç mekân uygulamaları.
         </p>
       </div>
 
-      <div class="site-footer__navigation">
+      <div class="site-footer__grid">
         <div>
-          <h2>Services</h2>
-          <a href="painting.html">Professional Painting</a>
-          <a href="atmospheres.html">TRUECOAT Atmospheres</a>
-          <a href="projects.html">Selected Projects</a>
+          <h2>Keşfedin</h2>
+
+          <a href="painting.html">Boyama</a>
+          <a href="difference.html">Farkımız</a>
+          <a href="atmospheres.html">Atmosferler</a>
+          <a href="projects.html">Projeler</a>
         </div>
 
         <div>
-          <h2>TRUECOAT</h2>
-          <a href="difference.html">Our Difference</a>
-          <a href="service-areas.html">Service Areas</a>
-          <a href="service-areas.html#request-survey">Request a Survey</a>
-        </div>
+          <h2>Hizmet</h2>
 
-        <div>
-          <h2>Featured</h2>
-          <a href="project-mediterranean.html">Mediterranean Calm</a>
-          <a href="project-modern.html">Quiet Modern</a>
-          <a href="project-organic.html">Organic Retreat</a>
+          <a href="service-areas.html">Hizmet Alanları</a>
+          <a href="request-atmosphere.html">Ücretsiz Keşif</a>
         </div>
       </div>
 
       <div class="site-footer__bottom">
-        <p>
-          &copy; <span data-current-year></span> TRUECOAT. All rights reserved.
-        </p>
-
-        <p>Painting &amp; interiors, thoughtfully finished.</p>
+        <p>© 2026 TRUECOAT. Tüm hakları saklıdır.</p>
       </div>
     </div>
   </footer>
