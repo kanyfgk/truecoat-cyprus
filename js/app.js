@@ -7,211 +7,307 @@ const TRUECOAT_IMAGE_ROOT = "https://images.unsplash.com/";
 const TRUECOAT_IMAGES = {
   home:
     `${TRUECOAT_IMAGE_ROOT}photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=88`,
-
   painting:
     `${TRUECOAT_IMAGE_ROOT}photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=1600&q=88`,
-
   painter:
     `${TRUECOAT_IMAGE_ROOT}photo-1595814433015-e6f5ce69614e?auto=format&fit=crop&w=1600&q=88`,
-
   exterior:
     `${TRUECOAT_IMAGE_ROOT}photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=1600&q=88`,
-
   preparation:
     `${TRUECOAT_IMAGE_ROOT}photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1600&q=88`,
-
   protected:
     `${TRUECOAT_IMAGE_ROOT}photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=88`,
 
   mediterranean:
-    `${TRUECOAT_IMAGE_ROOT}photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=88`,
-
+    `${TRUECOAT_IMAGE_ROOT}photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=88`,
   mediterraneanDetail:
-    `${TRUECOAT_IMAGE_ROOT}photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=88`,
-
+    `${TRUECOAT_IMAGE_ROOT}photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88`,
   mediterraneanEvening:
     `${TRUECOAT_IMAGE_ROOT}photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=88`,
 
   modern:
     `${TRUECOAT_IMAGE_ROOT}photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=88`,
-
   modernDetail:
-    `${TRUECOAT_IMAGE_ROOT}photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=88`,
-
+    `${TRUECOAT_IMAGE_ROOT}photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=88`,
   modernEvening:
     `${TRUECOAT_IMAGE_ROOT}photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=88`,
 
   organic:
     `${TRUECOAT_IMAGE_ROOT}photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=88`,
-
   organicDetail:
-    `${TRUECOAT_IMAGE_ROOT}photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=88`,
-
+    `${TRUECOAT_IMAGE_ROOT}photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=88`,
   organicEvening:
-    `${TRUECOAT_IMAGE_ROOT}photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=88`,
-
-  atmosphere:
-    `${TRUECOAT_IMAGE_ROOT}photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1800&q=88`,
-
-  service:
-    `${TRUECOAT_IMAGE_ROOT}photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=1600&q=88`
+    `${TRUECOAT_IMAGE_ROOT}photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1600&q=88`
 };
 
-const TRUECOAT_CONTACT_EMAIL =
-  document.body.dataset.contactEmail || "truecoatcyprus@gmail.com";
+const PROJECT_DETAILS = {
+  mediterranean: {
+    name: "Akdeniz Sessizliği",
+    label: "Proje 01",
+    style: "Akdeniz Modern",
+    room: "24–32 m² oturma odası",
+    duration: "5–7 gün",
+    image: TRUECOAT_IMAGES.mediterranean,
+    page: "project-mediterranean.html"
+  },
 
-const SELECTORS = {
-  header: "[data-header]",
-  menuToggle: "[data-menu-toggle]",
-  navigation: "[data-navigation], #primary-navigation",
-  reveal: "[data-reveal], .reveal",
-  hotspot: ".product-hotspot, [data-hotspot]",
-  productCard: ".project-product-card, [data-product-card]",
-  drawer: ".product-drawer, [data-product-drawer]",
-  drawerPanel: ".product-drawer__panel, [data-drawer-panel]",
-  drawerClose: ".product-drawer__close, [data-drawer-close]",
-  listToggle: ".interactive-project__list-toggle, [data-list-toggle]",
-  productList: ".project-product-list, [data-product-list]",
-  requestForm: "[data-request-form]",
-  photoInput: "[data-photo-input]",
-  photoPreview: "[data-photo-preview]"
+  "mediterranean-silence": {
+    name: "Akdeniz Sessizliği",
+    label: "Proje 01",
+    style: "Akdeniz Modern",
+    room: "24–32 m² oturma odası",
+    duration: "5–7 gün",
+    image: TRUECOAT_IMAGES.mediterranean,
+    page: "project-mediterranean.html"
+  },
+
+  modern: {
+    name: "Modern Denge",
+    label: "Proje 02",
+    style: "Modern Minimal",
+    room: "20–30 m² oturma odası",
+    duration: "4–6 gün",
+    image: TRUECOAT_IMAGES.modern,
+    page: "project-modern.html"
+  },
+
+  "modern-balance": {
+    name: "Modern Denge",
+    label: "Proje 02",
+    style: "Modern Minimal",
+    room: "20–30 m² oturma odası",
+    duration: "4–6 gün",
+    image: TRUECOAT_IMAGES.modern,
+    page: "project-modern.html"
+  },
+
+  organic: {
+    name: "Organik Sadelik",
+    label: "Proje 03",
+    style: "Organik Çağdaş",
+    room: "22–30 m² oturma odası",
+    duration: "5–7 gün",
+    image: TRUECOAT_IMAGES.organic,
+    page: "project-organic.html"
+  },
+
+  "organic-simplicity": {
+    name: "Organik Sadelik",
+    label: "Proje 03",
+    style: "Organik Çağdaş",
+    room: "22–30 m² oturma odası",
+    duration: "5–7 gün",
+    image: TRUECOAT_IMAGES.organic,
+    page: "project-organic.html"
+  },
+
+  painting: {
+    name: "Profesyonel Boyama",
+    label: "Boyama hizmeti",
+    style: "Yüzeye özel uygulama",
+    room: "Proje kapsamında belirlenir",
+    duration: "Keşif sonrası belirlenir",
+    image: TRUECOAT_IMAGES.painting,
+    page: "painting.html"
+  }
 };
 
-const state = {
-  lastFocusedElement: null,
-  activeProductId: null,
-  uploadedPhotos: []
+const PRODUCT_LIBRARY = {
+  "travertine-table": {
+    number: "1",
+    name: "Traverten Orta Sehpa",
+    price: "19.750 TL",
+    store: "D-Home",
+    description:
+      "Doğal taş görünümünü modern ve sade bir formla birleştiren yuvarlak orta sehpa.",
+    dimensions: "Çap: 70 cm · Yükseklik: 35 cm",
+    material: "Traverten görünümlü yüzey",
+    colour: "Bej / Traverten",
+    image:
+      `${TRUECOAT_IMAGE_ROOT}photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=88`,
+    url: "https://www.etsy.com/search?q=travertine+coffee+table"
+  },
+
+  armchair: {
+    number: "2",
+    name: "Krem Bukle Berjer",
+    price: "14.250 TL",
+    store: "Dekor seçkisi",
+    description:
+      "Yumuşak bukle dokusu ve dengeli formuyla sıcak, rahat bir oturma parçası.",
+    dimensions: "Yaklaşık: 76 × 78 × 80 cm",
+    material: "Bukle kumaş ve ahşap gövde",
+    colour: "Krem",
+    image:
+      `${TRUECOAT_IMAGE_ROOT}photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1000&q=88`,
+    url: "https://www.etsy.com/search?q=cream+boucle+armchair"
+  },
+
+  lamp: {
+    number: "3",
+    name: "Seramik Masa Lambası",
+    price: "6.950 TL",
+    store: "Dekor seçkisi",
+    description:
+      "Mat seramik gövdesi ve keten başlığıyla yumuşak bir akşam ışığı oluşturur.",
+    dimensions: "Yükseklik: yaklaşık 52 cm",
+    material: "Seramik ve keten",
+    colour: "Kum beji",
+    image:
+      `${TRUECOAT_IMAGE_ROOT}photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=88`,
+    url: "https://www.etsy.com/search?q=ceramic+table+lamp+linen"
+  },
+
+  "side-table": {
+    number: "4",
+    name: "Traverten Yan Sehpa",
+    price: "8.900 TL",
+    store: "Dekor seçkisi",
+    description:
+      "Heykelsi formu ve doğal tonu sayesinde oturma alanına güçlü bir yüzey ekler.",
+    dimensions: "Yaklaşık: 40 × 40 × 48 cm",
+    material: "Taş görünümlü kompozit",
+    colour: "Doğal bej",
+    image:
+      `${TRUECOAT_IMAGE_ROOT}photo-1532323544230-7191fd51bc1b?auto=format&fit=crop&w=1000&q=88`,
+    url: "https://www.etsy.com/search?q=travertine+side+table"
+  },
+
+  rug: {
+    number: "5",
+    name: "Krem Dokuma Halı",
+    price: "9.850 TL",
+    store: "Dekor seçkisi",
+    description:
+      "Dokulu yüzeyiyle oturma grubunu bir araya getiren sıcak ve sade zemin parçası.",
+    dimensions: "Yaklaşık: 200 × 300 cm",
+    material: "Dokuma tekstil",
+    colour: "Krem / Kum",
+    image:
+      `${TRUECOAT_IMAGE_ROOT}photo-1600166898405-da9535204843?auto=format&fit=crop&w=1000&q=88`,
+    url: "https://www.etsy.com/search?q=cream+woven+rug"
+  },
+
+  cushion: {
+    number: "6",
+    name: "Keten Dokulu Kırlent",
+    price: "1.250 TL",
+    store: "Dekor seçkisi",
+    description:
+      "Doğal keten görünümüyle kanepe üzerindeki renk ve doku dengesini tamamlar.",
+    dimensions: "Yaklaşık: 45 × 45 cm",
+    material: "Keten karışımlı tekstil",
+    colour: "Doğal krem",
+    image:
+      `${TRUECOAT_IMAGE_ROOT}photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1000&q=88`,
+    url: "https://www.etsy.com/search?q=linen+cushion+cover"
+  },
+
+  artwork: {
+    number: "7",
+    name: "Dokulu Soyut Tablo",
+    price: "5.950 TL",
+    store: "Dekor seçkisi",
+    description:
+      "Sade tonlarda dokulu yüzeyiyle duvara derinlik kazandıran soyut çalışma.",
+    dimensions: "Yaklaşık: 80 × 100 cm",
+    material: "Tuval üzeri dokulu çalışma",
+    colour: "Kum / Kireç",
+    image:
+      `${TRUECOAT_IMAGE_ROOT}photo-1549490349-8643362247b5?auto=format&fit=crop&w=1000&q=88`,
+    url: "https://www.etsy.com/search?q=neutral+textured+wall+art"
+  },
+
+  olive: {
+    number: "8",
+    name: "Dekoratif Zeytin Ağacı",
+    price: "7.450 TL",
+    store: "Dekor seçkisi",
+    description:
+      "Mekâna doğal yükseklik, hareket ve Akdeniz karakteri kazandıran dekoratif ağaç.",
+    dimensions: "Yükseklik: yaklaşık 160–180 cm",
+    material: "Dekoratif bitki ve saksı",
+    colour: "Doğal yeşil",
+    image:
+      `${TRUECOAT_IMAGE_ROOT}photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1000&q=88`,
+    url: "https://www.etsy.com/search?q=artificial+olive+tree"
+  }
 };
 
-function query(selector, scope = document) {
-  return scope.querySelector(selector);
-}
-
-function queryAll(selector, scope = document) {
-  return Array.from(scope.querySelectorAll(selector));
-}
-
-function escapeSelector(value) {
-  if (window.CSS && typeof window.CSS.escape === "function") {
-    return window.CSS.escape(String(value));
+function getFocusableElements(container) {
+  if (!container) {
+    return [];
   }
 
-  return String(value).replace(/["\\]/g, "\\$&");
+  return Array.from(
+    container.querySelectorAll(
+      [
+        "a[href]",
+        "button:not([disabled])",
+        "input:not([disabled])",
+        "select:not([disabled])",
+        "textarea:not([disabled])",
+        '[tabindex]:not([tabindex="-1"])'
+      ].join(",")
+    )
+  ).filter((element) => !element.hasAttribute("hidden"));
 }
 
-function setImageSource(image, source) {
-  if (!image || !source) return;
+function lockPage() {
+  document.documentElement.classList.add("is-locked");
+  document.body.classList.add("is-locked");
+}
 
-  if (image.tagName === "IMG") {
-    image.src = source;
+function unlockPage() {
+  document.documentElement.classList.remove("is-locked");
+  document.body.classList.remove("is-locked");
+}
 
-    if (!image.hasAttribute("loading")) {
-      image.loading = image.closest(".hero, .interactive-project__stage")
-        ? "eager"
-        : "lazy";
-    }
+function initNavigation() {
+  const toggle = document.querySelector("[data-menu-toggle]");
+  const navigation = document.querySelector("[data-navigation]");
 
-    image.decoding = "async";
+  if (!toggle || !navigation) {
     return;
   }
 
-  image.style.backgroundImage = `url("${source}")`;
-}
+  let previouslyFocusedElement = null;
 
-function initialiseImages() {
-  queryAll("[data-image]").forEach((element) => {
-    const imageKey = element.dataset.image;
-    const source = TRUECOAT_IMAGES[imageKey];
-
-    if (source) {
-      setImageSource(element, source);
-    }
-  });
-
-  queryAll("[data-image-key]").forEach((element) => {
-    const imageKey = element.dataset.imageKey;
-    const source = TRUECOAT_IMAGES[imageKey];
-
-    if (source) {
-      setImageSource(element, source);
-    }
-  });
-}
-
-function initialiseHeader() {
-  const header = query(SELECTORS.header);
-
-  if (!header) return;
-
-  const updateHeader = () => {
-    header.classList.toggle("is-scrolled", window.scrollY > 18);
-  };
-
-  updateHeader();
-
-  window.addEventListener("scroll", updateHeader, {
-    passive: true
-  });
-}
-
-function getFocusableElements(container) {
-  if (!container) return [];
-
-  return queryAll(
-    [
-      "a[href]",
-      "button:not([disabled])",
-      "input:not([disabled])",
-      "select:not([disabled])",
-      "textarea:not([disabled])",
-      '[tabindex]:not([tabindex="-1"])'
-    ].join(","),
-    container
-  ).filter((element) => {
-    return (
-      !element.hasAttribute("hidden") &&
-      element.getAttribute("aria-hidden") !== "true"
-    );
-  });
-}
-
-function initialiseNavigation() {
-  const toggle = query(SELECTORS.menuToggle);
-  const navigation = query(SELECTORS.navigation);
-
-  if (!toggle || !navigation) return;
-
-  const openNavigation = () => {
-    state.lastFocusedElement = document.activeElement;
+  function openNavigation() {
+    previouslyFocusedElement = document.activeElement;
 
     toggle.setAttribute("aria-expanded", "true");
-    toggle.setAttribute("aria-label", "Menüyü kapat");
+    toggle.setAttribute("aria-label", "Navigasyonu kapat");
 
     navigation.classList.add("is-open");
-    navigation.dataset.open = "true";
+    document.body.classList.add("menu-is-open");
 
-    document.body.classList.add("is-menu-open");
+    lockPage();
 
-    const focusable = getFocusableElements(navigation);
+    const focusableElements = getFocusableElements(navigation);
 
-    window.setTimeout(() => {
-      focusable[0]?.focus();
-    }, 60);
-  };
+    if (focusableElements.length) {
+      window.setTimeout(() => focusableElements[0].focus(), 100);
+    }
+  }
 
-  const closeNavigation = ({ restoreFocus = true } = {}) => {
+  function closeNavigation({ restoreFocus = true } = {}) {
     toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-label", "Menüyü aç");
+    toggle.setAttribute("aria-label", "Navigasyonu aç");
 
     navigation.classList.remove("is-open");
-    navigation.dataset.open = "false";
+    document.body.classList.remove("menu-is-open");
 
-    document.body.classList.remove("is-menu-open");
+    unlockPage();
 
-    if (restoreFocus) {
-      state.lastFocusedElement?.focus?.();
+    if (
+      restoreFocus &&
+      previouslyFocusedElement &&
+      typeof previouslyFocusedElement.focus === "function"
+    ) {
+      previouslyFocusedElement.focus();
     }
-  };
+  }
 
   toggle.addEventListener("click", () => {
     const isOpen = toggle.getAttribute("aria-expanded") === "true";
@@ -223,73 +319,149 @@ function initialiseNavigation() {
     }
   });
 
-  queryAll("a", navigation).forEach((link) => {
+  navigation.querySelectorAll("a[href]").forEach((link) => {
     link.addEventListener("click", () => {
-      closeNavigation({
-        restoreFocus: false
-      });
+      closeNavigation({ restoreFocus: false });
     });
   });
 
   document.addEventListener("keydown", (event) => {
-    const isOpen = toggle.getAttribute("aria-expanded") === "true";
-
-    if (!isOpen) return;
-
-    if (event.key === "Escape") {
+    if (event.key === "Escape" && navigation.classList.contains("is-open")) {
       closeNavigation();
+    }
+
+    if (event.key !== "Tab" || !navigation.classList.contains("is-open")) {
       return;
     }
 
-    if (event.key !== "Tab") return;
+    const focusableElements = getFocusableElements(navigation);
 
-    const focusable = getFocusableElements(navigation);
+    if (!focusableElements.length) {
+      return;
+    }
 
-    if (!focusable.length) return;
-
-    const firstElement = focusable[0];
-    const lastElement = focusable[focusable.length - 1];
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
 
     if (event.shiftKey && document.activeElement === firstElement) {
       event.preventDefault();
       lastElement.focus();
-    }
-
-    if (!event.shiftKey && document.activeElement === lastElement) {
+    } else if (!event.shiftKey && document.activeElement === lastElement) {
       event.preventDefault();
       firstElement.focus();
     }
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 1080) {
-      closeNavigation({
-        restoreFocus: false
-      });
+    if (window.innerWidth >= 960 && navigation.classList.contains("is-open")) {
+      closeNavigation({ restoreFocus: false });
     }
   });
 }
 
-function initialiseRevealAnimations() {
-  const elements = queryAll(SELECTORS.reveal);
+function initHeader() {
+  const header = document.querySelector("[data-header]");
 
-  if (!elements.length) return;
-
-  if (
-    !("IntersectionObserver" in window) ||
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  ) {
-    elements.forEach((element) => {
-      element.classList.add("is-visible");
-    });
-
+  if (!header) {
     return;
   }
+
+  let previousScrollPosition = window.scrollY;
+  let ticking = false;
+
+  function updateHeader() {
+    const currentScrollPosition = window.scrollY;
+
+    header.classList.toggle("is-scrolled", currentScrollPosition > 20);
+
+    if (
+      currentScrollPosition > previousScrollPosition &&
+      currentScrollPosition > 160 &&
+      !document.body.classList.contains("menu-is-open")
+    ) {
+      header.classList.add("is-hidden");
+    } else {
+      header.classList.remove("is-hidden");
+    }
+
+    previousScrollPosition = Math.max(currentScrollPosition, 0);
+    ticking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+
+  updateHeader();
+}
+
+function initCurrentNavigation() {
+  const currentFile =
+    window.location.pathname.split("/").filter(Boolean).pop() || "index.html";
+
+  document
+    .querySelectorAll(".primary-navigation a[href], .site-footer a[href]")
+    .forEach((link) => {
+      const href = link.getAttribute("href");
+
+      if (!href || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+        return;
+      }
+
+      const linkFile = href.split("?")[0].split("#")[0];
+
+      if (linkFile === currentFile) {
+        link.classList.add("is-current");
+
+        if (link.closest(".primary-navigation")) {
+          link.setAttribute("aria-current", "page");
+        }
+      }
+    });
+}
+
+function initRevealAnimations() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.documentElement.classList.add("reduce-motion");
+    return;
+  }
+
+  const elements = document.querySelectorAll(
+    [
+      "[data-reveal]",
+      ".section-heading",
+      ".service-entry",
+      ".atmosphere-preview-card",
+      ".principle-card",
+      ".painting-service-card",
+      ".property-card",
+      ".area-card",
+      ".process-steps > li",
+      ".painting-process__steps > li",
+      ".difference-flow__steps > li"
+    ].join(",")
+  );
+
+  if (!elements.length || !("IntersectionObserver" in window)) {
+    elements.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+
+  elements.forEach((element) => element.classList.add("reveal-item"));
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
+        if (!entry.isIntersecting) {
+          return;
+        }
 
         entry.target.classList.add("is-visible");
         observer.unobserve(entry.target);
@@ -297,706 +469,790 @@ function initialiseRevealAnimations() {
     },
     {
       threshold: 0.12,
-      rootMargin: "0px 0px -40px"
+      rootMargin: "0px 0px -40px 0px"
     }
   );
 
-  elements.forEach((element) => {
-    observer.observe(element);
-  });
+  elements.forEach((element) => observer.observe(element));
 }
 
-function normaliseProductId(element) {
-  if (!element) return "";
+function initResponsiveImages() {
+  document.querySelectorAll("[data-image-key]").forEach((element) => {
+    const key = element.dataset.imageKey;
+    const imageUrl = TRUECOAT_IMAGES[key];
 
-  return (
-    element.dataset.productId ||
-    element.dataset.product ||
-    element.dataset.target ||
-    element.getAttribute("aria-controls") ||
-    ""
-  )
-    .replace(/^#/, "")
-    .trim();
-}
-
-function getProductCard(productId) {
-  if (!productId) return null;
-
-  const safeId = escapeSelector(productId);
-
-  return (
-    query(`[data-product-id="${safeId}"]`) ||
-    query(`[data-product="${safeId}"]`) ||
-    query(`#${safeId}`)
-  );
-}
-
-function getText(element, selectors, fallback = "") {
-  for (const selector of selectors) {
-    const target = query(selector, element);
-
-    if (target?.textContent?.trim()) {
-      return target.textContent.trim();
+    if (!imageUrl) {
+      return;
     }
-  }
 
-  return fallback;
-}
-
-function getProductData(card, hotspot = null) {
-  if (!card && !hotspot) return null;
-
-  const source = card || hotspot;
-  const image =
-    query("img", card || source)?.currentSrc ||
-    query("img", card || source)?.src ||
-    source.dataset.image ||
-    "";
-
-  return {
-    id: normaliseProductId(card) || normaliseProductId(hotspot),
-    number:
-      source.dataset.productNumber ||
-      hotspot?.textContent?.trim() ||
-      getText(source, [".project-product-card__number"], ""),
-    title:
-      source.dataset.productTitle ||
-      getText(
-        source,
-        [
-          ".project-product-card__title",
-          "h3",
-          "[data-product-title]"
-        ],
-        "Seçilen ürün"
-      ),
-    price:
-      source.dataset.productPrice ||
-      getText(
-        source,
-        [
-          ".project-product-card__price",
-          "[data-product-price]",
-          ".price"
-        ],
-        ""
-      ),
-    source:
-      source.dataset.productSource ||
-      getText(
-        source,
-        [
-          ".project-product-card__source",
-          "[data-product-source]"
-        ],
-        ""
-      ),
-    description:
-      source.dataset.productDescription ||
-      getText(
-        source,
-        [
-          ".project-product-card__description",
-          "[data-product-description]"
-        ],
-        "Bu ürün seçilen atmosferin malzeme, renk ve form dengesini tamamlar."
-      ),
-    image,
-    url:
-      source.dataset.productUrl ||
-      query("a[href]", source)?.href ||
-      ""
-  };
-}
-
-function setDrawerContent(drawer, product) {
-  if (!drawer || !product) return;
-
-  const image = query(
-    "[data-drawer-image], .product-drawer__image img, .product-drawer__media img",
-    drawer
-  );
-
-  const number = query(
-    "[data-drawer-number], .product-drawer__number",
-    drawer
-  );
-
-  const title = query(
-    "[data-drawer-title], .product-drawer__title",
-    drawer
-  );
-
-  const price = query(
-    "[data-drawer-price], .product-drawer__price",
-    drawer
-  );
-
-  const source = query(
-    "[data-drawer-source], .product-drawer__source",
-    drawer
-  );
-
-  const description = query(
-    "[data-drawer-description], .product-drawer__description",
-    drawer
-  );
-
-  const link = query(
-    "[data-drawer-link], .product-drawer__link",
-    drawer
-  );
-
-  if (image && product.image) {
-    image.src = product.image;
-    image.alt = product.title;
-  }
-
-  if (number) {
-    number.textContent = product.number
-      ? String(product.number)
-      : "";
-  }
-
-  if (title) {
-    title.textContent = product.title;
-  }
-
-  if (price) {
-    price.textContent = product.price;
-  }
-
-  if (source) {
-    source.textContent = product.source;
-  }
-
-  if (description) {
-    description.textContent = product.description;
-  }
-
-  if (link) {
-    if (product.url) {
-      link.href = product.url;
-      link.hidden = false;
+    if (element.tagName === "IMG") {
+      element.src = imageUrl;
     } else {
-      link.hidden = true;
-    }
-  }
-}
-
-function openProductDrawer(drawer, product) {
-  if (!drawer || !product) return;
-
-  state.lastFocusedElement = document.activeElement;
-  state.activeProductId = product.id;
-
-  setDrawerContent(drawer, product);
-
-  drawer.classList.add("is-open");
-  drawer.setAttribute("aria-hidden", "false");
-
-  document.body.classList.add("is-drawer-open");
-
-  const panel = query(SELECTORS.drawerPanel, drawer);
-
-  window.setTimeout(() => {
-    query(SELECTORS.drawerClose, drawer)?.focus();
-    panel?.scrollTo?.({
-      top: 0,
-      behavior: "instant"
-    });
-  }, 60);
-}
-
-function closeProductDrawer(drawer) {
-  if (!drawer) return;
-
-  drawer.classList.remove("is-open");
-  drawer.setAttribute("aria-hidden", "true");
-
-  document.body.classList.remove("is-drawer-open");
-
-  state.activeProductId = null;
-  state.lastFocusedElement?.focus?.();
-}
-
-function initialiseProductDrawer() {
-  const drawer = query(SELECTORS.drawer);
-
-  if (!drawer) return;
-
-  queryAll(SELECTORS.drawerClose, drawer).forEach((button) => {
-    button.addEventListener("click", () => {
-      closeProductDrawer(drawer);
-    });
-  });
-
-  drawer.addEventListener("click", (event) => {
-    if (event.target === drawer) {
-      closeProductDrawer(drawer);
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (
-      event.key === "Escape" &&
-      drawer.classList.contains("is-open")
-    ) {
-      closeProductDrawer(drawer);
+      element.style.backgroundImage = `url("${imageUrl}")`;
     }
   });
 }
 
-function activateProduct(productId, hotspot = null) {
-  const card = getProductCard(productId);
-  const drawer = query(SELECTORS.drawer);
-  const product = getProductData(card, hotspot);
-
-  queryAll(SELECTORS.hotspot).forEach((button) => {
-    const isCurrent = normaliseProductId(button) === productId;
-
-    button.classList.toggle("is-active", isCurrent);
-    button.setAttribute(
-      "aria-pressed",
-      isCurrent ? "true" : "false"
-    );
-  });
-
-  queryAll(SELECTORS.productCard).forEach((productCard) => {
-    const isCurrent =
-      normaliseProductId(productCard) === productId;
-
-    productCard.classList.toggle("is-active", isCurrent);
-  });
-
-  if (drawer && product) {
-    openProductDrawer(drawer, product);
-    return;
-  }
-
-  if (card) {
-    card.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center"
-    });
-  }
-}
-
-function initialiseHotspots() {
-  queryAll(SELECTORS.hotspot).forEach((hotspot, index) => {
-    const productId =
-      normaliseProductId(hotspot) ||
-      `product-${index + 1}`;
-
-    hotspot.dataset.productId = productId;
-
-    if (!hotspot.hasAttribute("aria-label")) {
-      hotspot.setAttribute(
-        "aria-label",
-        `${index + 1}. ürünü görüntüle`
-      );
-    }
-
-    hotspot.setAttribute("aria-pressed", "false");
-
-    hotspot.addEventListener("click", () => {
-      activateProduct(productId, hotspot);
-    });
-  });
-
-  queryAll(SELECTORS.productCard).forEach((card, index) => {
-    if (!normaliseProductId(card)) {
-      card.dataset.productId = `product-${index + 1}`;
-    }
-
-    const trigger =
-      query("[data-product-open]", card) ||
-      query("button", card);
-
-    if (trigger) {
-      trigger.addEventListener("click", (event) => {
-        if (trigger.tagName === "A") return;
-
-        event.preventDefault();
-        activateProduct(normaliseProductId(card));
-      });
-    }
-  });
-}
-
-function initialiseProductListToggle() {
-  const toggle = query(SELECTORS.listToggle);
-  const productList = query(SELECTORS.productList);
-
-  if (!toggle || !productList) return;
-
-  const originalText = toggle.textContent.trim();
-  const hiddenText =
-    toggle.dataset.showLabel ||
-    "Ürün listesini göster";
-
-  toggle.addEventListener("click", () => {
-    const isHidden = productList.classList.toggle("is-collapsed");
-
-    toggle.setAttribute(
-      "aria-expanded",
-      isHidden ? "false" : "true"
-    );
-
-    toggle.textContent = isHidden
-      ? hiddenText
-      : originalText;
-  });
-}
-
-function initialiseHorizontalRails() {
-  const rails = queryAll(
+function initNativeProductRails() {
+  const rails = document.querySelectorAll(
     [
-      ".project-product-list__grid",
+      "[data-product-rail]",
       ".product-rail",
-      "[data-horizontal-rail]"
+      ".project-products__rail",
+      ".featured-products__rail",
+      ".atmosphere-products__rail"
     ].join(",")
   );
 
   rails.forEach((rail) => {
-    let startX = 0;
-    let startScrollLeft = 0;
-    let pointerActive = false;
+    rail.classList.add("is-ready");
 
-    rail.addEventListener("pointerdown", (event) => {
-      if (event.pointerType === "touch") return;
-
-      pointerActive = true;
-      startX = event.clientX;
-      startScrollLeft = rail.scrollLeft;
-
-      rail.setPointerCapture?.(event.pointerId);
-      rail.classList.add("is-dragging");
-    });
-
-    rail.addEventListener("pointermove", (event) => {
-      if (!pointerActive) return;
-
-      const distance = event.clientX - startX;
-      rail.scrollLeft = startScrollLeft - distance;
-    });
-
-    const stopDragging = (event) => {
-      if (!pointerActive) return;
-
-      pointerActive = false;
-      rail.releasePointerCapture?.(event.pointerId);
-      rail.classList.remove("is-dragging");
-    };
-
-    rail.addEventListener("pointerup", stopDragging);
-    rail.addEventListener("pointercancel", stopDragging);
-    rail.addEventListener("pointerleave", stopDragging);
-  });
-}
-
-function formatFileSize(bytes) {
-  if (bytes < 1024 * 1024) {
-    return `${Math.ceil(bytes / 1024)} KB`;
-  }
-
-  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
-}
-
-function initialisePhotoUpload() {
-  const input = query(SELECTORS.photoInput);
-  const preview = query(SELECTORS.photoPreview);
-
-  if (!input || !preview) return;
-
-  input.addEventListener("change", () => {
-    const files = Array.from(input.files || [])
-      .filter((file) => file.type.startsWith("image/"))
-      .slice(0, 4);
-
-    state.uploadedPhotos.forEach((photo) => {
-      URL.revokeObjectURL(photo.url);
-    });
-
-    state.uploadedPhotos = files.map((file) => ({
-      file,
-      url: URL.createObjectURL(file)
-    }));
-
-    preview.innerHTML = "";
-
-    state.uploadedPhotos.forEach((photo, index) => {
-      const item = document.createElement("div");
-      const image = document.createElement("img");
-      const remove = document.createElement("button");
-      const details = document.createElement("small");
-
-      item.className = "request-upload__preview-item";
-
-      image.src = photo.url;
-      image.alt = `Yüklenen oda fotoğrafı ${index + 1}`;
-
-      remove.type = "button";
-      remove.className = "request-upload__remove";
-      remove.setAttribute(
-        "aria-label",
-        `${index + 1}. fotoğrafı kaldır`
-      );
-      remove.textContent = "×";
-
-      details.textContent = formatFileSize(photo.file.size);
-
-      remove.addEventListener("click", () => {
-        URL.revokeObjectURL(photo.url);
-        state.uploadedPhotos.splice(index, 1);
-        item.remove();
-      });
-
-      item.append(image, remove, details);
-      preview.append(item);
-    });
-  });
-}
-
-function setFieldError(form, fieldName, hasError) {
-  const field = form.elements[fieldName];
-  const error = query(
-    `[data-error-for="${escapeSelector(fieldName)}"]`,
-    form
-  );
-
-  if (field) {
-    field.classList.toggle("has-error", hasError);
-    field.setAttribute(
-      "aria-invalid",
-      hasError ? "true" : "false"
+    rail.addEventListener(
+      "wheel",
+      (event) => {
+        if (
+          window.innerWidth >= 960 &&
+          Math.abs(event.deltaY) > Math.abs(event.deltaX) &&
+          rail.scrollWidth > rail.clientWidth
+        ) {
+          event.preventDefault();
+          rail.scrollLeft += event.deltaY;
+        }
+      },
+      { passive: false }
     );
-  }
 
-  if (error) {
-    error.classList.toggle("is-visible", hasError);
-  }
-}
+    rail.addEventListener(
+      "scroll",
+      () => {
+        const maximumScroll = rail.scrollWidth - rail.clientWidth;
 
-function validateRequestForm(form) {
-  const values = new FormData(form);
+        rail.classList.toggle("is-at-start", rail.scrollLeft <= 4);
+        rail.classList.toggle(
+          "is-at-end",
+          maximumScroll <= 4 || rail.scrollLeft >= maximumScroll - 4
+        );
+      },
+      { passive: true }
+    );
 
-  const fullName = String(values.get("fullName") || "").trim();
-  const phone = String(values.get("phone") || "").trim();
-  const email = String(values.get("email") || "").trim();
-  const location = String(values.get("location") || "").trim();
-  const roomType = String(values.get("roomType") || "").trim();
-  const consent = values.get("consent");
-
-  const phonePattern = /^[+0-9\s()/-]{8,}$/;
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  const errors = {
-    fullName: fullName.length < 3,
-    phone: !phonePattern.test(phone),
-    email: Boolean(email) && !emailPattern.test(email),
-    location: !location,
-    roomType: !roomType,
-    consent: !consent
-  };
-
-  Object.entries(errors).forEach(([fieldName, hasError]) => {
-    setFieldError(form, fieldName, hasError);
+    rail.dispatchEvent(new Event("scroll"));
   });
 
-  return !Object.values(errors).some(Boolean);
+  document.querySelectorAll("[data-rail-next]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const selector = button.dataset.railNext;
+      const rail = selector ? document.querySelector(selector) : button.closest("section")?.querySelector("[data-product-rail]");
+
+      if (!rail) {
+        return;
+      }
+
+      const card = rail.querySelector(
+        ".product-card, .project-product-card, article"
+      );
+
+      const cardWidth = card
+        ? card.getBoundingClientRect().width
+        : rail.clientWidth * 0.78;
+
+      rail.scrollBy({
+        left: cardWidth + 16,
+        behavior: "smooth"
+      });
+    });
+  });
+
+  document.querySelectorAll("[data-rail-previous]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const selector = button.dataset.railPrevious;
+      const rail = selector ? document.querySelector(selector) : button.closest("section")?.querySelector("[data-product-rail]");
+
+      if (!rail) {
+        return;
+      }
+
+      const card = rail.querySelector(
+        ".product-card, .project-product-card, article"
+      );
+
+      const cardWidth = card
+        ? card.getBoundingClientRect().width
+        : rail.clientWidth * 0.78;
+
+      rail.scrollBy({
+        left: -(cardWidth + 16),
+        behavior: "smooth"
+      });
+    });
+  });
 }
 
-function buildRequestEmail(form) {
-  const values = new FormData(form);
+function findProduct(productKey, trigger) {
+  if (productKey && PRODUCT_LIBRARY[productKey]) {
+    return PRODUCT_LIBRARY[productKey];
+  }
 
-  const project =
-    String(values.get("project") || "Atmosfer talebi").trim();
+  if (!trigger) {
+    return null;
+  }
 
-  const subject =
-    `TRUECOAT Ücretsiz Keşif Talebi — ${project}`;
+  const dataset = trigger.dataset;
 
-  const lines = [
-    "TRUECOAT ÜCRETSİZ KEŞİF TALEBİ",
-    "",
-    `Atmosfer: ${project}`,
-    `Ad Soyad: ${values.get("fullName") || ""}`,
-    `Telefon: ${values.get("phone") || ""}`,
-    `E-posta: ${values.get("email") || "Belirtilmedi"}`,
-    `Bölge: ${values.get("location") || ""}`,
-    `Oda Türü: ${values.get("roomType") || ""}`,
-    `Yaklaşık Alan: ${values.get("roomSize") || "Belirtilmedi"} m²`,
-    `Bütçe: ${values.get("budget") || "Keşif sonrasında"}`,
-    "",
-    "Müşteri Notu:",
-    String(values.get("message") || "Not eklenmedi"),
-    "",
-    `Eklenmek istenen fotoğraf sayısı: ${state.uploadedPhotos.length}`
-  ];
+  if (!dataset.productName) {
+    return null;
+  }
 
   return {
-    subject,
-    body: lines.join("\n")
+    number: dataset.productNumber || "",
+    name: dataset.productName,
+    price: dataset.productPrice || "Teklif alınır",
+    store: dataset.productStore || "TRUECOAT seçkisi",
+    description:
+      dataset.productDescription ||
+      "Bu ürün, seçilen atmosferin renk ve malzeme dengesiyle uyumlu olduğu için projeye dahil edilmiştir.",
+    dimensions: dataset.productDimensions || "Ürün sayfasında belirtilir",
+    material: dataset.productMaterial || "Ürün sayfasında belirtilir",
+    colour: dataset.productColour || "Atmosfer paletiyle uyumlu",
+    image: dataset.productImage || TRUECOAT_IMAGES.mediterraneanDetail,
+    url: dataset.productUrl || "projects.html"
   };
 }
 
-function initialiseRequestForm() {
-  const form = query(SELECTORS.requestForm);
+function initProductDrawer() {
+  const drawer = document.querySelector("[data-product-drawer]");
+  const backdrop = document.querySelector("[data-drawer-backdrop]");
 
-  if (!form) return;
+  if (!drawer) {
+    return;
+  }
 
-  const status = query("[data-form-status]", form);
-  const submitButton = query('[type="submit"]', form);
+  const closeButtons = drawer.querySelectorAll("[data-drawer-close]");
+  const drawerImage = drawer.querySelector("[data-drawer-image]");
+  const drawerNumber = drawer.querySelector("[data-drawer-number]");
+  const drawerName = drawer.querySelector("[data-drawer-name]");
+  const drawerPrice = drawer.querySelector("[data-drawer-price]");
+  const drawerStore = drawer.querySelector("[data-drawer-store]");
+  const drawerDescription = drawer.querySelector("[data-drawer-description]");
+  const drawerDimensions = drawer.querySelector("[data-drawer-dimensions]");
+  const drawerMaterial = drawer.querySelector("[data-drawer-material]");
+  const drawerColour = drawer.querySelector("[data-drawer-colour]");
+  const drawerLink = drawer.querySelector("[data-drawer-link]");
 
-  queryAll("input, select, textarea", form).forEach((field) => {
-    field.addEventListener("input", () => {
-      if (field.name) {
-        setFieldError(form, field.name, false);
+  let lastFocusedElement = null;
+
+  function renderProduct(product) {
+    if (drawerImage) {
+      drawerImage.src = product.image;
+      drawerImage.alt = product.name;
+    }
+
+    if (drawerNumber) {
+      drawerNumber.textContent = product.number;
+    }
+
+    if (drawerName) {
+      drawerName.textContent = product.name;
+    }
+
+    if (drawerPrice) {
+      drawerPrice.textContent = product.price;
+    }
+
+    if (drawerStore) {
+      drawerStore.textContent = product.store;
+    }
+
+    if (drawerDescription) {
+      drawerDescription.textContent = product.description;
+    }
+
+    if (drawerDimensions) {
+      drawerDimensions.textContent = product.dimensions;
+    }
+
+    if (drawerMaterial) {
+      drawerMaterial.textContent = product.material;
+    }
+
+    if (drawerColour) {
+      drawerColour.textContent = product.colour;
+    }
+
+    if (drawerLink) {
+      drawerLink.href = product.url;
+      drawerLink.setAttribute("target", "_blank");
+      drawerLink.setAttribute("rel", "noopener noreferrer");
+    }
+  }
+
+  function openDrawer(product, trigger) {
+    lastFocusedElement = trigger || document.activeElement;
+
+    renderProduct(product);
+
+    drawer.hidden = false;
+    drawer.setAttribute("aria-hidden", "false");
+    drawer.classList.add("is-open");
+
+    if (backdrop) {
+      backdrop.hidden = false;
+      backdrop.classList.add("is-visible");
+    }
+
+    document.body.classList.add("drawer-is-open");
+    lockPage();
+
+    const focusableElements = getFocusableElements(drawer);
+
+    if (focusableElements.length) {
+      window.setTimeout(() => focusableElements[0].focus(), 80);
+    }
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove("is-open");
+    drawer.setAttribute("aria-hidden", "true");
+
+    if (backdrop) {
+      backdrop.classList.remove("is-visible");
+    }
+
+    document.body.classList.remove("drawer-is-open");
+    unlockPage();
+
+    window.setTimeout(() => {
+      drawer.hidden = true;
+
+      if (backdrop) {
+        backdrop.hidden = true;
       }
-    });
+    }, 300);
 
-    field.addEventListener("change", () => {
-      if (field.name) {
-        setFieldError(form, field.name, false);
+    if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+      lastFocusedElement.focus();
+    }
+  }
+
+  document.querySelectorAll("[data-product], [data-product-open]").forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      const productKey =
+        trigger.dataset.product || trigger.dataset.productOpen;
+
+      const product = findProduct(productKey, trigger);
+
+      if (!product) {
+        return;
       }
+
+      event.preventDefault();
+      openDrawer(product, trigger);
     });
   });
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", closeDrawer);
+  });
 
-    if (!validateRequestForm(form)) {
-      const firstInvalid = query(
-        ".has-error, [aria-invalid='true']",
-        form
-      );
+  if (backdrop) {
+    backdrop.addEventListener("click", closeDrawer);
+  }
 
-      firstInvalid?.focus();
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && drawer.classList.contains("is-open")) {
+      closeDrawer();
+    }
 
-      if (status) {
-        status.hidden = false;
-        status.className =
-          "request-form__status is-error";
-        status.textContent =
-          "Lütfen işaretlenen alanları kontrol edin.";
-      }
-
+    if (event.key !== "Tab" || !drawer.classList.contains("is-open")) {
       return;
     }
 
-    const email = buildRequestEmail(form);
-    const mailto =
-      `mailto:${encodeURIComponent(TRUECOAT_CONTACT_EMAIL)}` +
-      `?subject=${encodeURIComponent(email.subject)}` +
-      `&body=${encodeURIComponent(email.body)}`;
+    const focusableElements = getFocusableElements(drawer);
 
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.classList.add("is-loading");
-      submitButton.textContent = "Talep hazırlanıyor…";
+    if (!focusableElements.length) {
+      return;
     }
 
-    if (status) {
-      status.hidden = false;
-      status.className =
-        "request-form__status is-success";
-      status.textContent =
-        "Talebiniz hazırlandı. E-posta uygulamanız açılıyor.";
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (event.shiftKey && document.activeElement === firstElement) {
+      event.preventDefault();
+      lastElement.focus();
+    } else if (!event.shiftKey && document.activeElement === lastElement) {
+      event.preventDefault();
+      firstElement.focus();
     }
-
-    window.setTimeout(() => {
-      window.location.href = mailto;
-
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.classList.remove("is-loading");
-        submitButton.innerHTML =
-          'Ücretsiz keşif talebini gönder <span aria-hidden="true">→</span>';
-      }
-    }, 500);
   });
 }
 
-function initialiseSmoothLinks() {
-  queryAll('a[href^="#"]').forEach((link) => {
-    const href = link.getAttribute("href");
+function initHotspots() {
+  const hotspots = document.querySelectorAll(
+    "[data-hotspot], .project-hotspot"
+  );
 
-    if (!href || href === "#") return;
+  hotspots.forEach((hotspot) => {
+    hotspot.addEventListener("click", () => {
+      const productKey =
+        hotspot.dataset.hotspot ||
+        hotspot.dataset.product ||
+        hotspot.dataset.productOpen;
 
-    link.addEventListener("click", (event) => {
-      const target = query(href);
+      if (!productKey) {
+        return;
+      }
 
-      if (!target) return;
+      const matchingTrigger = document.querySelector(
+        `[data-product="${CSS.escape(productKey)}"], [data-product-open="${CSS.escape(productKey)}"]`
+      );
 
-      event.preventDefault();
-
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+      if (matchingTrigger && matchingTrigger !== hotspot) {
+        matchingTrigger.click();
+      }
     });
   });
 }
 
-function initialiseCurrentNavigation() {
-  const currentFile =
-    window.location.pathname.split("/").pop() ||
-    "index.html";
+function initProductListToggle() {
+  document.querySelectorAll("[data-list-toggle]").forEach((button) => {
+    const targetSelector = button.dataset.listTarget;
+    const target = targetSelector
+      ? document.querySelector(targetSelector)
+      : document.querySelector("[data-product-list]");
 
-  queryAll(".site-navigation a").forEach((link) => {
-    const linkFile =
-      new URL(link.href, window.location.href)
-        .pathname
-        .split("/")
-        .pop() || "index.html";
+    if (!target) {
+      return;
+    }
 
-    const isCurrent = linkFile === currentFile;
+    const showLabel =
+      button.dataset.showLabel || "Ürün listesini göster";
 
-    link.classList.toggle("is-current", isCurrent);
+    const hideLabel =
+      button.dataset.hideLabel || "Ürün listesini gizle";
 
-    if (isCurrent) {
-      link.setAttribute("aria-current", "page");
+    function updateButton() {
+      const isHidden = target.classList.contains("is-hidden");
+
+      button.setAttribute("aria-expanded", String(!isHidden));
+
+      const textElement = button.querySelector(
+        "[data-list-toggle-text], span"
+      );
+
+      if (textElement) {
+        textElement.textContent = isHidden ? showLabel : hideLabel;
+      } else {
+        button.textContent = isHidden ? showLabel : hideLabel;
+      }
+    }
+
+    button.addEventListener("click", () => {
+      target.classList.toggle("is-hidden");
+      updateButton();
+    });
+
+    updateButton();
+  });
+}
+
+function initProjectRequestLinks() {
+  const bodyProject =
+    document.body.dataset.project ||
+    document.querySelector("[data-project-page]")?.dataset.projectPage;
+
+  if (!bodyProject) {
+    return;
+  }
+
+  document
+    .querySelectorAll(
+      'a[href="request-atmosphere.html"], a[href^="request-atmosphere.html?"]'
+    )
+    .forEach((link) => {
+      const url = new URL(link.href, window.location.href);
+
+      if (!url.searchParams.has("project")) {
+        url.searchParams.set("project", bodyProject);
+      }
+
+      link.href = `${url.pathname.split("/").pop()}${url.search}`;
+    });
+}
+
+function getSelectedProject() {
+  const parameters = new URLSearchParams(window.location.search);
+
+  const rawProject =
+    parameters.get("project") ||
+    parameters.get("service") ||
+    "mediterranean";
+
+  return PROJECT_DETAILS[rawProject] || PROJECT_DETAILS.mediterranean;
+}
+
+function initRequestProjectContext() {
+  if (!document.body.classList.contains("page-request-atmosphere")) {
+    return;
+  }
+
+  const project = getSelectedProject();
+
+  const projectInput = document.querySelector(
+    'input[name="project"], [data-request-project-input]'
+  );
+
+  const serviceInput = document.querySelector(
+    'input[name="service"], [data-request-service-input]'
+  );
+
+  if (projectInput) {
+    projectInput.value = project.name;
+  }
+
+  if (serviceInput && project === PROJECT_DETAILS.painting) {
+    serviceInput.value = "Profesyonel Boyama";
+  }
+
+  document.querySelectorAll("[data-request-project-name]").forEach((element) => {
+    element.textContent = project.name;
+  });
+
+  document.querySelectorAll("[data-request-project-label]").forEach((element) => {
+    element.textContent = project.label;
+  });
+
+  document.querySelectorAll("[data-request-project-style]").forEach((element) => {
+    element.textContent = project.style;
+  });
+
+  document.querySelectorAll("[data-request-project-room]").forEach((element) => {
+    element.textContent = project.room;
+  });
+
+  document.querySelectorAll("[data-request-project-duration]").forEach((element) => {
+    element.textContent = project.duration;
+  });
+
+  document.querySelectorAll("[data-request-project-image]").forEach((element) => {
+    if (element.tagName === "IMG") {
+      element.src = project.image;
+      element.alt = `${project.name} proje görünümü`;
+    } else {
+      element.style.backgroundImage = `url("${project.image}")`;
+    }
+  });
+
+  document.querySelectorAll("[data-request-project-link]").forEach((element) => {
+    element.href = project.page;
+  });
+}
+
+function initPhotoUpload() {
+  const inputs = document.querySelectorAll(
+    'input[type="file"][data-photo-input], input[type="file"][name="photos"], input[type="file"][name="photos[]"]'
+  );
+
+  inputs.forEach((input) => {
+    const previewSelector = input.dataset.previewTarget;
+    const previewContainer = previewSelector
+      ? document.querySelector(previewSelector)
+      : input.closest("form")?.querySelector("[data-photo-preview]");
+
+    const statusElement = input
+      .closest("form")
+      ?.querySelector("[data-photo-status]");
+
+    let selectedFiles = [];
+
+    function renderPreviews() {
+      if (!previewContainer) {
+        return;
+      }
+
+      previewContainer.innerHTML = "";
+
+      selectedFiles.forEach((file, index) => {
+        const preview = document.createElement("div");
+        preview.className = "photo-preview";
+
+        const image = document.createElement("img");
+        image.alt = `Yüklenen mekân fotoğrafı ${index + 1}`;
+
+        const removeButton = document.createElement("button");
+        removeButton.type = "button";
+        removeButton.className = "photo-preview__remove";
+        removeButton.setAttribute(
+          "aria-label",
+          `${file.name} fotoğrafını kaldır`
+        );
+        removeButton.textContent = "×";
+
+        const reader = new FileReader();
+
+        reader.addEventListener("load", () => {
+          image.src = reader.result;
+        });
+
+        reader.readAsDataURL(file);
+
+        removeButton.addEventListener("click", () => {
+          selectedFiles.splice(index, 1);
+          renderPreviews();
+          updateInputFiles();
+        });
+
+        preview.append(image, removeButton);
+        previewContainer.appendChild(preview);
+      });
+
+      if (statusElement) {
+        statusElement.textContent = selectedFiles.length
+          ? `${selectedFiles.length} fotoğraf seçildi`
+          : "Henüz fotoğraf seçilmedi";
+      }
+    }
+
+    function updateInputFiles() {
+      if (typeof DataTransfer === "undefined") {
+        return;
+      }
+
+      const transfer = new DataTransfer();
+
+      selectedFiles.forEach((file) => transfer.items.add(file));
+      input.files = transfer.files;
+    }
+
+    input.addEventListener("change", () => {
+      const incomingFiles = Array.from(input.files || []);
+      const validFiles = incomingFiles.filter((file) => {
+        const isValidType = ["image/jpeg", "image/png", "image/webp"].includes(
+          file.type
+        );
+
+        const isValidSize = file.size <= 10 * 1024 * 1024;
+
+        return isValidType && isValidSize;
+      });
+
+      selectedFiles = [...selectedFiles, ...validFiles].slice(0, 6);
+
+      updateInputFiles();
+      renderPreviews();
+
+      if (incomingFiles.length !== validFiles.length && statusElement) {
+        statusElement.textContent =
+          "Bazı dosyalar desteklenmedi. JPG, PNG veya WEBP yükleyin; dosya başına en fazla 10 MB.";
+      }
+    });
+  });
+}
+
+function validateRequestForm(form) {
+  let isValid = true;
+
+  form.querySelectorAll("[required]").forEach((field) => {
+    const wrapper =
+      field.closest(".form-field") ||
+      field.closest(".request-field") ||
+      field.parentElement;
+
+    let fieldIsValid = field.checkValidity();
+
+    if (field.type === "checkbox") {
+      fieldIsValid = field.checked;
+    }
+
+    if (wrapper) {
+      wrapper.classList.toggle("has-error", !fieldIsValid);
+    }
+
+    field.setAttribute("aria-invalid", String(!fieldIsValid));
+
+    if (!fieldIsValid) {
+      isValid = false;
+    }
+  });
+
+  return isValid;
+}
+
+function createMailtoSubmission(form) {
+  const formData = new FormData(form);
+  const lines = [];
+
+  formData.forEach((value, key) => {
+    if (value instanceof File) {
+      return;
+    }
+
+    const cleanKey = key
+      .replaceAll("-", " ")
+      .replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+    lines.push(`${cleanKey}: ${value}`);
+  });
+
+  const selectedProject = getSelectedProject();
+
+  if (!lines.some((line) => line.startsWith("Project"))) {
+    lines.unshift(`Proje: ${selectedProject.name}`);
+  }
+
+  lines.push("");
+  lines.push(
+    "Not: Mekân fotoğrafları e-posta uygulamasında ayrıca eklenebilir."
+  );
+
+  const subject = encodeURIComponent(
+    `TRUECOAT keşif talebi — ${selectedProject.name}`
+  );
+
+  const body = encodeURIComponent(lines.join("\n"));
+
+  window.location.href =
+    `mailto:truecoatcyprus@gmail.com?subject=${subject}&body=${body}`;
+}
+
+function initRequestForms() {
+  const forms = document.querySelectorAll(
+    "[data-request-form], .request-form"
+  );
+
+  forms.forEach((form) => {
+    const submitButton = form.querySelector('[type="submit"]');
+    const statusElement = form.querySelector(
+      "[data-form-status], .form-status"
+    );
+
+    form.querySelectorAll("input, select, textarea").forEach((field) => {
+      field.addEventListener("input", () => {
+        const wrapper =
+          field.closest(".form-field") ||
+          field.closest(".request-field") ||
+          field.parentElement;
+
+        if (wrapper) {
+          wrapper.classList.remove("has-error");
+        }
+
+        field.removeAttribute("aria-invalid");
+      });
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!validateRequestForm(form)) {
+        if (statusElement) {
+          statusElement.textContent =
+            "Lütfen zorunlu alanları kontrol edin.";
+          statusElement.classList.add("is-error");
+        }
+
+        const firstInvalidField = form.querySelector(
+          '[aria-invalid="true"]'
+        );
+
+        if (firstInvalidField) {
+          firstInvalidField.focus();
+        }
+
+        return;
+      }
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.classList.add("is-loading");
+      }
+
+      if (statusElement) {
+        statusElement.textContent =
+          "Talebiniz e-posta uygulamasına hazırlanıyor.";
+        statusElement.classList.remove("is-error");
+        statusElement.classList.add("is-success");
+      }
+
+      window.setTimeout(() => {
+        createMailtoSubmission(form);
+
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.classList.remove("is-loading");
+        }
+      }, 350);
+    });
+  });
+}
+
+function initDetails() {
+  document.querySelectorAll("details").forEach((detail) => {
+    const summary = detail.querySelector("summary");
+
+    if (!summary) {
+      return;
+    }
+
+    detail.addEventListener("toggle", () => {
+      summary.setAttribute("aria-expanded", String(detail.open));
+
+      const symbol = summary.querySelector("span");
+
+      if (symbol) {
+        symbol.textContent = detail.open ? "−" : "+";
+      }
+    });
+  });
+}
+
+function initSafeExternalLinks() {
+  document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+    const currentRel = new Set(
+      (link.getAttribute("rel") || "").split(" ").filter(Boolean)
+    );
+
+    currentRel.add("noopener");
+    currentRel.add("noreferrer");
+
+    link.setAttribute("rel", Array.from(currentRel).join(" "));
+  });
+}
+
+function removeInvalidEmptyLinks() {
+  document.querySelectorAll('a[href="#"], a[href=""]').forEach((link) => {
+    if (
+      link.hasAttribute("data-product") ||
+      link.hasAttribute("data-product-open") ||
+      link.getAttribute("role") === "button"
+    ) {
+      link.setAttribute("href", "projects.html");
     }
   });
 }
 
-function initialiseExternalLinks() {
-  queryAll('a[target="_blank"]').forEach((link) => {
-    const rel = new Set(
-      String(link.getAttribute("rel") || "")
-        .split(/\s+/)
-        .filter(Boolean)
-    );
-
-    rel.add("noopener");
-    rel.add("noreferrer");
-
-    link.setAttribute("rel", Array.from(rel).join(" "));
-  });
-}
-
-function initialiseApp() {
-  initialiseImages();
-  initialiseHeader();
-  initialiseNavigation();
-  initialiseRevealAnimations();
-  initialiseProductDrawer();
-  initialiseHotspots();
-  initialiseProductListToggle();
-  initialiseHorizontalRails();
-  initialisePhotoUpload();
-  initialiseRequestForm();
-  initialiseSmoothLinks();
-  initialiseCurrentNavigation();
-  initialiseExternalLinks();
+function init() {
+  removeInvalidEmptyLinks();
+  initNavigation();
+  initHeader();
+  initCurrentNavigation();
+  initRevealAnimations();
+  initResponsiveImages();
+  initNativeProductRails();
+  initProductDrawer();
+  initHotspots();
+  initProductListToggle();
+  initProjectRequestLinks();
+  initRequestProjectContext();
+  initPhotoUpload();
+  initRequestForms();
+  initDetails();
+  initSafeExternalLinks();
 
   document.body.classList.add("is-ready");
 }
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initialiseApp);
+  document.addEventListener("DOMContentLoaded", init);
 } else {
-  initialiseApp();
-} 
+  init();
+}
