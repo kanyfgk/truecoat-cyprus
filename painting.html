@@ -1,34 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional interior and exterior painting by TRUECOAT, with careful preparation, experienced workmanship and a complete finish.">
-  <meta name="theme-color" content="#191a17">
 
-  <title>Professional Painting — TRUECOAT</title>
+  <meta
+    name="description"
+    content="TRUECOAT profesyonel iç ve dış cephe boyama hizmetleri: ücretsiz keşif, yüzey hazırlığı, kontrollü uygulama ve temiz teslim."
+  >
+  <meta name="theme-color" content="#f4f1e9">
+
+  <title>Profesyonel Boyama Hizmetleri — TRUECOAT</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/atmosphere-shop.css">
+  <link rel="stylesheet" href="css/mobile.css">
 </head>
 
 <body class="page page-painting">
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#main-content">İçeriğe geç</a>
 
   <header class="site-header" data-header>
     <div class="site-header__inner container">
-      <a class="brand" href="index.html" aria-label="TRUECOAT home">
+      <a class="brand" href="index.html" aria-label="TRUECOAT ana sayfa">
         <span class="brand__wordmark">TRUECOAT</span>
-        <span class="brand__descriptor">Painting &amp; Interiors</span>
+        <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
       </a>
 
       <button
         class="menu-toggle"
         type="button"
-        aria-label="Open navigation"
+        aria-label="Navigasyonu aç"
         aria-expanded="false"
         aria-controls="primary-navigation"
         data-menu-toggle
@@ -38,556 +49,638 @@
       </button>
 
       <nav
-        class="site-navigation"
+        class="primary-navigation"
         id="primary-navigation"
-        aria-label="Primary navigation"
+        aria-label="Ana navigasyon"
         data-navigation
       >
-        <a href="painting.html" aria-current="page">Painting</a>
-        <a href="difference.html">Our Difference</a>
-        <a href="atmospheres.html">Atmospheres</a>
-        <a href="projects.html">Projects</a>
-        <a href="service-areas.html">Service Areas</a>
-        <a class="button button--small button--dark" href="service-areas.html#request-survey">
-          Request a survey
+        <a href="painting.html" aria-current="page">Boyama</a>
+        <a href="difference.html">Farkımız</a>
+        <a href="atmospheres.html">Atmosferler</a>
+        <a href="projects.html">Projeler</a>
+        <a href="service-areas.html">Hizmet Alanları</a>
+
+        <a class="navigation-cta" href="request-atmosphere.html">
+          Ücretsiz keşif talep et
         </a>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="painting-hero">
+    <section class="painting-hero" aria-labelledby="painting-title">
+      <div class="painting-hero__media">
+        <img
+          src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=2000&q=88"
+          alt="İç mekân duvarını profesyonel olarak boyayan usta"
+          fetchpriority="high"
+        >
+      </div>
+
+      <div class="painting-hero__overlay"></div>
+
       <div class="painting-hero__content container">
-        <div class="painting-hero__copy">
-          <p class="eyebrow">Professional painting</p>
+        <p class="eyebrow">Profesyonel boyama</p>
 
-          <h1>
-            The finish changes everything.
-          </h1>
+        <h1 id="painting-title">
+          Hazırlıktan son kontrole kadar
+          <em>profesyonelce tamamlanır.</em>
+        </h1>
 
-          <p class="lead">
-            Carefully prepared surfaces, precise application and experienced
-            workmanship for interiors and exteriors that feel properly renewed.
-          </p>
+        <p>
+          İç ve dış cephe boyama, yüzey onarımı, renk yönlendirmesi ve uygulama
+          sonrası temizlik tek ekip tarafından yönetilir.
+        </p>
 
-          <div class="painting-hero__actions">
-            <a class="button button--dark" href="service-areas.html#request-survey">
-              Request a free survey
-            </a>
+        <div class="painting-hero__actions">
+          <a class="button button--light" href="request-atmosphere.html?service=painting">
+            Ücretsiz keşif talep et
+          </a>
 
-            <a class="text-link" href="#painting-services">
-              Explore our services
-              <span aria-hidden="true">↓</span>
-            </a>
-          </div>
+          <a class="button button--ghost-light" href="difference.html">
+            Uygulama standardımız
+          </a>
+        </div>
+      </div>
+
+      <div class="painting-hero__trust">
+        <div>
+          <strong>20+</strong>
+          <span>Yıllık deneyim</span>
         </div>
 
-        <figure class="painting-hero__visual">
-          <img
-            src="assets/images/painting-hero.jpg"
-            alt="Painter applying a precise neutral finish to an interior wall"
-            width="1500"
-            height="1800"
-            fetchpriority="high"
-          >
-          <figcaption>
-            Preparation, application and final detailing handled by one team.
-          </figcaption>
-        </figure>
+        <div>
+          <strong>4</strong>
+          <span>Kontrollü aşama</span>
+        </div>
+
+        <div>
+          <strong>1</strong>
+          <span>Sorumlu ekip</span>
+        </div>
       </div>
     </section>
 
-    <section class="painting-standard section section--dark">
-      <div class="container">
-        <div class="painting-standard__heading">
-          <p class="eyebrow eyebrow--light">Our standard</p>
+    <section class="painting-intro section">
+      <div class="container painting-intro__grid">
+        <div>
+          <p class="eyebrow">Boyama hizmetimiz</p>
 
           <h2>
-            A beautiful room begins long before the first coat.
+            İyi boya uygulaması,
+            <em>duvara boya sürmekten ibaret değildir.</em>
           </h2>
         </div>
 
-        <div class="painting-standard__content">
-          <p class="lead">
-            The quality of a painted surface depends on what happens underneath it.
-            That is why we place equal attention on inspection, preparation and
-            application.
+        <div class="painting-intro__copy">
+          <p>
+            Kalıcı ve pürüzsüz bir sonuç için önce yüzeyi inceler, gerekli
+            onarımları belirler ve mekânı uygulamaya hazırlarız.
           </p>
 
           <p>
-            Cracks, damaged areas, loose coatings and uneven surfaces are identified
-            before work begins. The correct preparation and paint system are then
-            selected for the room, surface and conditions.
+            Kullanılacak ürün, astar, kat sayısı ve uygulama yöntemi; yüzeyin
+            durumuna ve mekânın kullanımına göre planlanır.
           </p>
 
-          <a class="text-link text-link--light" href="difference.html">
-            Discover the TRUECOAT difference
+          <a class="text-link" href="difference.html">
+            TRUECOAT farkını incele
             <span aria-hidden="true">↗️</span>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="painting-services section" id="painting-services">
+    <section class="painting-services section section--soft" aria-labelledby="services-title">
       <div class="container">
         <div class="section-heading section-heading--split">
           <div>
-            <p class="eyebrow">Painting services</p>
-            <h2>For every part<br>of the property.</h2>
+            <p class="eyebrow">Hizmet kapsamı</p>
+            <h2 id="services-title">Mekânın ihtiyacına göre planlanır.</h2>
           </div>
 
           <p>
-            Each project is surveyed individually so the specification reflects the
-            surfaces, condition and finish your property requires.
+            Küçük bir oda yenilemesinden bütün yapının boya uygulamasına kadar
+            farklı kapsamlarla çalışıyoruz.
           </p>
         </div>
 
-        <div class="painting-services__list">
-          <article class="painting-service">
-            <div class="painting-service__number">01</div>
-
-            <div class="painting-service__visual">
+        <div class="painting-services__grid">
+          <article class="painting-service-card painting-service-card--large">
+            <div class="painting-service-card__image">
               <img
-                src="assets/images/painting-interiors.jpg"
-                alt="Freshly painted premium living room"
-                width="1200"
-                height="900"
+                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1400&q=86"
+                alt="İç cephe boyama uygulaması"
                 loading="lazy"
               >
             </div>
 
-            <div class="painting-service__content">
-              <h3>Interior Painting</h3>
-
+            <div class="painting-service-card__content">
+              <span>01</span>
+              <p class="eyebrow">İç cephe</p>
+              <h3>Yaşam alanları için temiz ve kontrollü uygulama.</h3>
               <p>
-                Walls, ceilings, trim and interior details finished with careful
-                control of colour, sheen and consistency.
+                Salon, yatak odası, mutfak, koridor, ofis ve ticari alanlarda
+                yüzey hazırlığıyla birlikte profesyonel iç cephe boyama.
               </p>
 
-              <ul class="check-list">
-                <li>Living spaces and bedrooms</li>
-                <li>Kitchens and bathrooms</li>
-                <li>Ceilings, doors and woodwork</li>
-                <li>Feature walls and colour changes</li>
+              <ul>
+                <li>Duvar ve tavan boyama</li>
+                <li>Çatlak ve yüzey onarımı</li>
+                <li>Kapı ve süpürgelik uygulamaları</li>
+                <li>Uygulama sonrası temizlik</li>
               </ul>
             </div>
           </article>
 
-          <article class="painting-service">
-            <div class="painting-service__number">02</div>
-
-            <div class="painting-service__visual">
+          <article class="painting-service-card">
+            <div class="painting-service-card__image">
               <img
-                src="assets/images/painting-exteriors.jpg"
-                alt="Clean modern home with a professionally painted exterior"
-                width="1200"
-                height="900"
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=86"
+                alt="Yenilenmiş modern ev iç mekânı"
                 loading="lazy"
               >
             </div>
 
-            <div class="painting-service__content">
-              <h3>Exterior Painting</h3>
-
+            <div class="painting-service-card__content">
+              <span>02</span>
+              <p class="eyebrow">Renk yenileme</p>
+              <h3>Mekânın karakterini doğru renklerle değiştirin.</h3>
               <p>
-                Durable exterior finishes selected to protect the building while
-                giving the property a cleaner, more considered appearance.
+                Mevcut ışığı, zemini ve sabit mobilyaları dikkate alarak
+                dengeli renk seçenekleri oluşturuyoruz.
               </p>
-
-              <ul class="check-list">
-                <li>Exterior walls and façades</li>
-                <li>Balconies and boundary walls</li>
-                <li>Doors, shutters and exterior details</li>
-                <li>Weathered and sun-exposed surfaces</li>
-              </ul>
             </div>
           </article>
 
-          <article class="painting-service">
-            <div class="painting-service__number">03</div>
-
-            <div class="painting-service__visual">
+          <article class="painting-service-card">
+            <div class="painting-service-card__image">
               <img
-                src="assets/images/painting-repairs.jpg"
-                alt="Interior wall being carefully prepared before repainting"
-                width="1200"
-                height="900"
+                src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1100&q=86"
+                alt="Bakımlı dış cepheye sahip modern ev"
                 loading="lazy"
               >
             </div>
 
-            <div class="painting-service__content">
-              <h3>Surface Preparation</h3>
-
+            <div class="painting-service-card__content">
+              <span>03</span>
+              <p class="eyebrow">Dış cephe</p>
+              <h3>Yapıyı dış koşullara karşı koruyan uygulama.</h3>
               <p>
-                Repairs and preparation designed to create a sound, even base before
-                the final paint system is applied.
+                Yüzey durumuna ve iklim koşullarına uygun ürünlerle dış cephe
+                yenileme ve koruma çalışmaları gerçekleştiriyoruz.
               </p>
-
-              <ul class="check-list">
-                <li>Crack and minor surface repairs</li>
-                <li>Filling, sanding and smoothing</li>
-                <li>Removal of loose or failing coatings</li>
-                <li>Priming and stain preparation</li>
-              </ul>
             </div>
           </article>
 
-          <article class="painting-service">
-            <div class="painting-service__number">04</div>
-
-            <div class="painting-service__visual">
+          <article class="painting-service-card">
+            <div class="painting-service-card__image">
               <img
-                src="assets/images/painting-rental-refresh.jpg"
-                alt="Bright, freshly repainted furnished apartment"
-                width="1200"
-                height="900"
+                src="https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1100&q=86"
+                alt="Yenilenmiş ticari iç mekân"
                 loading="lazy"
               >
             </div>
 
-            <div class="painting-service__content">
-              <h3>Property Refresh</h3>
-
+            <div class="painting-service-card__content">
+              <span>04</span>
+              <p class="eyebrow">Ticari alanlar</p>
+              <h3>İşletme düzenini minimum etkileyen proje planı.</h3>
               <p>
-                Efficient repainting for occupied homes, rental properties and
-                residences being prepared for sale or new tenants.
+                Ofis, mağaza, restoran ve kiralık mülkler için zamana duyarlı,
+                planlı ve temiz uygulama sunuyoruz.
               </p>
+            </div>
+          </article>
 
-              <ul class="check-list">
-                <li>Occupied and furnished properties</li>
-                <li>Rental changeovers</li>
-                <li>Pre-sale presentation</li>
-                <li>Selected rooms or complete properties</li>
-              </ul>
+          <article class="painting-service-card">
+            <div class="painting-service-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1100&q=86"
+                alt="Teslime hazırlanmış temiz daire"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="painting-service-card__content">
+              <span>05</span>
+              <p class="eyebrow">Taşınma öncesi ve sonrası</p>
+              <h3>Boş veya eşyalı evler için kontrollü yenileme.</h3>
+              <p>
+                Taşınma, kiralama veya satış öncesinde mülkü hızlı ve düzenli
+                biçimde kullanıma hazırlarız.
+              </p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="painting-detail section section--warm">
-      <div class="container">
-        <div class="painting-detail__gallery">
-          <figure class="painting-detail__image painting-detail__image--large">
-            <img
-              src="assets/images/painting-detail-main.jpg"
-              alt="Close view of a perfectly finished interior wall and doorway"
-              width="1300"
-              height="1700"
-              loading="lazy"
-            >
-          </figure>
-
-          <figure class="painting-detail__image painting-detail__image--small">
-            <img
-              src="assets/images/painting-detail-tools.jpg"
-              alt="Professional painting tools arranged beside paint samples"
-              width="900"
-              height="1100"
-              loading="lazy"
-            >
-          </figure>
-        </div>
-
-        <div class="painting-detail__content">
-          <p class="eyebrow">Attention to detail</p>
-
-          <h2>Clean lines. Even coverage. A composed result.</h2>
-
-          <p>
-            Premium painting is not defined by the paint alone. It is visible in the
-            edges, transitions, surface consistency and the way the work relates to
-            the architecture of the room.
-          </p>
-
-          <p>
-            Floors, furniture and fixed elements are protected before painting
-            begins. Work areas are kept organised throughout the project and the
-            property is reviewed before completion.
-          </p>
-
-          <dl class="painting-detail__facts">
-            <div>
-              <dt>Protection</dt>
-              <dd>Floors, furniture and surrounding surfaces</dd>
-            </div>
-
-            <div>
-              <dt>Precision</dt>
-              <dd>Controlled edges, corners and transitions</dd>
-            </div>
-
-            <div>
-              <dt>Completion</dt>
-              <dd>Final inspection and organised handover</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section class="painting-colour section">
-      <div class="container">
-        <div class="painting-colour__content">
-          <p class="eyebrow">Colour guidance</p>
-
-          <h2>
-            The right white is not always white.
-          </h2>
-
-          <p class="lead">
-            Natural light, floor tones, furniture and neighbouring colours can
-            completely change how a finish appears inside the room.
-          </p>
-
-          <p>
-            We help narrow the direction before work begins, reducing uncertain
-            choices and creating a result that feels connected to the property.
-          </p>
-
-          <a class="text-link" href="atmospheres.html">
-            Explore complete atmosphere directions
-            <span aria-hidden="true">↗️</span>
-          </a>
-        </div>
-
-        <div class="painting-colour__palette" aria-label="Example TRUECOAT neutral colour palette">
-          <div class="paint-swatch paint-swatch--chalk">
-            <span>Chalk</span>
-            <small>Soft neutral</small>
-          </div>
-
-          <div class="paint-swatch paint-swatch--linen">
-            <span>Linen</span>
-            <small>Warm neutral</small>
-          </div>
-
-          <div class="paint-swatch paint-swatch--stone">
-            <span>Stone</span>
-            <small>Earth neutral</small>
-          </div>
-
-          <div class="paint-swatch paint-swatch--olive">
-            <span>Olive</span>
-            <small>Muted natural</small>
-          </div>
-
-          <div class="paint-swatch paint-swatch--charcoal">
-            <span>Charcoal</span>
-            <small>Deep contrast</small>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="painting-process section section--dark">
+    <section class="painting-process section section--dark" aria-labelledby="process-title">
       <div class="container">
         <div class="section-heading section-heading--split section-heading--light">
           <div>
-            <p class="eyebrow eyebrow--light">How it works</p>
-            <h2>A controlled process<br>from survey to handover.</h2>
+            <p class="eyebrow">Uygulama süreci</p>
+            <h2 id="process-title">
+              Boya kutusu açılmadan önce
+              <em>proje başlamıştır.</em>
+            </h2>
           </div>
 
           <p>
-            You know what is included, how the project will progress and what result
-            the agreed scope is designed to deliver.
+            Her aşama bir sonraki aşamanın kalitesini belirler. Bu nedenle
+            hazırlık sürecini uygulamanın ayrılmaz parçası olarak görüyoruz.
           </p>
         </div>
 
         <ol class="painting-process__steps">
           <li>
-            <span>01</span>
-            <h3>Survey</h3>
-            <p>
-              We inspect the property, measure the work and assess the condition of
-              the surfaces.
-            </p>
+            <span class="painting-process__number">01</span>
+
+            <div class="painting-process__content">
+              <p class="eyebrow">Keşif ve değerlendirme</p>
+              <h3>Yüzeyi, alanı ve beklentiyi inceleriz.</h3>
+              <p>
+                Nem, çatlak, eski boya, yüzey türü, mobilya durumu ve çalışma
+                koşulları değerlendirilir.
+              </p>
+            </div>
           </li>
 
           <li>
-            <span>02</span>
-            <h3>Specification</h3>
-            <p>
-              The preparation, paint system, colours and required finish are agreed.
-            </p>
+            <span class="painting-process__number">02</span>
+
+            <div class="painting-process__content">
+              <p class="eyebrow">Koruma ve hazırlık</p>
+              <h3>Mekânı uygulamaya hazırlarız.</h3>
+              <p>
+                Zeminler ve sabit elemanlar korunur; gerekli onarım, dolgu,
+                zımpara, temizlik ve astarlama işlemleri tamamlanır.
+              </p>
+            </div>
           </li>
 
           <li>
-            <span>03</span>
-            <h3>Preparation</h3>
-            <p>
-              Work areas are protected and surfaces are repaired, prepared and
-              primed where required.
-            </p>
+            <span class="painting-process__number">03</span>
+
+            <div class="painting-process__content">
+              <p class="eyebrow">Profesyonel uygulama</p>
+              <h3>Planlanan boya sistemi uygulanır.</h3>
+              <p>
+                Kenar kesimleri, katlar ve kuruma süreleri kontrollü biçimde
+                yönetilir.
+              </p>
+            </div>
           </li>
 
           <li>
-            <span>04</span>
-            <h3>Application</h3>
-            <p>
-              Paint is applied systematically with attention to coverage,
-              consistency and clean detailing.
-            </p>
-          </li>
+            <span class="painting-process__number">04</span>
 
-          <li>
-            <span>05</span>
-            <h3>Handover</h3>
-            <p>
-              The completed work is reviewed and the property is left organised for
-              its next use.
-            </p>
+            <div class="painting-process__content">
+              <p class="eyebrow">Kontrol ve teslim</p>
+              <h3>Sonuç ayrıntılı biçimde kontrol edilir.</h3>
+              <p>
+                Rötuşlar, koruma malzemelerinin kaldırılması ve temizlik
+                tamamlanarak mekân kullanıma hazır teslim edilir.
+              </p>
+            </div>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="painting-scope section">
-      <div class="container">
-        <div class="painting-scope__heading">
-          <p class="eyebrow">Built around the property</p>
+    <section class="painting-protection section">
+      <div class="container painting-protection__grid">
+        <div class="painting-protection__content">
+          <p class="eyebrow">Eşyalı evlerde çalışma</p>
 
-          <h2>
-            A single room or a complete repaint.
-          </h2>
+          <h2>Evinizi yenilerken yaşam alanınıza saygı duyarız.</h2>
+
+          <p>
+            Mobilyalı mekânlarda çalışma planı, eşyaların güvenli biçimde
+            taşınması ve korunması dikkate alınarak hazırlanır.
+          </p>
+
+          <div class="painting-protection__list">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Mobilya planı</h3>
+                <p>
+                  Eşyaların oda içinde taşınması veya geçici olarak başka alana
+                  alınması planlanır.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Tam yüzey koruması</h3>
+                <p>
+                  Zeminler, mobilyalar ve sabit yüzeyler uygun koruma
+                  malzemeleriyle kapatılır.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Temiz çalışma düzeni</h3>
+                <p>
+                  Malzemeler kontrollü tutulur ve çalışma alanı gün sonunda
+                  düzenlenir.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <div class="painting-scope__grid">
+        <div class="painting-protection__visual">
+          <img
+            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88"
+            alt="Mobilyaları korunarak yenilenmiş düzenli salon"
+            loading="lazy"
+          >
+
+          <div class="painting-protection__note">
+            <strong>Koruma planı</strong>
+            <span>Her keşifte proje kapsamına göre belirlenir.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="painting-colour section section--soft" aria-labelledby="colour-title">
+      <div class="container">
+        <div class="painting-colour__intro">
+          <p class="eyebrow">Renk yönlendirmesi</p>
+
+          <h2 id="colour-title">
+            Rengi küçük bir karttan değil,
+            <em>mekânın bütünüyle değerlendiririz.</em>
+          </h2>
+
+          <p>
+            Gün ışığı, yapay aydınlatma, zemin, mobilya ve odanın kullanım
+            amacı rengin gerçek görünümünü değiştirir.
+          </p>
+        </div>
+
+        <div class="painting-colour__layout">
+          <div class="painting-colour__palette" aria-label="TRUECOAT doğal renk paleti">
+            <div style="--swatch-color:#e7ded1">
+              <span>Kireç taşı</span>
+            </div>
+
+            <div style="--swatch-color:#c9b9a5">
+              <span>Kum beji</span>
+            </div>
+
+            <div style="--swatch-color:#a89b89">
+              <span>Doğal taupe</span>
+            </div>
+
+            <div style="--swatch-color:#77796c">
+              <span>Adaçayı</span>
+            </div>
+
+            <div style="--swatch-color:#51483e">
+              <span>Toprak kahve</span>
+            </div>
+          </div>
+
+          <div class="painting-colour__facts">
+            <article>
+              <span>01</span>
+              <h3>Işığı değerlendiririz</h3>
+              <p>
+                Rengin gün içinde nasıl değiştiğini ve mekânı nasıl
+                hissettirdiğini dikkate alırız.
+              </p>
+            </article>
+
+            <article>
+              <span>02</span>
+              <h3>Mevcut parçalarla eşleştiririz</h3>
+              <p>
+                Zemin, perde, mobilya ve sabit yüzeylerle uyumlu seçenekler
+                oluştururuz.
+              </p>
+            </article>
+
+            <article>
+              <span>03</span>
+              <h3>Atmosferi belirleriz</h3>
+              <p>
+                Sakin, sıcak, aydınlık veya güçlü görünüm hedefini renk
+                yaklaşımına dönüştürürüz.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="painting-colour__action">
+          <a class="button button--dark" href="atmospheres.html">
+            Renk ve atmosferleri keşfet
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="painting-quality section" aria-labelledby="quality-title">
+      <div class="container">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Teslim standardı</p>
+            <h2 id="quality-title">Tamamlandı demeden önce kontrol ederiz.</h2>
+          </div>
+
+          <p>
+            Teslim yalnızca son kat boyanın kuruması değildir. Mekânın temiz,
+            düzenli ve kullanıma hazır olması gerekir.
+          </p>
+        </div>
+
+        <div class="painting-quality__grid">
           <article>
-            <span class="painting-scope__icon" aria-hidden="true">01</span>
-            <h3>Homes</h3>
+            <span aria-hidden="true">✓</span>
+            <h3>Yüzey kontrolü</h3>
             <p>
-              Apartments, villas and private residences requiring careful,
-              dependable workmanship.
+              Duvarlar farklı ışık koşullarında kontrol edilir.
             </p>
           </article>
 
           <article>
-            <span class="painting-scope__icon" aria-hidden="true">02</span>
-            <h3>Rental Properties</h3>
+            <span aria-hidden="true">✓</span>
+            <h3>Kenar ve detay kontrolü</h3>
             <p>
-              Clean, efficient refreshes prepared around handovers, occupancy and
-              letting schedules.
+              Köşeler, tavan birleşimleri ve sabit eleman çevreleri incelenir.
             </p>
           </article>
 
           <article>
-            <span class="painting-scope__icon" aria-hidden="true">03</span>
-            <h3>Commercial Interiors</h3>
+            <span aria-hidden="true">✓</span>
+            <h3>Gerekli rötuşlar</h3>
             <p>
-              Selected offices, studios and customer-facing spaces that require a
-              professional finish.
+              Teslim öncesinde belirlenen küçük düzeltmeler tamamlanır.
+            </p>
+          </article>
+
+          <article>
+            <span aria-hidden="true">✓</span>
+            <h3>Uygulama sonrası temizlik</h3>
+            <p>
+              Koruma malzemeleri kaldırılır ve çalışma alanı düzenlenir.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="painting-furnished">
-      <div class="painting-furnished__visual">
+    <section class="painting-estimate section section--dark">
+      <div class="container painting-estimate__grid">
+        <div class="painting-estimate__heading">
+          <p class="eyebrow">Teklif nasıl belirlenir?</p>
+
+          <h2>
+            Her proje kendi koşullarına göre
+            <em>şeffaf biçimde fiyatlandırılır.</em>
+          </h2>
+        </div>
+
+        <div class="painting-estimate__content">
+          <p>
+            Net fiyat; yalnızca metrekareye değil, yüzey durumuna, yapılacak
+            onarımlara, kullanılacak ürüne, eşya yoğunluğuna ve çalışma
+            koşullarına bağlıdır.
+          </p>
+
+          <ul>
+            <li>Boyanacak toplam alan</li>
+            <li>Duvar ve tavan yüzeylerinin durumu</li>
+            <li>Gerekli onarım ve hazırlık işlemleri</li>
+            <li>Seçilen boya sistemi ve kat sayısı</li>
+            <li>Mobilya taşıma ve koruma ihtiyacı</li>
+            <li>Projenin tamamlanma süresi</li>
+          </ul>
+
+          <a class="button button--light" href="request-atmosphere.html?service=painting">
+            Ücretsiz keşif talep et
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="painting-service-areas section">
+      <div class="container painting-service-areas__grid">
+        <div>
+          <p class="eyebrow">Hizmet bölgeleri</p>
+
+          <h2>Projenizin bulunduğu bölgeyi kontrol edin.</h2>
+
+          <p>
+            Keşif ve uygulama planı, projenin konumuna ve kapsamına göre
+            oluşturulur.
+          </p>
+
+          <a class="button button--dark" href="service-areas.html">
+            Hizmet alanlarını görüntüle
+          </a>
+        </div>
+
+        <div class="painting-service-areas__locations">
+          <span>Girne</span>
+          <span>Lefkoşa</span>
+          <span>Mağusa</span>
+          <span>İskele</span>
+          <span>Güzelyurt</span>
+          <span>Lefke</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="painting-cta">
+      <div class="painting-cta__media">
         <img
-          src="assets/images/painting-furnished-home.jpg"
-          alt="Protected furniture inside a home prepared for painting"
-          width="1600"
-          height="1200"
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=88"
+          alt="Profesyonel boya uygulamasıyla yenilenmiş yaşam alanı"
           loading="lazy"
         >
       </div>
 
-      <div class="painting-furnished__content">
-        <p class="eyebrow">Furnished properties</p>
+      <div class="painting-cta__overlay"></div>
 
-        <h2>Your home does not need to be empty.</h2>
+      <div class="painting-cta__content container">
+        <p class="eyebrow">Projenizi başlatın</p>
+
+        <h2>
+          Mekânınızı görelim,
+          <em>doğru uygulama planını oluşturalım.</em>
+        </h2>
 
         <p>
-          Where appropriate, painting can be planned around an occupied or furnished
-          property. Furniture movement, protection and room access requirements are
-          reviewed during the survey.
+          Alan bilgilerini ve fotoğrafları gönderin. Ekibimiz ücretsiz keşif
+          için sizinle iletişime geçsin.
         </p>
 
-        <p>
-          Larger or heavily furnished projects may require an additional moving
-          team, which will be identified before the work is confirmed.
-        </p>
+        <div class="painting-cta__actions">
+          <a class="button button--light" href="request-atmosphere.html?service=painting">
+            Ücretsiz keşif talep et
+          </a>
 
-        <a class="text-link" href="service-areas.html#request-survey">
-          Discuss your property
-          <span aria-hidden="true">↗️</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="painting-cta section section--accent">
-      <div class="container">
-        <div class="painting-cta__content">
-          <p class="eyebrow">Request a survey</p>
-
-          <h2>
-            Let’s give the property the finish it deserves.
-          </h2>
-
-          <p>
-            Tell us which areas need painting and where the property is located. We
-            will confirm availability and arrange the next step.
-          </p>
-
-          <div class="painting-cta__actions">
-            <a class="button button--dark" href="service-areas.html#request-survey">
-              Request a free survey
-            </a>
-
-            <a class="text-link" href="projects.html">
-              View selected projects
-              <span aria-hidden="true">↗️</span>
-            </a>
-          </div>
+          <a class="button button--ghost-light" href="projects.html">
+            Projeleri incele
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__top">
-        <a class="brand brand--footer" href="index.html" aria-label="TRUECOAT home">
+    <div class="container site-footer__top">
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="index.html">
           <span class="brand__wordmark">TRUECOAT</span>
-          <span class="brand__descriptor">Painting &amp; Interiors</span>
+          <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
         </a>
 
         <p>
-          Professional painting and atmosphere-led interior improvements for
-          considered homes.
+          Profesyonel boya uygulaması, iç mekân atmosferleri ve seçilebilir
+          dekor çözümleri.
         </p>
       </div>
 
       <div class="site-footer__navigation">
         <div>
-          <h2>Services</h2>
-          <a href="painting.html">Professional Painting</a>
-          <a href="atmospheres.html">TRUECOAT Atmospheres</a>
-          <a href="projects.html">Selected Projects</a>
+          <p class="footer-heading">Hizmetler</p>
+          <a href="painting.html">Boyama</a>
+          <a href="atmospheres.html">Atmosferler</a>
+          <a href="projects.html">Projeler</a>
         </div>
 
         <div>
-          <h2>TRUECOAT</h2>
-          <a href="difference.html">Our Difference</a>
-          <a href="service-areas.html">Service Areas</a>
-          <a href="service-areas.html#request-survey">Request a Survey</a>
+          <p class="footer-heading">TRUECOAT</p>
+          <a href="difference.html">Farkımız</a>
+          <a href="service-areas.html">Hizmet alanları</a>
+          <a href="request-atmosphere.html">Ücretsiz keşif</a>
         </div>
 
         <div>
-          <h2>Featured</h2>
-          <a href="project-mediterranean.html">Mediterranean Calm</a>
-          <a href="project-modern.html">Quiet Modern</a>
-          <a href="project-organic.html">Organic Retreat</a>
+          <p class="footer-heading">İletişim</p>
+          <a href="mailto:truecoatcyprus@gmail.com">
+            truecoatcyprus@gmail.com
+          </a>
+          <a href="tel:+905338880000">+90 533 888 00 00</a>
+          <p>Kuzey Kıbrıs Türk Cumhuriyeti</p>
         </div>
       </div>
+    </div>
 
-      <div class="site-footer__bottom">
-        <p>&copy; <span data-current-year></span> TRUECOAT. All rights reserved.</p>
-        <p>Painting &amp; interiors, thoughtfully finished.</p>
-      </div>
+    <div class="container site-footer__bottom">
+      <p>© 2026 TRUECOAT. Tüm hakları saklıdır.</p>
+      <a href="request-atmosphere.html">Projenizi başlatın ↗️</a>
     </div>
   </footer>
 
