@@ -1,34 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Check TRUECOAT service areas and request a free property survey for professional painting or an atmosphere-led interior transformation.">
-  <meta name="theme-color" content="#191a17">
 
-  <title>Service Areas &amp; Survey — TRUECOAT</title>
+  <meta
+    name="description"
+    content="TRUECOAT hizmet alanları: Girne, Lefkoşa, Mağusa, İskele, Güzelyurt, Lefke ve çevresinde profesyonel boyama ve iç mekân hizmetleri."
+  >
+  <meta name="theme-color" content="#f4f1e9">
+
+  <title>Hizmet Alanları — TRUECOAT</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/atmosphere-shop.css">
+  <link rel="stylesheet" href="css/mobile.css">
 </head>
 
 <body class="page page-service-areas">
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  <a class="skip-link" href="#main-content">İçeriğe geç</a>
 
   <header class="site-header" data-header>
     <div class="site-header__inner container">
-      <a class="brand" href="index.html" aria-label="TRUECOAT home">
+      <a class="brand" href="index.html" aria-label="TRUECOAT ana sayfa">
         <span class="brand__wordmark">TRUECOAT</span>
-        <span class="brand__descriptor">Painting &amp; Interiors</span>
+        <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
       </a>
 
       <button
         class="menu-toggle"
         type="button"
-        aria-label="Open navigation"
+        aria-label="Navigasyonu aç"
         aria-expanded="false"
         aria-controls="primary-navigation"
         data-menu-toggle
@@ -38,580 +49,691 @@
       </button>
 
       <nav
-        class="site-navigation"
+        class="primary-navigation"
         id="primary-navigation"
-        aria-label="Primary navigation"
+        aria-label="Ana navigasyon"
         data-navigation
       >
-        <a href="painting.html">Painting</a>
-        <a href="difference.html">Our Difference</a>
-        <a href="atmospheres.html">Atmospheres</a>
-        <a href="projects.html">Projects</a>
-        <a href="service-areas.html" aria-current="page">Service Areas</a>
-        <a class="button button--small button--dark" href="#request-survey">
-          Request a survey
+        <a href="painting.html">Boyama</a>
+        <a href="difference.html">Farkımız</a>
+        <a href="atmospheres.html">Atmosferler</a>
+        <a href="projects.html">Projeler</a>
+        <a href="service-areas.html" aria-current="page">Hizmet Alanları</a>
+
+        <a class="navigation-cta" href="request-atmosphere.html">
+          Ücretsiz keşif talep et
         </a>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="areas-hero">
-      <div class="container">
+    <section class="areas-hero" aria-labelledby="areas-title">
+      <div class="container areas-hero__grid">
         <div class="areas-hero__content">
-          <p class="eyebrow">Service areas</p>
+          <p class="eyebrow">Hizmet alanları</p>
 
-          <h1>
-            Local workmanship.
-            <em>A wider point of view.</em>
+          <h1 id="areas-title">
+            Projeniz nerede olursa olsun
+            <em>aynı standardı taşıyoruz.</em>
           </h1>
 
-          <p class="lead">
-            TRUECOAT undertakes selected residential painting and interior
-            improvement projects across Northern Cyprus and the United Kingdom.
+          <p>
+            Profesyonel boyama, ücretsiz keşif ve iç mekân atmosferi
+            hizmetlerimizi proje konumuna ve kapsamına göre planlıyoruz.
           </p>
 
-          <a class="button button--dark" href="#request-survey">
-            Check your project
+          <a class="button button--dark" href="request-atmosphere.html">
+            Bölgeniz için keşif talep et
           </a>
         </div>
 
-        <figure class="areas-hero__visual">
+        <div class="areas-hero__visual">
           <img
-            src="assets/images/service-areas-hero.jpg"
-            alt="Refined residential property overlooking a Mediterranean landscape"
-            width="1500"
-            height="1750"
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1500&q=88"
+            alt="TRUECOAT hizmetleriyle tamamlanmış modern yaşam alanı"
             fetchpriority="high"
           >
-        </figure>
+
+          <div class="areas-hero__badge">
+            <strong>6</strong>
+            <span>Ana hizmet bölgesi</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="areas-regions section section--dark">
+    <section class="areas-directory section section--dark" aria-labelledby="directory-title">
       <div class="container">
         <div class="section-heading section-heading--split section-heading--light">
           <div>
-            <p class="eyebrow eyebrow--light">Active regions</p>
-            <h2>Two markets.<br>One TRUECOAT standard.</h2>
+            <p class="eyebrow">Bölge rehberi</p>
+            <h2 id="directory-title">Hizmet verdiğimiz ana bölgeler.</h2>
           </div>
 
           <p>
-            Project availability depends on location, scope and schedule. Send us
-            your property details and we will confirm the appropriate next step.
+            Yakın çevre ve köyler de proje uygunluğuna göre hizmet kapsamına
+            dahil edilebilir.
           </p>
         </div>
 
-        <div class="areas-regions__grid">
-          <article class="areas-region">
-            <div class="areas-region__image">
-              <img
-                src="assets/images/region-cyprus.jpg"
-                alt="Mediterranean residential architecture in Northern Cyprus"
-                width="1200"
-                height="900"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="areas-region__content">
-              <span class="areas-region__number">Region 01</span>
-              <h3>Northern Cyprus</h3>
-
+        <div class="areas-directory__grid">
+          <article class="area-card">
+            <span class="area-card__number">01</span>
+            <div>
+              <p class="eyebrow">Kuzey sahili</p>
+              <h3>Girne</h3>
               <p>
-                Professional painting and selected atmosphere-led interior projects
-                for apartments, villas, rental properties and residential
-                developments.
+                Daireler, villalar, kiralık mülkler, ofisler ve ticari alanlar
+                için iç ve dış cephe uygulamaları.
               </p>
-
-              <ul>
-                <li>Kyrenia and surrounding areas</li>
-                <li>Nicosia and surrounding areas</li>
-                <li>Famagusta and surrounding areas</li>
-                <li>İskele and the Karpaz region</li>
-                <li>Güzelyurt and Lefke</li>
-              </ul>
-
-              <a class="text-link text-link--light" href="#request-survey">
-                Request a Northern Cyprus survey
-                <span aria-hidden="true">↓</span>
-              </a>
             </div>
+
+            <ul>
+              <li>Girne Merkez</li>
+              <li>Karakum</li>
+              <li>Çatalköy</li>
+              <li>Ozanköy</li>
+              <li>Alsancak</li>
+              <li>Lapta</li>
+            </ul>
+
+            <a href="request-atmosphere.html?area=kyrenia">
+              Girne için keşif talep et
+              <span aria-hidden="true">↗️</span>
+            </a>
           </article>
 
-          <article class="areas-region">
-            <div class="areas-region__image">
-              <img
-                src="assets/images/region-uk.jpg"
-                alt="Characterful residential street in the United Kingdom"
-                width="1200"
-                height="900"
-                loading="lazy"
-              >
-            </div>
-
-            <div class="areas-region__content">
-              <span class="areas-region__number">Region 02</span>
-              <h3>United Kingdom</h3>
-
+          <article class="area-card">
+            <span class="area-card__number">02</span>
+            <div>
+              <p class="eyebrow">Başkent bölgesi</p>
+              <h3>Lefkoşa</h3>
               <p>
-                Selected interior painting, property refresh and atmosphere
-                projects, subject to local team availability and the scale of the
-                proposed work.
+                Konut, iş yeri, ofis ve yenileme projeleri için planlı boyama
+                ve iç mekân hizmetleri.
               </p>
-
-              <ul>
-                <li>Residential interior painting</li>
-                <li>Occupied and furnished homes</li>
-                <li>Rental and pre-sale refreshes</li>
-                <li>Atmosphere-led room transformations</li>
-                <li>Projects reviewed individually</li>
-              </ul>
-
-              <a class="text-link text-link--light" href="#request-survey">
-                Submit a UK project
-                <span aria-hidden="true">↓</span>
-              </a>
             </div>
+
+            <ul>
+              <li>Lefkoşa Merkez</li>
+              <li>Gönyeli</li>
+              <li>Hamitköy</li>
+              <li>Haspolat</li>
+              <li>Alayköy</li>
+              <li>Yenikent</li>
+            </ul>
+
+            <a href="request-atmosphere.html?area=nicosia">
+              Lefkoşa için keşif talep et
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </article>
+
+          <article class="area-card">
+            <span class="area-card__number">03</span>
+            <div>
+              <p class="eyebrow">Doğu bölgesi</p>
+              <h3>Mağusa</h3>
+              <p>
+                Yaşam alanları, öğrenci konutları, kiralık mülkler ve ticari
+                yapılar için yenileme hizmetleri.
+              </p>
+            </div>
+
+            <ul>
+              <li>Mağusa Merkez</li>
+              <li>Yenişehir</li>
+              <li>Karakol</li>
+              <li>Çanakkale</li>
+              <li>Mutluyaka</li>
+              <li>Tuzla</li>
+            </ul>
+
+            <a href="request-atmosphere.html?area=famagusta">
+              Mağusa için keşif talep et
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </article>
+
+          <article class="area-card">
+            <span class="area-card__number">04</span>
+            <div>
+              <p class="eyebrow">Long Beach bölgesi</p>
+              <h3>İskele</h3>
+              <p>
+                Yeni daireler, tatil evleri, site içi konutlar ve yatırım
+                mülkleri için boyama ve atmosfer uygulamaları.
+              </p>
+            </div>
+
+            <ul>
+              <li>İskele Merkez</li>
+              <li>Long Beach</li>
+              <li>Boğaz</li>
+              <li>Ötüken</li>
+              <li>Bafra</li>
+              <li>Mehmetçik</li>
+            </ul>
+
+            <a href="request-atmosphere.html?area=iskelen">
+              İskele için keşif talep et
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </article>
+
+          <article class="area-card">
+            <span class="area-card__number">05</span>
+            <div>
+              <p class="eyebrow">Batı bölgesi</p>
+              <h3>Güzelyurt</h3>
+              <p>
+                Konutlar, müstakil yapılar ve ticari alanlar için keşif,
+                hazırlık ve profesyonel boya uygulaması.
+              </p>
+            </div>
+
+            <ul>
+              <li>Güzelyurt Merkez</li>
+              <li>Kalkanlı</li>
+              <li>Akçay</li>
+              <li>Yayla</li>
+              <li>Zümrütköy</li>
+              <li>Mevlevi</li>
+            </ul>
+
+            <a href="request-atmosphere.html?area=morphou">
+              Güzelyurt için keşif talep et
+              <span aria-hidden="true">↗️</span>
+            </a>
+          </article>
+
+          <article class="area-card">
+            <span class="area-card__number">06</span>
+            <div>
+              <p class="eyebrow">Batı kıyısı</p>
+              <h3>Lefke</h3>
+              <p>
+                Ev, villa, öğrenci konutu ve küçük işletmeler için proje
+                kapsamına göre planlanan uygulamalar.
+              </p>
+            </div>
+
+            <ul>
+              <li>Lefke Merkez</li>
+              <li>Gemikonağı</li>
+              <li>Karadağ</li>
+              <li>Yeşilyurt</li>
+              <li>Yedidalga</li>
+              <li>Çamlıköy</li>
+            </ul>
+
+            <a href="request-atmosphere.html?area=lefke">
+              Lefke için keşif talep et
+              <span aria-hidden="true">↗️</span>
+            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="areas-project-types section">
-      <div class="container">
-        <div class="areas-project-types__heading">
-          <p class="eyebrow">Properties we work with</p>
+    <section class="areas-map section" aria-labelledby="map-title">
+      <div class="container areas-map__grid">
+        <div class="areas-map__content">
+          <p class="eyebrow">Proje konumu</p>
 
-          <h2>
-            Every project begins with the property—not a fixed package.
+          <h2 id="map-title">
+            Listede görünmeyen bölgeler için de
+            <em>bizimle iletişime geçebilirsiniz.</em>
           </h2>
+
+          <p>
+            Hizmet uygunluğu yalnızca bölge adına göre değil; projenin kapsamı,
+            ulaşım koşulları, ekip planı ve talep edilen tarihe göre
+            değerlendirilir.
+          </p>
+
+          <div class="areas-map__facts">
+            <article>
+              <strong>Ücretsiz keşif</strong>
+              <span>Uygun projelerde yerinde değerlendirme</span>
+            </article>
+
+            <article>
+              <strong>Planlı ulaşım</strong>
+              <span>Bölge ve proje kapsamına göre ekip planı</span>
+            </article>
+
+            <article>
+              <strong>Şeffaf teklif</strong>
+              <span>Ulaşım ve uygulama kapsamı önceden belirtilir</span>
+            </article>
+          </div>
+
+          <a class="button button--dark" href="request-atmosphere.html">
+            Konumunuzu gönderin
+          </a>
         </div>
 
-        <div class="areas-project-types__grid">
+        <div class="areas-map__visual" aria-label="Hizmet bölgelerinin görsel listesi">
+          <div class="areas-map__background">
+            <img
+              src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1400&q=86"
+              alt="Akdeniz kıyısı ve yerleşim bölgeleri"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="areas-map__locations">
+            <span class="areas-map__location areas-map__location--one">
+              <b>01</b>
+              Girne
+            </span>
+
+            <span class="areas-map__location areas-map__location--two">
+              <b>02</b>
+              Lefkoşa
+            </span>
+
+            <span class="areas-map__location areas-map__location--three">
+              <b>03</b>
+              Mağusa
+            </span>
+
+            <span class="areas-map__location areas-map__location--four">
+              <b>04</b>
+              İskele
+            </span>
+
+            <span class="areas-map__location areas-map__location--five">
+              <b>05</b>
+              Güzelyurt
+            </span>
+
+            <span class="areas-map__location areas-map__location--six">
+              <b>06</b>
+              Lefke
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="areas-services section section--soft" aria-labelledby="area-services-title">
+      <div class="container">
+        <div class="section-heading section-heading--split">
+          <div>
+            <p class="eyebrow">Bölgenize gelen hizmetler</p>
+            <h2 id="area-services-title">Tek bir hizmetle sınırlı değiliz.</h2>
+          </div>
+
+          <p>
+            Projenin konumuna ve kapsamına göre boyama ile iç mekân
+            hizmetlerini birlikte planlayabiliriz.
+          </p>
+        </div>
+
+        <div class="areas-services__grid">
           <article>
             <span>01</span>
-            <h3>Private Homes</h3>
+            <h3>İç cephe boyama</h3>
             <p>
-              Apartments, villas and houses requiring careful painting or a more
-              complete interior transformation.
+              Duvar, tavan, kapı, süpürgelik ve gerekli yüzey onarımları.
             </p>
+
+            <a href="painting.html">
+              Hizmeti incele
+              <span aria-hidden="true">↗️</span>
+            </a>
           </article>
 
           <article>
             <span>02</span>
-            <h3>Furnished Properties</h3>
+            <h3>Dış cephe boyama</h3>
             <p>
-              Occupied homes where protection, access and furniture movement must be
-              considered before work begins.
+              Yapının durumuna ve dış koşullara uygun koruyucu uygulamalar.
             </p>
+
+            <a href="painting.html">
+              Hizmeti incele
+              <span aria-hidden="true">↗️</span>
+            </a>
           </article>
 
           <article>
             <span>03</span>
-            <h3>Rental Properties</h3>
+            <h3>Renk yönlendirmesi</h3>
             <p>
-              Efficient refreshes planned around new tenants, handovers and property
-              presentation.
+              Işık, zemin ve mevcut mobilyalarla uyumlu renk yaklaşımı.
             </p>
+
+            <a href="difference.html">
+              Yaklaşımımızı incele
+              <span aria-hidden="true">↗️</span>
+            </a>
           </article>
 
           <article>
             <span>04</span>
-            <h3>Pre-Sale Homes</h3>
+            <h3>Atmosfer uygulaması</h3>
             <p>
-              Focused improvements designed to make the property feel cleaner,
-              brighter and more considered before listing.
+              Boya, dekor ürünleri ve yerleşimi bir araya getiren bütünsel
+              proje.
             </p>
+
+            <a href="atmospheres.html">
+              Atmosferleri keşfet
+              <span aria-hidden="true">↗️</span>
+            </a>
           </article>
 
           <article>
             <span>05</span>
-            <h3>Holiday Residences</h3>
+            <h3>Ürün seçimi</h3>
             <p>
-              Painting and interior updates coordinated for owners who may not be
-              present throughout the work.
+              Seçtiğiniz projede kullanılan ürünleri inceleme ve projeye
+              ekleme.
             </p>
+
+            <a href="projects.html">
+              Projeleri görüntüle
+              <span aria-hidden="true">↗️</span>
+            </a>
           </article>
 
           <article>
             <span>06</span>
-            <h3>Selected Commercial Spaces</h3>
+            <h3>Temiz teslim</h3>
             <p>
-              Offices, studios and customer-facing interiors considered individually
-              according to scope and schedule.
+              Son kontroller, rötuşlar ve uygulama sonrası alan düzenlemesi.
             </p>
+
+            <a href="difference.html">
+              Standartlarımızı incele
+              <span aria-hidden="true">↗️</span>
+            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="areas-furnished section section--warm">
-      <div class="container">
-        <div class="areas-furnished__visual">
-          <img
-            src="assets/images/service-areas-furnished.jpg"
-            alt="Furniture carefully protected inside a home prepared for painting"
-            width="1400"
-            height="1600"
-            loading="lazy"
-          >
+    <section class="areas-scheduling section section--dark" aria-labelledby="scheduling-title">
+      <div class="container areas-scheduling__grid">
+        <div>
+          <p class="eyebrow">Bölgesel planlama</p>
+
+          <h2 id="scheduling-title">
+            Keşif ve uygulama tarihleri
+            <em>ekip rotasına göre planlanır.</em>
+          </h2>
         </div>
 
-        <div class="areas-furnished__content">
-          <p class="eyebrow">Furnished homes</p>
-
-          <h2>
-            The logistics are considered before the painting begins.
-          </h2>
-
-          <p class="lead">
-            A furnished property requires a different plan from an empty one.
-          </p>
-
+        <div class="areas-scheduling__content">
           <p>
-            We review furniture volume, access, protection and the sequence of rooms
-            during the survey. Smaller items may need to be removed by the client
-            before work starts.
+            Aynı bölgedeki projeleri verimli biçimde planlayarak ulaşım süresini
+            azaltır ve ekibin uygulamaya odaklanmasını sağlarız.
           </p>
 
-          <p>
-            Where a property contains substantial or heavy furniture, a separate
-            moving team may be required. This will be identified and agreed before
-            the project is confirmed.
-          </p>
+          <ol>
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Konumunuzu gönderin</h3>
+                <p>
+                  Adresinizi, alan türünü ve talep ettiğiniz hizmeti paylaşın.
+                </p>
+              </div>
+            </li>
 
-          <a class="text-link" href="#request-survey">
-            Tell us about your property
-            <span aria-hidden="true">↓</span>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Ön değerlendirme yapılsın</h3>
+                <p>
+                  Ekibimiz proje kapsamını ve bölge uygunluğunu kontrol etsin.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <span>03</span>
+              <div>
+                <h3>Keşif tarihi belirlensin</h3>
+                <p>
+                  Uygun gün ve saat için sizinle iletişime geçelim.
+                </p>
+              </div>
+            </li>
+          </ol>
+
+          <a class="button button--light" href="request-atmosphere.html">
+            Keşif talebini başlat
           </a>
         </div>
       </div>
     </section>
 
-    <section class="areas-survey-info section">
+    <section class="areas-property section" aria-labelledby="property-title">
       <div class="container">
-        <div class="areas-survey-info__intro">
-          <p class="eyebrow">The initial survey</p>
+        <div class="areas-property__intro">
+          <p class="eyebrow">Farklı mülk ihtiyaçları</p>
 
-          <h2>
-            A useful first conversation—not a sales visit.
+          <h2 id="property-title">
+            Yaşadığınız evden yatırım mülkünüze kadar.
           </h2>
-
-          <p>
-            The purpose of the survey is to understand the property, identify the
-            real scope and determine whether TRUECOAT is the right fit for the
-            project.
-          </p>
         </div>
 
-        <ol class="areas-survey-info__steps">
-          <li>
-            <span>01</span>
-            <div>
-              <h3>Project review</h3>
-              <p>
-                We review your location, property type, photographs and requested
-                service.
-              </p>
-            </div>
-          </li>
+        <div class="areas-property__grid">
+          <article class="property-card">
+            <img
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=86"
+              alt="Modern aile yaşam alanı"
+              loading="lazy"
+            >
 
-          <li>
-            <span>02</span>
             <div>
-              <h3>Initial contact</h3>
+              <p class="eyebrow">Yaşam alanları</p>
+              <h3>Ev ve daireler</h3>
               <p>
-                We contact you to clarify the scope and confirm whether an on-site or
-                remote survey is appropriate.
+                Eşyalı veya boş konutlar için kontrollü boyama ve atmosfer
+                yenileme.
               </p>
             </div>
-          </li>
+          </article>
 
-          <li>
-            <span>03</span>
-            <div>
-              <h3>Property assessment</h3>
-              <p>
-                Surfaces, access, room conditions and wider interior requirements are
-                assessed.
-              </p>
-            </div>
-          </li>
+          <article class="property-card">
+            <img
+              src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1000&q=86"
+              alt="Modern müstakil villa"
+              loading="lazy"
+            >
 
-          <li>
-            <span>04</span>
             <div>
-              <h3>Tailored proposal</h3>
+              <p class="eyebrow">Büyük projeler</p>
+              <h3>Villa ve müstakil evler</h3>
               <p>
-                You receive a proposal based on the agreed work, finishes and
-                project requirements.
+                İç ve dış cepheyi kapsayan aşamalı yenileme planları.
               </p>
             </div>
-          </li>
-        </ol>
+          </article>
+
+          <article class="property-card">
+            <img
+              src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1000&q=86"
+              alt="Kiralama için hazırlanmış temiz daire"
+              loading="lazy"
+            >
+
+            <div>
+              <p class="eyebrow">Yatırım mülkleri</p>
+              <h3>Kiralık ve satılık konutlar</h3>
+              <p>
+                Teslim tarihi odaklı boya, bakım ve görsel yenileme.
+              </p>
+            </div>
+          </article>
+
+          <article class="property-card">
+            <img
+              src="https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1000&q=86"
+              alt="Modern ticari iç mekân"
+              loading="lazy"
+            >
+
+            <div>
+              <p class="eyebrow">Ticari projeler</p>
+              <h3>Ofis ve işletmeler</h3>
+              <p>
+                İşletme düzenini minimum etkileyen planlı uygulamalar.
+              </p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="survey-request section section--accent" id="request-survey">
+    <section class="areas-faq section section--soft" aria-labelledby="faq-title">
       <div class="container">
-        <div class="survey-request__heading">
-          <p class="eyebrow">Request a free survey</p>
-
-          <h2>
-            Tell us about your property.
-          </h2>
-
-          <p>
-            Complete the form below with as much information as you currently have.
-            We will review the project before arranging the next step.
-          </p>
-
-          <div class="survey-request__notes">
-            <div>
-              <strong>Helpful to include</strong>
-              <span>Property location and areas requiring work</span>
-            </div>
-
-            <div>
-              <strong>Photographs</strong>
-              <span>Can be shared when we contact you</span>
-            </div>
-
-            <div>
-              <strong>Response</strong>
-              <span>Subject to current project availability</span>
-            </div>
-          </div>
+        <div class="areas-faq__heading">
+          <p class="eyebrow">Sık sorulanlar</p>
+          <h2 id="faq-title">Hizmet bölgesi hakkında.</h2>
         </div>
 
-        <form
-          class="survey-form"
-          action="mailto:hello@truecoat.co"
-          method="post"
-          enctype="text/plain"
-          data-survey-form
+        <div class="areas-faq__list">
+          <details>
+            <summary>
+              Listede olmayan bir bölgede hizmet alabilir miyim?
+              <span aria-hidden="true">+</span>
+            </summary>
+
+            <p>
+              Evet. Proje konumunu ve kapsamını gönderdiğinizde ekibimizin
+              ulaşım ve çalışma uygunluğunu değerlendirebiliriz.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Ücretsiz keşif bütün bölgelerde geçerli mi?
+              <span aria-hidden="true">+</span>
+            </summary>
+
+            <p>
+              Ücretsiz keşif uygunluğu; bölgeye, proje büyüklüğüne ve ekibin
+              mevcut çalışma rotasına göre onaylanır.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Küçük bir oda için farklı bölgeye gelir misiniz?
+              <span aria-hidden="true">+</span>
+            </summary>
+
+            <p>
+              Küçük projeler de değerlendirilir. Uygunluk, bölgedeki diğer
+              projelerle birlikte planlanarak belirlenebilir.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Dekor ürünlerinin teslimatı her bölgeye yapılır mı?
+              <span aria-hidden="true">+</span>
+            </summary>
+
+            <p>
+              Teslimat ve montaj uygunluğu seçilen ürüne, tedarikçiye ve proje
+              konumuna göre teklif aşamasında açıklanır.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="areas-cta">
+      <div class="areas-cta__media">
+        <img
+          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=88"
+          alt="TRUECOAT tarafından yenilenebilecek premium yaşam alanı"
+          loading="lazy"
         >
-          <div class="survey-form__row">
-            <div class="form-field">
-              <label for="survey-name">Full name</label>
-              <input
-                id="survey-name"
-                name="Name"
-                type="text"
-                autocomplete="name"
-                required
-              >
-            </div>
-
-            <div class="form-field">
-              <label for="survey-contact">Phone or WhatsApp number</label>
-              <input
-                id="survey-contact"
-                name="Contact number"
-                type="tel"
-                autocomplete="tel"
-                required
-              >
-            </div>
-          </div>
-
-          <div class="survey-form__row">
-            <div class="form-field">
-              <label for="survey-email">Email address</label>
-              <input
-                id="survey-email"
-                name="Email"
-                type="email"
-                autocomplete="email"
-                required
-              >
-            </div>
-
-            <div class="form-field">
-              <label for="survey-region">Region</label>
-              <select id="survey-region" name="Region" required>
-                <option value="" selected disabled>Select your region</option>
-                <option value="Northern Cyprus">Northern Cyprus</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="Other">Another location</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="survey-form__row">
-            <div class="form-field">
-              <label for="survey-location">Town or area</label>
-              <input
-                id="survey-location"
-                name="Town or area"
-                type="text"
-                autocomplete="address-level2"
-                required
-              >
-            </div>
-
-            <div class="form-field">
-              <label for="survey-property">Property type</label>
-              <select id="survey-property" name="Property type" required>
-                <option value="" selected disabled>Select property type</option>
-                <option value="Apartment">Apartment</option>
-                <option value="Villa or house">Villa or house</option>
-                <option value="Rental property">Rental property</option>
-                <option value="Commercial space">Commercial space</option>
-                <option value="Other property">Other property</option>
-              </select>
-            </div>
-          </div>
-
-          <fieldset class="survey-form__choices">
-            <legend>Which service are you interested in?</legend>
-
-            <label>
-              <input type="checkbox" name="Service" value="Interior painting">
-              <span>Interior painting</span>
-            </label>
-
-            <label>
-              <input type="checkbox" name="Service" value="Exterior painting">
-              <span>Exterior painting</span>
-            </label>
-
-            <label>
-              <input type="checkbox" name="Service" value="Property refresh">
-              <span>Property refresh</span>
-            </label>
-
-            <label>
-              <input type="checkbox" name="Service" value="Complete atmosphere">
-              <span>Complete atmosphere</span>
-            </label>
-          </fieldset>
-
-          <div class="survey-form__row">
-            <div class="form-field">
-              <label for="survey-furnished">Is the property furnished?</label>
-              <select id="survey-furnished" name="Furnished property" required>
-                <option value="" selected disabled>Select an answer</option>
-                <option value="Yes, fully furnished">Yes, fully furnished</option>
-                <option value="Partly furnished">Partly furnished</option>
-                <option value="No, empty property">No, empty property</option>
-              </select>
-            </div>
-
-            <div class="form-field">
-              <label for="survey-timing">Preferred timing</label>
-              <select id="survey-timing" name="Preferred timing" required>
-                <option value="" selected disabled>Select preferred timing</option>
-                <option value="As soon as possible">As soon as possible</option>
-                <option value="Within one month">Within one month</option>
-                <option value="Within three months">Within three months</option>
-                <option value="Planning ahead">Planning ahead</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-field form-field--full">
-            <label for="survey-message">Tell us about the project</label>
-            <textarea
-              id="survey-message"
-              name="Project details"
-              rows="7"
-              placeholder="Which rooms or exterior areas need work? What would you like to change?"
-              required
-            ></textarea>
-          </div>
-
-          <label class="survey-form__consent">
-            <input type="checkbox" name="Consent" value="Accepted" required>
-            <span>
-              I agree that TRUECOAT may contact me about this project request.
-            </span>
-          </label>
-
-          <button class="button button--dark" type="submit">
-            Submit project request
-          </button>
-
-          <p class="survey-form__status" aria-live="polite" data-form-status></p>
-        </form>
       </div>
-    </section>
 
-    <section class="areas-next section">
-      <div class="container">
-        <div class="areas-next__content">
-          <p class="eyebrow">Not ready to enquire?</p>
+      <div class="areas-cta__overlay"></div>
 
-          <h2>
-            Explore what TRUECOAT could bring to the property.
-          </h2>
+      <div class="areas-cta__content container">
+        <p class="eyebrow">Bölgenizi kontrol edelim</p>
 
-          <div class="areas-next__links">
-            <a href="painting.html">
-              <span>Professional painting</span>
-              <span aria-hidden="true">↗️</span>
-            </a>
+        <h2>
+          Konumunuzu gönderin,
+          <em>projenizi birlikte planlayalım.</em>
+        </h2>
 
-            <a href="atmospheres.html">
-              <span>Complete atmospheres</span>
-              <span aria-hidden="true">↗️</span>
-            </a>
+        <p>
+          Adresinizi, mekân türünü ve ihtiyacınızı paylaşın. Ekibimiz keşif
+          uygunluğu için sizinle iletişime geçsin.
+        </p>
 
-            <a href="projects.html">
-              <span>Selected projects</span>
-              <span aria-hidden="true">↗️</span>
-            </a>
-          </div>
+        <div class="areas-cta__actions">
+          <a class="button button--light" href="request-atmosphere.html">
+            Ücretsiz keşif talep et
+          </a>
+
+          <a class="button button--ghost-light" href="projects.html">
+            Projeleri incele
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__top">
-        <a class="brand brand--footer" href="index.html" aria-label="TRUECOAT home">
+    <div class="container site-footer__top">
+      <div class="site-footer__brand">
+        <a class="brand brand--footer" href="index.html">
           <span class="brand__wordmark">TRUECOAT</span>
-          <span class="brand__descriptor">Painting &amp; Interiors</span>
+          <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
         </a>
 
         <p>
-          Professional painting and atmosphere-led interior improvements for
-          considered homes.
+          Profesyonel boya uygulaması, iç mekân atmosferleri ve seçilebilir
+          dekor çözümleri.
         </p>
       </div>
 
       <div class="site-footer__navigation">
         <div>
-          <h2>Services</h2>
-          <a href="painting.html">Professional Painting</a>
-          <a href="atmospheres.html">TRUECOAT Atmospheres</a>
-          <a href="projects.html">Selected Projects</a>
+          <p class="footer-heading">Hizmetler</p>
+          <a href="painting.html">Boyama</a>
+          <a href="atmospheres.html">Atmosferler</a>
+          <a href="projects.html">Projeler</a>
         </div>
 
         <div>
-          <h2>TRUECOAT</h2>
-          <a href="difference.html">Our Difference</a>
-          <a href="service-areas.html">Service Areas</a>
-          <a href="#request-survey">Request a Survey</a>
+          <p class="footer-heading">TRUECOAT</p>
+          <a href="difference.html">Farkımız</a>
+          <a href="service-areas.html">Hizmet alanları</a>
+          <a href="request-atmosphere.html">Ücretsiz keşif</a>
         </div>
 
         <div>
-          <h2>Featured</h2>
-          <a href="project-mediterranean.html">Mediterranean Calm</a>
-          <a href="project-modern.html">Quiet Modern</a>
-          <a href="project-organic.html">Organic Retreat</a>
+          <p class="footer-heading">İletişim</p>
+          <a href="mailto:truecoatcyprus@gmail.com">
+            truecoatcyprus@gmail.com
+          </a>
+          <a href="tel:+905338880000">+90 533 888 00 00</a>
+          <p>Kuzey Kıbrıs Türk Cumhuriyeti</p>
         </div>
       </div>
+    </div>
 
-      <div class="site-footer__bottom">
-        <p>&copy; <span data-current-year></span> TRUECOAT. All rights reserved.</p>
-        <p>Painting &amp; interiors, thoughtfully finished.</p>
-      </div>
+    <div class="container site-footer__bottom">
+      <p>© 2026 TRUECOAT. Tüm hakları saklıdır.</p>
+      <a href="request-atmosphere.html">Projenizi başlatın ↗️</a>
     </div>
   </footer>
 
   <script src="js/app.js" defer></script>
 </body>
-</html> 
+</html>
