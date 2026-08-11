@@ -1,0 +1,941 @@
+/* TRUECOAT — Atmospheres Page */
+
+.page-atmospheres {
+  --atmosphere-paper: #f4f1eb;
+  --atmosphere-card: #fffdf9;
+  --atmosphere-ink: #191915;
+  --atmosphere-muted: #6f6a62;
+  --atmosphere-accent: #896d54;
+  --atmosphere-accent-dark: #66503d;
+  --atmosphere-line: rgba(25, 25, 21, 0.14);
+  --atmosphere-dark: #1b1b17;
+  background: var(--atmosphere-paper);
+  color: var(--atmosphere-ink);
+}
+
+.page-atmospheres main {
+  overflow: hidden;
+}
+
+.page-atmospheres img {
+  display: block;
+}
+
+/* HERO */
+
+.page-atmospheres .atmospheres-hero {
+  position: relative;
+  min-height: 760px;
+  display: grid;
+  align-items: end;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--atmosphere-dark);
+}
+
+.page-atmospheres .atmospheres-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.page-atmospheres .atmospheres-hero__media::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(16, 16, 13, 0.84) 0%,
+      rgba(16, 16, 13, 0.55) 42%,
+      rgba(16, 16, 13, 0.12) 75%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(16, 16, 13, 0.05) 30%,
+      rgba(16, 16, 13, 0.62) 100%
+    );
+  content: "";
+}
+
+.page-atmospheres .atmospheres-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page-atmospheres .atmospheres-hero__content {
+  width: min(820px, 72vw);
+  padding:
+    clamp(80px, 11vw, 160px)
+    clamp(28px, 6vw, 96px)
+    clamp(70px, 8vw, 118px);
+  color: #fff;
+}
+
+.page-atmospheres .eyebrow {
+  margin: 0 0 20px;
+  color: var(--atmosphere-accent);
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.page-atmospheres .atmospheres-hero .eyebrow {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.page-atmospheres .atmospheres-hero h1 {
+  max-width: 12ch;
+  margin: 0;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(58px, 7vw, 108px);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+}
+
+.page-atmospheres .atmospheres-hero h1 em {
+  display: block;
+  font-weight: 400;
+}
+
+.page-atmospheres .atmospheres-hero__content > p:not(.eyebrow) {
+  max-width: 610px;
+  margin: 30px 0 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.page-atmospheres .atmospheres-hero__actions {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.page-atmospheres .button {
+  min-height: 52px;
+  padding: 15px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--atmosphere-accent);
+  border-radius: 999px;
+  background: var(--atmosphere-accent);
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.page-atmospheres .button:hover {
+  border-color: var(--atmosphere-accent-dark);
+  background: var(--atmosphere-accent-dark);
+  transform: translateY(-2px);
+}
+
+.page-atmospheres .button--ghost {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(16, 16, 13, 0.18);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.page-atmospheres .button--ghost:hover {
+  border-color: #fff;
+  background: #fff;
+  color: var(--atmosphere-ink);
+}
+
+/* INTRODUCTION */
+
+.page-atmospheres .atmosphere-introduction {
+  padding:
+    clamp(80px, 10vw, 150px)
+    clamp(28px, 7vw, 112px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: clamp(60px, 11vw, 180px);
+  align-items: start;
+  background: var(--atmosphere-paper);
+}
+
+.page-atmospheres .atmosphere-introduction__heading h2 {
+  max-width: 11ch;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(50px, 5.8vw, 88px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.page-atmospheres .atmosphere-introduction__content {
+  padding-top: 42px;
+}
+
+.page-atmospheres .atmosphere-introduction__content p {
+  margin: 0 0 24px;
+  color: var(--atmosphere-muted);
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.page-atmospheres .atmosphere-introduction__content a {
+  margin-top: 12px;
+  display: inline-block;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--atmosphere-ink);
+  color: var(--atmosphere-ink);
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* COLLECTION */
+
+.page-atmospheres .atmosphere-collection {
+  padding:
+    clamp(76px, 9vw, 132px)
+    clamp(28px, 5vw, 80px);
+  background: #e9e4dc;
+}
+
+.page-atmospheres .atmosphere-collection__header {
+  margin-bottom: 54px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: 60px;
+  align-items: end;
+}
+
+.page-atmospheres .atmosphere-collection__header h2 {
+  max-width: 11ch;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 5vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.page-atmospheres .atmosphere-collection__header > p {
+  max-width: 470px;
+  margin: 0;
+  color: var(--atmosphere-muted);
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.page-atmospheres .atmospheres-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.page-atmospheres .atmosphere-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--atmosphere-line);
+  border-radius: 18px;
+  background: var(--atmosphere-card);
+  transition:
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+.page-atmospheres .atmosphere-card:hover {
+  box-shadow: 0 24px 65px rgba(43, 34, 26, 0.14);
+  transform: translateY(-6px);
+}
+
+.page-atmospheres .atmosphere-card__media {
+  position: relative;
+  height: clamp(330px, 40vw, 590px);
+  display: block;
+  overflow: hidden;
+  background: #d9d3cb;
+  color: var(--atmosphere-ink);
+  text-decoration: none;
+}
+
+.page-atmospheres .atmosphere-card__media::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 19, 16, 0.08),
+      transparent 48%,
+      rgba(20, 19, 16, 0.38)
+    );
+  content: "";
+}
+
+.page-atmospheres .atmosphere-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.page-atmospheres .atmosphere-card:hover .atmosphere-card__media img {
+  transform: scale(1.035);
+}
+
+.page-atmospheres .atmosphere-card__index {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(25, 25, 21, 0.13);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.page-atmospheres .atmosphere-card__open {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2;
+  padding: 11px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(24, 23, 19, 0.68);
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.page-atmospheres .atmosphere-card__content {
+  padding: 28px 26px 30px;
+}
+
+.page-atmospheres .atmosphere-card__title > p {
+  margin: 0 0 9px;
+  color: var(--atmosphere-accent);
+  font-family: "Manrope", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.page-atmospheres .atmosphere-card__title h3 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(32px, 3vw, 46px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.page-atmospheres .atmosphere-card__content > p {
+  min-height: 68px;
+  margin: 20px 0 24px;
+  color: var(--atmosphere-muted);
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.page-atmospheres .atmosphere-card__facts {
+  margin: 0 0 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--atmosphere-line);
+  border-bottom: 1px solid var(--atmosphere-line);
+}
+
+.page-atmospheres .atmosphere-card__facts > div {
+  min-width: 0;
+  padding: 15px 10px;
+  border-left: 1px solid var(--atmosphere-line);
+}
+
+.page-atmospheres .atmosphere-card__facts > div:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.page-atmospheres .atmosphere-card__facts dt {
+  margin-bottom: 5px;
+  color: var(--atmosphere-muted);
+  font-family: "Manrope", sans-serif;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.page-atmospheres .atmosphere-card__facts dd {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.page-atmospheres .atmosphere-card__link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--atmosphere-ink);
+  font-family: "Manrope", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* SERVICE */
+
+.page-atmospheres .atmosphere-service {
+  min-height: 720px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(390px, 0.85fr);
+  background: var(--atmosphere-card);
+}
+
+.page-atmospheres .atmosphere-service__visual {
+  min-height: 720px;
+  overflow: hidden;
+}
+
+.page-atmospheres .atmosphere-service__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-atmospheres .atmosphere-service__content {
+  padding:
+    clamp(70px, 9vw, 130px)
+    clamp(38px, 7vw, 105px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-atmospheres .atmosphere-service__content h2 {
+  max-width: 10ch;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(46px, 5vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.page-atmospheres .atmosphere-service__content > p:not(.eyebrow) {
+  max-width: 570px;
+  margin: 28px 0;
+  color: var(--atmosphere-muted);
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.page-atmospheres .atmosphere-service__content ul {
+  margin: 0 0 34px;
+  padding: 0;
+  list-style: none;
+}
+
+.page-atmospheres .atmosphere-service__content li {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--atmosphere-line);
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.page-atmospheres .atmosphere-service__content .button {
+  align-self: flex-start;
+}
+
+/* PROCESS */
+
+.page-atmospheres .atmosphere-process {
+  padding:
+    clamp(80px, 10vw, 150px)
+    clamp(28px, 7vw, 112px);
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(70px, 12vw, 180px);
+  background: var(--atmosphere-dark);
+  color: #fff;
+}
+
+.page-atmospheres .atmosphere-process__heading {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+}
+
+.page-atmospheres .atmosphere-process__heading .eyebrow {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.page-atmospheres .atmosphere-process__heading h2 {
+  max-width: 9ch;
+  margin: 0;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 5.3vw, 80px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.page-atmospheres .atmosphere-process__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-atmospheres .atmosphere-process__steps li {
+  padding: 32px 0;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.page-atmospheres .atmosphere-process__steps li:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.page-atmospheres .atmosphere-process__steps > li > span {
+  color: rgba(255, 255, 255, 0.48);
+  font-family: "Manrope", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.page-atmospheres .atmosphere-process__steps h3 {
+  margin: 0 0 9px;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.page-atmospheres .atmosphere-process__steps p {
+  max-width: 520px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* FINAL CTA */
+
+.page-atmospheres .atmosphere-final-cta {
+  padding:
+    clamp(80px, 10vw, 145px)
+    clamp(28px, 7vw, 112px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(330px, 0.85fr);
+  gap: clamp(60px, 11vw, 170px);
+  align-items: end;
+  background: #d8cec1;
+}
+
+.page-atmospheres .atmosphere-final-cta h2 {
+  max-width: 12ch;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 5.6vw, 84px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.page-atmospheres .atmosphere-final-cta > div:last-child > p {
+  margin: 0 0 30px;
+  color: #5e584f;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* TABLET */
+
+@media (max-width: 1080px) {
+  .page-atmospheres .atmospheres-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-atmospheres .atmosphere-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .page-atmospheres .atmosphere-card:last-child {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .page-atmospheres
+    .atmosphere-card:last-child
+    .atmosphere-card__media {
+    height: 100%;
+    min-height: 500px;
+  }
+
+  .page-atmospheres .atmosphere-service {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+  .page-atmospheres .atmospheres-hero {
+    min-height: calc(100svh - 84px);
+    align-items: end;
+  }
+
+  .page-atmospheres .atmospheres-hero__media::after {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(16, 16, 13, 0.12) 0%,
+        rgba(16, 16, 13, 0.22) 28%,
+        rgba(16, 16, 13, 0.9) 100%
+      );
+  }
+
+  .page-atmospheres .atmospheres-hero__media img {
+    object-position: 57% center;
+  }
+
+  .page-atmospheres .atmospheres-hero__content {
+    width: 100%;
+    padding: 150px 20px 34px;
+  }
+
+  .page-atmospheres .eyebrow {
+    margin-bottom: 13px;
+    font-size: 8px;
+    letter-spacing: 0.17em;
+  }
+
+  .page-atmospheres .atmospheres-hero h1 {
+    max-width: 10ch;
+    font-size: clamp(45px, 13.2vw, 62px);
+    line-height: 0.94;
+  }
+
+  .page-atmospheres .atmospheres-hero__content > p:not(.eyebrow) {
+    max-width: 37ch;
+    margin-top: 20px;
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .page-atmospheres .atmospheres-hero__actions {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .page-atmospheres .button {
+    min-height: 48px;
+    padding: 12px 13px;
+    font-size: 8px;
+  }
+
+  .page-atmospheres .atmosphere-introduction {
+    padding: 68px 20px;
+    display: block;
+  }
+
+  .page-atmospheres .atmosphere-introduction__heading h2 {
+    max-width: 10ch;
+    font-size: 43px;
+    line-height: 1;
+  }
+
+  .page-atmospheres .atmosphere-introduction__content {
+    padding-top: 34px;
+  }
+
+  .page-atmospheres .atmosphere-introduction__content p {
+    margin-bottom: 18px;
+    font-size: 11px;
+    line-height: 1.75;
+  }
+
+  .page-atmospheres .atmosphere-introduction__content a {
+    font-size: 8px;
+  }
+
+  .page-atmospheres .atmosphere-collection {
+    padding: 66px 0 72px;
+  }
+
+  .page-atmospheres .atmosphere-collection__header {
+    margin-bottom: 34px;
+    padding: 0 20px;
+    display: block;
+  }
+
+  .page-atmospheres .atmosphere-collection__header h2 {
+    max-width: 9ch;
+    font-size: 43px;
+  }
+
+  .page-atmospheres .atmosphere-collection__header > p {
+    margin-top: 19px;
+    font-size: 10px;
+    line-height: 1.7;
+  }
+
+  .page-atmospheres .atmospheres-grid {
+    padding: 0 20px 14px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    grid-auto-columns: min(82vw, 340px);
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .page-atmospheres .atmospheres-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-atmospheres .atmosphere-card,
+  .page-atmospheres .atmosphere-card:last-child {
+    grid-column: auto;
+    display: block;
+    scroll-snap-align: start;
+    transform: none;
+  }
+
+  .page-atmospheres .atmosphere-card:hover {
+    transform: none;
+  }
+
+  .page-atmospheres .atmosphere-card__media,
+  .page-atmospheres
+    .atmosphere-card:last-child
+    .atmosphere-card__media {
+    height: 390px;
+    min-height: 0;
+  }
+
+  .page-atmospheres .atmosphere-card__index {
+    top: 14px;
+    left: 14px;
+    width: 34px;
+    height: 34px;
+    font-size: 9px;
+  }
+
+  .page-atmospheres .atmosphere-card__open {
+    right: 14px;
+    bottom: 14px;
+    padding: 9px 12px;
+    font-size: 7px;
+  }
+
+  .page-atmospheres .atmosphere-card__content {
+    padding: 23px 19px 24px;
+  }
+
+  .page-atmospheres .atmosphere-card__title h3 {
+    font-size: 34px;
+  }
+
+  .page-atmospheres .atmosphere-card__content > p {
+    min-height: 0;
+    margin: 16px 0 20px;
+    font-size: 10px;
+    line-height: 1.65;
+  }
+
+  .page-atmospheres .atmosphere-card__facts > div {
+    padding: 13px 7px;
+  }
+
+  .page-atmospheres .atmosphere-card__facts dt {
+    font-size: 6px;
+  }
+
+  .page-atmospheres .atmosphere-card__facts dd {
+    font-size: 8px;
+  }
+
+  .page-atmospheres .atmosphere-card__link {
+    font-size: 8px;
+  }
+
+  .page-atmospheres .atmosphere-service {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-atmospheres .atmosphere-service__visual {
+    min-height: 0;
+    height: 68vw;
+    max-height: 380px;
+  }
+
+  .page-atmospheres .atmosphere-service__content {
+    padding: 62px 20px 68px;
+  }
+
+  .page-atmospheres .atmosphere-service__content h2 {
+    max-width: 10ch;
+    font-size: 42px;
+  }
+
+  .page-atmospheres .atmosphere-service__content > p:not(.eyebrow) {
+    margin: 22px 0;
+    font-size: 10px;
+    line-height: 1.7;
+  }
+
+  .page-atmospheres .atmosphere-service__content li {
+    padding: 12px 0;
+    font-size: 10px;
+  }
+
+  .page-atmospheres .atmosphere-service__content .button {
+    width: 100%;
+  }
+
+  .page-atmospheres .atmosphere-process {
+    padding: 68px 20px;
+    display: block;
+  }
+
+  .page-atmospheres .atmosphere-process__heading {
+    position: static;
+    margin-bottom: 40px;
+  }
+
+  .page-atmospheres .atmosphere-process__heading h2 {
+    font-size: 43px;
+  }
+
+  .page-atmospheres .atmosphere-process__steps li {
+    padding: 23px 0;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .page-atmospheres .atmosphere-process__steps h3 {
+    font-size: 13px;
+  }
+
+  .page-atmospheres .atmosphere-process__steps p {
+    font-size: 9px;
+    line-height: 1.65;
+  }
+
+  .page-atmospheres .atmosphere-final-cta {
+    padding: 68px 20px;
+    display: block;
+  }
+
+  .page-atmospheres .atmosphere-final-cta h2 {
+    max-width: 10ch;
+    font-size: 43px;
+  }
+
+  .page-atmospheres .atmosphere-final-cta > div:last-child {
+    margin-top: 30px;
+  }
+
+  .page-atmospheres .atmosphere-final-cta > div:last-child > p {
+    margin-bottom: 24px;
+    font-size: 10px;
+    line-height: 1.7;
+  }
+
+  .page-atmospheres .atmosphere-final-cta .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 390px) {
+  .page-atmospheres .atmospheres-hero h1,
+  .page-atmospheres .atmosphere-introduction__heading h2,
+  .page-atmospheres .atmosphere-collection__header h2,
+  .page-atmospheres .atmosphere-service__content h2,
+  .page-atmospheres .atmosphere-process__heading h2,
+  .page-atmospheres .atmosphere-final-cta h2 {
+    font-size: 39px;
+  }
+
+  .page-atmospheres .atmospheres-grid {
+    grid-auto-columns: 84vw;
+  }
+
+  .page-atmospheres .atmosphere-card__media,
+  .page-atmospheres
+    .atmosphere-card:last-child
+    .atmosphere-card__media {
+    height: 350px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-atmospheres *,
+  .page-atmospheres *::before,
+  .page-atmospheres *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
