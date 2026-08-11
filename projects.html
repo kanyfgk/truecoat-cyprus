@@ -2,33 +2,23 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="TRUECOAT tarafından boya, dekor ve uygulama bütünlüğüyle tasarlanan seçilmiş yaşam alanlarını keşfedin.">
+  <meta name="theme-color" content="#f4f1eb">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  >
-
-  <meta
-    name="description"
-    content="TRUECOAT iç mekân projelerini keşfedin. Boya, malzeme, mobilya ve dekor ürünleriyle tamamlanan premium yaşam alanları."
-  >
-
-  <meta name="theme-color" content="#f5f2ec">
-
-  <title>Projeler — TRUECOAT</title>
+  <title>Projeler | TRUECOAT</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/atmosphere-shop.css">
-  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/styles.css?v=20260812">
+  <link rel="stylesheet" href="css/components.css?v=20260812">
+  <link rel="stylesheet" href="css/projects.css?v=20260812">
+  <link rel="stylesheet" href="css/mobile.css?v=20260812">
 </head>
 
 <body class="page page-projects">
@@ -38,7 +28,7 @@
     <div class="site-header__inner">
       <a class="brand" href="index.html" aria-label="TRUECOAT ana sayfa">
         <span class="brand__wordmark">TRUECOAT</span>
-        <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
+        <span class="brand__descriptor">BOYAMA VE İÇ MEKÂNLAR</span>
       </a>
 
       <button
@@ -50,20 +40,16 @@
         data-menu-toggle
       >
         <span></span>
+        <span></span>
       </button>
 
-      <nav
-        class="site-navigation"
-        id="primary-navigation"
-        aria-label="Ana navigasyon"
-        data-navigation
-      >
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Ana menü">
         <a href="painting.html">Boyama</a>
         <a href="difference.html">Farkımız</a>
         <a href="atmospheres.html">Atmosferler</a>
-        <a href="projects.html">Projeler</a>
+        <a href="projects.html" aria-current="page">Projeler</a>
         <a href="service-areas.html">Hizmet Alanları</a>
-        <a class="nav-cta" href="request-atmosphere.html">
+        <a class="primary-navigation__cta" href="request-atmosphere.html">
           Ücretsiz Keşif
         </a>
       </nav>
@@ -71,79 +57,79 @@
   </header>
 
   <main id="main-content">
-    <section class="projects-hero">
+    <section class="projects-hero" aria-labelledby="projects-title">
       <div class="projects-hero__content">
-        <p class="eyebrow">TRUECOAT Projeleri</p>
+        <p class="projects-eyebrow">TRUECOAT PROJELERİ</p>
 
-        <h1>
+        <h1 id="projects-title" class="projects-hero__title">
           Boyadan daha fazlası.
           <em>Tamamlanmış yaşam alanları.</em>
         </h1>
 
-        <p>
-          Her proje; profesyonel boya uygulaması, seçilmiş malzemeler,
-          mobilyalar, aydınlatma ve dekor parçalarıyla bütünlük içinde
-          tasarlanır.
+        <p class="projects-hero__intro">
+          Her proje; yüzey hazırlığı, profesyonel boya uygulaması,
+          renk dengesi, mobilya ve dekor seçimleriyle tek bir atmosfer
+          olarak planlanır.
         </p>
 
         <div class="projects-hero__actions">
-          <a class="button" href="#selected-projects">
+          <a class="button button--dark" href="#selected-projects">
             Projeleri keşfet
           </a>
-
-          <a class="button button--ghost" href="request-atmosphere.html">
-            Ücretsiz keşif
+          <a class="button button--text" href="request-atmosphere.html">
+            Ücretsiz keşif talep et
+            <span aria-hidden="true">→</span>
           </a>
         </div>
       </div>
 
-      <div class="projects-hero__visual">
+      <figure class="projects-hero__visual">
         <img
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=90"
-          alt="TRUECOAT tarafından tasarlanan sıcak doğal tonlu premium salon"
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=88"
+          alt="Doğal tonlarla tamamlanmış premium bir oturma odası"
+          width="1800"
+          height="1200"
           fetchpriority="high"
         >
+        <figcaption class="projects-hero__caption">
+          <span>Seçilmiş atmosfer</span>
+          <strong>Akdeniz Sakinliği</strong>
+        </figcaption>
+      </figure>
 
-        <div class="projects-hero__badge">
-          <span>01</span>
-          <p>Akdeniz Sakinliği</p>
+      <div class="projects-hero__proof" aria-label="TRUECOAT proje özellikleri">
+        <div>
+          <strong>20+</strong>
+          <span>uygulama deneyimi</span>
+        </div>
+        <div>
+          <strong>3</strong>
+          <span>seçilmiş atmosfer</span>
+        </div>
+        <div>
+          <strong>1</strong>
+          <span>tek ekip, tek plan</span>
         </div>
       </div>
     </section>
 
-    <section class="projects-manifesto">
-      <div class="projects-manifesto__heading">
-        <p class="eyebrow">Mekânı bütün olarak ele alıyoruz</p>
-
-        <h2>
-          Duvar rengi başlangıçtır.
-          <em>Atmosfer, bütün parçaların dengesidir.</em>
-        </h2>
+    <section class="projects-introduction">
+      <div class="projects-introduction__heading">
+        <p class="projects-eyebrow">SİZE ÖZEL PROJE</p>
+        <h2>Bu atmosferlerden birini evinize uyarlayalım.</h2>
       </div>
 
-      <div class="projects-manifesto__content">
+      <div class="projects-introduction__body">
         <p>
-          TRUECOAT projelerinde boya uygulaması tek başına ele alınmaz.
-          Duvar yüzeyleri, ışık, mobilya formu, tekstiller ve dekor
-          ürünleri aynı görsel dil içinde değerlendirilir.
+          Beğendiğiniz yaşam yönünü seçin. Alanınızı, ışığı ve mevcut
+          mobilyalarınızı yerinde değerlendirip aynı hissi evinize özel
+          ölçülerle yeniden kuralım.
         </p>
 
-        <div class="projects-manifesto__facts">
-          <article>
-            <strong>01</strong>
-            <span>Tek proje planı</span>
-          </article>
-
-          <article>
-            <strong>02</strong>
-            <span>Boya ve dekor yönetimi</span>
-          </article>
-
-          <article>
-            <strong>03</strong>
-            <span>Uygulanabilir ürün seçimi</span>
-          </article>
-        </div>
+        <a class="text-link" href="request-atmosphere.html">
+          Proje talebi oluştur
+          <span aria-hidden="true">↗️</span>
+        </a>
       </div>
     </section>
 
@@ -152,384 +138,350 @@
       id="selected-projects"
       aria-labelledby="selected-projects-title"
     >
-      <div class="selected-projects__header">
+      <div class="section-heading">
         <div>
-          <p class="eyebrow">Seçilmiş projeler</p>
-
+          <p class="projects-eyebrow">SEÇİLMİŞ PROJELER</p>
           <h2 id="selected-projects-title">
             Yaşam biçiminize göre üç farklı yön.
           </h2>
         </div>
 
         <p>
-          Her proje sayfasında ortamın tamamını, kullanılan ürünleri,
-          tahmini maliyeti ve uygulama talebi oluşturma seçeneğini
-          görebilirsiniz.
+          Her proje sayfasında atmosferin tamamını, kullanılan parçaları,
+          uygulama süresini ve proje talebi seçeneğini görebilirsiniz.
         </p>
       </div>
 
-      <div class="projects-grid">
-        <article class="project-card project-card--featured">
-          <a
-            class="project-card__image"
-            href="project-mediterranean.html"
-            aria-label="Akdeniz Sakinliği projesini aç"
+      <article class="project-card project-card--featured">
+        <a
+          class="project-card__media"
+          href="project-mediterranean.html"
+          aria-label="Akdeniz Sakinliği projesini görüntüle"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=88"
+            alt="Taş ve sıcak doğal tonlarla tasarlanmış Akdeniz salonu"
+            width="1600"
+            height="1100"
+            loading="lazy"
           >
-            <img
-              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1500&q=88"
-              alt="Akdeniz Sakinliği projesinin sıcak doğal tonlu salonu"
-              loading="lazy"
-            >
+          <span class="project-card__number">01</span>
+          <span class="project-card__view">
+            Projeyi görüntüle
+            <span aria-hidden="true">↗️</span>
+          </span>
+        </a>
 
-            <span class="project-card__number">01</span>
-
-            <span class="project-card__view">
-              Projeyi görüntüle ↗️
-            </span>
-          </a>
-
-          <div class="project-card__content">
-            <div class="project-card__heading">
-              <div>
-                <p>Akdeniz Modern</p>
-                <h3>Akdeniz Sakinliği</h3>
-              </div>
-
-              <span>Salon · 24–32 m²</span>
-            </div>
-
-            <p>
-              Doğal taş, sıcak keten dokuları ve güneşten solmuş
-              renklerle sakin ve zamansız bir yaşam alanı.
-            </p>
-
-            <dl class="project-card__details">
-              <div>
-                <dt>Ürün</dt>
-                <dd>8 seçilmiş parça</dd>
-              </div>
-
-              <div>
-                <dt>Uygulama</dt>
-                <dd>5–7 gün</dd>
-              </div>
-
-              <div>
-                <dt>Palet</dt>
-                <dd>Sıcak doğal tonlar</dd>
-              </div>
-            </dl>
-
-            <div class="project-card__actions">
-              <a href="project-mediterranean.html">
-                Projeyi incele
-              </a>
-
-              <a href="request-atmosphere.html?project=mediterranean">
-                Evime uygula →
-              </a>
-            </div>
+        <div class="project-card__content">
+          <div class="project-card__identity">
+            <p>Akdeniz Modern</p>
+            <h3>Akdeniz Sakinliği</h3>
+            <span>Salon · 24–32 m²</span>
           </div>
-        </article>
 
-        <article class="project-card">
-          <a
-            class="project-card__image"
-            href="project-modern.html"
-            aria-label="Modern Denge projesini aç"
+          <p class="project-card__description">
+            Doğal taş, sıcak keten dokuları ve güneşten solmuş renklerle
+            sakin, dengeli ve zamansız bir yaşam alanı.
+          </p>
+
+          <dl class="project-card__details">
+            <div>
+              <dt>Ürün</dt>
+              <dd>8 seçilmiş parça</dd>
+            </div>
+            <div>
+              <dt>Uygulama</dt>
+              <dd>5–7 gün</dd>
+            </div>
+            <div>
+              <dt>Palet</dt>
+              <dd>Sıcak doğal tonlar</dd>
+            </div>
+          </dl>
+
+          <div class="project-card__actions">
+            <a href="project-mediterranean.html">Projeyi incele</a>
+            <a href="request-atmosphere.html?project=mediterranean">
+              Evime uygula
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a
+          class="project-card__media"
+          href="project-modern.html"
+          aria-label="Modern Denge projesini görüntüle"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=88"
+            alt="Temiz çizgilerle tasarlanmış modern salon"
+            width="1600"
+            height="1100"
+            loading="lazy"
           >
-            <img
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1300&q=88"
-              alt="Modern Denge projesinin sade ve mimari salonu"
-              loading="lazy"
-            >
+          <span class="project-card__number">02</span>
+          <span class="project-card__view">
+            Projeyi görüntüle
+            <span aria-hidden="true">↗️</span>
+          </span>
+        </a>
 
-            <span class="project-card__number">02</span>
-
-            <span class="project-card__view">
-              Projeyi görüntüle ↗️
-            </span>
-          </a>
-
-          <div class="project-card__content">
-            <div class="project-card__heading">
-              <div>
-                <p>Çağdaş Minimal</p>
-                <h3>Modern Denge</h3>
-              </div>
-
-              <span>Salon · 22–30 m²</span>
-            </div>
-
-            <p>
-              Mat yüzeyler, açık taş tonları ve antrasit detaylarla
-              güçlü fakat kontrollü bir modern atmosfer.
-            </p>
-
-            <dl class="project-card__details">
-              <div>
-                <dt>Ürün</dt>
-                <dd>8 seçilmiş parça</dd>
-              </div>
-
-              <div>
-                <dt>Uygulama</dt>
-                <dd>4–6 gün</dd>
-              </div>
-
-              <div>
-                <dt>Palet</dt>
-                <dd>Kum ve antrasit</dd>
-              </div>
-            </dl>
-
-            <div class="project-card__actions">
-              <a href="project-modern.html">
-                Projeyi incele
-              </a>
-
-              <a href="request-atmosphere.html?project=modern-balance">
-                Evime uygula →
-              </a>
-            </div>
+        <div class="project-card__content">
+          <div class="project-card__identity">
+            <p>Çağdaş Minimal</p>
+            <h3>Modern Denge</h3>
+            <span>Salon · 22–30 m²</span>
           </div>
-        </article>
 
-        <article class="project-card">
-          <a
-            class="project-card__image"
-            href="project-organic.html"
-            aria-label="Organik Sadelik projesini aç"
+          <p class="project-card__description">
+            Net çizgiler, kontrollü kontrastlar ve işlevsel parçalarla
+            düzenli fakat sıcak karakterini koruyan modern bir atmosfer.
+          </p>
+
+          <dl class="project-card__details">
+            <div>
+              <dt>Ürün</dt>
+              <dd>7 seçilmiş parça</dd>
+            </div>
+            <div>
+              <dt>Uygulama</dt>
+              <dd>4–6 gün</dd>
+            </div>
+            <div>
+              <dt>Palet</dt>
+              <dd>Kum, taş ve antrasit</dd>
+            </div>
+          </dl>
+
+          <div class="project-card__actions">
+            <a href="project-modern.html">Projeyi incele</a>
+            <a href="request-atmosphere.html?project=modern">
+              Evime uygula
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a
+          class="project-card__media"
+          href="project-organic.html"
+          aria-label="Organik Sadelik projesini görüntüle"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=88"
+            alt="Ahşap ve yumuşak tekstillerle tasarlanmış organik salon"
+            width="1600"
+            height="1100"
+            loading="lazy"
           >
-            <img
-              src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1300&q=88"
-              alt="Organik Sadelik projesinin doğal ahşap ve keten dokulu salonu"
-              loading="lazy"
-            >
+          <span class="project-card__number">03</span>
+          <span class="project-card__view">
+            Projeyi görüntüle
+            <span aria-hidden="true">↗️</span>
+          </span>
+        </a>
 
-            <span class="project-card__number">03</span>
-
-            <span class="project-card__view">
-              Projeyi görüntüle ↗️
-            </span>
-          </a>
-
-          <div class="project-card__content">
-            <div class="project-card__heading">
-              <div>
-                <p>Organik Modern</p>
-                <h3>Organik Sadelik</h3>
-              </div>
-
-              <span>Salon · 20–28 m²</span>
-            </div>
-
-            <p>
-              Doğal ahşaplar, yumuşak tekstiller ve toprak tonlarıyla
-              daha rahat ve huzurlu bir yaşam yönü.
-            </p>
-
-            <dl class="project-card__details">
-              <div>
-                <dt>Ürün</dt>
-                <dd>8 seçilmiş parça</dd>
-              </div>
-
-              <div>
-                <dt>Uygulama</dt>
-                <dd>4–6 gün</dd>
-              </div>
-
-              <div>
-                <dt>Palet</dt>
-                <dd>Keten, kil ve meşe</dd>
-              </div>
-            </dl>
-
-            <div class="project-card__actions">
-              <a href="project-organic.html">
-                Projeyi incele
-              </a>
-
-              <a href="request-atmosphere.html?project=organic-simplicity">
-                Evime uygula →
-              </a>
-            </div>
+        <div class="project-card__content">
+          <div class="project-card__identity">
+            <p>Organik Modern</p>
+            <h3>Organik Sadelik</h3>
+            <span>Salon · 20–28 m²</span>
           </div>
-        </article>
-      </div>
+
+          <p class="project-card__description">
+            Doğal ahşaplar, yumuşak tekstiller ve toprak tonlarıyla daha
+            rahat, dokunsal ve huzurlu bir yaşam yönü.
+          </p>
+
+          <dl class="project-card__details">
+            <div>
+              <dt>Ürün</dt>
+              <dd>8 seçilmiş parça</dd>
+            </div>
+            <div>
+              <dt>Uygulama</dt>
+              <dd>4–6 gün</dd>
+            </div>
+            <div>
+              <dt>Palet</dt>
+              <dd>Keten, kil ve meşe</dd>
+            </div>
+          </dl>
+
+          <div class="project-card__actions">
+            <a href="project-organic.html">Projeyi incele</a>
+            <a href="request-atmosphere.html?project=organic">
+              Evime uygula
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </article>
     </section>
 
-    <section class="project-shopping-experience">
-      <div class="project-shopping-experience__visual">
+    <section class="project-commerce" aria-labelledby="commerce-title">
+      <div class="project-commerce__visual">
         <img
           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=88"
-          alt="Seçilmiş ürünlerin bulunduğu premium salon projesi"
+          alt="Dekor ürünlerinin yer aldığı tamamlanmış salon"
+          width="1500"
+          height="1100"
           loading="lazy"
         >
 
-        <span class="project-shopping-experience__point point--one">
-          1
-        </span>
-
-        <span class="project-shopping-experience__point point--two">
-          2
-        </span>
-
-        <span class="project-shopping-experience__point point--three">
-          3
-        </span>
+        <span class="product-marker product-marker--one">1</span>
+        <span class="product-marker product-marker--two">2</span>
+        <span class="product-marker product-marker--three">3</span>
       </div>
 
-      <div class="project-shopping-experience__content">
-        <p class="eyebrow">Alışveriş yapılabilir projeler</p>
-
-        <h2>
+      <div class="project-commerce__content">
+        <p class="projects-eyebrow">ALIŞVERİŞ YAPILABİLİR PROJELER</p>
+        <h2 id="commerce-title">
           Beğendiğiniz ürünü mekânın içinde görün.
         </h2>
 
         <p>
-          Proje görselindeki numaralı ürün noktaları; mobilya,
-          aydınlatma, tekstil ve dekor parçalarını doğrudan
-          incelemenizi sağlar.
+          Proje görsellerindeki mobilya, aydınlatma, tekstil ve dekor
+          parçalarını doğru bağlam içinde inceleyin; ürün bilgisine ve
+          proje toplamına aynı sayfadan ulaşın.
         </p>
 
         <ul>
           <li>Ürün görseli ve açıklaması</li>
-          <li>Fiyat ve tedarikçi bilgisi</li>
-          <li>Gerçek ürün yönlendirmesi</li>
+          <li>Fiyat ve tedarik bilgisi</li>
+          <li>Gerçek ürün bağlantısı</li>
           <li>Tahmini proje toplamı</li>
         </ul>
 
-        <a class="button" href="project-mediterranean.html">
+        <a class="button button--dark" href="project-mediterranean.html">
           Örnek projeyi incele
         </a>
       </div>
     </section>
 
-    <section class="project-service-model">
-      <div class="project-service-model__heading">
-        <p class="eyebrow">TRUECOAT hizmet modeli</p>
-
-        <h2>
-          İlhamdan uygulamaya kadar tek ekip.
-        </h2>
-      </div>
-
-      <div class="project-service-model__steps">
-        <article>
-          <span>01</span>
-
-          <h3>Atmosfer seçimi</h3>
-
-          <p>
-            Tarzınıza ve evinizin kullanım biçimine uygun proje
-            yönünü birlikte belirleriz.
-          </p>
-        </article>
-
-        <article>
-          <span>02</span>
-
-          <h3>Ücretsiz keşif</h3>
-
-          <p>
-            Alanı, doğal ışığı, mevcut yüzeyleri ve mobilyaları
-            yerinde değerlendiririz.
-          </p>
-        </article>
-
-        <article>
-          <span>03</span>
-
-          <h3>Kişiye özel plan</h3>
-
-          <p>
-            Renkleri, malzemeleri ve ürün alternatiflerini
-            evinize ve bütçenize göre düzenleriz.
-          </p>
-        </article>
-
-        <article>
-          <span>04</span>
-
-          <h3>Uygulama ve teslimat</h3>
-
-          <p>
-            Boya, temizlik, ürün teslimatı ve montaj süreçlerini
-            tek plan üzerinden yönetiriz.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="projects-final-cta">
-      <div class="projects-final-cta__visual">
-        <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1300&q=88"
-          alt="Sakin ve doğal tonlarda tamamlanmış salon"
-          loading="lazy"
-        >
-      </div>
-
-      <div class="projects-final-cta__content">
-        <p class="eyebrow">Size özel proje</p>
-
-        <h2>
-          Bu atmosferlerden birini evinize uyarlayalım.
-        </h2>
+    <section class="project-process" aria-labelledby="process-title">
+      <div class="section-heading">
+        <div>
+          <p class="projects-eyebrow">TRUECOAT HİZMET MODELİ</p>
+          <h2 id="process-title">
+            İlhamdan uygulamaya kadar tek ekip.
+          </h2>
+        </div>
 
         <p>
-          Fotoğraflarınızı ve birkaç temel bilgiyi gönderin.
-          Ekibimiz alanınızı değerlendirerek ücretsiz keşif için
-          sizinle iletişime geçsin.
+          Tasarım fikri, keşif, yüzey hazırlığı, boya uygulaması ve ürün
+          yerleşimi birbirinden kopmadan yönetilir.
+        </p>
+      </div>
+
+      <ol class="project-process__steps">
+        <li>
+          <span>01</span>
+          <h3>Atmosfer seçimi</h3>
+          <p>
+            Tarzınıza ve evinizin kullanım biçimine uygun proje yönünü
+            birlikte belirleriz.
+          </p>
+        </li>
+
+        <li>
+          <span>02</span>
+          <h3>Ücretsiz keşif</h3>
+          <p>
+            Alanı, doğal ışığı, mevcut yüzeyleri ve mobilyaları yerinde
+            değerlendiririz.
+          </p>
+        </li>
+
+        <li>
+          <span>03</span>
+          <h3>Kişiye özel plan</h3>
+          <p>
+            Renkleri, malzemeleri ve ürün alternatiflerini evinize ve
+            bütçenize göre düzenleriz.
+          </p>
+        </li>
+
+        <li>
+          <span>04</span>
+          <h3>Uygulama ve teslimat</h3>
+          <p>
+            Boya, temizlik, ürün teslimatı ve montaj süreçlerini tek plan
+            üzerinden yönetiriz.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="projects-cta">
+      <div>
+        <p class="projects-eyebrow">PROJENİZİ BAŞLATALIM</p>
+        <h2>Beğendiğiniz atmosferi evinize uyarlayalım.</h2>
+      </div>
+
+      <div class="projects-cta__action">
+        <p>
+          Alanınızın fotoğraflarını gönderin. Ekibimiz ihtiyacınızı
+          değerlendirerek ücretsiz keşif için sizinle iletişime geçsin.
         </p>
 
-        <a class="button" href="request-atmosphere.html">
-          Proje talebi oluştur
+        <a class="button button--light" href="request-atmosphere.html">
+          Ücretsiz keşif talep et
+          <span aria-hidden="true">→</span>
         </a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <div class="site-footer__brand">
-        <a class="brand" href="index.html">
-          <span class="brand__wordmark">TRUECOAT</span>
-          <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
-        </a>
+    <div class="site-footer__top">
+      <a class="brand brand--footer" href="index.html">
+        <span class="brand__wordmark">TRUECOAT</span>
+        <span class="brand__descriptor">BOYAMA VE İÇ MEKÂNLAR</span>
+      </a>
 
-        <p>
-          Boya, yüzey, malzeme ve dekoru tek bir atmosfer içinde
-          buluşturan premium iç mekân uygulamaları.
-        </p>
+      <p>
+        Profesyonel boya uygulaması, atmosfer tasarımı ve tamamlanmış
+        yaşam alanları.
+      </p>
+    </div>
+
+    <div class="site-footer__links">
+      <div>
+        <h2>Keşfet</h2>
+        <a href="painting.html">Boyama</a>
+        <a href="difference.html">Farkımız</a>
+        <a href="atmospheres.html">Atmosferler</a>
+        <a href="projects.html">Projeler</a>
       </div>
 
-      <div class="site-footer__grid">
-        <div>
-          <h2>Keşfedin</h2>
-
-          <a href="painting.html">Boyama</a>
-          <a href="difference.html">Farkımız</a>
-          <a href="atmospheres.html">Atmosferler</a>
-          <a href="projects.html">Projeler</a>
-        </div>
-
-        <div>
-          <h2>Hizmet</h2>
-
-          <a href="service-areas.html">Hizmet Alanları</a>
-          <a href="request-atmosphere.html">Ücretsiz Keşif</a>
-        </div>
+      <div>
+        <h2>Hizmet</h2>
+        <a href="service-areas.html">Hizmet alanları</a>
+        <a href="request-atmosphere.html">Ücretsiz keşif</a>
+        <a href="project-mediterranean.html">Akdeniz Sakinliği</a>
+        <a href="project-modern.html">Modern Denge</a>
       </div>
 
-      <div class="site-footer__bottom">
-        <p>© 2026 TRUECOAT. Tüm hakları saklıdır.</p>
+      <div>
+        <h2>İletişim</h2>
+        <a href="tel:+905338528320">+90 533 852 83 20</a>
+        <a href="tel:+905391152765">0539 115 27 65</a>
+        <span>Kuzey Kıbrıs</span>
       </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>© 2026 TRUECOAT</span>
+      <a href="index.html">Ana sayfa</a>
     </div>
   </footer>
 
-  <script src="js/app.js" defer></script>
+  <script src="js/app.js?v=20260812" defer></script>
 </body>
 </html>
