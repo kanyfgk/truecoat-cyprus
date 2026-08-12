@@ -987,191 +987,370 @@
 }
 
 /* =========================================================
-   MOBILE
+   MOBILE — PREMIUM PROJECT EXPERIENCE
    ========================================================= */
 
 @media (max-width: 760px) {
+
+  /* ---------------------------------------------------------
+     SHOWCASE
+     --------------------------------------------------------- */
+
   .page-project-detail .project-showcase {
     display: flex;
     min-height: auto;
     flex-direction: column;
+    overflow: hidden;
     background: var(--project-dark);
   }
 
   .page-project-detail .project-showcase__visual {
-    display: flex;
-    min-height: auto;
-    flex-direction: column;
-    overflow: visible;
+    position: relative;
+    display: block;
+    min-height: 720px;
+    overflow: hidden;
+    background: var(--project-dark);
   }
 
   .page-project-detail .project-showcase__visual > img {
-    order: 2;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: min(68svh, 620px);
+    height: 100%;
+    object-fit: cover;
     object-position: center;
   }
 
   .page-project-detail .project-showcase__shade {
-    display: none;
+    display: block;
+    z-index: 1;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(17, 18, 15, 0.22) 0%,
+        rgba(17, 18, 15, 0.08) 24%,
+        rgba(17, 18, 15, 0.2) 48%,
+        rgba(17, 18, 15, 0.9) 82%,
+        #1b1c18 100%
+      );
   }
 
   .page-project-detail .project-showcase__content {
     position: relative;
+    z-index: 3;
     inset: auto;
-    order: 1;
+    display: flex;
     width: 100%;
-    padding: 84px 20px 36px;
-    background: var(--project-dark);
+    min-height: 720px;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding:
+      92px
+      20px
+      34px;
+    background: transparent;
   }
 
   .page-project-detail .project-back-link {
-    top: 26px;
+    position: absolute;
+    top: 28px;
     left: 20px;
-    font-size: 0.65rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    width: auto;
+    min-height: 38px;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .page-project-detail .project-back-link::before {
+    font-size: 1rem;
   }
 
   .page-project-detail .project-eyebrow {
-    margin-bottom: 12px;
-    font-size: 0.64rem;
+    margin: 0 0 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.19em;
   }
 
   .page-project-detail .project-showcase h1 {
-    max-width: 100%;
-    font-size: clamp(3.2rem, 16vw, 5.3rem);
-    line-height: 0.91;
+    max-width: 340px;
+    margin: 0;
+    font-size: clamp(3.55rem, 17vw, 5.25rem);
+    letter-spacing: -0.06em;
+    line-height: 0.87;
   }
 
   .page-project-detail .project-showcase__description {
-    margin-top: 20px;
-    font-size: 0.9rem;
+    max-width: 330px;
+    margin: 22px 0 0;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 0.88rem;
     line-height: 1.65;
   }
 
+  /* ---------------------------------------------------------
+     PROJECT FACTS
+     --------------------------------------------------------- */
+
   .page-project-detail .project-facts {
-    margin-top: 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
   }
 
   .page-project-detail .project-fact {
-    padding: 14px 12px 14px 0;
+    min-width: 0;
+    padding: 14px 10px 15px 0;
   }
 
   .page-project-detail .project-fact:nth-child(even) {
-    padding-left: 12px;
+    padding-left: 14px;
   }
 
   .page-project-detail .project-fact span {
-    font-size: 0.57rem;
+    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 0.54rem;
+    letter-spacing: 0.13em;
   }
 
   .page-project-detail .project-fact strong {
     font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.4;
   }
+
+  /* ---------------------------------------------------------
+     HERO ACTIONS
+     --------------------------------------------------------- */
 
   .page-project-detail .project-showcase__actions {
     display: grid;
-    grid-template-columns: 1fr;
-    margin-top: 26px;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    margin-top: 24px;
   }
 
-  .page-project-detail .project-primary-action,
-  .page-project-detail .project-share-action {
+  .page-project-detail .project-primary-action {
     width: 100%;
     min-height: 52px;
+    padding: 0 17px;
+    border: 1px solid rgba(255, 255, 255, 0.94);
+    background: rgba(255, 255, 255, 0.96);
+    color: var(--project-ink);
+    font-size: 0.64rem;
+    letter-spacing: 0.11em;
   }
 
+  .page-project-detail .project-share-action {
+    width: 52px;
+    min-width: 52px;
+    min-height: 52px;
+    padding: 0;
+    overflow: hidden;
+    border-color: rgba(255, 255, 255, 0.34);
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 0;
+  }
+
+  .page-project-detail .project-share-action::before {
+    content: "↗️";
+    font-size: 1rem;
+  }
+
+  /* ---------------------------------------------------------
+     HOTSPOTS
+     --------------------------------------------------------- */
+
   .page-project-detail .project-hotspot {
-    z-index: 5;
-    width: 32px;
-    height: 32px;
-    font-size: 0.68rem;
+    z-index: 4;
+    width: 31px;
+    height: 31px;
+    border: 1px solid rgba(23, 24, 20, 0.12);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.16);
+    font-size: 0.64rem;
   }
 
   .page-project-detail .project-hotspot[data-product="1"] {
-    left: 63%;
-    top: auto;
-    bottom: 12%;
+    left: 65%;
+    top: 58%;
+    bottom: auto;
   }
 
   .page-project-detail .project-hotspot[data-product="2"] {
-    left: 34%;
-    top: auto;
-    bottom: 38%;
+    left: 35%;
+    top: 44%;
+    bottom: auto;
   }
 
   .page-project-detail .project-hotspot[data-product="3"] {
-    left: 76%;
-    top: auto;
-    bottom: 69%;
+    left: 77%;
+    top: 28%;
+    bottom: auto;
   }
 
   .page-project-detail .project-hotspot[data-product="4"] {
     left: 84%;
-    top: auto;
-    bottom: 43%;
+    top: 44%;
+    bottom: auto;
   }
 
   .page-project-detail .project-hotspot[data-product="5"] {
-    left: 70%;
-    top: auto;
-    bottom: 20%;
+    left: 72%;
+    top: 64%;
+    bottom: auto;
   }
 
   .page-project-detail .project-hotspot[data-product="6"] {
     left: 25%;
-    top: auto;
-    bottom: 32%;
+    top: 53%;
+    bottom: auto;
   }
 
   .page-project-detail .project-hotspot[data-product="7"] {
     left: 58%;
-    top: auto;
-    bottom: 72%;
+    top: 30%;
+    bottom: auto;
   }
 
   .page-project-detail .project-hotspot[data-product="8"] {
-    left: 27%;
-    top: auto;
-    bottom: 70%;
+    left: 26%;
+    top: 27%;
+    bottom: auto;
   }
 
+  /* ---------------------------------------------------------
+     PROJECT SUMMARY
+     --------------------------------------------------------- */
+
   .page-project-detail .project-summary {
-    padding: 20px;
-    border-top: 1px solid var(--project-line);
-    border-left: 0;
+    position: relative;
+    z-index: 5;
+    padding: 22px 16px 58px;
+    border: 0;
+    background: var(--project-dark);
   }
 
   .page-project-detail .project-summary__card {
-    padding: 22px 18px;
+    padding: 28px 22px;
+    border: 0;
+    border-radius: 18px;
+    background: var(--project-card);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+  }
+
+  .page-project-detail .project-summary h2 {
+    margin-bottom: 22px;
+    color: var(--project-ink);
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
   }
 
   .page-project-detail .project-summary__row {
-    gap: 12px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 14px;
+    padding: 15px 0;
   }
 
-  .page-project-detail .project-products {
-    padding: 64px 20px;
+  .page-project-detail .project-summary__row span {
+    font-size: 0.78rem;
   }
+
+  .page-project-detail .project-summary__row strong {
+    font-size: 0.8rem;
+  }
+
+  .page-project-detail .project-summary__total {
+    align-items: end;
+    margin-top: 3px;
+    padding-top: 22px;
+  }
+
+  .page-project-detail .project-summary__total strong {
+    font-size: 1.8rem;
+    letter-spacing: -0.04em;
+  }
+
+  .page-project-detail .project-summary__action {
+    min-height: 54px;
+    margin-top: 23px;
+    border-radius: 0;
+    padding-inline: 18px;
+  }
+
+  .page-project-detail .project-summary__note {
+    margin-top: 13px;
+    font-size: 0.7rem;
+  }
+
+  .page-project-detail .project-summary__benefits {
+    gap: 14px;
+    margin-top: 24px;
+    padding-top: 21px;
+  }
+
+  .page-project-detail .project-summary__benefits span {
+    font-size: 0.74rem;
+  }
+
+  /* ---------------------------------------------------------
+     SECTION HEADINGS
+     --------------------------------------------------------- */
 
   .page-project-detail .project-section-heading {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
+  }
+
+  .page-project-detail .project-section-heading__eyebrow {
+    margin-bottom: 11px;
+    font-size: 0.61rem;
   }
 
   .page-project-detail .project-section-heading h2 {
-    font-size: clamp(2.5rem, 12vw, 4rem);
+    max-width: 345px;
+    font-size: clamp(2.9rem, 13.5vw, 4.5rem);
+    line-height: 0.92;
   }
 
   .page-project-detail .project-section-heading p {
-    margin-top: 16px;
-    font-size: 0.84rem;
+    max-width: 340px;
+    margin-top: 20px;
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  /* ---------------------------------------------------------
+     PRODUCTS
+     --------------------------------------------------------- */
+
+  .page-project-detail .project-products {
+    padding: 72px 0 72px 20px;
+    overflow: hidden;
+  }
+
+  .page-project-detail .project-products .project-section-heading {
+    padding-right: 20px;
   }
 
   .page-project-detail .project-product-rail {
-    grid-auto-columns: minmax(158px, 44vw);
-    gap: 10px;
-    margin-right: -20px;
-    padding-right: 20px;
+    grid-auto-columns: 72vw;
+    gap: 12px;
+    margin: 0;
+    padding: 0 20px 20px 0;
+    scroll-padding-left: 20px;
+  }
+
+  .page-project-detail .project-product-card {
+    border-color: rgba(23, 24, 20, 0.12);
   }
 
   .page-project-detail .project-product-card:hover {
@@ -1179,54 +1358,93 @@
     box-shadow: none;
   }
 
+  .page-project-detail .project-product-card__media {
+    aspect-ratio: 1 / 1.04;
+  }
+
+  .page-project-detail .project-product-card__number {
+    top: 13px;
+    left: 13px;
+    width: 34px;
+    height: 34px;
+  }
+
   .page-project-detail .project-product-card__content {
-    padding: 14px 12px 17px;
+    padding: 18px 16px 21px;
   }
 
   .page-project-detail .project-product-card__content h3 {
-    font-size: 0.76rem;
+    font-size: 0.87rem;
+  }
+
+  .page-project-detail .project-product-card__supplier {
+    font-size: 0.68rem;
   }
 
   .page-project-detail .project-product-card__price {
-    font-size: 0.78rem;
+    margin-top: 14px;
+    font-size: 0.86rem;
   }
+
+  /* ---------------------------------------------------------
+     PALETTE
+     --------------------------------------------------------- */
 
   .page-project-detail .project-palette {
     grid-template-columns: 1fr;
   }
 
   .page-project-detail .project-palette__visual {
-    min-height: 420px;
+    min-height: 480px;
   }
 
   .page-project-detail .project-palette__content {
-    padding: 54px 20px 72px;
+    padding: 62px 20px 82px;
   }
 
   .page-project-detail .project-palette__content h2 {
-    font-size: clamp(2.8rem, 13vw, 4.6rem);
+    max-width: 350px;
+    font-size: clamp(3rem, 14vw, 4.8rem);
+    line-height: 0.9;
+  }
+
+  .page-project-detail .project-palette__content > p {
+    margin-top: 22px;
+    font-size: 0.84rem;
   }
 
   .page-project-detail .project-palette__swatches {
-    gap: 5px;
+    gap: 4px;
+    margin-top: 34px;
+  }
+
+  .page-project-detail .project-palette__swatch {
+    aspect-ratio: 1 / 1.15;
   }
 
   .page-project-detail .project-palette__swatch span {
     display: none;
   }
 
+  /* ---------------------------------------------------------
+     PROCESS
+     --------------------------------------------------------- */
+
   .page-project-detail .project-process {
-    padding: 68px 20px;
+    padding: 72px 20px 78px;
   }
 
   .page-project-detail .project-process__steps {
-    grid-template-columns: 1fr;
-    margin-top: 34px;
+    display: block;
+    margin-top: 38px;
+    border-bottom: 0;
   }
 
   .page-project-detail .project-process__step {
-    min-height: 0;
-    padding: 24px 4px 28px;
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    min-height: auto;
+    padding: 24px 0 28px;
     border-right: 0;
     border-bottom: 1px solid var(--project-line);
   }
@@ -1235,38 +1453,72 @@
     border-bottom: 0;
   }
 
-  .page-project-detail .project-process__step h3 {
-    margin-top: 26px;
-    font-size: 2rem;
+  .page-project-detail .project-process__number {
+    grid-row: 1 / span 2;
+    padding-top: 4px;
+    font-size: 0.64rem;
   }
 
+  .page-project-detail .project-process__step h3 {
+    margin: 0;
+    font-family: var(--font-body, Arial, sans-serif);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+
+  .page-project-detail .project-process__step p {
+    margin: 8px 0 0;
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  /* ---------------------------------------------------------
+     FINAL CTA
+     --------------------------------------------------------- */
+
   .page-project-detail .project-final-cta {
-    grid-template-columns: 1fr;
+    display: flex;
     min-height: auto;
+    flex-direction: column;
   }
 
   .page-project-detail .project-final-cta__visual {
-    height: 430px;
+    height: 500px;
   }
 
   .page-project-detail .project-final-cta__content {
-    padding: 58px 20px 68px;
+    padding: 62px 20px 74px;
   }
 
   .page-project-detail .project-final-cta__content h2 {
-    font-size: clamp(3rem, 14vw, 4.8rem);
+    max-width: 345px;
+    font-size: clamp(3.3rem, 15vw, 5rem);
+    line-height: 0.88;
+  }
+
+  .page-project-detail .project-final-cta__content p {
+    margin-top: 23px;
+    font-size: 0.84rem;
   }
 
   .page-project-detail .project-final-cta__action {
     width: 100%;
+    min-height: 56px;
     justify-content: space-between;
+    margin-top: 30px;
   }
+
+  /* ---------------------------------------------------------
+     PRODUCT DRAWER
+     --------------------------------------------------------- */
 
   .page-project-detail .product-drawer__panel {
     top: auto;
     bottom: 0;
     width: 100%;
-    height: min(88svh, 780px);
+    height: min(90svh, 800px);
     border-radius: 20px 20px 0 0;
     transform: translateY(100%);
   }
@@ -1276,45 +1528,67 @@
   }
 
   .page-project-detail .product-drawer__media {
-    aspect-ratio: 1.45 / 1;
+    aspect-ratio: 1.4 / 1;
   }
 
   .page-project-detail .product-drawer__content {
-    padding: 24px 20px 36px;
+    padding: 26px 20px 38px;
+  }
+
+  .page-project-detail .product-drawer__content h2 {
+    font-size: clamp(2.2rem, 11vw, 3.3rem);
   }
 }
+
 
 /* =========================================================
    SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 390px) {
+
   .page-project-detail .project-showcase__content {
-    padding-inline: 16px;
+    min-height: 680px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .page-project-detail .project-back-link {
+    left: 16px;
   }
 
   .page-project-detail .project-showcase h1 {
-    font-size: clamp(3rem, 15vw, 4.2rem);
-  }
-
-  .page-project-detail .project-products,
-  .page-project-detail .project-process {
-    padding-inline: 16px;
-  }
-
-  .page-project-detail .project-product-rail {
-    grid-auto-columns: minmax(150px, 47vw);
-    margin-right: -16px;
-    padding-right: 16px;
+    font-size: clamp(3.15rem, 16vw, 4.45rem);
   }
 
   .page-project-detail .project-summary {
-    padding-inline: 16px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .page-project-detail .project-summary__card {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .page-project-detail .project-products {
+    padding-left: 16px;
+  }
+
+  .page-project-detail .project-products .project-section-heading {
+    padding-right: 16px;
+  }
+
+  .page-project-detail .project-product-rail {
+    grid-auto-columns: 78vw;
+    padding-right: 16px;
   }
 
   .page-project-detail .project-palette__content,
+  .page-project-detail .project-process,
   .page-project-detail .project-final-cta__content {
-    padding-inline: 16px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 
