@@ -2,43 +2,38 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
-    content="TRUECOAT Akdeniz Sakinliği atmosferi: boya, doğal malzemeler ve seçilmiş dekor ürünleriyle tamamlanan premium salon projesi."
+    content="TRUECOAT Modern Denge projesi: çağdaş çizgiler, dengeli renkler ve seçilebilir dekor ürünleriyle tamamlanan yaşam alanı."
   >
+  <meta name="theme-color" content="#f4f1eb">
 
-  <meta name="theme-color" content="#f5f2ec">
-
-  <title>Akdeniz Sakinliği — TRUECOAT</title>
+  <title>Modern Denge Projesi — TRUECOAT</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/atmosphere-shop.css">
+  <link rel="stylesheet" href="css/project-detail.css">
   <link rel="stylesheet" href="css/mobile.css">
 </head>
 
-<body class="page page-atmosphere-project">
+<body class="page page-project-detail page-project-modern">
   <a class="skip-link" href="#main-content">İçeriğe geç</a>
 
   <header class="site-header" data-header>
     <div class="site-header__inner">
       <a class="brand" href="index.html" aria-label="TRUECOAT ana sayfa">
         <span class="brand__wordmark">TRUECOAT</span>
-        <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
+        <span class="brand__descriptor">BOYAMA VE İÇ MEKÂNLAR</span>
       </a>
 
       <button
@@ -50,20 +45,21 @@
         data-menu-toggle
       >
         <span></span>
+        <span></span>
       </button>
 
       <nav
-        class="site-navigation"
+        class="primary-navigation"
         id="primary-navigation"
-        aria-label="Ana navigasyon"
+        aria-label="Ana menü"
         data-navigation
       >
         <a href="painting.html">Boyama</a>
         <a href="difference.html">Farkımız</a>
         <a href="atmospheres.html">Atmosferler</a>
-        <a href="projects.html">Projeler</a>
+        <a href="projects.html" aria-current="page">Projeler</a>
         <a href="service-areas.html">Hizmet Alanları</a>
-        <a class="nav-cta" href="request-atmosphere.html">
+        <a class="primary-navigation__cta" href="request-atmosphere.html">
           Ücretsiz Keşif
         </a>
       </nav>
@@ -71,649 +67,695 @@
   </header>
 
   <main id="main-content">
-    <article class="interactive-project">
-      <section
-        class="interactive-project__stage"
-        aria-labelledby="project-title"
-      >
-        <div class="interactive-project__image">
-          <img
-            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1900&q=90"
-            alt="Sıcak doğal tonlarla tasarlanmış Akdeniz atmosferli salon"
-            fetchpriority="high"
+    <section class="project-showcase">
+      <div class="project-showcase__visual">
+        <img
+          class="project-showcase__image"
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=88"
+          alt="Modern çizgiler ve doğal tonlarla tasarlanmış çağdaş oturma odası"
+          width="2200"
+          height="1467"
+          fetchpriority="high"
+        >
+
+        <div class="project-showcase__shade" aria-hidden="true"></div>
+
+        <a
+          class="project-hotspot project-hotspot--1"
+          href="#product-1"
+          aria-label="1 numaralı ürün: Minimal orta sehpa"
+        >1</a>
+
+        <a
+          class="project-hotspot project-hotspot--2"
+          href="#product-2"
+          aria-label="2 numaralı ürün: Modüler koltuk"
+        >2</a>
+
+        <a
+          class="project-hotspot project-hotspot--3"
+          href="#product-3"
+          aria-label="3 numaralı ürün: Metal ayaklı lambader"
+        >3</a>
+
+        <a
+          class="project-hotspot project-hotspot--4"
+          href="#product-4"
+          aria-label="4 numaralı ürün: Seramik dekoratif vazo"
+        >4</a>
+
+        <a
+          class="project-hotspot project-hotspot--5"
+          href="#product-5"
+          aria-label="5 numaralı ürün: Dokulu yün halı"
+        >5</a>
+
+        <a
+          class="project-hotspot project-hotspot--6"
+          href="#product-6"
+          aria-label="6 numaralı ürün: Modern berjer"
+        >6</a>
+
+        <a
+          class="project-hotspot project-hotspot--7"
+          href="#product-7"
+          aria-label="7 numaralı ürün: Soyut duvar tablosu"
+        >7</a>
+
+        <a
+          class="project-hotspot project-hotspot--8"
+          href="#product-8"
+          aria-label="8 numaralı ürün: Dekoratif zeytin ağacı"
+        >8</a>
+      </div>
+
+      <div class="project-showcase__content">
+        <a class="project-back-link" href="projects.html">
+          <span aria-hidden="true">←</span>
+          Tüm projeler
+        </a>
+
+        <p class="project-eyebrow">PROJE 02 · MODERN KOLEKSİYON</p>
+
+        <h1>Modern Denge</h1>
+
+        <p class="project-showcase__lead">
+          Net çizgiler, açık yüzeyler ve sıcak dokularla oluşturulan sakin,
+          çağdaş ve kullanışlı bir yaşam alanı.
+        </p>
+
+        <dl class="project-facts">
+          <div>
+            <dt>Stil</dt>
+            <dd>Yumuşak modern</dd>
+          </div>
+
+          <div>
+            <dt>Palet</dt>
+            <dd>Kum, taş ve antrasit</dd>
+          </div>
+
+          <div>
+            <dt>Önerilen alan</dt>
+            <dd>26–34 m² oturma odası</dd>
+          </div>
+
+          <div>
+            <dt>Tahmini uygulama</dt>
+            <dd>5–7 gün</dd>
+          </div>
+        </dl>
+
+        <div class="project-showcase__actions">
+          <a
+            class="button button--light"
+            href="request-atmosphere.html?project=modern"
           >
-        </div>
-
-        <div class="interactive-project__shade"></div>
-
-        <div class="interactive-project__introduction">
-          <a class="interactive-project__back" href="projects.html">
-            ← Tüm projeler
-          </a>
-
-          <p class="interactive-project__eyebrow">
-            Atmosfer 01
-          </p>
-
-          <h1 id="project-title">
-            Akdeniz Sakinliği
-          </h1>
-
-          <p>
-            Doğal malzemeler, güneşten solmuş renkler ve rahat
-            formlarla sıcak, dengeli bir yaşam alanı.
-          </p>
-
-          <dl class="interactive-project__facts">
-            <div class="interactive-project__fact">
-              <dt>Stil</dt>
-              <dd>Akdeniz Modern</dd>
-            </div>
-
-            <div class="interactive-project__fact">
-              <dt>Palet</dt>
-              <dd>Sıcak doğal tonlar</dd>
-            </div>
-
-            <div class="interactive-project__fact">
-              <dt>Önerilen oda</dt>
-              <dd>24–32 m² salon</dd>
-            </div>
-
-            <div class="interactive-project__fact">
-              <dt>Tahmini uygulama</dt>
-              <dd>5–7 gün</dd>
-            </div>
-          </dl>
-
-          <a class="button" href="request-atmosphere.html">
             Bu atmosferi istiyorum
           </a>
-        </div>
 
-        <button
-          class="product-hotspot"
-          type="button"
-          style="--hotspot-x: 51%; --hotspot-y: 77%;"
-          data-product-id="mediterranean-table"
-          aria-label="Traverten orta sehpayı görüntüle"
-        >
-          1
-        </button>
-
-        <button
-          class="product-hotspot"
-          type="button"
-          style="--hotspot-x: 28%; --hotspot-y: 64%;"
-          data-product-id="mediterranean-sofa"
-          aria-label="Krem koltuğu görüntüle"
-        >
-          2
-        </button>
-
-        <button
-          class="product-hotspot"
-          type="button"
-          style="--hotspot-x: 76%; --hotspot-y: 42%;"
-          data-product-id="mediterranean-lamp"
-          aria-label="Hasır lambaderi görüntüle"
-        >
-          3
-        </button>
-
-        <button
-          class="product-hotspot"
-          type="button"
-          style="--hotspot-x: 84%; --hotspot-y: 68%;"
-          data-product-id="mediterranean-vase"
-          aria-label="Traverten görünümlü vazoyu görüntüle"
-        >
-          4
-        </button>
-
-        <button
-          class="product-hotspot"
-          type="button"
-          style="--hotspot-x: 68%; --hotspot-y: 88%;"
-          data-product-id="mediterranean-rug"
-          aria-label="Jüt dokuma halıyı görüntüle"
-        >
-          5
-        </button>
-
-        <button
-          class="product-hotspot"
-          type="button"
-          style="--hotspot-x: 56%; --hotspot-y: 57%;"
-          data-product-id="mediterranean-cushion"
-          aria-label="Keten dokulu kırlenti görüntüle"
-        >
-          6
-        </button>
-
-        <button
-          class="product-hotspot"
-          type="button"
-          style="--hotspot-x: 53%; --hotspot-y: 25%;"
-          data-product-id="mediterranean-art"
-          aria-label="Dokulu duvar tablosunu görüntüle"
-        >
-          7
-        </button>
-
-        <button
-          class="product-hotspot"
-          type="button"
-          style="--hotspot-x: 31%; --hotspot-y: 28%;"
-          data-product-id="mediterranean-tree"
-          aria-label="Dekoratif zeytin ağacını görüntüle"
-        >
-          8
-        </button>
-
-        <button
-          class="interactive-project__list-toggle"
-          type="button"
-          aria-expanded="true"
-          data-list-toggle
-          data-show-label="Ürün listesini göster"
-        >
-          Ürün listesini gizle
-        </button>
-      </section>
-
-      <section
-        class="project-product-list"
-        aria-labelledby="products-title"
-        data-product-list
-      >
-        <div class="project-product-list__header">
-          <div>
-            <p class="eyebrow">
-              Bu ortamda kullanılan ürünler
-            </p>
-
-            <h2 id="products-title">
-              Akdeniz koleksiyonu
-            </h2>
-          </div>
-
-          <p>
-            Numaralı noktalara dokunarak ürünlerin detaylarını
-            görüntüleyebilirsiniz.
-          </p>
-        </div>
-
-        <div
-          class="project-product-list__grid"
-          data-horizontal-rail
-        >
-          <article
-            class="project-product-card"
-            data-product-card
-            data-product-id="mediterranean-table"
-            data-product-number="1"
-            data-product-title="Traverten Orta Sehpa"
-            data-product-price="£138,99"
-            data-product-source="Seçilmiş tedarikçi"
-            data-product-description="Yuvarlak formu ve doğal taş görünümüyle salonun merkezinde sakin ve dengeli bir odak oluşturur."
-            data-product-url="https://www.etsy.com/search?q=travertine+coffee+table"
-          >
-            <div class="project-product-card__image">
-              <img
-                src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=700&q=86"
-                alt="Traverten görünümlü yuvarlak orta sehpa"
-                loading="lazy"
-              >
-
-              <span class="project-product-card__number">1</span>
-            </div>
-
-            <h3 class="project-product-card__title">
-              Traverten Orta Sehpa
-            </h3>
-
-            <p class="project-product-card__source">
-              Seçilmiş tedarikçi
-            </p>
-
-            <strong class="project-product-card__price">
-              £138,99
-            </strong>
-
-            <button type="button" data-product-open>
-              Ürünü incele
-            </button>
-          </article>
-
-          <article
-            class="project-product-card"
-            data-product-card
-            data-product-id="mediterranean-sofa"
-            data-product-number="2"
-            data-product-title="Krem Dokulu Koltuk"
-            data-product-price="£1.249,00"
-            data-product-source="Seçilmiş tedarikçi"
-            data-product-description="Yumuşak hatları ve açık renkli dokusuyla Akdeniz atmosferinin rahat ve zamansız karakterini destekler."
-            data-product-url="https://www.etsy.com/search?q=cream+textured+sofa"
-          >
-            <div class="project-product-card__image">
-              <img
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=86"
-                alt="Krem renkli yumuşak dokulu salon koltuğu"
-                loading="lazy"
-              >
-
-              <span class="project-product-card__number">2</span>
-            </div>
-
-            <h3 class="project-product-card__title">
-              Krem Dokulu Koltuk
-            </h3>
-
-            <p class="project-product-card__source">
-              Seçilmiş tedarikçi
-            </p>
-
-            <strong class="project-product-card__price">
-              £1.249,00
-            </strong>
-
-            <button type="button" data-product-open>
-              Ürünü incele
-            </button>
-          </article>
-
-          <article
-            class="project-product-card"
-            data-product-card
-            data-product-id="mediterranean-lamp"
-            data-product-number="3"
-            data-product-title="Hasır Lambader"
-            data-product-price="£84,90"
-            data-product-source="Etsy koleksiyonu"
-            data-product-description="Doğal lifli başlığı sıcak ve yumuşak bir ışık yayarak salonun akşam atmosferini tamamlar."
-            data-product-url="https://www.etsy.com/search?q=rattan+floor+lamp"
-          >
-            <div class="project-product-card__image">
-              <img
-                src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=86"
-                alt="Doğal hasır başlıklı lambader"
-                loading="lazy"
-              >
-
-              <span class="project-product-card__number">3</span>
-            </div>
-
-            <h3 class="project-product-card__title">
-              Hasır Lambader
-            </h3>
-
-            <p class="project-product-card__source">
-              Etsy koleksiyonu
-            </p>
-
-            <strong class="project-product-card__price">
-              £84,90
-            </strong>
-
-            <button type="button" data-product-open>
-              Ürünü incele
-            </button>
-          </article>
-
-          <article
-            class="project-product-card"
-            data-product-card
-            data-product-id="mediterranean-vase"
-            data-product-number="4"
-            data-product-title="Taş Görünümlü Vazo"
-            data-product-price="£42,50"
-            data-product-source="Etsy koleksiyonu"
-            data-product-description="Mat taş dokusu ve organik formuyla raf, konsol ve masa düzenlemelerine doğal bir vurgu katar."
-            data-product-url="https://www.etsy.com/search?q=stone+texture+vase"
-          >
-            <div class="project-product-card__image">
-              <img
-                src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=700&q=86"
-                alt="Doğal taş görünümlü dekoratif vazo"
-                loading="lazy"
-              >
-
-              <span class="project-product-card__number">4</span>
-            </div>
-
-            <h3 class="project-product-card__title">
-              Taş Görünümlü Vazo
-            </h3>
-
-            <p class="project-product-card__source">
-              Etsy koleksiyonu
-            </p>
-
-            <strong class="project-product-card__price">
-              £42,50
-            </strong>
-
-            <button type="button" data-product-open>
-              Ürünü incele
-            </button>
-          </article>
-
-          <article
-            class="project-product-card"
-            data-product-card
-            data-product-id="mediterranean-rug"
-            data-product-number="5"
-            data-product-title="Jüt Dokuma Halı"
-            data-product-price="£119,00"
-            data-product-source="Etsy koleksiyonu"
-            data-product-description="Doğal lif dokusu zemine sıcaklık kazandırırken açık tonlu mobilyaları görsel olarak bir araya getirir."
-            data-product-url="https://www.etsy.com/search?q=natural+jute+rug"
-          >
-            <div class="project-product-card__image">
-              <img
-                src="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=700&q=86"
-                alt="Doğal renkli jüt dokuma salon halısı"
-                loading="lazy"
-              >
-
-              <span class="project-product-card__number">5</span>
-            </div>
-
-            <h3 class="project-product-card__title">
-              Jüt Dokuma Halı
-            </h3>
-
-            <p class="project-product-card__source">
-              Etsy koleksiyonu
-            </p>
-
-            <strong class="project-product-card__price">
-              £119,00
-            </strong>
-
-            <button type="button" data-product-open>
-              Ürünü incele
-            </button>
-          </article>
-
-          <article
-            class="project-product-card"
-            data-product-card
-            data-product-id="mediterranean-cushion"
-            data-product-number="6"
-            data-product-title="Keten Dokulu Kırlent"
-            data-product-price="£24,99"
-            data-product-source="Etsy koleksiyonu"
-            data-product-description="Sıcak nötr rengi ve keten dokusuyla koltuk üzerinde yumuşak ve doğal bir katman oluşturur."
-            data-product-url="https://www.etsy.com/search?q=neutral+linen+cushion"
-          >
-            <div class="project-product-card__image">
-              <img
-                src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=700&q=86"
-                alt="Keten dokulu açık renk dekoratif kırlent"
-                loading="lazy"
-              >
-
-              <span class="project-product-card__number">6</span>
-            </div>
-
-            <h3 class="project-product-card__title">
-              Keten Dokulu Kırlent
-            </h3>
-
-            <p class="project-product-card__source">
-              Etsy koleksiyonu
-            </p>
-
-            <strong class="project-product-card__price">
-              £24,99
-            </strong>
-
-            <button type="button" data-product-open>
-              Ürünü incele
-            </button>
-          </article>
-
-          <article
-            class="project-product-card"
-            data-product-card
-            data-product-id="mediterranean-art"
-            data-product-number="7"
-            data-product-title="Dokulu Duvar Tablosu"
-            data-product-price="£79,00"
-            data-product-source="Etsy koleksiyonu"
-            data-product-description="Minimal kabartmalı yüzeyiyle duvara hareket kazandırır ancak atmosferin sakin karakterini bozmaz."
-            data-product-url="https://www.etsy.com/search?q=neutral+textured+wall+art"
-          >
-            <div class="project-product-card__image">
-              <img
-                src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=700&q=86"
-                alt="Nötr tonlarda dokulu soyut duvar tablosu"
-                loading="lazy"
-              >
-
-              <span class="project-product-card__number">7</span>
-            </div>
-
-            <h3 class="project-product-card__title">
-              Dokulu Duvar Tablosu
-            </h3>
-
-            <p class="project-product-card__source">
-              Etsy koleksiyonu
-            </p>
-
-            <strong class="project-product-card__price">
-              £79,00
-            </strong>
-
-            <button type="button" data-product-open>
-              Ürünü incele
-            </button>
-          </article>
-
-          <article
-            class="project-product-card"
-            data-product-card
-            data-product-id="mediterranean-tree"
-            data-product-number="8"
-            data-product-title="Dekoratif Zeytin Ağacı"
-            data-product-price="£74,99"
-            data-product-source="Seçilmiş tedarikçi"
-            data-product-description="Akdeniz karakterini doğrudan mekâna taşıyan zeytin ağacı, salonun doğal odak noktasını oluşturur."
-            data-product-url="https://www.etsy.com/search?q=artificial+olive+tree"
-          >
-            <div class="project-product-card__image">
-              <img
-                src="https://images.unsplash.com/photo-1614594575810-49783b7d1a7f?auto=format&fit=crop&w=700&q=86"
-                alt="Dekoratif saksı içinde zeytin ağacı"
-                loading="lazy"
-              >
-
-              <span class="project-product-card__number">8</span>
-            </div>
-
-            <h3 class="project-product-card__title">
-              Dekoratif Zeytin Ağacı
-            </h3>
-
-            <p class="project-product-card__source">
-              Seçilmiş tedarikçi
-            </p>
-
-            <strong class="project-product-card__price">
-              £74,99
-            </strong>
-
-            <button type="button" data-product-open>
-              Ürünü incele
-            </button>
-          </article>
-        </div>
-      </section>
-
-      <section class="project-estimate" aria-label="Proje tahmini">
-        <div class="project-estimate__summary">
-          <article>
-            <span>Seçilmiş ürünler</span>
-            <strong>8 parça</strong>
-          </article>
-
-          <article>
-            <span>Tahmini ürün toplamı</span>
-            <strong>£1.813,37</strong>
-          </article>
-
-          <article>
-            <span>Boya uygulaması</span>
-            <strong>Keşif sonrası</strong>
-          </article>
-
-          <article>
-            <span>Teslimat ve montaj</span>
-            <strong>Teklif alınır</strong>
-          </article>
-        </div>
-
-        <div class="project-estimate__action">
-          <div>
-            <small>8 ürün · Tahmini toplam</small>
-            <strong>£1.813,37</strong>
-          </div>
-
-          <a href="request-atmosphere.html">
-            Atmosferi uygula
+          <a class="button button--outline-light" href="#project-products">
+            Ürünleri incele
           </a>
         </div>
-      </section>
-    </article>
+      </div>
+    </section>
+
+    <section class="project-summary" aria-label="Proje özeti">
+      <div class="project-summary__item">
+        <span class="project-summary__label">Toplam ürün</span>
+        <strong>8 parça</strong>
+      </div>
+
+      <div class="project-summary__item">
+        <span class="project-summary__label">Tahmini ürün toplamı</span>
+        <strong>92.450 TL</strong>
+      </div>
+
+      <div class="project-summary__item">
+        <span class="project-summary__label">Boyama uygulaması</span>
+        <strong>Keşif sonrası</strong>
+      </div>
+
+      <div class="project-summary__item">
+        <span class="project-summary__label">Teslimat ve montaj</span>
+        <strong>Teklif alınır</strong>
+      </div>
+    </section>
+
+    <section class="project-products" id="project-products">
+      <div class="section-heading project-products__heading">
+        <div>
+          <p class="section-heading__eyebrow">PROJEDE KULLANILAN ÜRÜNLER</p>
+          <h2>Mekânı tamamlayan seçilmiş parçalar.</h2>
+        </div>
+
+        <p>
+          Ürün kartlarını yana kaydırın. Her parçanın bilgilerini inceleyebilir,
+          favorilerinize ekleyebilir veya tedarikçi sayfasına geçebilirsiniz.
+        </p>
+      </div>
+
+      <div class="product-rail" data-product-rail>
+        <article class="project-product-card" id="product-1">
+          <button
+            class="project-product-card__button"
+            type="button"
+            data-product-open
+            data-product-name="Minimal Orta Sehpa"
+            data-product-price="18.750 TL"
+            data-product-number="1"
+            data-product-image="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1000&q=85"
+            data-product-description="Doğal taş görünümünü yalın bir formda sunan, modern oturma alanları için seçilmiş geniş orta sehpa."
+          >
+            <span class="project-product-card__number">1</span>
+
+            <img
+              src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=700&q=85"
+              alt="Minimal modern orta sehpa"
+              width="700"
+              height="840"
+              loading="lazy"
+            >
+
+            <span class="project-product-card__content">
+              <strong>Minimal Orta Sehpa</strong>
+              <span>Taş görünümlü yüzey</span>
+              <b>18.750 TL</b>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-product-card" id="product-2">
+          <button
+            class="project-product-card__button"
+            type="button"
+            data-product-open
+            data-product-name="Luca Modüler Koltuk"
+            data-product-price="46.900 TL"
+            data-product-number="2"
+            data-product-image="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=85"
+            data-product-description="Geniş oturumlu, sade çizgili ve farklı yerleşimlere uyarlanabilen açık renkli modüler koltuk."
+          >
+            <span class="project-product-card__number">2</span>
+
+            <img
+              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=85"
+              alt="Açık renkli modüler modern koltuk"
+              width="700"
+              height="840"
+              loading="lazy"
+            >
+
+            <span class="project-product-card__content">
+              <strong>Luca Modüler Koltuk</strong>
+              <span>Dokulu açık bej kumaş</span>
+              <b>46.900 TL</b>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-product-card" id="product-3">
+          <button
+            class="project-product-card__button"
+            type="button"
+            data-product-open
+            data-product-name="Metal Ayaklı Lambader"
+            data-product-price="7.250 TL"
+            data-product-number="3"
+            data-product-image="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=85"
+            data-product-description="İnce metal gövdesi ve yumuşak ışık veren kumaş başlığıyla modern atmosferi tamamlayan lambader."
+          >
+            <span class="project-product-card__number">3</span>
+
+            <img
+              src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=700&q=85"
+              alt="İnce metal ayaklı modern lambader"
+              width="700"
+              height="840"
+              loading="lazy"
+            >
+
+            <span class="project-product-card__content">
+              <strong>Metal Ayaklı Lambader</strong>
+              <span>Mat siyah gövde</span>
+              <b>7.250 TL</b>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-product-card" id="product-4">
+          <button
+            class="project-product-card__button"
+            type="button"
+            data-product-open
+            data-product-name="Seramik Dekoratif Vazo"
+            data-product-price="2.450 TL"
+            data-product-number="4"
+            data-product-image="https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=1000&q=85"
+            data-product-description="El işçiliğini çağrıştıran yüzeyi ve nötr rengiyle raf, konsol ve sehpa düzenleri için seçilmiş seramik vazo."
+          >
+            <span class="project-product-card__number">4</span>
+
+            <img
+              src="https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=700&q=85"
+              alt="Nötr renkli dekoratif seramik vazo"
+              width="700"
+              height="840"
+              loading="lazy"
+            >
+
+            <span class="project-product-card__content">
+              <strong>Seramik Dekoratif Vazo</strong>
+              <span>Mat kum yüzey</span>
+              <b>2.450 TL</b>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-product-card" id="product-5">
+          <button
+            class="project-product-card__button"
+            type="button"
+            data-product-open
+            data-product-name="Dokulu Yün Halı"
+            data-product-price="6.750 TL"
+            data-product-number="5"
+            data-product-image="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=1000&q=85"
+            data-product-description="Oturma grubunu görsel olarak bir araya getiren, sıcak dokulu ve kolay eşleşen doğal tonlu halı."
+          >
+            <span class="project-product-card__number">5</span>
+
+            <img
+              src="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=700&q=85"
+              alt="Doğal tonlarda dokulu yün halı"
+              width="700"
+              height="840"
+              loading="lazy"
+            >
+
+            <span class="project-product-card__content">
+              <strong>Dokulu Yün Halı</strong>
+              <span>Doğal kum tonu</span>
+              <b>6.750 TL</b>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-product-card" id="product-6">
+          <button
+            class="project-product-card__button"
+            type="button"
+            data-product-open
+            data-product-name="Modern Berjer"
+            data-product-price="6.900 TL"
+            data-product-number="6"
+            data-product-image="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1000&q=85"
+            data-product-description="Hafif gövdesi, rahat oturumu ve koyu renkli ayaklarıyla modern salon düzenini tamamlayan tekli koltuk."
+          >
+            <span class="project-product-card__number">6</span>
+
+            <img
+              src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=700&q=85"
+              alt="Açık renkli modern berjer"
+              width="700"
+              height="840"
+              loading="lazy"
+            >
+
+            <span class="project-product-card__content">
+              <strong>Modern Berjer</strong>
+              <span>Dokulu krem kumaş</span>
+              <b>6.900 TL</b>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-product-card" id="product-7">
+          <button
+            class="project-product-card__button"
+            type="button"
+            data-product-open
+            data-product-name="Soyut Duvar Tablosu"
+            data-product-price="2.650 TL"
+            data-product-number="7"
+            data-product-image="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1000&q=85"
+            data-product-description="Mekânın nötr paletini destekleyen, yalın dokulu ve ince çerçeveli büyük ölçekli duvar tablosu."
+          >
+            <span class="project-product-card__number">7</span>
+
+            <img
+              src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=700&q=85"
+              alt="Nötr tonlarda soyut duvar tablosu"
+              width="700"
+              height="840"
+              loading="lazy"
+            >
+
+            <span class="project-product-card__content">
+              <strong>Soyut Duvar Tablosu</strong>
+              <span>Dokulu yüzey</span>
+              <b>2.650 TL</b>
+            </span>
+          </button>
+        </article>
+
+        <article class="project-product-card" id="product-8">
+          <button
+            class="project-product-card__button"
+            type="button"
+            data-product-open
+            data-product-name="Dekoratif Zeytin Ağacı"
+            data-product-price="800 TL"
+            data-product-number="8"
+            data-product-image="https://images.unsplash.com/photo-1614594575810-5e2147d6f073?auto=format&fit=crop&w=1000&q=85"
+            data-product-description="Modern iç mekâna doğal bir vurgu ekleyen, saksılı ve bakımı kolay dekoratif zeytin ağacı."
+          >
+            <span class="project-product-card__number">8</span>
+
+            <img
+              src="https://images.unsplash.com/photo-1614594575810-5e2147d6f073?auto=format&fit=crop&w=700&q=85"
+              alt="Saksı içerisinde dekoratif zeytin ağacı"
+              width="700"
+              height="840"
+              loading="lazy"
+            >
+
+            <span class="project-product-card__content">
+              <strong>Dekoratif Zeytin Ağacı</strong>
+              <span>Doğal yeşil görünüm</span>
+              <b>800 TL</b>
+            </span>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-palette">
+      <div class="project-palette__content">
+        <p class="section-heading__eyebrow">RENK VE MALZEME PALETİ</p>
+
+        <h2>Serin çizgiler, sıcak dokular.</h2>
+
+        <p>
+          Modern Denge; açık kum tonlarını, yumuşak grileri ve kontrollü
+          antrasit ayrıntıları bir araya getirir. Sonuç sade fakat soğuk
+          olmayan, uzun süre kullanılabilecek dengeli bir atmosferdir.
+        </p>
+      </div>
+
+      <div class="project-palette__swatches" aria-label="Proje renk paleti">
+        <div style="--swatch: #ded7cc;">
+          <span>Açık kum</span>
+        </div>
+
+        <div style="--swatch: #b9b2a8;">
+          <span>Taş grisi</span>
+        </div>
+
+        <div style="--swatch: #f0ede7;">
+          <span>Kırık beyaz</span>
+        </div>
+
+        <div style="--swatch: #74736e;">
+          <span>Duman</span>
+        </div>
+
+        <div style="--swatch: #343532;">
+          <span>Antrasit</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-process">
+      <div class="section-heading">
+        <div>
+          <p class="section-heading__eyebrow">TRUECOAT UYGULAMA MODELİ</p>
+          <h2>Bu projeyi evinize nasıl uyarlıyoruz?</h2>
+        </div>
+      </div>
+
+      <ol class="project-process__list">
+        <li>
+          <span>01</span>
+          <div>
+            <h3>Alanı inceliyoruz</h3>
+            <p>
+              Ölçüleri, doğal ışığı, mevcut yüzeyleri ve korunacak eşyaları
+              yerinde değerlendiriyoruz.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <span>02</span>
+          <div>
+            <h3>Paleti uyarlıyoruz</h3>
+            <p>
+              Modern Denge paletini evinizin ışığına, zeminine ve mevcut
+              mobilyalarına göre düzenliyoruz.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <span>03</span>
+          <div>
+            <h3>Ürünleri netleştiriyoruz</h3>
+            <p>
+              Kullanmak istediğiniz parçaları belirliyor, alternatifleri ve
+              tahmini bütçeyi tek planda topluyoruz.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <span>04</span>
+          <div>
+            <h3>Uygulayıp teslim ediyoruz</h3>
+            <p>
+              Yüzey hazırlığı, boyama, temizlik, ürün teslimatı ve montaj
+              süreçlerini koordineli biçimde tamamlıyoruz.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="project-final-cta">
+      <div>
+        <p class="section-heading__eyebrow">MODERN DENGE · PROJE 02</p>
+        <h2>Bu atmosfer evinize göre yeniden tasarlansın.</h2>
+      </div>
+
+      <div class="project-final-cta__actions">
+        <a
+          class="button button--dark"
+          href="request-atmosphere.html?project=modern"
+        >
+          Proje talebi oluştur
+        </a>
+
+        <a class="button button--text" href="projects.html">
+          Diğer projeleri gör
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
   </main>
 
   <aside
     class="product-drawer"
     aria-hidden="true"
-    aria-label="Ürün detayları"
+    aria-label="Ürün ayrıntıları"
     data-product-drawer
   >
+    <button
+      class="product-drawer__backdrop"
+      type="button"
+      aria-label="Ürün ayrıntılarını kapat"
+      data-product-close
+    ></button>
+
     <div
       class="product-drawer__panel"
       role="dialog"
       aria-modal="true"
-      aria-labelledby="drawer-product-title"
-      data-drawer-panel
+      aria-labelledby="product-drawer-title"
     >
       <button
         class="product-drawer__close"
         type="button"
-        aria-label="Ürün detaylarını kapat"
-        data-drawer-close
+        aria-label="Kapat"
+        data-product-close
       >
-        ×
+        <span></span>
+        <span></span>
       </button>
 
-      <div class="product-drawer__media">
+      <div class="product-drawer__heading">
+        <span class="product-drawer__number" data-drawer-number>1</span>
+        <p>PROJE ÜRÜNÜ</p>
+      </div>
+
+      <div class="product-drawer__image-wrap">
         <img
+          class="product-drawer__image"
           data-drawer-image
-          src=""
+          src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1000&q=85"
           alt=""
+          width="1000"
+          height="1000"
         >
       </div>
 
       <div class="product-drawer__content">
-        <div class="product-drawer__heading">
-          <span
-            class="product-drawer__number"
-            data-drawer-number
-          ></span>
+        <h2 id="product-drawer-title" data-drawer-name>
+          Minimal Orta Sehpa
+        </h2>
+
+        <strong class="product-drawer__price" data-drawer-price>
+          18.750 TL
+        </strong>
+
+        <p data-drawer-description>
+          Doğal taş görünümünü yalın bir formda sunan modern orta sehpa.
+        </p>
+
+        <dl class="product-drawer__details">
+          <div>
+            <dt>Proje</dt>
+            <dd>Modern Denge</dd>
+          </div>
 
           <div>
-            <p
-              class="product-drawer__source"
-              data-drawer-source
-            ></p>
-
-            <h2
-              class="product-drawer__title"
-              id="drawer-product-title"
-              data-drawer-title
-            >
-              Ürün
-            </h2>
+            <dt>Tedarik</dt>
+            <dd>Keşif sonrasında doğrulanır</dd>
           </div>
-        </div>
 
-        <strong
-          class="product-drawer__price"
-          data-drawer-price
-        ></strong>
+          <div>
+            <dt>Teslimat</dt>
+            <dd>Stok ve bölgeye göre planlanır</dd>
+          </div>
+        </dl>
 
-        <p
-          class="product-drawer__description"
-          data-drawer-description
-        ></p>
-
-        <div class="product-drawer__actions">
-          <a
-            class="product-drawer__link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-drawer-link
-          >
-            Ürünü görüntüle ↗️
-          </a>
-
-          <a
-            class="product-drawer__apply"
-            href="request-atmosphere.html"
-          >
-            Bu atmosferi evime uygula
-          </a>
-        </div>
+        <a
+          class="button button--dark product-drawer__action"
+          href="request-atmosphere.html?project=modern"
+        >
+          Bu ürünü projeme ekle
+        </a>
       </div>
     </div>
   </aside>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <div class="site-footer__brand">
-        <a class="brand" href="index.html">
-          <span class="brand__wordmark">TRUECOAT</span>
-          <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
-        </a>
+    <div class="site-footer__top">
+      <a class="brand brand--footer" href="index.html">
+        <span class="brand__wordmark">TRUECOAT</span>
+        <span class="brand__descriptor">BOYAMA VE İÇ MEKÂNLAR</span>
+      </a>
 
-        <p>
-          Boya, malzeme ve seçilmiş dekor ürünleriyle tamamlanan
-          premium iç mekân atmosferleri.
-        </p>
+      <p>
+        Boyama, atmosfer tasarımı, ürün seçimi ve uygulama süreçlerini
+        tek bir proje planında birleştiriyoruz.
+      </p>
+    </div>
+
+    <div class="site-footer__links">
+      <div>
+        <h2>Hizmetler</h2>
+        <a href="painting.html">Profesyonel boyama</a>
+        <a href="atmospheres.html">Atmosfer tasarımı</a>
+        <a href="projects.html">Projeler</a>
+        <a href="service-areas.html">Hizmet alanları</a>
       </div>
 
-      <div class="site-footer__grid">
-        <div>
-          <h2>Keşfedin</h2>
-
-          <a href="painting.html">Boyama</a>
-          <a href="difference.html">Farkımız</a>
-          <a href="atmospheres.html">Atmosferler</a>
-          <a href="projects.html">Projeler</a>
-        </div>
-
-        <div>
-          <h2>Hizmet</h2>
-
-          <a href="service-areas.html">Hizmet Alanları</a>
-          <a href="request-atmosphere.html">Ücretsiz Keşif</a>
-        </div>
+      <div>
+        <h2>Projeler</h2>
+        <a href="project-mediterranean.html">Akdeniz Sakinliği</a>
+        <a href="project-modern.html" aria-current="page">Modern Denge</a>
+        <a href="project-organic.html">Organik Sadelik</a>
       </div>
 
-      <div class="site-footer__bottom">
-        <p>© 2026 TRUECOAT. Tüm hakları saklıdır.</p>
+      <div>
+        <h2>İletişim</h2>
+        <a href="tel:+905391152765">Türkçe: 0539 115 27 65</a>
+        <a href="tel:+905338528320">English: +90 533 852 83 20</a>
+        <a href="request-atmosphere.html">Ücretsiz keşif talebi</a>
       </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>© 2026 TRUECOAT. Tüm hakları saklıdır.</span>
+      <a href="index.html">Ana sayfa</a>
     </div>
   </footer>
 
   <script src="js/app.js" defer></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const drawer = document.querySelector("[data-product-drawer]");
+      const openButtons = document.querySelectorAll("[data-product-open]");
+      const closeButtons = document.querySelectorAll("[data-product-close]");
+
+      if (!drawer || !openButtons.length) return;
+
+      const drawerNumber = drawer.querySelector("[data-drawer-number]");
+      const drawerImage = drawer.querySelector("[data-drawer-image]");
+      const drawerName = drawer.querySelector("[data-drawer-name]");
+      const drawerPrice = drawer.querySelector("[data-drawer-price]");
+      const drawerDescription = drawer.querySelector(
+        "[data-drawer-description]"
+      );
+
+      let lastFocusedElement = null;
+
+      function openDrawer(button) {
+        lastFocusedElement = button;
+
+        drawerNumber.textContent = button.dataset.productNumber || "";
+        drawerName.textContent = button.dataset.productName || "";
+        drawerPrice.textContent = button.dataset.productPrice || "";
+        drawerDescription.textContent =
+          button.dataset.productDescription || "";
+
+        drawerImage.src = button.dataset.productImage || "";
+        drawerImage.alt = button.dataset.productName || "Ürün görseli";
+
+        drawer.classList.add("is-open");
+        drawer.setAttribute("aria-hidden", "false");
+        document.body.classList.add("drawer-open");
+
+        const closeButton = drawer.querySelector(".product-drawer__close");
+        if (closeButton) closeButton.focus();
+      }
+
+      function closeDrawer() {
+        drawer.classList.remove("is-open");
+        drawer.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("drawer-open");
+
+        if (lastFocusedElement) lastFocusedElement.focus();
+      }
+
+      openButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          openDrawer(button);
+        });
+      });
+
+      closeButtons.forEach(function (button) {
+        button.addEventListener("click", closeDrawer);
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && drawer.classList.contains("is-open")) {
+          closeDrawer();
+        }
+      });
+    });
+  </script>
 </body>
-</html>
+</html> 
