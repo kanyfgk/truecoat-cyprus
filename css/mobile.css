@@ -907,86 +907,75 @@
 
   /* Atmospheres listing */
 
-  .atmospheres-hero,
-  .projects-hero,
-  .collection-hero {
-    min-height: auto !important;
-    padding: 60px 20px 65px !important;
-  }
+.atmospheres-hero,
+.collection-hero {
+  min-height: auto !important;
+  padding: 60px 20px 65px !important;
+}
 
-  .atmospheres-hero__inner,
-  .projects-hero__inner,
-  .collection-hero__inner {
-    display: block !important;
-  }
+.atmospheres-hero__inner,
+.collection-hero__inner {
+  display: block !important;
+}
 
-  .atmospheres-hero h1,
-  .projects-hero h1,
-  .collection-hero h1 {
-    max-width: 100% !important;
-    font-size: clamp(47px, 13vw, 66px) !important;
-    line-height: 0.98 !important;
-  }
+.atmospheres-hero h1,
+.collection-hero h1 {
+  max-width: 100% !important;
+  font-size: clamp(47px, 13vw, 66px) !important;
+  line-height: 0.98 !important;
+}
 
-  .atmospheres-hero p,
-  .projects-hero p,
-  .collection-hero p {
-    max-width: 100% !important;
-    margin-top: 22px !important;
-    font-size: 14px !important;
-  }
+.atmospheres-hero p,
+.collection-hero p {
+  max-width: 100% !important;
+  margin-top: 22px !important;
+  font-size: 14px !important;
+}
 
-  .atmospheres-grid,
-  .projects-grid,
-  .collection-grid,
-  .atmosphere-list {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-  }
+.atmospheres-grid,
+.collection-grid,
+.atmosphere-list {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 16px !important;
+}
 
-  .atmosphere-card,
-  .project-card,
-  .collection-card {
-    min-height: 0 !important;
-    border-radius: var(--radius) !important;
-  }
+.atmosphere-card,
+.collection-card {
+  min-height: 0 !important;
+  border-radius: var(--radius) !important;
+}
 
-  .atmosphere-card__image,
-  .project-card__image,
-  .collection-card__image {
-    height: auto !important;
-    aspect-ratio: 4 / 4.6 !important;
-  }
+.atmosphere-card__image,
+.collection-card__image {
+  height: auto !important;
+  aspect-ratio: 4 / 4.6 !important;
+}
 
-  .atmosphere-card__content,
-  .project-card__content,
-  .collection-card__content {
-    padding: 24px 20px !important;
-  }
+.atmosphere-card__content,
+.collection-card__content {
+  padding: 24px 20px !important;
+}
 
-  .atmosphere-card h2,
-  .atmosphere-card h3,
-  .project-card h2,
-  .project-card h3,
-  .collection-card h2,
-  .collection-card h3 {
-    font-size: 34px !important;
-  }
+.atmosphere-card h2,
+.atmosphere-card h3,
+.collection-card h2,
+.collection-card h3 {
+  font-size: 34px !important;
+}
 
-  
 
-  /* Request atmosphere page */
+/* Request atmosphere page */
 
-  .request-hero,
-  .request-page-hero {
-    padding: 50px 0 35px !important;
-  }
+.request-hero,
+.request-page-hero {
+  padding: 50px 0 35px !important;
+}
 
-  .request-hero h1,
-  .request-page-hero h1 {
-    font-size: clamp(43px, 12vw, 60px) !important;
-  }
+.request-hero h1,
+.request-page-hero h1 {
+  font-size: clamp(43px, 12vw, 60px) !important;
+}
 
   .request-layout,
   .request-atmosphere-layout,
