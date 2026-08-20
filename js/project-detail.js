@@ -42,6 +42,15 @@
       .trim();
   }
 
+  function escapeHTML(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
   function getProjectName() {
     const heading = document.querySelector(
       ".project-showcase__content h1"
@@ -59,6 +68,22 @@
       )
     ) {
       return "mediterranean";
+    }
+
+    if (
+      document.body.classList.contains(
+        "page-project-modern"
+      )
+    ) {
+      return "modern";
+    }
+
+    if (
+      document.body.classList.contains(
+        "page-project-organic"
+      )
+    ) {
+      return "organic";
     }
 
     const path = window.location.pathname
@@ -79,6 +104,7 @@
 
   /* =========================================================
      PRODUCT DATA
+     Supports both project card structures
      ========================================================= */
 
   function getProductData(card) {
@@ -86,24 +112,53 @@
       return null;
     }
 
-    const image = card.querySelector(
-      ".project-product-card__media img"
+    const button = card.querySelector(
+      "[data-product-open], [data-product-trigger]"
     );
+
+    const image =
+      card.querySelector(
+        ".project-product-card__media img"
+      ) ||
+      card.querySelector(
+        ".project-product-card__button img"
+      ) ||
+      card.querySelector("img");
 
     const category = card.querySelector(
       ".project-product-card__content > p"
     );
 
-    const name = card.querySelector(
-      ".project-product-card__content > h3"
-    );
+    const name =
+      card.querySelector(
+        ".project-product-card__content > h3"
+      ) ||
+      card.querySelector(
+        ".project-product-card__content > strong"
+      );
 
     const detail = card.querySelector(
       ".project-product-card__content > span"
     );
 
-    const price = card.querySelector(
-      ".project-product-card__content > strong"
+    const price =
+      card.querySelector(
+        ".project-product-card__content > b"
+      ) ||
+      card.querySelector(
+        ".project-product-card__content > strong:last-child"
+      );
+
+    const dataset = button ? button.dataset : {};
+
+    const nameText = cleanText(
+      dataset.productName ||
+        (name ? name.textContent : "Seçilmiş ürün")
+    );
+
+    const priceText = cleanText(
+      dataset.productPrice ||
+        (price ? price.textContent : "Teklif alınır")
     );
 
     const detailText = cleanText(
@@ -123,11 +178,11 @@
         : "Proje ürünü"
     );
 
-    const nameText = cleanText(
-      name
-        ? name.textContent
-        : "Seçilmiş ürün"
-    );
+    const productImage =
+      dataset.productImage ||
+      (image
+        ? image.currentSrc || image.src
+        : fallbackImage);
 
     return {
       id: card.id,
@@ -141,44 +196,52 @@
 
       projectSlug: getProjectSlug(),
 
-      image: image
-        ? image.currentSrc || image.src
-        : fallbackImage,
+      image:
+        productImage ||
+        fallbackImage,
 
-      imageAlt: image
-        ? cleanText(image.alt)
-        : nameText,
+      imageAlt:
+        image && cleanText(image.alt)
+          ? cleanText(image.alt)
+          : nameText,
 
-      category: categoryText,
+      category:
+        categoryText,
 
-      name: nameText,
+      name:
+        nameText,
 
-      price: cleanText(
-        price
-          ? price.textContent
-          : "Teklif alınır"
-      ),
+      price:
+        priceText,
 
       material:
         detailParts[0] ||
+        detailText ||
         "Seçilmiş malzeme",
 
       colour:
         detailParts[1] ||
         "Proje paleti",
 
-      location: categoryText,
+      location:
+        categoryText,
 
       description:
-        nameText +
-        ", " +
-        getProjectName() +
-        " atmosferinin renk, doku ve kullanım dengesi düşünülerek seçildi."
+        cleanText(
+          dataset.productDescription ||
+            (
+              nameText +
+              ", " +
+              getProjectName() +
+              " atmosferinin renk, doku ve kullanım dengesi düşünülerek seçildi."
+            )
+        )
     };
   }
 
   /* =========================================================
      PRODUCT DRAWER
+     Supports current HTML + previous drawer structure
      ========================================================= */
 
   function setDrawerContent(product) {
@@ -186,37 +249,74 @@
       return;
     }
 
-    const drawerImage = drawer.querySelector(
-      "[data-product-image]"
-    );
+    const drawerImage =
+      drawer.querySelector(
+        "[data-drawer-image]"
+      ) ||
+      drawer.querySelector(
+        "[data-product-image]"
+      );
 
-    const drawerCategory = drawer.querySelector(
-      "[data-product-category]"
-    );
+    const drawerCategory =
+      drawer.querySelector(
+        "[data-drawer-category]"
+      ) ||
+      drawer.querySelector(
+        "[data-product-category]"
+      );
 
-    const drawerName = drawer.querySelector(
-      "[data-product-name]"
-    );
+    const drawerName =
+      drawer.querySelector(
+        "[data-drawer-name]"
+      ) ||
+      drawer.querySelector(
+        "[data-product-name]"
+      );
 
-    const drawerPrice = drawer.querySelector(
-      "[data-product-price]"
-    );
+    const drawerPrice =
+      drawer.querySelector(
+        "[data-drawer-price]"
+      ) ||
+      drawer.querySelector(
+        "[data-product-price]"
+      );
 
-    const drawerDescription = drawer.querySelector(
-      "[data-product-description]"
-    );
+    const drawerDescription =
+      drawer.querySelector(
+        "[data-drawer-description]"
+      ) ||
+      drawer.querySelector(
+        "[data-product-description]"
+      );
 
-    const drawerMaterial = drawer.querySelector(
-      "[data-product-material]"
-    );
+    const drawerMaterial =
+      drawer.querySelector(
+        "[data-drawer-material]"
+      ) ||
+      drawer.querySelector(
+        "[data-product-material]"
+      );
 
-    const drawerColour = drawer.querySelector(
-      "[data-product-colour]"
-    );
+    const drawerColour =
+      drawer.querySelector(
+        "[data-drawer-colour]"
+      ) ||
+      drawer.querySelector(
+        "[data-product-colour]"
+      );
 
-    const drawerLocation = drawer.querySelector(
-      "[data-product-location]"
-    );
+    const drawerLocation =
+      drawer.querySelector(
+        "[data-drawer-location]"
+      ) ||
+      drawer.querySelector(
+        "[data-product-location]"
+      );
+
+    const drawerNumber =
+      drawer.querySelector(
+        "[data-drawer-number]"
+      );
 
     if (drawerImage) {
       drawerImage.src =
@@ -261,6 +361,16 @@
     if (drawerLocation) {
       drawerLocation.textContent =
         product.location;
+    }
+
+    if (drawerNumber) {
+      const numberMatch =
+        String(product.id || "").match(/\d+/);
+
+      drawerNumber.textContent =
+        numberMatch
+          ? numberMatch[0]
+          : "";
     }
 
     drawer.dataset.activeProduct =
@@ -319,7 +429,9 @@
       return;
     }
 
-    drawer.classList.remove("is-open");
+    drawer.classList.remove(
+      "is-open"
+    );
 
     drawer.setAttribute(
       "aria-hidden",
@@ -342,16 +454,28 @@
   }
 
   function handleProductTrigger(trigger) {
-    const productId =
+    let productId =
       trigger.getAttribute(
         "data-product-trigger"
       );
 
     if (!productId) {
+      const card = trigger.closest(
+        ".project-product-card"
+      );
+
+      productId =
+        card ? card.id : "";
+    }
+
+    if (!productId) {
       return;
     }
 
-    openProduct(productId, trigger);
+    openProduct(
+      productId,
+      trigger
+    );
   }
 
   /* =========================================================
@@ -435,9 +559,11 @@
 
     if (!alreadyExists) {
       cart.push({
-        cartId: product.cartId,
+        cartId:
+          product.cartId,
 
-        id: product.id,
+        id:
+          product.id,
 
         project:
           product.project,
@@ -480,19 +606,20 @@
 
     updateAddToCartButton();
 
+    closeProduct();
+
     openCart();
   }
 
-  function removeProductFromCart(
-    cartId
-  ) {
-    const cart = getCart().filter(
-      function (item) {
-        return (
-          item.cartId !== cartId
-        );
-      }
-    );
+  function removeProductFromCart(cartId) {
+    const cart =
+      getCart().filter(
+        function (item) {
+          return (
+            item.cartId !== cartId
+          );
+        }
+      );
 
     saveCart(cart);
 
@@ -500,8 +627,43 @@
   }
 
   /* =========================================================
-     PRICE
+     PRICE / CURRENCY
      ========================================================= */
+
+  function getCurrencyFromPrice(price) {
+    const text =
+      cleanText(price).toUpperCase();
+
+    if (
+      text.includes("TL") ||
+      text.includes("₺")
+    ) {
+      return "TRY";
+    }
+
+    if (
+      text.includes("GBP") ||
+      text.includes("£")
+    ) {
+      return "GBP";
+    }
+
+    if (
+      text.includes("EUR") ||
+      text.includes("€")
+    ) {
+      return "EUR";
+    }
+
+    if (
+      text.includes("USD") ||
+      text.includes("$")
+    ) {
+      return "USD";
+    }
+
+    return null;
+  }
 
   function parsePrice(price) {
     const text =
@@ -519,9 +681,15 @@
     let value =
       match[1];
 
+    const dotCount =
+      (value.match(/\./g) || []).length;
+
+    const commaCount =
+      (value.match(/,/g) || []).length;
+
     if (
-      value.includes(",") &&
-      value.includes(".")
+      value.includes(".") &&
+      value.includes(",")
     ) {
       if (
         value.lastIndexOf(",") >
@@ -533,13 +701,48 @@
             .replace(",", ".");
       } else {
         value =
-          value.replace(/,/g, "");
+          value
+            .replace(/,/g, "");
+      }
+    } else if (
+      dotCount > 1
+    ) {
+      value =
+        value.replace(/\./g, "");
+    } else if (
+      commaCount > 1
+    ) {
+      value =
+        value.replace(/,/g, "");
+    } else if (
+      value.includes(".")
+    ) {
+      const parts =
+        value.split(".");
+
+      if (
+        parts[1] &&
+        parts[1].length === 3
+      ) {
+        value =
+          parts.join("");
       }
     } else if (
       value.includes(",")
     ) {
-      value =
-        value.replace(",", ".");
+      const parts =
+        value.split(",");
+
+      if (
+        parts[1] &&
+        parts[1].length === 3
+      ) {
+        value =
+          parts.join("");
+      } else {
+        value =
+          value.replace(",", ".");
+      }
     }
 
     const number =
@@ -548,6 +751,34 @@
     return Number.isFinite(number)
       ? number
       : 0;
+  }
+
+  function getCartCurrency(cart) {
+    const currencies =
+      cart
+        .map(function (item) {
+          return getCurrencyFromPrice(
+            item.price
+          );
+        })
+        .filter(Boolean);
+
+    if (!currencies.length) {
+      return "TRY";
+    }
+
+    const uniqueCurrencies =
+      Array.from(
+        new Set(currencies)
+      );
+
+    if (
+      uniqueCurrencies.length === 1
+    ) {
+      return uniqueCurrencies[0];
+    }
+
+    return "MIXED";
   }
 
   function getCartTotal(cart) {
@@ -563,12 +794,54 @@
     );
   }
 
-  function formatGBP(value) {
-    return (
-      "£" +
-      Number(value || 0)
-        .toFixed(2)
-        .replace(".", ",")
+  function formatCurrency(
+    value,
+    currency
+  ) {
+    const number =
+      Number(value || 0);
+
+    try {
+      return new Intl.NumberFormat(
+        "tr-TR",
+        {
+          style: "currency",
+          currency: currency,
+          minimumFractionDigits:
+            Number.isInteger(number)
+              ? 0
+              : 2,
+          maximumFractionDigits: 2
+        }
+      ).format(number);
+    } catch (error) {
+      return (
+        number.toLocaleString(
+          "tr-TR"
+        ) +
+        " " +
+        currency
+      );
+    }
+  }
+
+  function formatCartTotal(cart) {
+    if (!cart.length) {
+      return "0 TL";
+    }
+
+    const currency =
+      getCartCurrency(cart);
+
+    if (
+      currency === "MIXED"
+    ) {
+      return "Birden fazla para birimi";
+    }
+
+    return formatCurrency(
+      getCartTotal(cart),
+      currency
     );
   }
 
@@ -705,7 +978,6 @@
         aria-labelledby="truecoat-cart-title"
       >
         <div class="truecoat-cart__header">
-
           <div>
             <p>
               TRUECOAT SEPET
@@ -724,7 +996,6 @@
           >
             ×
           </button>
-
         </div>
 
         <div
@@ -760,7 +1031,7 @@
             <strong
               data-cart-total
             >
-              £0,00
+              0 TL
             </strong>
           </div>
 
@@ -781,7 +1052,6 @@
             <span aria-hidden="true">→</span>
           </button>
         </div>
-
       </aside>
     `;
 
@@ -850,9 +1120,7 @@
 
     if (total) {
       total.textContent =
-        formatGBP(
-          getCartTotal(cart)
-        );
+        formatCartTotal(cart);
     }
 
     if (!items) {
@@ -871,13 +1139,55 @@
         element.className =
           "truecoat-cart-item";
 
+        const safeImage =
+          escapeHTML(
+            item.image ||
+            fallbackImage
+          );
+
+        const safeImageAlt =
+          escapeHTML(
+            item.imageAlt ||
+            item.name
+          );
+
+        const safeProject =
+          escapeHTML(
+            item.project || ""
+          );
+
+        const safeName =
+          escapeHTML(
+            item.name || ""
+          );
+
+        const safeMaterial =
+          escapeHTML(
+            item.material || ""
+          );
+
+        const safeColour =
+          escapeHTML(
+            item.colour || ""
+          );
+
+        const safePrice =
+          escapeHTML(
+            item.price || ""
+          );
+
+        const safeCartId =
+          escapeHTML(
+            item.cartId || ""
+          );
+
         element.innerHTML = `
           <div
             class="truecoat-cart-item__image"
           >
             <img
-              src="${item.image || fallbackImage}"
-              alt="${item.imageAlt || item.name}"
+              src="${safeImage}"
+              alt="${safeImageAlt}"
             >
           </div>
 
@@ -885,32 +1195,32 @@
             class="truecoat-cart-item__content"
           >
             <p>
-              ${item.project || ""}
+              ${safeProject}
             </p>
 
             <h3>
-              ${item.name}
+              ${safeName}
             </h3>
 
             <span>
-              ${item.material || ""}
+              ${safeMaterial}
               ${
-                item.colour
-                  ? " · " + item.colour
+                safeColour
+                  ? " · " + safeColour
                   : ""
               }
             </span>
 
             <strong>
-              ${item.price}
+              ${safePrice}
             </strong>
           </div>
 
           <button
             type="button"
             class="truecoat-cart-item__remove"
-            data-cart-remove="${item.cartId}"
-            aria-label="${item.name} ürününü sepetten çıkar"
+            data-cart-remove="${safeCartId}"
+            aria-label="${safeName} ürününü sepetten çıkar"
           >
             ×
           </button>
@@ -1060,14 +1370,6 @@
       if (designButton) {
         event.preventDefault();
 
-        /*
-         Next system layer:
-         room planner / customer room composer.
-
-         We deliberately do not redirect to the
-         request form here.
-        */
-
         window.dispatchEvent(
           new CustomEvent(
             "truecoat:open-room-planner",
@@ -1084,7 +1386,7 @@
 
       const productTrigger =
         event.target.closest(
-          "[data-product-trigger]"
+          "[data-product-trigger], [data-product-open]"
         );
 
       if (productTrigger) {
@@ -1347,7 +1649,7 @@
 
   document
     .querySelectorAll(
-      ".project-product-card__media img"
+      ".project-product-card img"
     )
     .forEach(
       function (image) {
