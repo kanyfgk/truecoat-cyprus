@@ -1368,21 +1368,18 @@
         );
 
       if (designButton) {
-        event.preventDefault();
+  event.preventDefault();
 
-        window.dispatchEvent(
-          new CustomEvent(
-            "truecoat:open-room-planner",
-            {
-              detail: {
-                cart: getCart()
-              }
-            }
-          )
-        );
+  const cart = getCart();
 
-        return;
-      }
+  if (!cart.length) {
+    return;
+  }
+
+  window.location.href = "room-planner.html";
+
+  return;
+}
 
       const productTrigger =
         event.target.closest(
