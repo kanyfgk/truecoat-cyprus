@@ -51,10 +51,11 @@
         data-menu-toggle
       >
         <span></span>
+        <span></span>
       </button>
 
       <nav
-        class="site-navigation"
+        class="primary-navigation"
         id="primary-navigation"
         aria-label="Ana navigasyon"
         data-navigation
@@ -64,7 +65,7 @@
         <a href="atmospheres.html">Atmosferler</a>
         <a href="projects.html">Projeler</a>
         <a href="service-areas.html">Hizmet Alanları</a>
-        <a class="nav-cta" href="request-atmosphere.html">
+        <a class="navigation-cta" href="request-atmosphere.html">
           Ücretsiz Keşif
         </a>
       </nav>
@@ -542,42 +543,61 @@
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <div class="site-footer__brand">
-        <a class="brand" href="index.html">
-          <span class="brand__wordmark">TRUECOAT</span>
-          <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
-        </a>
 
-        <p>
-          Boya, yüzey, malzeme ve dekoru tek bir atmosfer içinde
-          buluşturan premium iç mekân uygulamaları.
-        </p>
-      </div>
+  <div class="site-footer__top">
 
-      <div class="site-footer__grid">
-        <div>
-          <h2>Keşfedin</h2>
+    <div class="site-footer__brand">
+      <a
+        class="brand brand--footer"
+        href="index.html"
+        aria-label="TRUECOAT ana sayfa"
+      >
+        <span class="brand__wordmark">TRUECOAT</span>
+        <span class="brand__descriptor">BOYAMA VE İÇ MEKÂNLAR</span>
+      </a>
 
-          <a href="painting.html">Boyama</a>
-          <a href="difference.html">Farkımız</a>
-          <a href="atmospheres.html">Atmosferler</a>
-          <a href="projects.html">Projeler</a>
-        </div>
-
-        <div>
-          <h2>Hizmet</h2>
-
-          <a href="service-areas.html">Hizmet Alanları</a>
-          <a href="request-atmosphere.html">Ücretsiz Keşif</a>
-        </div>
-      </div>
-
-      <div class="site-footer__bottom">
-        <p>© 2026 TRUECOAT. Tüm hakları saklıdır.</p>
-      </div>
+      <p>
+        Boya, yüzey, malzeme ve dekoru tek bir atmosfer içinde
+        buluşturan premium iç mekân uygulamaları.
+      </p>
     </div>
-  </footer>
+
+    <nav class="site-footer__navigation" aria-label="Alt menü">
+
+      <div>
+        <p class="footer-heading">Keşfet</p>
+
+        <a href="painting.html">Boyama</a>
+        <a href="difference.html">Farkımız</a>
+        <a href="atmospheres.html">Atmosferler</a>
+        <a href="projects.html">Projeler</a>
+      </div>
+
+      <div>
+        <p class="footer-heading">Hizmet</p>
+
+        <a href="service-areas.html">Hizmet Alanları</a>
+        <a href="request-atmosphere.html">Ücretsiz Keşif</a>
+      </div>
+
+      <div>
+        <p class="footer-heading">İletişim</p>
+
+        <a href="tel:+905338528320">+90 533 852 83 20</a>
+        <a href="tel:+905391152765">0539 115 27 65</a>
+        <p>Kuzey Kıbrıs</p>
+      </div>
+
+    </nav>
+
+  </div>
+
+  <div class="site-footer__bottom">
+    <span>© 2026 TRUECOAT</span>
+    <a href="index.html">Ana sayfa</a>
+  </div>
+
+</footer>
 
   <script src="js/app.js" defer></script>
 </body>
