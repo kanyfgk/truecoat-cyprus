@@ -2,6 +2,13 @@
 
 document.documentElement.classList.add("is-enabled");
 
+const TRUECOAT_CONTACT = Object.freeze({
+  phoneDisplay: "+90 548 849 08 37",
+  phoneHref: "tel:+905488490837",
+  email: "truecoatcyprus@gmail.com",
+  emailHref: "mailto:truecoatcyprus@gmail.com"
+});
+
 const TRUECOAT_IMAGE_ROOT = "https://images.unsplash.com/";
 
 const TRUECOAT_IMAGES = {
@@ -42,7 +49,7 @@ const TRUECOAT_IMAGES = {
 
 const PROJECT_DETAILS = {
   mediterranean: {
-    name: "Akdeniz Sessizliği",
+    name: "Akdeniz Sakinliği",
     label: "Proje 01",
     style: "Akdeniz Modern",
     room: "24–32 m² oturma odası",
@@ -52,7 +59,7 @@ const PROJECT_DETAILS = {
   },
 
   "mediterranean-silence": {
-    name: "Akdeniz Sessizliği",
+    name: "Akdeniz Sakinliği",
     label: "Proje 01",
     style: "Akdeniz Modern",
     room: "24–32 m² oturma odası",
@@ -234,6 +241,34 @@ const PRODUCT_LIBRARY = {
   }
 };
 
+function initTruecoatContactDetails() {
+  document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+    link.href = TRUECOAT_CONTACT.phoneHref;
+    link.textContent = TRUECOAT_CONTACT.phoneDisplay;
+  });
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+    link.href = TRUECOAT_CONTACT.emailHref;
+    link.textContent = TRUECOAT_CONTACT.email;
+  });
+
+  document.querySelectorAll("[data-truecoat-phone]").forEach((element) => {
+    element.textContent = TRUECOAT_CONTACT.phoneDisplay;
+
+    if (element.tagName === "A") {
+      element.href = TRUECOAT_CONTACT.phoneHref;
+    }
+  });
+
+  document.querySelectorAll("[data-truecoat-email]").forEach((element) => {
+    element.textContent = TRUECOAT_CONTACT.email;
+
+    if (element.tagName === "A") {
+      element.href = TRUECOAT_CONTACT.emailHref;
+    }
+  });
+}
+
 function getFocusableElements(container) {
   if (!container) {
     return [];
@@ -411,7 +446,12 @@ function initCurrentNavigation() {
     .forEach((link) => {
       const href = link.getAttribute("href");
 
-      if (!href || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+      if (
+        !href ||
+        href.startsWith("http") ||
+        href.startsWith("mailto:") ||
+        href.startsWith("tel:")
+      ) {
         return;
       }
 
@@ -542,7 +582,10 @@ function initNativeProductRails() {
   document.querySelectorAll("[data-rail-next]").forEach((button) => {
     button.addEventListener("click", () => {
       const selector = button.dataset.railNext;
-      const rail = selector ? document.querySelector(selector) : button.closest("section")?.querySelector("[data-product-rail]");
+
+      const rail = selector
+        ? document.querySelector(selector)
+        : button.closest("section")?.querySelector("[data-product-rail]");
 
       if (!rail) {
         return;
@@ -566,7 +609,10 @@ function initNativeProductRails() {
   document.querySelectorAll("[data-rail-previous]").forEach((button) => {
     button.addEventListener("click", () => {
       const selector = button.dataset.railPrevious;
-      const rail = selector ? document.querySelector(selector) : button.closest("section")?.querySelector("[data-product-rail]");
+
+      const rail = selector
+        ? document.querySelector(selector)
+        : button.closest("section")?.querySelector("[data-product-rail]");
 
       if (!rail) {
         return;
@@ -620,6 +666,14 @@ function findProduct(productKey, trigger) {
 }
 
 function initProductDrawer() {
+  /*
+    Proje detay sayfalarının ürün drawer sistemi project-detail.js
+    tarafından yönetilir. app.js burada ikinci kez müdahale etmez.
+  */
+  if (document.body.classList.contains("page-project-detail")) {
+    return;
+  }
+
   const drawer = document.querySelector("[data-product-drawer]");
   const backdrop = document.querySelector("[data-drawer-backdrop]");
 
@@ -734,21 +788,23 @@ function initProductDrawer() {
     }
   }
 
-  document.querySelectorAll("[data-product], [data-product-open]").forEach((trigger) => {
-    trigger.addEventListener("click", (event) => {
-      const productKey =
-        trigger.dataset.product || trigger.dataset.productOpen;
+  document
+    .querySelectorAll("[data-product], [data-product-open]")
+    .forEach((trigger) => {
+      trigger.addEventListener("click", (event) => {
+        const productKey =
+          trigger.dataset.product || trigger.dataset.productOpen;
 
-      const product = findProduct(productKey, trigger);
+        const product = findProduct(productKey, trigger);
 
-      if (!product) {
-        return;
-      }
+        if (!product) {
+          return;
+        }
 
-      event.preventDefault();
-      openDrawer(product, trigger);
+        event.preventDefault();
+        openDrawer(product, trigger);
+      });
     });
-  });
 
   closeButtons.forEach((button) => {
     button.addEventListener("click", closeDrawer);
@@ -787,6 +843,14 @@ function initProductDrawer() {
 }
 
 function initHotspots() {
+  /*
+    Proje detay sayfalarında hotspot → ürün eşlemesini yalnızca
+    project-detail.js yönetir.
+  */
+  if (document.body.classList.contains("page-project-detail")) {
+    return;
+  }
+
   const hotspots = document.querySelectorAll(
     "[data-hotspot], .project-hotspot"
   );
@@ -802,8 +866,13 @@ function initHotspots() {
         return;
       }
 
+      const escapedProductKey =
+        window.CSS && typeof window.CSS.escape === "function"
+          ? CSS.escape(productKey)
+          : productKey.replace(/["\\]/g, "\\$&");
+
       const matchingTrigger = document.querySelector(
-        `[data-product="${CSS.escape(productKey)}"], [data-product-open="${CSS.escape(productKey)}"]`
+        `[data-product="${escapedProductKey}"], [data-product-open="${escapedProductKey}"]`
       );
 
       if (matchingTrigger && matchingTrigger !== hotspot) {
@@ -816,6 +885,7 @@ function initHotspots() {
 function initProductListToggle() {
   document.querySelectorAll("[data-list-toggle]").forEach((button) => {
     const targetSelector = button.dataset.listTarget;
+
     const target = targetSelector
       ? document.querySelector(targetSelector)
       : document.querySelector("[data-product-list]");
@@ -913,38 +983,52 @@ function initRequestProjectContext() {
     serviceInput.value = "Profesyonel Boyama";
   }
 
-  document.querySelectorAll("[data-request-project-name]").forEach((element) => {
-    element.textContent = project.name;
-  });
+  document
+    .querySelectorAll("[data-request-project-name]")
+    .forEach((element) => {
+      element.textContent = project.name;
+    });
 
-  document.querySelectorAll("[data-request-project-label]").forEach((element) => {
-    element.textContent = project.label;
-  });
+  document
+    .querySelectorAll("[data-request-project-label]")
+    .forEach((element) => {
+      element.textContent = project.label;
+    });
 
-  document.querySelectorAll("[data-request-project-style]").forEach((element) => {
-    element.textContent = project.style;
-  });
+  document
+    .querySelectorAll("[data-request-project-style]")
+    .forEach((element) => {
+      element.textContent = project.style;
+    });
 
-  document.querySelectorAll("[data-request-project-room]").forEach((element) => {
-    element.textContent = project.room;
-  });
+  document
+    .querySelectorAll("[data-request-project-room]")
+    .forEach((element) => {
+      element.textContent = project.room;
+    });
 
-  document.querySelectorAll("[data-request-project-duration]").forEach((element) => {
-    element.textContent = project.duration;
-  });
+  document
+    .querySelectorAll("[data-request-project-duration]")
+    .forEach((element) => {
+      element.textContent = project.duration;
+    });
 
-  document.querySelectorAll("[data-request-project-image]").forEach((element) => {
-    if (element.tagName === "IMG") {
-      element.src = project.image;
-      element.alt = `${project.name} proje görünümü`;
-    } else {
-      element.style.backgroundImage = `url("${project.image}")`;
-    }
-  });
+  document
+    .querySelectorAll("[data-request-project-image]")
+    .forEach((element) => {
+      if (element.tagName === "IMG") {
+        element.src = project.image;
+        element.alt = `${project.name} proje görünümü`;
+      } else {
+        element.style.backgroundImage = `url("${project.image}")`;
+      }
+    });
 
-  document.querySelectorAll("[data-request-project-link]").forEach((element) => {
-    element.href = project.page;
-  });
+  document
+    .querySelectorAll("[data-request-project-link]")
+    .forEach((element) => {
+      element.href = project.page;
+    });
 }
 
 function initPhotoUpload() {
@@ -954,6 +1038,7 @@ function initPhotoUpload() {
 
   inputs.forEach((input) => {
     const previewSelector = input.dataset.previewTarget;
+
     const previewContainer = previewSelector
       ? document.querySelector(previewSelector)
       : input.closest("form")?.querySelector("[data-photo-preview]");
@@ -1025,10 +1110,13 @@ function initPhotoUpload() {
 
     input.addEventListener("change", () => {
       const incomingFiles = Array.from(input.files || []);
+
       const validFiles = incomingFiles.filter((file) => {
-        const isValidType = ["image/jpeg", "image/png", "image/webp"].includes(
-          file.type
-        );
+        const isValidType = [
+          "image/jpeg",
+          "image/png",
+          "image/webp"
+        ].includes(file.type);
 
         const isValidSize = file.size <= 10 * 1024 * 1024;
 
@@ -1040,7 +1128,10 @@ function initPhotoUpload() {
       updateInputFiles();
       renderPreviews();
 
-      if (incomingFiles.length !== validFiles.length && statusElement) {
+      if (
+        incomingFiles.length !== validFiles.length &&
+        statusElement
+      ) {
         statusElement.textContent =
           "Bazı dosyalar desteklenmedi. JPG, PNG veya WEBP yükleyin; dosya başına en fazla 10 MB.";
       }
@@ -1111,7 +1202,7 @@ function createMailtoSubmission(form) {
   const body = encodeURIComponent(lines.join("\n"));
 
   window.location.href =
-    `mailto:truecoatcyprus@gmail.com?subject=${subject}&body=${body}`;
+    `${TRUECOAT_CONTACT.emailHref}?subject=${subject}&body=${body}`;
 }
 
 function initRequestForms() {
@@ -1121,6 +1212,7 @@ function initRequestForms() {
 
   forms.forEach((form) => {
     const submitButton = form.querySelector('[type="submit"]');
+
     const statusElement = form.querySelector(
       "[data-form-status], .form-status"
     );
@@ -1231,6 +1323,7 @@ function removeInvalidEmptyLinks() {
 }
 
 function init() {
+  initTruecoatContactDetails();
   removeInvalidEmptyLinks();
   initNavigation();
   initHeader();
