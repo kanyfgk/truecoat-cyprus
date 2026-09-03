@@ -248,10 +248,10 @@ h3 {
 }
 
 .text-link {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding-bottom: 6px;
+  padding-bottom: 7px;
   border-bottom: 1px solid currentColor;
   font-size: 13px;
   font-weight: 700;
@@ -259,11 +259,11 @@ h3 {
   text-transform: uppercase;
   transition:
     color var(--transition),
-    gap var(--transition);
+    transform var(--transition);
 }
 
 .text-link:hover {
-  gap: 18px;
+  transform: translateX(4px);
   color: var(--accent);
 }
 
@@ -327,7 +327,9 @@ h3 {
 
 .site-header__inner {
   display: flex;
+  width: min(100% - (var(--page-gutter) * 2), var(--container));
   height: 100%;
+  margin-inline: auto;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
@@ -1833,7 +1835,6 @@ h3 {
 .areas-services__grid article > a {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   margin-top: 35px;
   padding-bottom: 5px;
   border-bottom: 1px solid currentColor;
@@ -1841,6 +1842,15 @@ h3 {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.area-card > a:hover,
+.areas-services__grid article > a:hover {
+  transform: translateX(4px);
+  color: var(--accent-light);
 }
 
 .areas-map__content h2 {
