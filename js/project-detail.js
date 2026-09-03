@@ -9,7 +9,7 @@
 
   /* =========================================================
      CORE REFERENCES
-     ========================================================= */
+  ========================================================= */
 
   const drawer = document.querySelector("[data-product-drawer]");
   const shareButton = document.querySelector("[data-share-project]");
@@ -34,7 +34,7 @@
 
   /* =========================================================
      HELPERS
-     ========================================================= */
+  ========================================================= */
 
   function cleanText(value) {
     return String(value || "")
@@ -104,8 +104,7 @@
 
   /* =========================================================
      PRODUCT DATA
-     Supports both project card structures
-     ========================================================= */
+  ========================================================= */
 
   function getProductData(card) {
     if (!card) {
@@ -192,9 +191,11 @@
         "::" +
         card.id,
 
-      project: getProjectName(),
+      project:
+        getProjectName(),
 
-      projectSlug: getProjectSlug(),
+      projectSlug:
+        getProjectSlug(),
 
       image:
         productImage ||
@@ -241,8 +242,7 @@
 
   /* =========================================================
      PRODUCT DRAWER
-     Supports current HTML + previous drawer structure
-     ========================================================= */
+  ========================================================= */
 
   function setDrawerContent(product) {
     if (!drawer || !product) {
@@ -415,6 +415,9 @@
     const closeButton =
       drawer.querySelector(
         ".product-drawer__close"
+      ) ||
+      drawer.querySelector(
+        "[data-product-close]"
       );
 
     window.setTimeout(function () {
@@ -480,7 +483,7 @@
 
   /* =========================================================
      CART STORAGE
-     ========================================================= */
+  ========================================================= */
 
   function getCart() {
     try {
@@ -628,7 +631,7 @@
 
   /* =========================================================
      PRICE / CURRENCY
-     ========================================================= */
+  ========================================================= */
 
   function getCurrencyFromPrice(price) {
     const text =
@@ -846,8 +849,8 @@
   }
 
   /* =========================================================
-     ADD TO CART BUTTON STATE
-     ========================================================= */
+     ADD TO CART BUTTON
+  ========================================================= */
 
   function updateAddToCartButton() {
     if (!drawer) {
@@ -896,7 +899,7 @@
 
   /* =========================================================
      CART UI
-     ========================================================= */
+  ========================================================= */
 
   function createCartInterface() {
     if (
@@ -1048,7 +1051,7 @@
             type="button"
             data-cart-design
           >
-            Seçilen ürünleri alana uygula
+            Seçilen ürünlerle keşif talebi oluştur
             <span aria-hidden="true">→</span>
           </button>
         </div>
@@ -1284,8 +1287,45 @@
   }
 
   /* =========================================================
+     CART → REQUEST
+  ========================================================= */
+
+  function goToRequestWithCart() {
+    const cart = getCart();
+
+    if (!cart.length) {
+      return;
+    }
+
+    const projectSlug =
+      cart[0]?.projectSlug ||
+      getProjectSlug();
+
+    const target =
+      new URL(
+        "request-atmosphere.html",
+        window.location.href
+      );
+
+    target.searchParams.set(
+      "project",
+      projectSlug
+    );
+
+    target.searchParams.set(
+      "source",
+      "cart"
+    );
+
+    window.location.href =
+      `${target.pathname
+        .split("/")
+        .pop()}${target.search}`;
+  }
+
+  /* =========================================================
      CLICK EVENTS
-     ========================================================= */
+  ========================================================= */
 
   document.addEventListener(
     "click",
@@ -1368,18 +1408,12 @@
         );
 
       if (designButton) {
-  event.preventDefault();
+        event.preventDefault();
 
-  const cart = getCart();
+        goToRequestWithCart();
 
-  if (!cart.length) {
-    return;
-  }
-
-  window.location.href = "room-planner.html";
-
-  return;
-}
+        return;
+      }
 
       const productTrigger =
         event.target.closest(
@@ -1411,7 +1445,7 @@
 
   /* =========================================================
      KEYBOARD
-     ========================================================= */
+  ========================================================= */
 
   document.addEventListener(
     "keydown",
@@ -1505,7 +1539,7 @@
 
   /* =========================================================
      SHARE
-     ========================================================= */
+  ========================================================= */
 
   function copyShareLink(button) {
     const pageUrl =
@@ -1642,7 +1676,7 @@
 
   /* =========================================================
      IMAGE FALLBACKS
-     ========================================================= */
+  ========================================================= */
 
   document
     .querySelectorAll(
@@ -1701,7 +1735,7 @@
 
   /* =========================================================
      PRODUCT RAIL
-     ========================================================= */
+  ========================================================= */
 
   if (productRail) {
     productRail.setAttribute(
@@ -1747,7 +1781,7 @@
 
   /* =========================================================
      URL PRODUCT OPEN
-     ========================================================= */
+  ========================================================= */
 
   const urlParameters =
     new URLSearchParams(
@@ -1776,7 +1810,7 @@
 
   /* =========================================================
      INITIALISE
-     ========================================================= */
+  ========================================================= */
 
   createCartInterface();
 
