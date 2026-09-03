@@ -958,3 +958,51 @@
     font-size: 9px;
   }
 }
+
+/* =========================================================
+   TRUECOAT — REQUEST PAGE FINAL CLEANUP
+   ========================================================= */
+
+.request-project-card__link {
+  display: inline-flex;
+  align-items: center;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.request-project-card__link:hover {
+  color: #8b7058;
+  transform: translateX(4px);
+}
+
+
+/* Upload alanındaki boş ikon kabını gizle.
+   Yön oku / emoji kullanılmaz. */
+
+.request-upload__icon:empty {
+  display: none;
+}
+
+
+/* Touch cihazlarda hover hareketinin takılı kalmasını önle. */
+
+@media (hover: none) {
+  .request-atmosphere__back:hover,
+  .request-project-card__link:hover,
+  .request-form__submit:hover {
+    transform: none;
+  }
+}
+
+
+/* Accessibility */
+
+.request-project-card__link:focus-visible,
+.request-atmosphere__back:focus-visible,
+.request-form__submit:focus-visible,
+.request-upload__area:focus-within {
+  outline: 2px solid #8b7058;
+  outline-offset: 4px;
+}
