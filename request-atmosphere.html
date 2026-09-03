@@ -33,13 +33,26 @@
 </head>
 
 <body class="page page-request-atmosphere">
-  <a class="skip-link" href="#main-content">İçeriğe geç</a>
+
+  <a class="skip-link" href="#main-content">
+    İçeriğe geç
+  </a>
 
   <header class="site-header" data-header>
     <div class="site-header__inner">
-      <a class="brand" href="index.html" aria-label="TRUECOAT ana sayfa">
-        <span class="brand__wordmark">TRUECOAT</span>
-        <span class="brand__descriptor">Boyama ve İç Mekânlar</span>
+
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="TRUECOAT ana sayfa"
+      >
+        <span class="brand__wordmark">
+          TRUECOAT
+        </span>
+
+        <span class="brand__descriptor">
+          BOYAMA VE İÇ MEKÂNLAR
+        </span>
       </a>
 
       <button
@@ -60,101 +73,168 @@
         aria-label="Ana navigasyon"
         data-navigation
       >
-        <a href="painting.html">Boyama</a>
-        <a href="difference.html">Farkımız</a>
-        <a href="atmospheres.html">Atmosferler</a>
-        <a href="projects.html">Projeler</a>
-        <a href="service-areas.html">Hizmet Alanları</a>
-        <a class="navigation-cta" href="request-atmosphere.html">
+        <a href="painting.html">
+          Boyama
+        </a>
+
+        <a href="difference.html">
+          Farkımız
+        </a>
+
+        <a href="atmospheres.html">
+          Atmosferler
+        </a>
+
+        <a href="projects.html">
+          Projeler
+        </a>
+
+        <a href="service-areas.html">
+          Hizmet Alanları
+        </a>
+
+        <a
+          class="navigation-cta"
+          href="request-atmosphere.html"
+          aria-current="page"
+        >
           Ücretsiz Keşif
         </a>
       </nav>
+
     </div>
   </header>
 
   <main id="main-content">
+
     <section class="request-atmosphere">
+
       <div class="request-atmosphere__intro">
+
         <a
           class="request-atmosphere__back"
           href="project-mediterranean.html"
+          data-request-project-link
         >
-          ← Akdeniz Sakinliği projesine dön
+          ← Seçilen projeye dön
         </a>
 
-        <p class="eyebrow">Kişiye özel atmosfer uygulaması</p>
+        <p class="eyebrow">
+          Kişiye özel atmosfer uygulaması
+        </p>
 
-        <h1>Bu atmosferi evimde istiyorum.</h1>
+        <h1>
+          Bu atmosferi evimde istiyorum.
+        </h1>
 
         <p class="request-atmosphere__lead">
           Beğendiğiniz atmosferi evinizin ölçülerine, ışığına,
           mevcut mobilyalarına ve bütçenize göre yeniden yorumluyoruz.
         </p>
+
       </div>
 
       <div class="request-atmosphere__layout">
+
+        <!-- SELECTED PROJECT -->
+
         <section
           class="request-project-card"
           aria-labelledby="selected-project-title"
         >
+
           <div class="request-project-card__image">
+
             <img
               src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88"
-              alt="Sıcak doğal tonlarla tasarlanmış Akdeniz atmosferli oturma odası"
+              alt="TRUECOAT seçilen proje görünümü"
+              data-request-project-image
             >
+
           </div>
 
           <div class="request-project-card__content">
-            <div>
-              <p class="eyebrow">Seçilen atmosfer</p>
 
-              <h2 id="selected-project-title">
+            <div>
+
+              <p class="eyebrow">
+                Seçilen atmosfer
+              </p>
+
+              <h2
+                id="selected-project-title"
+                data-request-project-name
+              >
                 Akdeniz Sakinliği
               </h2>
 
               <p>
-                Doğal malzemeler, sıcak tonlar ve zamansız tasarımla
-                dengeli bir yaşam alanı.
+                Seçtiğiniz atmosfer, evinizin mimarisi ve mevcut
+                yaşam düzeni dikkate alınarak size özel uyarlanır.
               </p>
+
             </div>
 
             <dl class="request-project-card__facts">
+
               <div>
                 <dt>Önerilen alan</dt>
-                <dd>24–32 m²</dd>
+
+                <dd data-request-project-room>
+                  24–32 m² oturma odası
+                </dd>
               </div>
 
               <div>
                 <dt>Tahmini uygulama</dt>
-                <dd>5–7 gün</dd>
+
+                <dd data-request-project-duration>
+                  5–7 gün
+                </dd>
               </div>
 
               <div>
-                <dt>Ürün sayısı</dt>
-                <dd>8 parça</dd>
+                <dt>Proje</dt>
+
+                <dd data-request-project-label>
+                  Proje 01
+                </dd>
               </div>
 
               <div>
-                <dt>Proje türü</dt>
-                <dd>Salon</dd>
+                <dt>Stil</dt>
+
+                <dd data-request-project-style>
+                  Akdeniz Modern
+                </dd>
               </div>
+
             </dl>
 
             <a
               class="request-project-card__link"
               href="project-mediterranean.html"
+              data-request-project-link
             >
               Proje detaylarını görüntüle →
             </a>
+
           </div>
+
         </section>
+
+        <!-- FORM -->
 
         <section
           class="request-form-card"
           aria-labelledby="request-form-title"
         >
+
           <div class="request-form-card__header">
-            <p class="eyebrow">Ücretsiz keşif talebi</p>
+
+            <p class="eyebrow">
+              Ücretsiz keşif talebi
+            </p>
 
             <h2 id="request-form-title">
               Evinizi tanıyalım.
@@ -164,22 +244,55 @@
               Bilgilerinizi bırakın. Ekibimiz alanınızı değerlendirip
               sizinle iletişime geçsin.
             </p>
+
           </div>
 
           <form
             class="request-form"
             id="atmosphere-request-form"
+            action="https://formsubmit.co/ajax/truecoatcyprus@gmail.com"
+            method="POST"
+            enctype="multipart/form-data"
             data-request-form
             novalidate
           >
+
+            <!-- FORMSUBMIT -->
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="Yeni TRUECOAT Ücretsiz Keşif Talebi"
+            >
+
+            <input
+              type="hidden"
+              name="_template"
+              value="table"
+            >
+
+            <input
+              type="text"
+              name="_honey"
+              tabindex="-1"
+              autocomplete="off"
+              style="display:none"
+              aria-hidden="true"
+            >
+
+            <!-- PROJECT -->
+
             <input
               type="hidden"
               name="project"
               value="Akdeniz Sakinliği"
+              data-request-project-input
             >
 
             <div class="request-form__grid">
+
               <div class="form-field">
+
                 <label for="full-name">
                   Ad Soyad
                   <span aria-hidden="true">*</span>
@@ -194,12 +307,17 @@
                   required
                 >
 
-                <small class="form-field__error" data-error-for="fullName">
+                <small
+                  class="form-field__error"
+                  data-error-for="fullName"
+                >
                   Lütfen adınızı ve soyadınızı girin.
                 </small>
+
               </div>
 
               <div class="form-field">
+
                 <label for="phone">
                   Telefon
                   <span aria-hidden="true">*</span>
@@ -215,12 +333,17 @@
                   required
                 >
 
-                <small class="form-field__error" data-error-for="phone">
+                <small
+                  class="form-field__error"
+                  data-error-for="phone"
+                >
                   Lütfen geçerli bir telefon numarası girin.
                 </small>
+
               </div>
 
               <div class="form-field">
+
                 <label for="email">
                   E-posta
                 </label>
@@ -234,12 +357,17 @@
                   placeholder="ornek@email.com"
                 >
 
-                <small class="form-field__error" data-error-for="email">
+                <small
+                  class="form-field__error"
+                  data-error-for="email"
+                >
                   Lütfen geçerli bir e-posta adresi girin.
                 </small>
+
               </div>
 
               <div class="form-field">
+
                 <label for="location">
                   Bölge
                   <span aria-hidden="true">*</span>
@@ -250,24 +378,52 @@
                   name="location"
                   required
                 >
-                  <option value="">Bölgenizi seçin</option>
-                  <option value="Girne">Girne</option>
-                  <option value="Lefkoşa">Lefkoşa</option>
-                  <option value="Gazimağusa">Gazimağusa</option>
-                  <option value="İskele">İskele</option>
-                  <option value="Güzelyurt">Güzelyurt</option>
-                  <option value="Lefke">Lefke</option>
-                  <option value="Diğer">Diğer</option>
+                  <option value="">
+                    Bölgenizi seçin
+                  </option>
+
+                  <option value="Girne">
+                    Girne
+                  </option>
+
+                  <option value="Lefkoşa">
+                    Lefkoşa
+                  </option>
+
+                  <option value="Gazimağusa">
+                    Gazimağusa
+                  </option>
+
+                  <option value="İskele">
+                    İskele
+                  </option>
+
+                  <option value="Güzelyurt">
+                    Güzelyurt
+                  </option>
+
+                  <option value="Lefke">
+                    Lefke
+                  </option>
+
+                  <option value="Diğer">
+                    Diğer
+                  </option>
                 </select>
 
-                <small class="form-field__error" data-error-for="location">
+                <small
+                  class="form-field__error"
+                  data-error-for="location"
+                >
                   Lütfen hizmet bölgesini seçin.
                 </small>
+
               </div>
 
               <div class="form-field">
+
                 <label for="room-type">
-                  Oda türü
+                  Proje alanı
                   <span aria-hidden="true">*</span>
                 </label>
 
@@ -276,41 +432,121 @@
                   name="roomType"
                   required
                 >
-                  <option value="">Oda türünü seçin</option>
-                  <option value="Salon">Salon</option>
-                  <option value="Yatak odası">Yatak odası</option>
-                  <option value="Yemek alanı">Yemek alanı</option>
-                  <option value="Çalışma odası">Çalışma odası</option>
-                  <option value="Tüm ev">Tüm ev</option>
-                  <option value="Diğer">Diğer</option>
+                  <option value="">
+                    Alanı seçin
+                  </option>
+
+                  <option value="Salon">
+                    Salon
+                  </option>
+
+                  <option value="Yatak odası">
+                    Yatak odası
+                  </option>
+
+                  <option value="Yemek alanı">
+                    Yemek alanı
+                  </option>
+
+                  <option value="Çalışma odası">
+                    Çalışma odası
+                  </option>
+
+                  <option value="Mutfak">
+                    Mutfak
+                  </option>
+
+                  <option value="Birden fazla oda">
+                    Birden fazla oda
+                  </option>
+
+                  <option value="Tüm ev">
+                    Tüm ev
+                  </option>
+
+                  <option value="Diğer">
+                    Diğer
+                  </option>
                 </select>
 
-                <small class="form-field__error" data-error-for="roomType">
-                  Lütfen oda türünü seçin.
+                <small
+                  class="form-field__error"
+                  data-error-for="roomType"
+                >
+                  Lütfen proje alanını seçin.
                 </small>
+
               </div>
 
               <div class="form-field">
+
                 <label for="room-size">
                   Yaklaşık alan
                 </label>
 
                 <div class="form-field__unit">
+
                   <input
                     id="room-size"
                     name="roomSize"
                     type="number"
                     inputmode="decimal"
                     min="1"
-                    max="1000"
+                    max="5000"
                     placeholder="Örn. 28"
                   >
 
-                  <span>m²</span>
+                  <span>
+                    m²
+                  </span>
+
                 </div>
+
               </div>
 
               <div class="form-field form-field--full">
+
+                <label for="service-type">
+                  İlgilendiğiniz hizmet
+                </label>
+
+                <select
+                  id="service-type"
+                  name="serviceType"
+                >
+                  <option value="">
+                    Hizmeti seçin
+                  </option>
+
+                  <option value="Boyama">
+                    Boyama
+                  </option>
+
+                  <option value="Boya ve dekorasyon">
+                    Boya ve dekorasyon
+                  </option>
+
+                  <option value="İç mekân tasarımı">
+                    İç mekân tasarımı
+                  </option>
+
+                  <option value="Komple atmosfer uygulaması">
+                    Komple atmosfer uygulaması
+                  </option>
+
+                  <option value="Tüm ev tasarımı">
+                    Tüm ev tasarımı
+                  </option>
+
+                  <option value="Henüz karar vermedim">
+                    Henüz karar vermedim
+                  </option>
+                </select>
+
+              </div>
+
+              <div class="form-field form-field--full">
+
                 <label for="budget">
                   Bütçe aralığı
                 </label>
@@ -319,23 +555,31 @@
                   id="budget"
                   name="budget"
                 >
-                  <option value="">Bütçe aralığını seçin</option>
+                  <option value="">
+                    Bütçe aralığını seçin
+                  </option>
+
                   <option value="Başlangıç">
                     Başlangıç seviye
                   </option>
+
                   <option value="Dengeli">
                     Dengeli seçim
                   </option>
+
                   <option value="Premium">
                     Premium uygulama
                   </option>
+
                   <option value="Keşif sonrası">
                     Keşif sonrasında belirlemek istiyorum
                   </option>
                 </select>
+
               </div>
 
               <div class="form-field form-field--full">
+
                 <label for="message">
                   Eviniz ve beklentiniz
                 </label>
@@ -346,43 +590,65 @@
                   rows="5"
                   placeholder="Mevcut alanınızı, değiştirmek istediğiniz bölümleri ve beklentilerinizi kısaca anlatın."
                 ></textarea>
+
               </div>
+
             </div>
 
+            <!-- PHOTO UPLOAD -->
+
             <div class="request-upload">
+
               <div class="request-upload__heading">
+
                 <div>
-                  <h3>Evinizin fotoğraflarını ekleyin</h3>
+
+                  <h3>
+                    Evinizin fotoğraflarını ekleyin
+                  </h3>
 
                   <p>
-                    Alanı farklı açılardan gösteren en fazla dört fotoğraf
-                    ekleyebilirsiniz.
+                    Alanı farklı açılardan gösteren en fazla dört
+                    fotoğraf ekleyebilirsiniz.
                   </p>
+
                 </div>
 
-                <span>İsteğe bağlı</span>
+                <span>
+                  İsteğe bağlı
+                </span>
+
               </div>
 
               <label
                 class="request-upload__area"
                 for="room-photos"
               >
-                <span class="request-upload__icon" aria-hidden="true">
+
+                <span
+                  class="request-upload__icon"
+                  aria-hidden="true"
+                >
                   ↑
                 </span>
 
-                <strong>Fotoğraf seçin</strong>
+                <strong>
+                  Fotoğraf seçin
+                </strong>
 
-                <small>JPG veya PNG · En fazla 10 MB</small>
+                <small>
+                  JPG, PNG veya WEBP · Toplam en fazla 10 MB
+                </small>
 
                 <input
                   id="room-photos"
-                  name="roomPhotos"
+                  name="attachment"
                   type="file"
                   accept="image/jpeg,image/png,image/webp"
                   multiple
                   data-photo-input
                 >
+
               </label>
 
               <div
@@ -390,12 +656,25 @@
                 data-photo-preview
                 aria-live="polite"
               ></div>
+
+              <p
+                class="request-upload__status"
+                data-photo-status
+                aria-live="polite"
+              >
+                Henüz fotoğraf seçilmedi
+              </p>
+
             </div>
 
+            <!-- CONSENT -->
+
             <label class="request-consent">
+
               <input
                 type="checkbox"
                 name="consent"
+                value="Kabul edildi"
                 required
               >
 
@@ -403,9 +682,13 @@
                 Talebimle ilgili benimle iletişime geçilmesini ve
                 bilgilerimin bu amaçla kullanılmasını kabul ediyorum.
               </span>
+
             </label>
 
-            <small class="form-field__error" data-error-for="consent">
+            <small
+              class="form-field__error"
+              data-error-for="consent"
+            >
               Devam etmek için iletişim iznini onaylamalısınız.
             </small>
 
@@ -418,8 +701,9 @@
             </button>
 
             <p class="request-form__note">
-              Talebiniz sonrasında ekibimiz sizinle iletişime geçerek
-              uygun keşif zamanını belirler.
+              Talebiniz TRUECOAT ekibine doğrudan iletilir.
+              Ekibimiz sizinle iletişime geçerek uygun keşif
+              zamanını belirler.
             </p>
 
             <div
@@ -429,176 +713,344 @@
               aria-live="polite"
               hidden
             ></div>
+
           </form>
+
         </section>
 
-        <aside class="request-benefits">
-          <p class="eyebrow">TRUECOAT yaklaşımı</p>
+        <!-- BENEFITS -->
 
-          <h2>Size ne sunuyoruz?</h2>
+        <aside class="request-benefits">
+
+          <p class="eyebrow">
+            TRUECOAT yaklaşımı
+          </p>
+
+          <h2>
+            Size ne sunuyoruz?
+          </h2>
 
           <div class="request-benefits__list">
+
             <article>
-              <span aria-hidden="true">01</span>
+
+              <span aria-hidden="true">
+                01
+              </span>
 
               <div>
-                <h3>Evinize özel uyarlama</h3>
+
+                <h3>
+                  Evinize özel uyarlama
+                </h3>
 
                 <p>
                   Atmosferi evinizin ölçülerine, ışığına ve mevcut
                   mimarisine göre yeniden tasarlarız.
                 </p>
+
               </div>
+
             </article>
 
             <article>
-              <span aria-hidden="true">02</span>
+
+              <span aria-hidden="true">
+                02
+              </span>
 
               <div>
-                <h3>Boya, dekor ve uygulama</h3>
+
+                <h3>
+                  Boya, dekor ve uygulama
+                </h3>
 
                 <p>
                   Boya uygulaması, ürün seçimi, teslimat ve montaj
                   süreçlerini tek yapı altında yönetiriz.
                 </p>
+
               </div>
+
             </article>
 
             <article>
-              <span aria-hidden="true">03</span>
+
+              <span aria-hidden="true">
+                03
+              </span>
 
               <div>
-                <h3>Ücretsiz keşif</h3>
+
+                <h3>
+                  Ücretsiz keşif
+                </h3>
 
                 <p>
-                  Uzman ekibimiz alanı yerinde değerlendirerek uygulanabilir
-                  bir plan oluşturur.
+                  Alanı değerlendirerek uygulanabilir ve net
+                  bir proje planı oluştururuz.
                 </p>
+
               </div>
+
             </article>
 
             <article>
-              <span aria-hidden="true">04</span>
+
+              <span aria-hidden="true">
+                04
+              </span>
 
               <div>
-                <h3>Şeffaf teklif</h3>
+
+                <h3>
+                  Şeffaf teklif
+                </h3>
 
                 <p>
-                  Ürün, boya, işçilik ve teslimat kalemlerini açık biçimde
-                  gösteren teklif sunarız.
+                  Ürün, boya, işçilik ve teslimat kalemlerini açık
+                  biçimde gösteren teklif sunarız.
                 </p>
+
               </div>
+
             </article>
+
           </div>
+
         </aside>
+
       </div>
+
     </section>
 
+    <!-- PROCESS -->
+
     <section class="request-process">
+
       <div class="request-process__inner">
+
         <div class="request-process__header">
-          <p class="eyebrow">Süreç</p>
-          <h2>Nasıl çalışıyoruz?</h2>
+
+          <p class="eyebrow">
+            Süreç
+          </p>
+
+          <h2>
+            Nasıl çalışıyoruz?
+          </h2>
+
         </div>
 
         <ol class="request-process__steps">
+
           <li>
-            <span>01</span>
+
+            <span>
+              01
+            </span>
 
             <div>
-              <h3>Bilgilerinizi gönderin</h3>
-              <p>Formu doldurun ve mümkünse alanın fotoğraflarını ekleyin.</p>
+
+              <h3>
+                Bilgilerinizi gönderin
+              </h3>
+
+              <p>
+                Formu doldurun ve mümkünse alanın fotoğraflarını ekleyin.
+              </p>
+
             </div>
+
           </li>
 
           <li>
-            <span>02</span>
+
+            <span>
+              02
+            </span>
 
             <div>
-              <h3>Keşif planlayalım</h3>
-              <p>Ekibimiz sizinle iletişime geçerek ücretsiz keşfi planlar.</p>
+
+              <h3>
+                Keşif planlayalım
+              </h3>
+
+              <p>
+                Ekibimiz sizinle iletişime geçerek ücretsiz keşfi planlar.
+              </p>
+
             </div>
+
           </li>
 
           <li>
-            <span>03</span>
+
+            <span>
+              03
+            </span>
 
             <div>
-              <h3>Projenizi oluşturalım</h3>
-              <p>Alanınıza özel boya, ürün ve uygulama planını hazırlayalım.</p>
+
+              <h3>
+                Projenizi oluşturalım
+              </h3>
+
+              <p>
+                Alanınıza özel boya, ürün ve uygulama planını hazırlayalım.
+              </p>
+
             </div>
+
           </li>
 
           <li>
-            <span>04</span>
+
+            <span>
+              04
+            </span>
 
             <div>
-              <h3>Atmosferi uygulayalım</h3>
-              <p>Onayınızın ardından uygulama ve teslimat süreci başlasın.</p>
+
+              <h3>
+                Atmosferi uygulayalım
+              </h3>
+
+              <p>
+                Onayınızın ardından uygulama ve teslimat süreci başlasın.
+              </p>
+
             </div>
+
           </li>
+
         </ol>
+
       </div>
+
     </section>
+
   </main>
+
+  <!-- FOOTER -->
 
   <footer class="site-footer">
 
-  <div class="site-footer__top">
+    <div class="site-footer__top">
 
-    <div class="site-footer__brand">
-      <a
-        class="brand brand--footer"
-        href="index.html"
-        aria-label="TRUECOAT ana sayfa"
+      <div class="site-footer__brand">
+
+        <a
+          class="brand brand--footer"
+          href="index.html"
+          aria-label="TRUECOAT ana sayfa"
+        >
+          <span class="brand__wordmark">
+            TRUECOAT
+          </span>
+
+          <span class="brand__descriptor">
+            BOYAMA VE İÇ MEKÂNLAR
+          </span>
+        </a>
+
+        <p>
+          Boya, yüzey, malzeme ve dekoru tek bir atmosfer içinde
+          buluşturan premium iç mekân uygulamaları.
+        </p>
+
+      </div>
+
+      <nav
+        class="site-footer__navigation"
+        aria-label="Alt menü"
       >
-        <span class="brand__wordmark">TRUECOAT</span>
-        <span class="brand__descriptor">BOYAMA VE İÇ MEKÂNLAR</span>
-      </a>
 
-      <p>
-        Boya, yüzey, malzeme ve dekoru tek bir atmosfer içinde
-        buluşturan premium iç mekân uygulamaları.
-      </p>
+        <div>
+
+          <p class="footer-heading">
+            Keşfet
+          </p>
+
+          <a href="painting.html">
+            Boyama
+          </a>
+
+          <a href="difference.html">
+            Farkımız
+          </a>
+
+          <a href="atmospheres.html">
+            Atmosferler
+          </a>
+
+          <a href="projects.html">
+            Projeler
+          </a>
+
+        </div>
+
+        <div>
+
+          <p class="footer-heading">
+            Hizmet
+          </p>
+
+          <a href="service-areas.html">
+            Hizmet Alanları
+          </a>
+
+          <a href="request-atmosphere.html">
+            Ücretsiz Keşif
+          </a>
+
+        </div>
+
+        <div>
+
+          <p class="footer-heading">
+            İletişim
+          </p>
+
+          <a
+            href="tel:+905488490837"
+            data-truecoat-phone
+          >
+            +90 548 849 08 37
+          </a>
+
+          <a
+            href="mailto:truecoatcyprus@gmail.com"
+            data-truecoat-email
+          >
+            truecoatcyprus@gmail.com
+          </a>
+
+          <p>
+            Kuzey Kıbrıs
+          </p>
+
+        </div>
+
+      </nav>
+
     </div>
 
-    <nav class="site-footer__navigation" aria-label="Alt menü">
+    <div class="site-footer__bottom">
 
-      <div>
-        <p class="footer-heading">Keşfet</p>
+      <span>
+        © 2026 TRUECOAT
+      </span>
 
-        <a href="painting.html">Boyama</a>
-        <a href="difference.html">Farkımız</a>
-        <a href="atmospheres.html">Atmosferler</a>
-        <a href="projects.html">Projeler</a>
-      </div>
+      <a href="index.html">
+        Ana sayfa
+      </a>
 
-      <div>
-        <p class="footer-heading">Hizmet</p>
+    </div>
 
-        <a href="service-areas.html">Hizmet Alanları</a>
-        <a href="request-atmosphere.html">Ücretsiz Keşif</a>
-      </div>
-
-      <div>
-        <p class="footer-heading">İletişim</p>
-
-        <a href="tel:+905338528320">+90 533 852 83 20</a>
-        <a href="tel:+905391152765">0539 115 27 65</a>
-        <p>Kuzey Kıbrıs</p>
-      </div>
-
-    </nav>
-
-  </div>
-
-  <div class="site-footer__bottom">
-    <span>© 2026 TRUECOAT</span>
-    <a href="index.html">Ana sayfa</a>
-  </div>
-
-</footer>
+  </footer>
 
   <script src="js/app.js" defer></script>
+
 </body>
 </html>
