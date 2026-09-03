@@ -138,7 +138,7 @@
             class="interactive-project__back"
             href="projects.html"
           >
-            ← Tüm projeler
+           Tüm projeler
           </a>
 
           <p class="interactive-project__eyebrow">
@@ -893,7 +893,7 @@
             rel="noopener noreferrer"
             data-drawer-link
           >
-            Ürünü görüntüle ↗️
+            Ürünü görüntüle 
           </a>
 
           <a
@@ -911,14 +911,16 @@
 
   </aside>
 
-  <footer class="site-footer">
+ <footer class="site-footer">
 
-    <div class="site-footer__inner">
+  <div class="container">
+
+    <div class="site-footer__top">
 
       <div class="site-footer__brand">
 
         <a
-          class="brand"
+          class="brand brand--footer"
           href="index.html"
           aria-label="TRUECOAT ana sayfa"
         >
@@ -938,13 +940,13 @@
 
       </div>
 
-      <div class="site-footer__grid">
+      <div class="site-footer__navigation">
 
         <div>
 
-          <h2>
+          <p class="footer-heading">
             Keşfedin
-          </h2>
+          </p>
 
           <a href="painting.html">
             Boyama
@@ -958,7 +960,10 @@
             Atmosferler
           </a>
 
-          <a href="projects.html">
+          <a
+            href="projects.html"
+            aria-current="page"
+          >
             Projeler
           </a>
 
@@ -966,31 +971,40 @@
 
         <div>
 
-          <h2>
-            Hizmet
-          </h2>
+          <p class="footer-heading">
+            Projeler
+          </p>
 
-          <a href="service-areas.html">
-            Hizmet Alanları
+          <a href="project-mediterranean.html">
+            Akdeniz Sakinliği
           </a>
 
-          <a href="request-atmosphere.html">
-            Ücretsiz Keşif
+          <a href="project-modern.html">
+            Modern Denge
+          </a>
+
+          <a
+            href="project-organic.html"
+            aria-current="page"
+          >
+            Organik Sadelik
           </a>
 
         </div>
 
         <div>
 
-          <h2>
+          <p class="footer-heading">
             İletişim
-          </h2>
+          </p>
 
           <a
-            href="tel:+905488490837"
+            href="https://wa.me/905488490837"
             data-truecoat-phone
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            +90 548 849 08 37
+            WhatsApp
           </a>
 
           <a
@@ -1000,21 +1014,27 @@
             truecoatcyprus@gmail.com
           </a>
 
+          <a href="request-atmosphere.html">
+            Ücretsiz Keşif
+          </a>
+
         </div>
-
-      </div>
-
-      <div class="site-footer__bottom">
-
-        <p>
-          © 2026 TRUECOAT. Tüm hakları saklıdır.
-        </p>
 
       </div>
 
     </div>
 
-  </footer>
+    <div class="site-footer__bottom">
+
+      <p>
+        © 2026 TRUECOAT. Tüm hakları saklıdır.
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
 
   <script src="js/app.js" defer></script>
 
