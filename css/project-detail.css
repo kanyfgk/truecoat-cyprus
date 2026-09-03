@@ -3242,3 +3242,236 @@
   outline: 2px solid var(--project-accent);
   outline-offset: 4px;
 }
+
+/* =========================================================
+   TRUECOAT — PROJECT DETAIL
+   FINAL UI CLEANUP
+   No arrow / emoji glyphs
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   BACK LINK
+   Direction is communicated by motion, not a glyph.
+   --------------------------------------------------------- */
+
+.page-project-detail .project-back-link {
+  gap: 0;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.page-project-detail .project-back-link::before {
+  content: none;
+}
+
+.page-project-detail .project-back-link:hover {
+  transform: translateX(-4px);
+}
+
+
+/* ---------------------------------------------------------
+   SUMMARY ACTION
+   --------------------------------------------------------- */
+
+.page-project-detail .project-summary__action {
+  justify-content: center;
+
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.page-project-detail .project-summary__action::after {
+  content: none;
+}
+
+.page-project-detail .project-summary__action:hover {
+  transform: translateX(4px);
+  background: var(--project-ink);
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCT CARD ACTION
+   --------------------------------------------------------- */
+
+.page-project-detail .project-product-card__link {
+  gap: 0;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.page-project-detail .project-product-card__link::after {
+  content: none;
+}
+
+.page-project-detail .project-product-card__link:hover {
+  transform: translateX(4px);
+  color: var(--project-accent);
+}
+
+
+/* ---------------------------------------------------------
+   FINAL CTA ACTION
+   --------------------------------------------------------- */
+
+.page-project-detail .project-final-cta__action {
+  justify-content: center;
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.page-project-detail .project-final-cta__action::after {
+  content: none;
+}
+
+.page-project-detail .project-final-cta__action:hover {
+  transform: translateX(4px);
+  background: #e9e4da;
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCT DRAWER ACTION
+   --------------------------------------------------------- */
+
+.page-project-detail .product-drawer__action {
+  justify-content: center;
+
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.page-project-detail .product-drawer__action::after {
+  content: none;
+}
+
+.page-project-detail .product-drawer__action:hover {
+  transform: translateX(4px);
+}
+
+
+/* ---------------------------------------------------------
+   BENEFITS
+   Remove check glyph.
+   Keep a restrained numbered/visual marker.
+   --------------------------------------------------------- */
+
+.page-project-detail .project-summary__benefits {
+  counter-reset: project-benefit;
+}
+
+.page-project-detail .project-summary__benefits span {
+  counter-increment: project-benefit;
+}
+
+.page-project-detail .project-summary__benefits span::before {
+  content: counter(project-benefit, decimal-leading-zero);
+
+  display: grid;
+
+  width: 24px;
+  height: 24px;
+
+  flex: 0 0 24px;
+
+  place-items: center;
+
+  border: 1px solid var(--project-accent);
+  border-radius: 50%;
+
+  color: var(--project-accent);
+
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE SHARE BUTTON
+   No emoji or directional glyph.
+   Use a CSS-built share symbol.
+   --------------------------------------------------------- */
+
+@media (max-width: 760px) {
+
+  .page-project-detail .project-share-action {
+    position: relative;
+  }
+
+  .page-project-detail .project-share-action::before {
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border: 2px solid currentColor;
+    border-radius: 50%;
+
+    background: transparent;
+
+    box-shadow:
+      11px -7px 0 -2px var(--project-dark),
+      11px -7px 0 0 currentColor,
+      11px 7px 0 -2px var(--project-dark),
+      11px 7px 0 0 currentColor;
+  }
+
+  .page-project-detail .project-share-action::after {
+    content: "";
+
+    position: absolute;
+
+    width: 12px;
+    height: 14px;
+
+    border-top: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+
+    transform: translateX(5px) scaleY(0.72);
+  }
+
+
+  /* Mobile actions remain stable */
+
+  .page-project-detail .project-primary-action {
+    justify-content: center;
+  }
+
+  .page-project-detail .project-summary__action,
+  .page-project-detail .project-final-cta__action,
+  .page-project-detail .product-drawer__action {
+    transform: none;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   TOUCH DEVICES
+   Prevent desktop hover movement from sticking after tap.
+   --------------------------------------------------------- */
+
+@media (hover: none) {
+
+  .page-project-detail .project-back-link:hover,
+  .page-project-detail .project-summary__action:hover,
+  .page-project-detail .project-product-card__link:hover,
+  .page-project-detail .project-final-cta__action:hover,
+  .page-project-detail .product-drawer__action:hover {
+    transform: none;
+  }
+
+}
