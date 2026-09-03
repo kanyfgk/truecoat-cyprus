@@ -8,8 +8,9 @@ document.documentElement.classList.add("is-enabled");
 ========================================================= */
 
 const TRUECOAT_CONTACT = Object.freeze({
-  phoneDisplay: "+90 548 849 08 37",
-  phoneHref: "tel:+905488490837",
+  phoneDisplay: "WhatsApp",
+  phoneNumber: "905488490837",
+  whatsappHref: "https://wa.me/905488490837",
   email: "truecoatcyprus@gmail.com",
   emailHref: "mailto:truecoatcyprus@gmail.com"
 });
@@ -276,40 +277,48 @@ const PRODUCT_LIBRARY = {
 
 function initTruecoatContactDetails() {
   document
-    .querySelectorAll('a[href^="tel:"]')
-    .forEach((link) => {
-      link.href = TRUECOAT_CONTACT.phoneHref;
-      link.textContent = TRUECOAT_CONTACT.phoneDisplay;
-    });
-
-  document
-    .querySelectorAll('a[href^="mailto:"]')
-    .forEach((link) => {
-      link.href = TRUECOAT_CONTACT.emailHref;
-      link.textContent = TRUECOAT_CONTACT.email;
-    });
-
-  document
-    .querySelectorAll("[data-truecoat-phone]")
+    .querySelectorAll(
+      'a[href^="tel:"], [data-truecoat-phone]'
+    )
     .forEach((element) => {
-      element.textContent = TRUECOAT_CONTACT.phoneDisplay;
+      element.textContent =
+        TRUECOAT_CONTACT.phoneDisplay;
 
       if (element.tagName === "A") {
-        element.href = TRUECOAT_CONTACT.phoneHref;
+        element.href =
+          TRUECOAT_CONTACT.whatsappHref;
+
+        element.setAttribute(
+          "target",
+          "_blank"
+        );
+
+        element.setAttribute(
+          "rel",
+          "noopener noreferrer"
+        );
+
+        element.setAttribute(
+          "aria-label",
+          "TRUECOAT ile WhatsApp üzerinden iletişime geç"
+        );
       }
     });
 
   document
-    .querySelectorAll("[data-truecoat-email]")
+    .querySelectorAll(
+      'a[href^="mailto:"], [data-truecoat-email]'
+    )
     .forEach((element) => {
-      element.textContent = TRUECOAT_CONTACT.email;
+      element.textContent =
+        TRUECOAT_CONTACT.email;
 
       if (element.tagName === "A") {
-        element.href = TRUECOAT_CONTACT.emailHref;
+        element.href =
+          TRUECOAT_CONTACT.emailHref;
       }
     });
 }
-
 
 /* =========================================================
    UTILITIES
@@ -1737,7 +1746,7 @@ function initRequestProjectContext() {
         )
       ) {
         element.textContent =
-          `← ${project.name} projesine dön`;
+  `${project.name} projesine dön`;
       }
     });
 }
