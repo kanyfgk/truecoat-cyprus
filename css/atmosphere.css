@@ -939,3 +939,57 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+/* =========================================================
+   TRUECOAT — ATMOSPHERES FINAL INTERACTION CLEANUP
+   ========================================================= */
+
+/* Introduction text link */
+
+.page-atmospheres .atmosphere-introduction__content a {
+  display: inline-flex;
+  align-items: center;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.page-atmospheres .atmosphere-introduction__content a:hover {
+  color: var(--atmosphere-accent);
+  transform: translateX(4px);
+}
+
+
+/* Project card text link */
+
+.page-atmospheres .atmosphere-card__link {
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.page-atmospheres .atmosphere-card__link:hover {
+  color: var(--atmosphere-accent);
+  transform: translateX(4px);
+}
+
+
+/* Keyboard accessibility */
+
+.page-atmospheres a:focus-visible,
+.page-atmospheres button:focus-visible {
+  outline: 2px solid var(--atmosphere-accent);
+  outline-offset: 4px;
+}
+
+
+/* Touch devices */
+
+@media (hover: none) {
+  .page-atmospheres .atmosphere-introduction__content a:hover,
+  .page-atmospheres .atmosphere-card__link:hover,
+  .page-atmospheres .button:hover {
+    transform: none;
+  }
+}
