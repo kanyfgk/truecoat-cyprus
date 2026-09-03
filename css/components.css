@@ -32,7 +32,9 @@
     border-radius:28px;
     padding:42px;
     border:1px solid rgba(0,0,0,.06);
-    transition:.35s;
+    transition:
+        transform .35s,
+        box-shadow .35s;
 }
 
 .painting-option:hover{
@@ -69,9 +71,19 @@
 }
 
 .painting-option a{
+    display:inline-flex;
+    align-items:center;
     font-weight:700;
     text-decoration:none;
+    transition:
+        color .35s,
+        transform .35s;
 }
+
+.painting-option a:hover{
+    transform:translateX(4px);
+}
+
 
 /* =========================================================
    ATMOSPHERE SHOWCASE
@@ -187,9 +199,19 @@
 }
 
 .atmosphere-paint-only-link{
+    display:inline-flex;
+    align-items:center;
     color:#fff;
     text-decoration:none;
     font-weight:700;
+    transition:
+        opacity .35s,
+        transform .35s;
+}
+
+.atmosphere-paint-only-link:hover{
+    transform:translateX(4px);
+    opacity:.78;
 }
 
 .hotspot{
@@ -270,6 +292,7 @@
     margin-bottom:24px;
 }
 
+
 /* =========================================================
    ATMOSPHERE TEASERS
 ========================================================= */
@@ -283,18 +306,22 @@
 
 .atmosphere-teaser{
     display:flex;
+    min-width:0;
+    min-height:130px;
     align-items:center;
     gap:22px;
     padding:28px;
     border-radius:24px;
-    text-decoration:none;
-    transition:.35s;
     color:#fff;
-    min-height:130px;
+    text-decoration:none;
+    transition:
+        transform .35s,
+        box-shadow .35s;
 }
 
 .atmosphere-teaser:hover{
-    transform:translateY(-8px);
+    transform:translateY(-6px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
 }
 
 .atmosphere-teaser span{
@@ -340,100 +367,121 @@
 
 @media(max-width:1200px){
 
-.atmosphere-showcase{
+    .atmosphere-showcase{
+        grid-template-columns:1fr;
+    }
 
-grid-template-columns:1fr;
+    .atmosphere-section-heading{
+        display:block;
+    }
 
-}
+    .atmosphere-heading-copy{
+        margin-top:32px;
+        max-width:100%;
+    }
 
-.atmosphere-section-heading{
+    .painting-choice-grid{
+        grid-template-columns:1fr;
+    }
 
-display:block;
-
-}
-
-.atmosphere-heading-copy{
-
-margin-top:32px;
-
-max-width:100%;
-
-}
-
-.painting-choice-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.painting-options{
-
-grid-template-columns:1fr;
-
-}
+    .painting-options{
+        grid-template-columns:1fr;
+    }
 
 }
 
 @media(max-width:768px){
 
-.atmosphere-section{
+    .painting-choice{
+        padding:80px 0;
+    }
 
-padding:90px 0;
+    .painting-choice-copy h2{
+        font-size:40px;
+    }
+
+    .painting-option{
+        padding:28px 22px;
+        border-radius:20px;
+    }
+
+    .atmosphere-section{
+        padding:90px 0;
+    }
+
+    .atmosphere-section-heading h2{
+        font-size:46px;
+    }
+
+    .atmosphere-showcase{
+        gap:20px;
+    }
+
+    .atmosphere-hero{
+        min-height:560px;
+        border-radius:22px;
+    }
+
+    .atmosphere-hero-copy{
+        left:30px;
+        right:30px;
+        bottom:30px;
+    }
+
+    .atmosphere-hero-copy h3{
+        font-size:48px;
+    }
+
+    .atmosphere-hero-copy p{
+        font-size:15px;
+        line-height:1.7;
+        margin-bottom:26px;
+    }
+
+    .atmosphere-actions{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:14px;
+    }
+
+    .atmosphere-panel{
+        padding:28px 22px;
+        border-radius:22px;
+    }
+
+    .atmosphere-panel-item{
+        padding:15px;
+        gap:14px;
+    }
+
+    .atmosphere-panel-item span{
+        width:36px;
+        height:36px;
+    }
+
+    .atmosphere-teasers{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .atmosphere-teaser{
+        padding:22px 18px;
+        gap:16px;
+    }
+
+    .atmosphere-teaser span{
+        width:46px;
+        height:46px;
+    }
+
+    .atmosphere-teaser strong{
+        font-size:20px;
+    }
+
+    .hotspot{
+        width:40px;
+        height:40px;
+        font-size:13px;
+    }
 
 }
-
-.atmosphere-hero{
-
-min-height:560px;
-
-}
-
-.atmosphere-hero-copy{
-
-left:30px;
-right:30px;
-bottom:30px;
-
-}
-
-.atmosphere-hero-copy h3{
-
-font-size:48px;
-
-}
-
-.atmosphere-actions{
-
-flex-direction:column;
-align-items:flex-start;
-
-}
-
-.atmosphere-teasers{
-
-grid-template-columns:1fr;
-
-}
-
-.hotspot{
-
-width:40px;
-height:40px;
-font-size:13px;
-
-}
-
-.painting-choice-copy h2{
-
-font-size:40px;
-
-}
-
-.atmosphere-section-heading h2{
-
-font-size:46px;
-
-}
-
-}
-
